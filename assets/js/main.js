@@ -24,10 +24,23 @@ function DisplayData(data, container) {
     const header = `<h2>Abfahrten ab ${stopName}</h2>`;
     const subheader = `<h3>Richtung ${directionName}</h3>`;
     const dataString = data.map(route => {
-      console.log(`${route.when}\n${route.line.name} ${route.direction}`);
-      const realtime = route.when.substr(11, 5);
-      const delay = Math.floor(route.delay / 60);
-      const plantime = getPlanTime(realtime, delay);
+      let realtime, delay, plantime;
+      if (route.when != null && route.delay != null) {
+        realtime = route.when.substr(11, 5);
+        delay = Math.floor(route.delay / 60);
+        plantime = getPlanTime(realtime, delay);
+      } else if (route.when != null) {
+        realtime = route.when.substr(11, 5);
+        delay = "?";
+        plantime = realtime;
+      } else {
+        realtime = "Ausfall";
+        delay = "X";
+        plantime = route.formerScheduledWhen.substr(11, 5);
+      }
+      /*const realtime = route.when != null ? route.when.substr(11, 5) : "Ausfall";
+      const delay = route.delay != null ? Math.floor(route.delay / 60) : "X";
+      const plantime = route.when != null && route.delay != null ? getPlanTime(realtime, delay) : route.formerScheduledWhen.substr(11, 5);*/
       const line = route.line.name;
       const target = route.direction;
       return `
@@ -82,4 +95,4 @@ getData(900000160509, 900000160518, "#BaeHerresults", []);
 getData(900000160014, 900000160010, "#MoeRoeresults", []);
 getData(900000160014, 900000160017, "#MoeLoeresults", []);
 getData(900000110012, 900000120001, "#BSTO_BFA", "S41", "Zeuthen", "Grünau", "Ostkreuz", "Schöneweide");
-getData(900000110012, 900000110004, "#BSTO_BLST", []);
+getData(900000110012, 900000110004, "#BSTO_BLST", "S42", "Birkenwerder", "Blankenburg", "Pankow", "Greifswalder");
