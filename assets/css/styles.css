@@ -6,3 +6,10 @@
 .row > * {
   flex: 1;
 }
+.planTime, .realTime, .delay {
+  flex: 0 0 60px;
+}
+.delay {
+  text-align: right;
+  padding-right: 10px;
+}
