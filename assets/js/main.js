@@ -109,3 +109,5 @@ const moeRoe = new Station("#MoeRoeresults", 900000160014, 900000160010, []);
 const moeLoe = new Station("#MoeLoeresults", 900000160014, 900000160017, []);
 const bstobfa = new Station("#BSTO_BFA", 900000110012, 900000120001, ["S41", "S8", "S85"]);
 const bstoblst = new Station("#BSTO_BLST", 900000110012, 900000110004, ["S42", "S8", "S85"]);
+const bstobus = new Station("#BSTO_240", 900000110012, 900000160014, []);
+const bmnbwes = new Station("#BMN_BWES", 900000024106, 900000026207, ["S41"]);
