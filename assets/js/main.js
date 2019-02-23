@@ -85,8 +85,15 @@ class Station {
       minutes += 60;
       hours -= 1;
     }
+    if (minutes > 59) {
+      minutes -= 60;
+      hours += 1;
+    }
     if (hours < 0) {
       hours += 24;
+    }
+    if (hours > 23) {
+      hours -= 24;
     }
     let hourString = hours < 10 ? `0${hours}` : `${hours}`;
     let minuteString = minutes < 10 ? `0${minutes}` : `${minutes}`;
