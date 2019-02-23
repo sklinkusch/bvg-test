@@ -112,3 +112,4 @@ const bstoblst = new Station("#BSTO_BLST", 900000110012, 900000110004, ["S42", "
 const bstobus = new Station("#BSTO_240", 900000110012, 900000160014, []);
 const bmnbwes = new Station("#BMN_BWES", 900000024106, 900000026207, ["S41"]);
 const bmnbwkrr = new Station("#BMN_BWKRR", 900000024106, 900000024102, []);
+const bmnzoo = new Station("#BMN_Zoo", 900000024106, 900000024104, []);
