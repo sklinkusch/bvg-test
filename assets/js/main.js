@@ -42,6 +42,8 @@ class Station_nofilter {
         `;
       }).join("");
       this.containers[dirIndex].innerHTML = `${header}${subheader}${innerString}`;
+    } else {
+      this.containers[dirIndex].innerHTML = `<div class="error">Your search did not match any means of transport</div>`;
     }
   }
   getData() {
