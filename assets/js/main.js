@@ -115,3 +115,4 @@ const bmnbwkrr = new Station("#BMN_BWKRR", 900000024106, 900000024102, []);
 const bmnzoo = new Station("#BMN_Zoo", 900000024106, 900000024104, []);
 const bmnspa = new Station("#BMN_Spa", 900000024106, 900000032402, []);
 const gatbhst = new Station("#Gat_BHST", 900000032106, 900000026105, []);
+const gatkla = new Station("#Gat_Kla", 900000032106, 900000032251, []);
