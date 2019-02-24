@@ -1,4 +1,4 @@
-class Station_nofilter {
+/*class Station_nofilter {
   constructor(domSelectors, station, directions) {
     this.containers = domSelectors.map(domSelector => document.querySelector(domSelector));
     this.stop = station;
@@ -121,7 +121,7 @@ class Station_filter extends Station_nofilter {
         });
     });
   }
-}
+}*/
 
 class Station {
   constructor(domSelector, station, filterValues) {
