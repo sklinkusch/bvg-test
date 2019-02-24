@@ -129,3 +129,4 @@ const moe = new Station_nofilter(["#MoeRoeresults", "#MoeLoeresults"], 900000160
 const bsto = new Station_filter(["#BSTO_BFA", "#BSTO_BLST", "#BSTO_240"], 900000110012, [900000120001, 900000110004, 900000160014], [["S41", "S8", "S85"], ["S42", "S8", "S85"], []]);
 const bmn = new Station_filter(["#BMN_BWES", "#BMN_BWKRR", "#BMN_Zoo", "#BMN_Spa"], 900000024106, [900000026207, 900000024102, 900000024104, 900000032402], [["S41", "S46"], ["S42", "S46"], [], []]);
 const gat = new Station_nofilter(["#Gat_BHST", "#Gat_Kla", "#Gat_Sta", "#Gat_Spa", "#Gat_Pic"], 900000032106, [900000026105, 900000032251, 900000032102, 900000032104, 900000032451]);
+const wil = new Station_nofilter(["#Wil_Spa", "#Wil_Kla", "#Wil_Pdm", "#Wil_See"], 900000032102, [900000032104, 900000039101, 900000220301, 900000220347]);
