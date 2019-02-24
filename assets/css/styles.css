@@ -34,10 +34,14 @@ main > div {
 .row > * {
   flex: 1;
 }
-.planTime, .realTime, .delay {
-  flex: 0 0 60px;
+.planTime, .realTime {
+  flex: 0 0 50px;
 }
 .delay {
+  flex: 0 0 30px;
   text-align: right;
   padding-right: 10px;
+}
+.line {
+  flex: 0 0 80px;
 }
