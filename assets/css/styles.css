@@ -7,6 +7,13 @@ body {
   background-image: url('../images/soroush-karimi-192112-unsplash.jpg');
   background-size: contain;
 }
+main {
+  background: white;
+  opacity: 0.7;
+  width: 85%;
+  margin: 20px auto;
+  padding: 10px;
+}
 .row {
   display: flex;
   flex-direction: row;
