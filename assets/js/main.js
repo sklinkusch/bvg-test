@@ -128,4 +128,4 @@ const bae = new Station_nofilter(["#BaeRoeresults", "#BaeHerresults"], 900000160
 const moe = new Station_nofilter(["#MoeRoeresults", "#MoeLoeresults"], 900000160014, [900000160010, 900000160017]);
 const bsto = new Station_filter(["#BSTO_BFA", "#BSTO_BLST", "#BSTO_240"], 900000110012, [900000120001, 900000110004, 900000160014], [["S41", "S8", "S85"], ["S42", "S8", "S85"], []]);
 const bmn = new Station_filter(["#BMN_BWES", "#BMN_BWKRR", "#BMN_Zoo", "#BMN_Spa"], 900000024106, [900000026207, 900000024102, 900000024104, 900000032402], [["S41", "S46"], ["S42", "S46"], [], []]);
-const gat = new Station_nofilter(["#Gat_BHST", "#Gat_Kla", "#Gat_Sta", "#Gat_Spa"], 900000032106, [900000026105, 900000032251, 900000032102, 900000032104]);
+const gat = new Station_nofilter(["#Gat_BHST", "#Gat_Kla", "#Gat_Sta", "#Gat_Spa", "#Gat_Pic"], 900000032106, [900000026105, 900000032251, 900000032102, 900000032104, 900000032451]);
