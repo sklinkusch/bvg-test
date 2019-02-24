@@ -3,6 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background-image: url('../images/soroush-karimi-192112-unsplash.jpg');
+  background-size: contain;
+}
 .row {
   display: flex;
   flex-direction: row;
