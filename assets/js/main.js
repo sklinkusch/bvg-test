@@ -141,7 +141,22 @@ class Station {
         for (let i = 0; i < array.length; i++) {
           let identifier = false;
           for (let j = 0; j < filterSet.length; j++) {
-            if (array[i].line.name.includes(filterSet[j]) || array[i].direction.includes(filterSet[j])) {
+            if (filterSet[j].line != null && filterSet[j].dir != null) {
+              if (array[i].line.name.includes(filterSet[j].line) && array[i].direction.includes(filterSet[j].dir)) {
+                identifier = true;
+                break;
+              }
+            } else if (filterSet[j].line != null) {
+              if (array[i].line.name.includes(filterSet[j].line)) {
+                identifier = true;
+                break;
+              }
+            } else if (filterSet[j].dir != null) {
+              if (array[i].direction.includes(filterSet[j].dir)) {
+                identifier = true;
+                break;
+              }
+            } else {
               identifier = true;
               break;
             }
