@@ -159,9 +159,9 @@ class Station {
               delay = Math.floor(array[i].delay / 60);
               planTime = this.getPlanTime(realTime, delay);
             } else if (array[i].when != null) {
-              realTime = array[i].when.substr(11, 5);
+              planTime = array[i].when.substr(11, 5);
               delay = "?";
-              planTime = realTime;
+              realTime = "";
             } else {
               realTime = "Ausfall";
               delay = "X";
