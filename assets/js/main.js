@@ -234,7 +234,7 @@ class Station {
   }
 }
 
-const jov = new Station("#JOV", 900000160541, [["Storkower", "Hugenottenplatz"], ["Ostbahnhof", "Betriebshof", "Tierpark"]]);
+const jov = new Station("#JOV", 900000160541, [[{ line: "240", dir: "Storkower" }, { line: "N50", dir: "Hugenottenplatz" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof" }, { line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof" }]]);
 const bae = new Station("#Bae", 900000160509, [["Hauptbahnhof", "Petersburger", "Schöneweide"], ["Ahrensfelde", "Marzahn", "Gudrunstr"]]);
 const moe = new Station("#Moe", 900000160014, [["Warschauer", "Frankfurter", "Schöneweide"], ["Virchow", "Gudrunstr", "Riesaer"]]);
 const bsto = new Station("#BSTO", 900000110012, [["S41", "Grünau", "Ostkreuz", "Schöneweide", "Zeuthen"], ["S42", "Birkenwerder", "Blankenburg", "Pankow", "Greifswalder"], ["Ostbahnhof", "Betriebshof"]]);
