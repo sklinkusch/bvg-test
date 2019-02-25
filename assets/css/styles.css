@@ -24,7 +24,7 @@ main {
   padding: 10px;
 }
 main > div {
-  margin-bottom: 25px;
+  margin: 15px 15px 15px 15px;
 }
 .row {
   display: flex;
@@ -33,6 +33,12 @@ main > div {
 }
 .row > * {
   flex: 1;
+}
+h2 {
+  margin: 10px 0 10px 0;
+}
+h3 {
+  margin: 5px 0 5px 0;
 }
 .planTime, .realTime {
   flex: 0 0 50px;
