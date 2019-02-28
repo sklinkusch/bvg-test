@@ -51,6 +51,10 @@ h3 {
   text-align: right;
   padding-right: 10px;
 }
+.transport {
+  flex: 0 0 35px;
+  text-align: center;
+}
 .line {
   flex: 0 0 80px;
 }
