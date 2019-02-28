@@ -244,6 +244,7 @@ class Station {
         break;
       case /^[1-9][0-9]{2}$/.test(line):
       case /^M(11|19|21|27|29|32|37|41|44|45|46|48|49|76|77|82|85)$/.test(line):
+      case /^X[0-9]{1,2}$/.test(line):
       case /^N[0-9]{1,2}$/.test(line):
         return `<span class="fas fa-bus">&nbsp;</span>`;
         break;
