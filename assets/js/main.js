@@ -184,6 +184,7 @@ class Station {
               planTime = array[i].formerScheduledWhen.substr(11, 5);
             }
             const line = array[i].line.name;
+            const mean = this.getMean(line);
             const target = array[i].direction;
             const row = document.createElement('div');
             row.className = "row";
@@ -191,6 +192,7 @@ class Station {
             <div class="planTime">${planTime}</div>
             <div class="realTime">${realTime}</div>
             <div class="delay">${delay}</div>
+            <div class="transport">${mean}</div>
             <div class="line">${line}</div>
             <div class="direction">${target}</div>
             `;
@@ -210,6 +212,53 @@ class Station {
       }).catch(function (err) {
         console.log(err);
       });
+  }
+  getMean(line) {
+    switch (true) {
+      case /^ICE/.test(line):
+      case /^IC/.test(line):
+      case /^EC/.test(line):
+      case /^RJ/.test(line):
+      case /^D/.test(line):
+      case /^EN/.test(line):
+      case /^NJ/.test(line):
+      case /^TGV/.test(line):
+      case /^THA/.test(line):
+      case /^FLX/.test(line):
+      case /^IRE/.test(line):
+      case /^RE/.test(line):
+      case /^RB/.test(line):
+        return `<span class="fas fa-train">&nbsp;</span>`;
+        break;
+      case /^S/.test(line):
+      case /^U/.test(line):
+        return `<span class="fas fa-subway">&nbsp;</span>`;
+        break;
+      case /^M(1|2|4|5|6|8)$/.test(line):
+      case /^M1(0|3|7)$/.test(line):
+      case /^[1-9][0-9]$/.test(line):
+        return `<span class="fas fa-tram">&nbsp;</span>`;
+        break;
+      case /^F/.test(line):
+        return `<span class="fas fa-ship">&nbsp;</span>`;
+        break;
+      case /^[1-9][0-9]{2}$/.test(line):
+      case /^M(11|19|21|27|29|32|37|41|44|45|46|48|49|76|77|82|85)$/.test(line):
+      case /^N[0-9]{1,2}$/.test(line):
+        return `<span class="fas fa-bus">&nbsp;</span>`;
+        break;
+    }
+    /*if (/^(ICE|IC|EC|IR|D|RE|RB)/.test(line)) {
+      return `<span class="fas fa-train">&nbsp;</span>`;
+    } else if (/^(S|U)/.test(line)) {
+      return `<span class="fas fa-subway">&nbsp;</span>`;
+    } else if (/^(M1|M2|M4|M5|M6|M8|M10|M13|12|16|18|21|27|37|50|60|61|62|63|67|68|87|88|89|91|92|93|94|96|98|99)$/.test(line)) {
+      return `<span class="fas fa-tram">&nbsp;</span>`;
+    } else if (/^F/.test(line)) {
+      return `<span class="fas fa-ship">&nbsp;</span>`;
+    } else {
+      return `<span class="fas fa-bus">&nbsp;</span>`;
+    }*/
   }
   getPlanTime(realtime, delay) {
     let hours = Number(realtime.substr(0, 2));
