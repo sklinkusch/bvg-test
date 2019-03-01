@@ -162,6 +162,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S8", dir: "Zeuthen" }, { line: "S8", dir: "Grünau" }], [{ line: "S85", dir: "Grünau" }, { line: "S85", dir: "Schöneweide" }], [{ line: "S42", dir: null }], [{ line: "S8", dir: "Birkenwerder" }, { line: "S8", dir: "Blankenburg" }, { line: "S8", dir: "Pankow" }], [{ line: "S85", dir: "Pankow" }], [{ line: "M4", dir: "Falkenberg" }, { line: "M4", dir: "Zingster Str" }, { line: "M4", dir: "Sulzfelder Str" }], [{ line: "M4", dir: "Hackescher Markt" }]]];
           break;
+        case "BHAL":
+          this.stop = [900000040101];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Westend" }, { line: "S46", dir: "Gesundbrunnen" }], [{ line: "M19", dir: "Grunewald" }, { line: "M19", dir: "Halensee" }], [{ line: "M29", dir: "Roseneck" }], [{ line: "X10", dir: "Teltow" }, { line: "X10", dir: "Andr&#233;ezeile" }], [{ line: "104", dir: "Brixplatz" }, { line: "104", dir: "Theodor-Heuss-Platz" }], [{ line: "N42", dir: "Theodor-Heuss-Platz" }], [{ line: "M19", dir: "Mehringdamm" }], [{ line: "M29", dir: "Hermannplatz" }], [{ line: "X10", dir: "Zoologischer Garten" }], [{ line: "104", dir: "Tunnelstr" }, { line: "104", dir: "Treptower Park" }], [{ line: "N42", dir: "Alexanderplatz" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
