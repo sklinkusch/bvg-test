@@ -126,7 +126,7 @@ class Station_filter extends Station_nofilter {
 class Station {
   constructor(domSelector, station, neighboring, filterValues) {
     this.container = document.querySelector(domSelector);
-    this.stop = station;
+    this._stop = station;
     this.neighboring = neighboring;
     this.filter = filterValues;
     this.getData();
@@ -296,6 +296,12 @@ class Station {
     let hourString = hours < 10 ? `0${hours}` : `${hours}`;
     let minuteString = minutes < 10 ? `0${minutes}` : `${minutes}`;
     return `${hourString}:${minuteString}`;
+  }
+  get stop() {
+    return this._stop;
+  }
+  set stop(newStop) {
+    this._stop = newStop;
   }
 }
 
