@@ -7,6 +7,7 @@ body {
   background-color: #111a29;
   background-image: url('../images/soroush-karimi-192112-unsplash.jpg');
   background-size: contain;
+  background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
