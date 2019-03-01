@@ -127,9 +127,48 @@ class Station {
   constructor(domSelector, station, neighboring, filterValues) {
     this.container = document.querySelector(domSelector);
     this._stop = station;
-    this.neighboring = neighboring;
-    this.filter = filterValues;
+    this._neighboring = neighboring;
+    this._filter = filterValues;
     this.getData();
+    this.addEventListeners();
+  }
+  addEventListeners() {
+    const dropdown = document.querySelector("#dropdown");
+    dropdown.addEventListener("input", (e) => {
+      const selectValue = e.target.value;
+      switch (selectValue) {
+        case "BBEU":
+          this.stop = [900000020202];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }], [{ line: "TXL", dir: "Flughafen Tegel" }], [{ line: "106", dir: "Seestr" }], [{ line: "123", dir: "Goebelplatz" }, { line: "123", dir: "Mäckeritzwiesen" }], [{ line: "N26", dir: "Seestr" }], [{ line: "TXL", dir: "Alexanderplatz" }, { line: "TXL", dir: "Hauptbahnhof" }], [{ line: "106", dir: "Lindenhof" }, { line: "106", dir: "Südkreuz" }, { line: "106", dir: "Kurfürstenstr" }], [{ line: "123", dir: "Hauptbahnhof" }], [{ line: "N26", dir: "Zoologischer Garten" }]]];
+          break;
+        case "jov":
+          this.stop = [900000160541];
+          this.neighboring = false;
+          this.filter = [[[{ line: "240", dir: "Storkower" }], [{ line: "N50", dir: "Hugenottenplatz" }, { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" }, { line: "N50", dir: "Pankow" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }], [{ line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof Lichtenberg" }]]];
+          break;
+        case "bae":
+          this.stop = [900000160509];
+          this.neighboring = false;
+          this.filter = [[[{ line: "M8", dir: "Hauptbahnhof" }, { line: "M8", dir: "Petersburger" }], [{ line: "M5", dir: "Petersburger" }], [{ line: "21", dir: "Schöneweide" }, { line: "21", dir: "Bersarinplatz" }, { line: "21", dir: "Treskowallee/Ehrlichstr" }], [{ line: "M8", dir: "Ahrensfelde/Stadtgrenze" }, { line: "M8", dir: "Betriebshof Marzahn" }], [{ line: "21", dir: "Gudrunstr" }]]];
+          break;
+        case "moe":
+          this.stop = [900000160014];
+          this.neighboring = false;
+          this.filter = [[[{ line: "M13", dir: "Warschauer" }, { line: "M13", dir: "Frankfurter" }], [{ line: "16", dir: "Frankfurter" }], [{ line: "21", dir: "Schöneweide" }, { line: "21", dir: "Bersarinplatz" }, { line: "21", dir: "Treskowallee/Ehrlichstr" }], [{ line: "M13", dir: "Virchow-Klinikum" }, { line: "M13", dir: "Degnerstr" }, { line: "M13", dir: "Betriebshof Lichtenberg" }], [{ line: "16", dir: "Ahrensfelde/Stadtgrenze" }], [{ line: "21", dir: "Gudrunstr" }]]]
+          break;
+        case "gat":
+          this.stop = [900000032106];
+          this.neighboring = false;
+          this.filter = [[[{ line: "M49", dir: "Zoologischer Garten" }, { line: "M49", dir: "Savignyplatz" }, { line: "M49", dir: "Wilmersdorfer Str" }, { line: "M49", dir: "Haus des Rundfunks" }], [{ line: "X34", dir: "Zoologischer Garten" }, { line: "X34", dir: "Savignyplatz" }, { line: "X34", dir: "Wilmersdorfer Str" }], [{ line: "X49", dir: "Wilmersdorfer" }], [{ line: "X34", dir: "Hottengrund" }, { line: "X34", dir: "Gutsstr" }], [{ line: "134", dir: "Hottengrund" }, { line: "134", dir: "Alt-Gatow" }, { line: "134", dir: "Alt-Kladow" }], [{ line: "M49", dir: "Nennhauser Damm" }, { line: "M49", dir: "Reimerweg" }], [{ line: "X49", dir: "Hahneberg" }, { line: "X49", dir: "Spektefeld" }], [{ line: "134", dir: "Wasserwerk Spandau" }, { line: "134", dir: "Kisseln" }, { line: "134", dir: "Rathaus Spandau" }], [{ line: "136", dir: "Aalemannufer" }, { line: "136", dir: "Hennigsdorf" }, { line: "136", dir: "Werderstr" }, { line: "136", dir: "Rathaus Spandau" }], [{ line: "236", dir: "Haselhorst" }, { line: "236", dir: "Rathaus Spandau" }], [{ line: "136", dir: "Am Omnibushof" }], [{ line: "236", dir: "Am Omnibushof" }]]];
+          break;
+        case "wil":
+          this.stop = [900000032102];
+          this.neighboring = false;
+          this.filter = [[[{ line: "135", dir: "Rathaus Spandau" }, { line: "135", dir: "Am Omnibushof" }], [{ line: "638", dir: "Rathaus Spandau" }], [{ line: "M49", dir: "Zoologischer Garten" }, { line: "M49", dir: "Savignyplatz" }, { line: "M49", dir: "Wilmersdorfer Str" }, { line: "M49", dir: "Haus des Rundfunks" }], [{ line: "X49", dir: "Wilmersdorfer Str" }], [{ line: "135", dir: "Alt-Kladow" }, { line: "135", dir: "Landstadt Gatow" }, { line: "135", dir: "Hottengrund" }], [{ line: "638", dir: "Hauptbahnhof" }, { line: "638", dir: "Campus Jungfernsee" }], [{ line: "338", dir: "Havelpark" }], [{ line: "M49", dir: "Nennhauser Damm" }, { line: "M49", dir: "Reimerweg" }], [{ line: "X49", dir: "Hahneberg" }, { line: "X49", dir: "Spektefeld" }]]];
+          break;
+      }
+    });
   }
   evalData(array) {
     if (array.length > 0) {
@@ -202,6 +241,12 @@ class Station {
       });
     }
   }
+  get filter() {
+    return this._filter;
+  }
+  set filter(newFilter) {
+    this._filter = newFilter;
+  }
   getData() {
     const url = `https://1.bvg.transport.rest/stations/${this.stop}/departures?duration=60&includeRelatedStations=${this.neighboring}`;
     fetch(url)
@@ -271,6 +316,7 @@ class Station {
       case /^M(11|19|21|27|29|32|37|41|44|45|46|48|49|76|77|82|85)$/.test(line):
       case /^X[0-9]{1,2}$/.test(line):
       case /^N[0-9]{1,2}$/.test(line):
+      case /^TXL$/.test(line):
         return `<span class="fas fa-bus" title="bus">&nbsp;</span>`;
         break;
     }
@@ -296,6 +342,12 @@ class Station {
     let hourString = hours < 10 ? `0${hours}` : `${hours}`;
     let minuteString = minutes < 10 ? `0${minutes}` : `${minutes}`;
     return `${hourString}:${minuteString}`;
+  }
+  get neighboring() {
+    return this._neighboring;
+  }
+  set neighboring(newValue) {
+    this._neighboring = newValue;
   }
   get stop() {
     return this._stop;
