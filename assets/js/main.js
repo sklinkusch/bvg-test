@@ -177,6 +177,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S45", dir: "Südkreuz" }, { line: "S45", dir: "Tempelhof" }], [{ line: "S46", dir: "Gesundbrunnen" }, { line: "S46", dir: "Westend" }, { line: "S46", dir: "Südkreuz" }, { line: "S46", dir: "Tempelhof" }], [{ line: "S42", dir: null }], [{ line: "S45", dir: "Schönefeld" }, { line: "S45", dir: "Grünau" }, { line: "S45", dir: "Schöneweide" }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "S47", dir: "Spindlersfeld" }], [{ line: "U8", dir: "Wittenau" }, { line: "U8", dir: "Paracelsus-Bad" }, { line: "U8", dir: "Osloer Str" }], [{ line: "377", dir: "Plänterwald" }], [{ line: "N8", dir: "Wilhelmsruher Damm" }, { line: "N8", dir: "Osloer Str" }], [{ line: "N79", dir: "Plänterwald" }], [{ line: "M44", dir: "Stuthirtenweg" }, { line: "M44", dir: "Alt-Buckow" }], [{ line: "246", dir: "Friedrich-Wilhelm-Platz" }, { line: "246", dir: "Alt-Tempelhof" }], [{ line: "277", dir: "Stadtrandsiedlung" }, { line: "277", dir: "Nahmitzer Damm/Motzener Str" }, { line: "277", dir: "Daimlerstr" }], [{ line: "370", dir: "Neuköllnische Brücke" }], [{ line: "377", dir: "Kranoldstr" }], [{ line: "N79", dir: "Alt-Mariendorf" }]], [[{ line: "246", dir: "Friedrich-Wilhelm-Platz" }, { line: "246", dir: "Alt-Tempelhof" }], [{ line: "370", dir: "Neuköllnische Brücke" }]]];
           break;
+        case "BHO":
+          this.stop = [900000044101];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }, { line: "S46", dir: "Westend" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "115", dir: "Spanische Allee/Potsdamer Ch" }, { line: "115", dir: "Neuruppiner Str" }, { line: "115", dir: "Roseneck" }], [{ line: "N3", dir: "Mexikoplatz" }], [{ line: "N10", dir: "Sachtlebenstr" }], [{ line: "115", dir: "Fehrbelliner Platz" }], [{ line: "N3", dir: "Wittenbergplatz" }], [{ line: "N10", dir: "Zoologischer Garten" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
