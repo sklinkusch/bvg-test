@@ -232,6 +232,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S42", dir: null }], [{ line: "M41", dir: "Hauptbahnhof" }, { line: "M41", dir: "Philharmonie" }, { line: "M41", dir: "Hallesches Tor" }, { line: "M41", dir: "Hermannplatz" }], [{ line: "171", dir: "Hermannplatz" }], [{ line: "N79", dir: "Alt-Mariendorf" }], [{ line: "M41", dir: "Sonnenallee/Baumschulenstr" }], [{ line: "171", dir: "Schönefeld" }, { line: "171", dir: "Rudow" }], [{ line: "N79", dir: "Plänterwald" }]], [[{ line: "171", dir: "Schönefeld" }, { line: "171", dir: "Rudow" }], [{ line: "N79", dir: "Alt-Mariendorf" }], [{ line: "171", dir: "Hermannplatz" }, { line: "171", dir: "Sonnenallee" }], [{ line: "N79", dir: "Plänterwald" }]]];
           break;
+        case "BSTO":
+          this.stop = [900000110012];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S8", dir: "Grünau" }, { line: "S8", dir: "Zeuthen" }], [{ line: "S85", dir: "Schöneweide" }, { line: "S85", dir: "Grünau" }], [{ line: "S42", dir: null }], [{ line: "S8", dir: "Birkenwerder" }, { line: "S8", dir: "Blankenburg" }], [{ line: "S85", dir: "Pankow" }], [{ line: "156", dir: "Stadion Buschallee" }, { line: "156", dir: "Große Seestr" }, { line: "156", dir: "Pasedagplatz" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
