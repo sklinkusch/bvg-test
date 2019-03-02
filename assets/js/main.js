@@ -197,6 +197,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S8", dir: "Zeuthen" }, { line: "S8", dir: "Grünau" }], [{ line: "S85", dir: "Grünau" }, { line: "S85", dir: "Schöneweide" }], [{ line: "S42", dir: null }], [{ line: "S8", dir: "Birkenwerder" }, { line: "S8", dir: "Blankenburg" }], [{ line: "S85", dir: "Pankow" }], [{ line: "M5", dir: "Hauptbahnhof" }, { line: "M5", dir: "Hackescher Markt" }, { line: "M5", dir: "Landsberger Allee/Petersburger Str" }], [{ line: "M6", dir: "Hackescher Markt" }, { line: "M6", dir: "Landsberger Allee/Petersburger Str" }], [{ line: "M8", dir: "Hauptbahnhof" }, { line: "M8", dir: "Landsberger Allee/Petersburger Str" }], [{ line: "M5", dir: "Zingster Str" }], [{ line: "M6", dir: "Riesaer Str" }, { line: "M6", dir: "Betriebshof Marzahn" }, { line: "M6", dir: "S Marzahn" }], [{ line: "M8", dir: "Ahrensfelde/Stadtgrenze" }, { line: "M8", dir: "Betriebshof Marzahn" }], [{ line: "156", dir: "Stadion Buschallee/Hansastr" }, { line: "156", dir: "Große Seestr." }, { line: "156", dir: "Pasedagplatz" }]]];
           break;
+        case "BMN":
+          this.stop = [900000024106];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Westend" }, { line: "S46", dir: "Gesundbrunnen" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "M49", dir: "Nennhauser Damm" }, { line: "M49", dir: "Reimerweg" }, { line: "M49", dir: "Gatower Str" }], [{ line: "X34", dir: "Hottengrund" }, { line: "X34", dir: "Gutsstr" }, { line: "X34", dir: "Gatower Str" }], [{ line: "X49", dir: "Hahneberg" }, { line: "X49", dir: "Spektefeld" }, { line: "X49", dir: "Gatower Str" }], [{ line: "139", dir: "Werderstr" }], [{ line: "218", dir: "Pfaueninsel" }], [{ line: "M49", dir: "Zoologischer Garten" }, { line: "M49", dir: "Savignyplatz" }, { line: "M49", dir: "Wilmersdorfer Str" }], [{ line: "X34", dir: "Zoologischer Garten" }, { line: "X34", dir: "Savignyplatz" }, { line: "X34", dir: "Wilmersdorfer" }], [{ line: "X49", dir: "Wilmersdorfer" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
