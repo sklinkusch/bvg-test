@@ -182,6 +182,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }, { line: "S46", dir: "Westend" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "115", dir: "Spanische Allee/Potsdamer Ch" }, { line: "115", dir: "Neuruppiner Str" }, { line: "115", dir: "Roseneck" }], [{ line: "N3", dir: "Mexikoplatz" }], [{ line: "N10", dir: "Sachtlebenstr" }], [{ line: "115", dir: "Fehrbelliner Platz" }], [{ line: "N3", dir: "Wittenbergplatz" }], [{ line: "N10", dir: "Zoologischer Garten" }]]];
           break;
+        case "BIP":
+          this.stop = [900000054105];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }, { line: "S46", dir: "Westend" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "U4", dir: "Nollendorfplatz" }], [{ line: "M48", dir: "Alexanderplatz" }, { line: "M48", dir: "Mohrenstr" }], [{ line: "M85", dir: "Hauptbahnhof" }, { line: "M85", dir: "Potsdamer Platz" }], [{ line: "187", dir: "Turmstr" }, { line: "187", dir: "Kurfürstenstr" }], [{ line: "248", dir: "Warschauer Str" }, { line: "248", dir: "Ostbahnhof" }, { line: "248", dir: "Alexanderplatz" }, { line: "248", dir: "Hallesches Tor" }, { line: "248", dir: "Südkreuz" }], [{ line: "M48", dir: "Busseallee" }, { line: "M48", dir: "Zehlendorf Eiche" }, { line: "M48", dir: "Rathaus Steglitz" }], [{ line: "M85", dir: "Lichterfelde Süd" }, { line: "M85", dir: "Rathaus Steglitz" }], [{ line: "187", dir: "Halbauer Weg" }, { line: "187", dir: "Lankwitz Kirche" }, { line: "187", dir: "Insulaner" }], [{ line: "248", dir: "Breitenbachplatz" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
