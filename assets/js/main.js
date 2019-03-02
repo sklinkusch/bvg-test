@@ -217,6 +217,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S8", dir: "Zeuthen" }, { line: "S8", dir: "Grünau" }], [{ line: "S85", dir: "Grünau" }, { line: "S85", dir: "Schöneweide" }], [{ line: "S42", dir: null }], [{ line: "S8", dir: "Birkenwerder" }, { line: "S8", dir: "Blankenburg" }, { line: "S8", dir: "Pankow" }], [{ line: "S85", dir: "Pankow" }], [{ line: "M2", dir: "Am Steinberg" }, { line: "M2", dir: "Heinersdorf" }], [{ line: "M2", dir: "Alexanderplatz" }], [{ line: "156", dir: "Stadion Buschallee/Hansastr" }, { line: "156", dir: "Große Seestr" }, { line: "156", dir: "Pasedagplatz" }], [{ line: "156", dir: "Storkower Str" }, { line: "156", dir: "Michelangelostr" }]]];
           break;
+        case "BSG":
+          this.stop = [900000054104];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S1", dir: "Oranienburg" }, { line: "S1", dir: "Frohnau" }, { line: "S1", dir: "Waidmannslust" }, { line: "S1", dir: "Schönholz" }, { line: "S1", dir: "Gesundbrunnen" }, { line: "S1", dir: "Nordbahnhof" }, { line: "S1", dir: "Potsdamer Platz" }], [{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }, { line: "S46", dir: "Westend" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }, { line: "S46", dir: "Tempelhof" }, { line: "S46", dir: "Südkreuz" }], [{ line: "M46", dir: "Zoologischer Garten" }, { line: "M46", dir: "Wittenbergplatz" }], [{ line: "248", dir: "Breitenbachplatz" }], [{ line: "M46", dir: "Britz-Süd" }, { line: "M46", dir: "Alt-Tempelhof" }, { line: "M46", dir: "Südkreuz" }], [{ line: "248", dir: "Warschauer Str" }, { line: "248", dir: "Ostbahnhof" }, { line: "248", dir: "Alexanderplatz" }, { line: "248", dir: "Hallesches Tor" }, { line: "248", dir: "Südkreuz" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
