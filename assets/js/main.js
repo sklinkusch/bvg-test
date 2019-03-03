@@ -195,6 +195,10 @@ addS26(){
 addS3(){
   this.S3 = { E: { line: "S3", dir: "Erkner" }, WIG: { line: "S3", dir: "Wilhelmshagen" }, RD: { line: "S3", dir: "Rahnsdorf" }, FRH: { line: "S3", dir: "Friedrichshagen" }, HIG: { line: "S3", dir: "Hirschgarten" }, KPK: { line: "S3", dir: "Köpenick" }, WHH: { line: "S3", dir: "Wuhlheide" }, KLH: { line: "S3", dir: "Karlshorst" }, RB: { line: "S3", dir: "Betriebsbahnhof Rummelsburg" }, RH: { line: "S3", dir: "Rummelsburg" }, OKS: { line: "S3", dir: "Ostkreuz" }, WRS: { line: "S3", dir: "Warschauer Str" }, OSB: { line: "S3", dir: "Ostbahnhof" }, JB: { line: "S3", dir: "Jannowitzbrücke" }, ALX: { line: "S3", dir: "Alexanderplatz" }, HKM: { line: "S3", dir: "Hackescher Markt" }, FST: { line: "S3", dir: "Friedrichstr" }, HBF: { line: "S3", dir: "Hauptbahnhof" }, BEV: { line: "S3", dir: "Bellevue" }, TGN: { line: "S3", dir: "Tiergarten" }, ZOS: { line: "S3", dir: "Zoologischer Garten" }, SAP: { line: "S3", dir: "Savignyplatz" }, CHS: { line: "S3", dir: "Charlottenburg" }, WKS: { line: "S3", dir: "Westkreuz" }, GWD: { line: "S3", dir: "Grunewald" }, MS: { line: "S3", dir: "Messe Süd" }, HST: { line: "S3", dir: "Heerstr" }, OLS: { line: "S3", dir: "Olympiastadion" }, PIC: { line: "S3", dir: "Pichelsberg" }, SRW: { line: "S3", dir: "Stresow" }, SPA: { line: "S3", dir: "Spandau" } };
 }
+addS4(){
+  this.S41 = { line: "S41", dir: null };
+  this.S42 = { line: "S42", dir: null };
+}
 evalData(array, index) {
   if (array.length > 0) {
     const header = document.createElement('h2');
