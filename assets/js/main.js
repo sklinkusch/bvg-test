@@ -267,6 +267,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "U9", dir: "Osloer Str" }], [{ line: "U9", dir: "Rathaus Steglitz" }, { line: "U9", dir: "Zoologischer Garten" }], [{ line: "N9", dir: "Osloer Str" }], [{ line: "N9", dir: "Rathaus Steglitz" }, { line: "N9", dir: "Zoologischer Garten" }]]];
           break;
+        case "BWK":
+          this.stop = [900000024102];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S3", dir: "Grunewald" }, { line: "S3", dir: "Spandau" }], [{ line: "S5", dir: "Grunewald" }], [{ line: "S7", dir: "Potsdam" }, { line: "S7", dir: "Wannsee" }, { line: "S7", dir: "Grunewald" }], [{ line: "S9", dir: "Spandau" }], [{ line: "S3", dir: "Erkner" }, { line: "S3", dir: "Friedrichshagen" }, { line: "S3", dir: "Köpenick" }], [{ line: "S5", dir: "Strausberg" }, { line: "S5", dir: "Hoppegarten" }, { line: "S5", dir: "Mahlsdorf" }, { line: "S5", dir: "Lichtenberg" }], [{ line: "S7", dir: "Ahrensfelde" }, { line: "S7", dir: "Lichtenberg" }, { line: "S7", dir: "Ostbahnhof" }], [{ line: "S9", dir: "Schönefeld" }, { line: "S9", dir: "Schöneweide" }], [{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }, { line: "S46", dir: "Westend" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "104", dir: "Brixplatz" }, { line: "104", dir: "Theodor-Heuss-Platz" }], [{ line: "N42", dir: "Theodor-Heuss-Platz" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
