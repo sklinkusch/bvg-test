@@ -208,6 +208,9 @@ addS46(){
 addS47(){
   this.S47 = { SPF: { line: "S47", dir: "Spindlersfeld" }, OSP: { line: "S47", dir: "Oberspree" }, SW: { line: "S47", dir: "Schöneweide" }, BMW: { line: "S47", dir: "Baumschulenweg" }, PWA: { line: "S47", dir: "Plänterwald" }, ; TP: { line: "S47", dir: "Treptower Park" }, KHD: { line: "S47", dir: "Köllnische Heide" }, NK: { line: "S47", ; dir: "Neukölln" }, HER: { line: "S47", dir: "Hermannstr" } };
 }
+addS5(){
+  this.S5 = { STN: { line: "S5", dir: "Strausberg Nord" }, STR: { line: "S5", dir: "Strausberg Stadt" }, HGM: { line: "S5", dir: "Hegermühle" }, STV: { line: "S5", dir: "Strausberg" }, PEN: { line: "S5", dir: "Petershagen Nord" }, FD: { line: "S5", dir: "Fredersdorf" }, NG: { line: "S5", dir: "Neuenhagen" }, HPG: { line: "S5", dir: "Hoppegarten" }, BIS: { line: "S5", dir: "Birkenstein" }, MDF: { line: "S5", dir: "Mahlsdorf" }, KAD: { line: "S5", dir: "Kaulsdorf" }, WT: { line: "S5", dir: "Wuhletal" }, BDF: { line: "S5", dir: "Biesdorf" }, FFO: { line: "S5", dir: "Friedrichsfelde Ost" }, LI: { line: "S5", dir: "Lichtenberg" }, NPL: { line: "S5", dir: "Nöldnerplatz" }, OKS: { line: "S5", dir: "Ostkreuz" }, WRS: { line: "S5", dir: "Warschauer Str" }, OSB: { line: "S5", dir: "Ostbahnhof" }, JB: { line: "S5", dir: "Jannowitzbrücke" }, ALX: { line: "S5", dir: "Alexanderplatz" }, HKM: { line: "S5", dir: "Hackescher Markt" }, FST: { line: "S5", dir: "Friedrichstr" }, HBF: { line: "S5", dir: "Hauptbahnhof" }, BEV: { line: "S5", dir: "Bellevue" }, TGN: { line: "S5", dir: "Tiergarten" }, ZOS: { line: "S5", dir: "Zoologischer Garten" }, SAP: { line: "S5", dir: "Savignyplatz" }, CHS: { line: "S5", dir: "Charlottenburg" }, WKS: { line: "S5", dir: "Westkreuz" }, GWD: { line: "S5", dir: "Grunewald" } };
+}
 evalData(array, index) {
   if (array.length > 0) {
     const header = document.createElement('h2');
