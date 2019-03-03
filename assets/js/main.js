@@ -199,6 +199,9 @@ addS4(){
   this.S41 = { line: "S41", dir: null };
   this.S42 = { line: "S42", dir: null };
 }
+addS45(){
+  this.S45 = { FLH: { line: "S45", dir: "Flughafen Berlin-Schönefeld" }, GBA: { line: "S45", dir: "Grünbergallee" }, AGL: { line: "S45", dir: "Altglienicke" }, GAS: { line: "S45", dir: "Grünau" }, ADL: { line: "S45", dir: "Adlershof" }, SCF: { line: "S45", dir: "Betriebsbahnhof Schöneweide" }, SW: { line: "S45", dir: "Schöneweide" }, BMW: { line: "S45", dir: "Baumschulenweg" }, PWA: { line: "S45", dir: "Plänterwald" }, TP: { line: "S45", dir: "Treptower Park" }, KHD: { line: "S45", dir: "Köllnische Heide" }, NK: { line: "S45", dir: "Neukölln" }, HER: { line: "S45", dir: "Hermannstr" }, THF: { line: "S45", dir: "Tempelhof" }, SKR: { line: "S45", dir: "Südkreuz" } };
+}
 evalData(array, index) {
   if (array.length > 0) {
     const header = document.createElement('h2');
