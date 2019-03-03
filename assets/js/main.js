@@ -186,66 +186,70 @@ class Station {
     this.S2 = { BFD: { line: "S2", dir: "Blankenfelde" }, MAH: { line: "S2", dir: "Mahlow" }, LRD: { line: "S2", dir: "Lichtenrade" }, SC: { line: "S2", dir: "Schichauweg" }, BCH: { line: "S2", dir: "Buckower Chaussee" }, MF: { line: "S2", dir: "Marienfelde" }, ATS: { line: "S2", dir: "Attilastr" }, PRS: { line: "S2", dir: "Priesterweg" }, SKV: { line: "S2", dir: "Südkreuz" }, YOR: { line: "S2", dir: "Yorckstr" }, AHU: { line: "S2", dir: "Anhalter Bahnhof" }, POP: { line: "S2", dir: "Potsdamer Platz" }, TOR: { line: "S2", dir: "Brandenburger Tor" }, FSTT: { line: "S2", dir: "Friedrichstr" }, ORS: { line: "S2", dir: "Oranienburger Str" }, NB: { line: "S2", dir: "Nordbahnhof" }, HUM: { line: "S2", dir: "Humboldthain" }, GB: { line: "S2", dir: "Gesundbrunnen" }, BOS: { line: "S2", dir: "Bornholmer Str" }, PKW: { line: "S2", dir: "Pankow" }, PHD: { line: "S2", dir: "Pankow-Heinersdorf" }, BLB: { line: "S2", dir: "Blankenfelde" }, KRW: { line: "S2", dir: "Karow" }, BU: { line: "S2", dir: "Buch" }, RGT: { line: "S2", dir: "Röntgental" }, ZEP: { line: "S2", dir: "Zepernick" }, BRF: { line: "S2", dir: "Bernau-Friedenstal" }, BER: { line: "S2", dir: "Bernau" } };
   }
   addS25() {
-    this.S25 = { TLS: { line: "S25", dir: "Teltow Stadt" }, LIS: { line: "S25", dir: "Lichterfelde Süd" }, OSS: { line: "S25", dir: "Osdorfer Str" }, LIO: { line: "S25", dir: "Lichterfelde Ost" }, LAK: { line: "S25", dir: "Lankwitz" }, SDE: { line: "S25", dir: "Südende" }, PRS: { line: "S25", dir: "Priesterweg" }, SKV: { line: "S25", dir: "Südkreuz" }, YOR: { line: "S25", dir: "Yorckstr" }, AHU: { line: "S25", dir: "Anhalter Bahnhof" }, POP: { line: "S25", dir: "Potsdamer Platz" }, TOR: { line: "S25", dir: "Brandenburger Tor" }, FSTT: { line: "S25", dir: "Friedrichstr" }, ORS: { line: "S25", dir: "Oranienburger Str" }, NB: { line: "S25", dir: "Nordbahnhof" }, HUM: { line: "S25", dir: "Humboldthain" }, GB: { line: "S25", dir: "Gesundbrunnen" }, BOS: { line: "S25", dir: "Bornholmer Str" }, WOK: { line: "S25", dir: "Wollankstr" }, SNH: { line: "S25", dir: "Schönholz" }, ARF: { line: "S25", dir: "Alt-Reinickendorf" }, KBO: { line: "S25", dir: "Karl-Bonhoeffer-Nervenklinik" }, EBD: { line: "S25", dir: "Eichborndamm" }, TG: { line: "S25", dir: "Tegel" }, SZF: { line: "S25", dir: "Schulzendorf" }, HLS: { line: "S25", dir: "Schulzendorf" }, HD: { line: "S25", dir: "Hennigsdorf" } };
-  }
-  evalData(array, index) {
-    if (array.length > 0) {
-      const header = document.createElement('h2');
-      header.innerHTML = `Abfahrten ab ${array[0].stop.name}`;
-      this.container.appendChild(header);
+    this.S25 = { 0TLS: { line: "S25", dir: "Teltow Stadt" }, LIS: { line: "S25", dir: "Lichterfelde Süd" }, OSS: { line: "S25", dir: "Osdorfer Str" }, LIO: { line: "S25", dir: "Lichterfelde Ost" }, LAK: { line: "S25", dir: "Lankwitz" }, SDE: { line: "S25", dir: "Südende" }, PRS: { line: "S25", dir: "Priesterweg" }, SKV: { line: "S25", dir: "Südkreuz" }, YOR: { line: "S25", dir: "Yorckstr" }, AHU: { line: "S25", dir: "Anhalter Bahnhof" }, POP: { line: "S25", dir: "Potsdamer Platz" }, TOR: { line: "S25", dir: "Brandenburger Tor" }, FSTT: { line: "S25", dir: "Friedrichstr" }, ORS: { line: "S25", dir: "Oranienburger Str" }, NB: { line: "S25", dir: "Nordbahnhof" }, HUM: { line: "S25", dir: "Humboldthain" }, GB: { line: "S25", dir: "Gesundbrunnen" }, BOS: { line: "S25", dir: "Bornholmer Str" }, WOK: { line: "S25", dir: "Wollankstr" }, SNH: { line: "S25", dir: "Schönholz" }, ARF: { line: "S25", dir: "Alt-Reinickendorf" }, KBO: { line: "S25", dir: "Karl-Bonhoeffer-Nervenklinik" }, EBD: { line: "S25", dir: "Eichborndamm" }, TG: { line: "S25", dir: "Tegel" }, SZF: { line: "S25", dir: "Schulzendorf" }, HLS: { line: "S25", dir: "Schulzendorf" }, HD: { line: "S25", dir: "Hennigsdorf" }
+  };
+}
+addS26(){
+  this.S26 = { TLS: { line: "S26", dir: "Teltow Stadt" }, LIS: { line: "S26", dir: "Lichterfelde Süd" }, OSS: { line: "S26", dir: "Osdorfer Str" }, LIO: { line: "S26", dir: "Lichterfelde Ost" }, LAK: { line: "S26", dir: "Lankwitz" }, SDE: { line: "S26", dir: "Südende" }, PRS: { line: "S26", dir: "Priesterweg" }, SKV: { line: "S26", dir: "Südkreuz" }, YOR: { line: "S26", dir: "Yorckstr" }, AHU: { line: "S26", dir: "Anhalter Bahnhof" }, POP: { line: "S26", dir: "Potsdamer Platz" }, TOR: { line: "S26", dir: "Brandenburger Tor" }, FSTT: { line: "S26", dir: "Friedrichstr" }, ORS: { line: "S26", dir: "Oranienburger Str" }, NB: { line: "S26", dir: "Nordbahnhof" }, HUM: { line: "S26", dir: "Humboldthain" }, GB: { line: "S26", dir: "Gesundbrunnen" }, BOS: { line: "S26", dir: "Bornholmer Str" }, WOK: { line: "S26", dir: "Wollankstr" }, SNH: { line: "S26", dir: "Schönholz" }, WM: { line: "S26", dir: "Wilhelmsruh" }, WIN: { line: "S26", dir: "Wittenau" }, WAI: { line: "S26", dir: "Waidmannslust" } };
+}
+evalData(array, index) {
+  if (array.length > 0) {
+    const header = document.createElement('h2');
+    header.innerHTML = `Abfahrten ab ${array[0].stop.name}`;
+    this.container.appendChild(header);
 
-      this.filter[index].forEach(filterSet => {
-        var subheader_ident = true;
-        for (let i = 0; i < array.length; i++) {
-          let identifier = false;
-          for (let j = 0; j < filterSet.length; j++) {
-            if (filterSet[j].line != null && filterSet[j].dir != null) {
-              if (array[i].line.name == filterSet[j].line && array[i].direction.includes(filterSet[j].dir)) {
-                identifier = true;
-                break;
-              }
-            } else if (filterSet[j].line != null) {
-              if (array[i].line.name == filterSet[j].line) {
-                identifier = true;
-                break;
-              }
-            } else if (filterSet[j].dir != null) {
-              if (array[i].direction.includes(filterSet[j].dir)) {
-                identifier = true;
-                break;
-              }
-            } else {
+    this.filter[index].forEach(filterSet => {
+      var subheader_ident = true;
+      for (let i = 0; i < array.length; i++) {
+        let identifier = false;
+        for (let j = 0; j < filterSet.length; j++) {
+          if (filterSet[j].line != null && filterSet[j].dir != null) {
+            if (array[i].line.name == filterSet[j].line && array[i].direction.includes(filterSet[j].dir)) {
               identifier = true;
               break;
             }
+          } else if (filterSet[j].line != null) {
+            if (array[i].line.name == filterSet[j].line) {
+              identifier = true;
+              break;
+            }
+          } else if (filterSet[j].dir != null) {
+            if (array[i].direction.includes(filterSet[j].dir)) {
+              identifier = true;
+              break;
+            }
+          } else {
+            identifier = true;
+            break;
           }
-          if (identifier == true) {
-            if (subheader_ident == true) {
-              const subheader = document.createElement('h3');
-              subheader.innerHTML = `Richtung ${array[i].direction}`;
-              this.container.appendChild(subheader);
-              subheader_ident = false;
-            }
-            let planTime, realTime, delay;
-            if (array[i].when != null && array[i].delay != null) {
-              realTime = array[i].when.substr(11, 5);
-              delay = Math.floor(array[i].delay / 60);
-              planTime = this.getPlanTime(realTime, delay);
-            } else if (array[i].when != null) {
-              planTime = array[i].when.substr(11, 5);
-              delay = "?";
-              realTime = "";
-            } else {
-              realTime = "Ausfall";
-              delay = "X";
-              planTime = array[i].formerScheduledWhen.substr(11, 5);
-            }
-            const line = array[i].line.name;
-            const mean = this.getMean(line);
-            const target = array[i].direction;
-            const row = document.createElement('div');
-            row.className = "row";
-            row.innerHTML = `
+        }
+        if (identifier == true) {
+          if (subheader_ident == true) {
+            const subheader = document.createElement('h3');
+            subheader.innerHTML = `Richtung ${array[i].direction}`;
+            this.container.appendChild(subheader);
+            subheader_ident = false;
+          }
+          let planTime, realTime, delay;
+          if (array[i].when != null && array[i].delay != null) {
+            realTime = array[i].when.substr(11, 5);
+            delay = Math.floor(array[i].delay / 60);
+            planTime = this.getPlanTime(realTime, delay);
+          } else if (array[i].when != null) {
+            planTime = array[i].when.substr(11, 5);
+            delay = "?";
+            realTime = "";
+          } else {
+            realTime = "Ausfall";
+            delay = "X";
+            planTime = array[i].formerScheduledWhen.substr(11, 5);
+          }
+          const line = array[i].line.name;
+          const mean = this.getMean(line);
+          const target = array[i].direction;
+          const row = document.createElement('div');
+          row.className = "row";
+          row.innerHTML = `
             <div class="planTime">${planTime}</div>
             <div class="realTime">${realTime}</div>
             <div class="delay">${delay}</div>
@@ -253,125 +257,125 @@ class Station {
             <div class="line">${line}</div>
             <div class="direction">${target}</div>
             `;
-            this.container.appendChild(row);
-          }
+          this.container.appendChild(row);
         }
-      });
-    }
-  }
-  get filter() {
-    return this._filter;
-  }
-  set filter(newFilter) {
-    this._filter = newFilter;
-  }
-  getData() {
-    this.stop.forEach((stop, index) => {
-      const url = `https://1.bvg.transport.rest/stations/${stop}/departures?duration=60&includeRelatedStations=false`;
-      fetch(url)
-        .then(response => {
-          return response.json();
-        }).then(data => {
-          this.evalData(data, index);
-        }).catch(err => console.log(err));
+      }
     });
   }
-  getMean(line) {
-    switch (true) {
-      case /^ICE/.test(line):
-        return `<span class="fas fa-train" title="Intercity Express train">&nbsp;</span>`;
-        break;
-      case /^IC/.test(line):
-        return `<span class="fas fa-train" title="Intercity train">&nbsp;</span>`;
-        break;
-      case /^EC/.test(line):
-        return `<span class="fas fa-train" title="Eurocity train">&nbsp;</span>`;
-        break;
-      case /^RJ/.test(line):
-        return `<span class="fas fa-train" title="Austrian Railjet train">&nbsp;</span>`;
-        break;
-      case /^EN/.test(line):
-        return `<span class="fas fa-train" title="EuroNight train">&nbsp;</span>`;
-        break;
-      case /^NJ/.test(line):
-        return `<span class="fas fa-train" title="Austrian NightJet train">&nbsp;</span>`;
-        break;
-      case /^TGV/.test(line):
-        return `<span class="fas fa-train" title="French Train &#224; grande vitesse">&nbsp;</span>`;
-        break;
-      case /^THA/.test(line):
-        return `<span class="fas fa-train" title="European Thalys train">&nbsp;</span>`;
-        break;
-      case /^FLX/.test(line):
-        return `<span class="fas fa-train" title="FlixTrain">&nbsp;</span>`;
-        break;
-      case /^HBX/.test(line):
-        return `<span class="fas fa-train" title="Harz-Berlin Express train">&nbsp;</span>`;
-        break;
-      case /^IRE/.test(line):
-        return `<span class="fas fa-train" title="InterRegio Express train">&nbsp;</span>`;
-        break;
-      case /^RE/.test(line):
-        return `<span class="fas fa-train" title="Regional Express train">&nbsp;</span>`;
-        break;
-      case /^RB/.test(line):
-        return `<span class="fas fa-train" title="Regional train">&nbsp;</span>`;
-        break;
-      case /^S/.test(line):
-        return `<span class="fas fa-subway" title="suburban railway (S-Bahn)">&nbsp;</span>`;
-      case /^U/.test(line):
-        return `<span class="fas fa-subway" title="underground (U-Bahn)">&nbsp;</span>`;
-        break;
-      case /^M(1|2|4|5|6|8)$/.test(line):
-      case /^M1(0|3|7)$/.test(line):
-      case /^[1-9][0-9]$/.test(line):
-        return `<span class="fas fa-tram" title="tramway">&nbsp;</span>`;
-        break;
-      case /^F/.test(line):
-        return `<span class="fas fa-ship" title="ferry">&nbsp;</span>`;
-        break;
-      case /^[1-9][0-9]{2}$/.test(line):
-      case /^M(11|19|21|27|29|32|37|41|44|45|46|48|49|76|77|82|85)$/.test(line):
-      case /^X[0-9]{1,2}$/.test(line):
-      case /^N[0-9]{1,2}$/.test(line):
-      case /^TXL$/.test(line):
-        return `<span class="fas fa-bus" title="bus">&nbsp;</span>`;
-        break;
-    }
+}
+get filter() {
+  return this._filter;
+}
+set filter(newFilter) {
+  this._filter = newFilter;
+}
+getData() {
+  this.stop.forEach((stop, index) => {
+    const url = `https://1.bvg.transport.rest/stations/${stop}/departures?duration=60&includeRelatedStations=false`;
+    fetch(url)
+      .then(response => {
+        return response.json();
+      }).then(data => {
+        this.evalData(data, index);
+      }).catch(err => console.log(err));
+  });
+}
+getMean(line) {
+  switch (true) {
+    case /^ICE/.test(line):
+      return `<span class="fas fa-train" title="Intercity Express train">&nbsp;</span>`;
+      break;
+    case /^IC/.test(line):
+      return `<span class="fas fa-train" title="Intercity train">&nbsp;</span>`;
+      break;
+    case /^EC/.test(line):
+      return `<span class="fas fa-train" title="Eurocity train">&nbsp;</span>`;
+      break;
+    case /^RJ/.test(line):
+      return `<span class="fas fa-train" title="Austrian Railjet train">&nbsp;</span>`;
+      break;
+    case /^EN/.test(line):
+      return `<span class="fas fa-train" title="EuroNight train">&nbsp;</span>`;
+      break;
+    case /^NJ/.test(line):
+      return `<span class="fas fa-train" title="Austrian NightJet train">&nbsp;</span>`;
+      break;
+    case /^TGV/.test(line):
+      return `<span class="fas fa-train" title="French Train &#224; grande vitesse">&nbsp;</span>`;
+      break;
+    case /^THA/.test(line):
+      return `<span class="fas fa-train" title="European Thalys train">&nbsp;</span>`;
+      break;
+    case /^FLX/.test(line):
+      return `<span class="fas fa-train" title="FlixTrain">&nbsp;</span>`;
+      break;
+    case /^HBX/.test(line):
+      return `<span class="fas fa-train" title="Harz-Berlin Express train">&nbsp;</span>`;
+      break;
+    case /^IRE/.test(line):
+      return `<span class="fas fa-train" title="InterRegio Express train">&nbsp;</span>`;
+      break;
+    case /^RE/.test(line):
+      return `<span class="fas fa-train" title="Regional Express train">&nbsp;</span>`;
+      break;
+    case /^RB/.test(line):
+      return `<span class="fas fa-train" title="Regional train">&nbsp;</span>`;
+      break;
+    case /^S/.test(line):
+      return `<span class="fas fa-subway" title="suburban railway (S-Bahn)">&nbsp;</span>`;
+    case /^U/.test(line):
+      return `<span class="fas fa-subway" title="underground (U-Bahn)">&nbsp;</span>`;
+      break;
+    case /^M(1|2|4|5|6|8)$/.test(line):
+    case /^M1(0|3|7)$/.test(line):
+    case /^[1-9][0-9]$/.test(line):
+      return `<span class="fas fa-tram" title="tramway">&nbsp;</span>`;
+      break;
+    case /^F/.test(line):
+      return `<span class="fas fa-ship" title="ferry">&nbsp;</span>`;
+      break;
+    case /^[1-9][0-9]{2}$/.test(line):
+    case /^M(11|19|21|27|29|32|37|41|44|45|46|48|49|76|77|82|85)$/.test(line):
+    case /^X[0-9]{1,2}$/.test(line):
+    case /^N[0-9]{1,2}$/.test(line):
+    case /^TXL$/.test(line):
+      return `<span class="fas fa-bus" title="bus">&nbsp;</span>`;
+      break;
   }
-  getPlanTime(realtime, delay) {
-    let hours = Number(realtime.substr(0, 2));
-    let minutes = Number(realtime.substr(3, 2));
-    minutes -= delay;
-    if (minutes < 0) {
-      minutes += 60;
-      hours -= 1;
-    }
-    if (minutes > 59) {
-      minutes -= 60;
-      hours += 1;
-    }
-    if (hours < 0) {
-      hours += 24;
-    }
-    if (hours > 23) {
-      hours -= 24;
-    }
-    let hourString = hours < 10 ? `0${hours}` : `${hours}`;
-    let minuteString = minutes < 10 ? `0${minutes}` : `${minutes}`;
-    return `${hourString}:${minuteString}`;
+}
+getPlanTime(realtime, delay) {
+  let hours = Number(realtime.substr(0, 2));
+  let minutes = Number(realtime.substr(3, 2));
+  minutes -= delay;
+  if (minutes < 0) {
+    minutes += 60;
+    hours -= 1;
   }
-  get neighboring() {
-    return this._neighboring;
+  if (minutes > 59) {
+    minutes -= 60;
+    hours += 1;
   }
-  set neighboring(newValue) {
-    this._neighboring = newValue;
+  if (hours < 0) {
+    hours += 24;
   }
-  get stop() {
-    return this._stop;
+  if (hours > 23) {
+    hours -= 24;
   }
-  set stop(newStop) {
-    this._stop = newStop;
-  }
+  let hourString = hours < 10 ? `0${hours}` : `${hours}`;
+  let minuteString = minutes < 10 ? `0${minutes}` : `${minutes}`;
+  return `${hourString}:${minuteString}`;
+}
+get neighboring() {
+  return this._neighboring;
+}
+set neighboring(newValue) {
+  this._neighboring = newValue;
+}
+get stop() {
+  return this._stop;
+}
+set stop(newStop) {
+  this._stop = newStop;
+}
 }
 const jov = new Station([900000160541], [[[{ line: "240", dir: "Storkower" }], [{ line: "N50", dir: "Hugenottenplatz" }, { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" }, { line: "N50", dir: "Pankow" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }], [{ line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof Lichtenberg" }]]]);
