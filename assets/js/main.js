@@ -262,6 +262,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "M45", dir: "Johannesstift" }, { line: "M45", dir: "DRK-Kliniken Westend" }, { line: "M45", dir: "Rathaus Spandau" }], [{ line: "M45", dir: "Zoologischer Garten" }]]];
           break;
+        case "BWH":
+          this.stop = [900000001201];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "U9", dir: "Osloer Str" }], [{ line: "U9", dir: "Rathaus Steglitz" }, { line: "U9", dir: "Zoologischer Garten" }], [{ line: "N9", dir: "Osloer Str" }], [{ line: "N9", dir: "Rathaus Steglitz" }, { line: "N9", dir: "Zoologischer Garten" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
