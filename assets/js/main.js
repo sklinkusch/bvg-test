@@ -179,6 +179,9 @@ class Station {
       this.getData();
     });
   }
+  addS1() {
+    return { WSS: { line: "S1", dir: "Wannsee" }, NIW: { line: "S1", dir: "Nikolassee" }, SLS: { line: "S1", dir: "Schlachtensee" }, ZD: { line: "S1", dir: "Zehlendorf" }, SDG: { line: "S1", dir: "Sundgauer Str" }, LWE: { line: "S1", dir: "Lichterfelde West" }, BGT: { line: "S1", dir: "Botanischer Garten" }, RST: { line: "S1", dir: "Rathaus Steglitz" }, FB: { line: "S1", dir: "Feuerbachstr" }, FRU: { line: "S1", dir: "Friedenau" }, SGV: { line: "S1", dir: "Schöneberg" }, JLB: { line: "S1", dir: "Julius-Leber-Brücke" }, GGS: { line: "S1", dir: "Yorckstr" }, AHU: { line: "S1", dir: "Anhalter Bahnhof" }, POP: { line: "S1", dir: "Potsdamer Platz" }, TOR: { line: "S1", dir: "Brandenburger Tor" }, FSTT: { line: "S1", dir: "Friedrichstr" }, ORS: { line: "S1", dir: "Oranienburger Str" }, NB: { line: "S1", dir: "Nordbahnhof" }, HUM: { line: "S1", dir: "Humboldthain" }, GB: { line: "S1", dir: "Gesundbrunnen" }, BOS: { line: "S1", dir: "Bornholmer Str" }, WOK: { line: "S1", dir: "Wollankstr" }, SNH: { line: "S1", dir: "Schönholz" }, WM: { line: "S1", dir: "Wilhelmsruh" }, WIN: { line: "S1", dir: "Wittenau" }, WAI: { line: "S1", dir: "Waidmannslust" }, HED: { line: "S1", dir: "Hermsdorf" }, FOH: { line: "S1", dir: "Frohnau" }, HN: { line: "S1", dir: "Hohen Neuendorf" }, BIW: { line: "S1", dir: "Birkenwerder" }, BOR: { line: "S1", dir: "Borgsdorf" }, LEN: { line: "S1", dir: "Lehnitz" }, ORB: { line: "S1", dir: "Oranienburg" } };
+  }
   evalData(array, index) {
     if (array.length > 0) {
       const header = document.createElement('h2');
