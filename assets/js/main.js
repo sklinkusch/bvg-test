@@ -1,133 +1,8 @@
-/*class Station_nofilter {
-  constructor(domSelectors, station, directions) {
-    this.containers = domSelectors.map(domSelector => document.querySelector(domSelector));
-    this.stop = station;
-    this.directions = directions;
-    this.getData();
-  }
-  evalData(array, dirIndex) {
-    if (array.length > 0) {
-      let header;
-      if (dirIndex == 0) {
-        header = `<h2>Abfahrten ab ${array[0].stop.name}</h2>`;
-      } else {
-        header = "";
-      }
-      const subheader = `<h3>Richtung ${array[0].direction}</h3>`;
-      const innerString = array.map(route => {
-        let planTime, realTime, delay;
-        if (route.when != null && route.delay != null) {
-          realTime = route.when.substr(11, 5);
-          delay = Math.floor(route.delay / 60);
-          planTime = this.getPlanTime(realTime, delay);
-        } else if (route.when != null) {
-          realTime = route.when.substr(11, 5);
-          delay = "?";
-          planTime = realTime;
-        } else {
-          realTime = "Ausfall";
-          delay = "X";
-          planTime = route.formerScheduledWhen.substr(11, 5);
-        }
-        const line = route.line.name;
-        const target = route.direction;
-        return `
-        <div class="row">
-        <div class="planTime">${planTime}</div>
-      <div class="realTime">${realTime}</div>
-      <div class="delay">${delay}</div>
-      <div class="line">${line}</div>
-      <div class="target">${target}</div>
-        </div>
-        `;
-      }).join("");
-      this.containers[dirIndex].innerHTML = `${header}${subheader}${innerString}`;
-    } else {
-      this.containers[dirIndex].innerHTML = `<div class="error">Your search did not match any means of transport</div>`;
-    }
-  }
-  getData() {
-    this.directions.forEach((direction, index) => {
-      const url = `https://1.bvg.transport.rest/stations/${this.stop}/departures?direction=${direction}&duration=60`;
-      fetch(url)
-        .then(response => {
-          return response.json();
-        }).then(data => {
-          this.evalData(data, index);
-        }).catch(function (err) {
-          console.log(err);
-        });
-    });
-  }
-  getPlanTime(realtime, delay) {
-    let hours = Number(realtime.substr(0, 2));
-    let minutes = Number(realtime.substr(3, 2));
-    minutes -= delay;
-    if (minutes < 0) {
-      minutes += 60;
-      hours -= 1;
-    }
-    if (minutes > 59) {
-      minutes -= 60;
-      hours += 1;
-    }
-    if (hours < 0) {
-      hours += 24;
-    }
-    if (hours > 23) {
-      hours -= 24;
-    }
-    let hourString = hours < 10 ? `0${hours}` : `${hours}`;
-    let minuteString = minutes < 10 ? `0${minutes}` : `${minutes}`;
-    return `${hourString}:${minuteString}`;
-  }
-}
-
-class Station_filter extends Station_nofilter {
-  constructor(domSelectors, station, directions, filterValues) {
-    super(domSelectors, station, directions);
-    this.filter = filterValues;
-    this.getData();
-  }
-  filterArray(data, dirIndex) {
-    if (this.filter[dirIndex].length > 0) {
-      const filtered = data.filter(route => {
-        let identifier = false;
-        this.filter[dirIndex].forEach(filterValue => {
-          if (route.line.name.includes(filterValue) || route.direction.includes(filterValue)) {
-            identifier = true;
-          }
-        });
-        if (identifier == true) {
-          return route;
-        }
-      });
-      return filtered;
-    } else {
-      return data;
-    }
-  }
-  getData() {
-    this.directions.forEach((direction, index) => {
-      const url = `https://1.bvg.transport.rest/stations/${this.stop}/departures?direction=${direction}&duration=60`;
-      fetch(url)
-        .then(response => {
-          return response.json();
-        }).then(data => {
-          const filteredData = this.filterArray(data, index);
-          this.evalData(filteredData, index);
-        }).catch(function (err) {
-          console.log(err);
-        });
-    });
-  }
-}*/
-
 class Station {
-  constructor(domSelector, station, neighboring, filterValues) {
-    this.container = document.querySelector(domSelector);
+  constructor(station, filterValues) {
+    this.container = document.querySelector("#container");
     this._stop = station;
-    this._neighboring = neighboring;
+    this._neighboring = false;
     this._filter = filterValues;
     this.getData();
     this.addEventListeners();
@@ -135,6 +10,9 @@ class Station {
   addEventListeners() {
     const dropdown = document.querySelector("#dropdown");
     dropdown.addEventListener("input", (e) => {
+      while (this.container.firstChild) {
+        this.container.removeChild(this.container.firstChild);
+      }
       const selectValue = e.target.value;
       switch (selectValue) {
         case "BBEU":
@@ -205,12 +83,12 @@ class Station {
         case "BNK":
           this.stop = [900000078201, 900000078272, 900000078273, 900000078271];
           this.neighboring = false;
-          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S45", dir: "Südkreuz" }, { line: "S45", dir: "Tempelhof" }], [{ line: "S46", dir: "Gesundbrunnen" }, { line: "S46", dir: Westend }, { line: "S46", dir: "Südkreuz" }, { line: "S46", dir: "Tempelhof" }], [{ line: "S47", dir: "Hermannstr" }], [{ line: "S42", dir: null }], [{ line: "S45", dir: "Schönefeld" }, { line: "S45", dir: "Grünau" }, { line: "S45", dir: "Schöneweide" }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "S47", dir: "Spindlersfeld" }]], [[{ line: "U7", dir: "Rudow" }, { line: "U7", dir: "Britz-Süd" }], [{ line: "U7", dir: "Rathaus Spandau" }, { line: "U7", dir: "Rohrdamm" }, { line: "U7", dir: "Richard-Wagner-Platz" }, { line: "U7", dir: "Fehrbelliner Platz" }, { line: "U7", dir: "Hermannplatz" }]], [[{ line: "171", dir: "Schönefeld" }, { line: "171", dir: "Rudow" }], [{ line: "N7", dir: "Schönefeld" }], [{ line: "N79", dir: "Alt-Mariendorf" }], [{ line: "171", dir: "Hermannplatz" }, { line: "171", dir: "Sonnenallee" }], [{ line: "N7", dir: "Rathaus Spandau" }], [{ line: "N79", dir: "Plänterwald" }]], [[{ line: "171", dir: "Schönefeld" }, { line: "171", dir: "Rudow" }], [{ line: "N7", dir: "Schönefeld" }], [{ line: "370", dir: "Neuköllnische Brücke" }], [{ line: "377", dir: "Plänterwald" }], [{ line: "171", dir: "Hermannplatz" }, { line: "171", dir: "Sonnenallee" }], [{ line: "N7", dir: "Rathaus Spandau" }], [{ line: "370", dir: "Hermannstr" }], [{ line: "377", dir: "Hermannstr" }]]];
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S45", dir: "Südkreuz" }, { line: "S45", dir: "Tempelhof" }], [{ line: "S46", dir: "Gesundbrunnen" }, { line: "S46", dir: "Westend" }, { line: "S46", dir: "Südkreuz" }, { line: "S46", dir: "Tempelhof" }], [{ line: "S47", dir: "Hermannstr" }], [{ line: "S42", dir: null }], [{ line: "S45", dir: "Schönefeld" }, { line: "S45", dir: "Grünau" }, { line: "S45", dir: "Schöneweide" }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "S47", dir: "Spindlersfeld" }]], [[{ line: "U7", dir: "Rudow" }, { line: "U7", dir: "Britz-Süd" }], [{ line: "U7", dir: "Rathaus Spandau" }, { line: "U7", dir: "Rohrdamm" }, { line: "U7", dir: "Richard-Wagner-Platz" }, { line: "U7", dir: "Fehrbelliner Platz" }, { line: "U7", dir: "Hermannplatz" }]], [[{ line: "171", dir: "Schönefeld" }, { line: "171", dir: "Rudow" }], [{ line: "N7", dir: "Schönefeld" }], [{ line: "N79", dir: "Alt-Mariendorf" }], [{ line: "171", dir: "Hermannplatz" }, { line: "171", dir: "Sonnenallee" }], [{ line: "N7", dir: "Rathaus Spandau" }], [{ line: "N79", dir: "Plänterwald" }]], [[{ line: "171", dir: "Schönefeld" }, { line: "171", dir: "Rudow" }], [{ line: "N7", dir: "Schönefeld" }], [{ line: "370", dir: "Neuköllnische Brücke" }], [{ line: "377", dir: "Plänterwald" }], [{ line: "171", dir: "Hermannplatz" }, { line: "171", dir: "Sonnenallee" }], [{ line: "N7", dir: "Rathaus Spandau" }], [{ line: "370", dir: "Hermannstr" }], [{ line: "377", dir: "Hermannstr" }]]];
           break;
         case "BOK":
           this.stop = [900000120003];
           this.neighboring = false;
-          this.filter = [[[{ line: "RE1", dir: "Cottbus" }, { line: "RE1", dir: "Eisenhüttenstadt" }, { line: "RE1", dir: "Frankfurt" }], [{ line: "RE2", dir: "Cottbus" }], [{ line: "RE7", dir: "Wünsdorf-Waldstadt" }, { line: "RE7", dir: "Schönefeld" }], [{ line: "RB12", dir: "Templin" }], [{ line: "RB14", dir: "Schönefeld" }], [{ line: "RB24", dir: "Eberswalde" }], [{ line: "RB25", dir: "Werneuchen" }], [{ line: "RB26", dir: "Gorz&#243;w" }, { line: "RB26", dir: "Kostrzyn" }], [{ line: "RE1", dir: "Magdeburg" }, { line: "RE1", dir: "Brandenburg" }, { line: "RE1", dir: "Potsdam" }], [{ line: "RE2", dir: "Wismar" }, { line: "RE2", dir: "Bad Kleinen" }, { line: "RE2", dir: "Schwerin" }, { line: "RE2", dir: "Wittenberge" }], [{ line: "RE7", dir: "Dessau" }, { line: "RE7", dir: "Bad Belzig" }], [{ line: "RB14", dir: "Nauen" }], [{ line: "RB24", dir: "Senftenberg" }, { line: "RB24", dir: "Cottbus" }], [{ line: "S3", dir: "Erkner" }, { line: "S3", dir: "Friedrichshagen" }, { line: "S3", dir: "Köpenick" }], [{ line: "S5", dir: "Strausberg" }, { line: "S5", dir: "Hoppegarten" }, { line: "S5", dir: "Mahlsdorf" }, { line: "S5", dir: "Lichtenberg" }], [{ line: "S7", dir: "Ahrensfelde" }, { line: "S7", dir: "Lichtenberg" }], [{ line: "S75", dir: "Wartenberg" }, { line: "S75", dir: "Hohenschönhausen" }], [{ line: "S75", dir: "Lichtenberg" }], [{ line: "S3", dir: "Grunewald" }, { line: "S3", dir: "Spandau" }, { line: "S3", dir: "Westkreuz" }, { line: "S3", dir: "Charlottenburg" }, { line: "S3", dir: "Ostbahnhof" }], [{ line: "S5", dir: "Grunewald" }, { line: "S5", dir: "Westkreuz" }, { line: "S5", dir: "Ostbahnhof" }], [{ line: "S7", dir: "Potsdam" }, { line: "S7", dir: "Wannsee" }, { line: "S7", dir: "Grunewald" }, { line: "S7", dir: "Westkreuz" }, { line: "S7", dir: "Charlottenburg" }, { line: "S7", dir: "Ostbahnhof" }], [{ line: "S75", dir: "Ostbahnhof" }, { line: "S75", dir: "Warschauer Str" }], [{ line: "S9", dir: "Spandau" }, { line: "S9", dir: "Westkreuz" }, { line: "S9", dir: "Ostbahnhof" }], [{ line: "S41", dir: null }], [{ line: "S8", dir: "Zeuthen" }, { line: "S8", dir: "Grünau" }], [{ line: "S85", dir: "Grünau" }, { line: "S85", dir: "Schöneweide" }], [{ line: "S42", dir: null }], [{ line: "S8", dir: "Birkenwerder" }, { line: "S8", dir: "Blankenburg" }, { line: "S8", dir: "Pankow" }], [{ line: "S85", dir: "Pankow" }], [{ line: "194", dir: "Helene-Weigel-Platz" }, { line: "194", dir: "Friedrichsfelde Ost" }, { line: "194", dir: "Nöldnerplatz" }], [{ line: "347", dir: "Tunnelstr" }], [{ line: "N94", dir: "Magdalenenstr" }], [{ line: "194", dir: Hermannplatz }, { line: "194", dir: "Treptower Park" }], [{ line: "347", dir: "Ostbahnhof" }, { line: "347", dir: "Warschauer Str" }], [{ line: "N94", dir: "Hermannplatz" }]]];
+          this.filter = [[[{ line: "RE1", dir: "Cottbus" }, { line: "RE1", dir: "Eisenhüttenstadt" }, { line: "RE1", dir: "Frankfurt" }], [{ line: "RE2", dir: "Cottbus" }], [{ line: "RE7", dir: "Wünsdorf-Waldstadt" }, { line: "RE7", dir: "Schönefeld" }], [{ line: "RB12", dir: "Templin" }], [{ line: "RB14", dir: "Schönefeld" }], [{ line: "RB24", dir: "Eberswalde" }], [{ line: "RB25", dir: "Werneuchen" }], [{ line: "RB26", dir: "Gorz&#243;w" }, { line: "RB26", dir: "Kostrzyn" }], [{ line: "RE1", dir: "Magdeburg" }, { line: "RE1", dir: "Brandenburg" }, { line: "RE1", dir: "Potsdam" }], [{ line: "RE2", dir: "Wismar" }, { line: "RE2", dir: "Bad Kleinen" }, { line: "RE2", dir: "Schwerin" }, { line: "RE2", dir: "Wittenberge" }], [{ line: "RE7", dir: "Dessau" }, { line: "RE7", dir: "Bad Belzig" }], [{ line: "RB14", dir: "Nauen" }], [{ line: "RB24", dir: "Senftenberg" }, { line: "RB24", dir: "Cottbus" }], [{ line: "S3", dir: "Erkner" }, { line: "S3", dir: "Friedrichshagen" }, { line: "S3", dir: "Köpenick" }], [{ line: "S5", dir: "Strausberg" }, { line: "S5", dir: "Hoppegarten" }, { line: "S5", dir: "Mahlsdorf" }, { line: "S5", dir: "Lichtenberg" }], [{ line: "S7", dir: "Ahrensfelde" }, { line: "S7", dir: "Lichtenberg" }], [{ line: "S75", dir: "Wartenberg" }, { line: "S75", dir: "Hohenschönhausen" }], [{ line: "S75", dir: "Lichtenberg" }], [{ line: "S3", dir: "Grunewald" }, { line: "S3", dir: "Spandau" }, { line: "S3", dir: "Westkreuz" }, { line: "S3", dir: "Charlottenburg" }, { line: "S3", dir: "Ostbahnhof" }], [{ line: "S5", dir: "Grunewald" }, { line: "S5", dir: "Westkreuz" }, { line: "S5", dir: "Ostbahnhof" }], [{ line: "S7", dir: "Potsdam" }, { line: "S7", dir: "Wannsee" }, { line: "S7", dir: "Grunewald" }, { line: "S7", dir: "Westkreuz" }, { line: "S7", dir: "Charlottenburg" }, { line: "S7", dir: "Ostbahnhof" }], [{ line: "S75", dir: "Ostbahnhof" }, { line: "S75", dir: "Warschauer Str" }], [{ line: "S9", dir: "Spandau" }, { line: "S9", dir: "Westkreuz" }, { line: "S9", dir: "Ostbahnhof" }], [{ line: "S41", dir: null }], [{ line: "S8", dir: "Zeuthen" }, { line: "S8", dir: "Grünau" }], [{ line: "S85", dir: "Grünau" }, { line: "S85", dir: "Schöneweide" }], [{ line: "S42", dir: null }], [{ line: "S8", dir: "Birkenwerder" }, { line: "S8", dir: "Blankenburg" }, { line: "S8", dir: "Pankow" }], [{ line: "S85", dir: "Pankow" }], [{ line: "194", dir: "Helene-Weigel-Platz" }, { line: "194", dir: "Friedrichsfelde Ost" }, { line: "194", dir: "Nöldnerplatz" }], [{ line: "347", dir: "Tunnelstr" }], [{ line: "N94", dir: "Magdalenenstr" }], [{ line: "194", dir: "Hermannplatz" }, { line: "194", dir: "Treptower Park" }], [{ line: "347", dir: "Ostbahnhof" }, { line: "347", dir: "Warschauer Str" }], [{ line: "N94", dir: "Hermannplatz" }]]];
           break;
         case "BPLA":
           this.stop = [900000110002];
@@ -275,7 +153,7 @@ class Station {
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
-          this.filter = [[[{ line: "240", dir: "Storkower" }], [{ line: "N50", dir: "Hugenottenplatz" }, { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" }, { line: "N50", dir: "Pankow" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }], [{ line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof Lichtenberg" }]]];
+          this.filter = [[[{ line: "240", dir: "Storkower Str" }], [{ line: "N50", dir: "Hugenottenplatz" }, { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" }, { line: "N50", dir: "Pankow" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }], [{ line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof Lichtenberg" }]]];
           break;
         case "bae":
           this.stop = [900000160509];
@@ -298,15 +176,16 @@ class Station {
           this.filter = [[[{ line: "135", dir: "Rathaus Spandau" }, { line: "135", dir: "Am Omnibushof" }], [{ line: "638", dir: "Rathaus Spandau" }], [{ line: "M49", dir: "Zoologischer Garten" }, { line: "M49", dir: "Savignyplatz" }, { line: "M49", dir: "Wilmersdorfer Str" }, { line: "M49", dir: "Haus des Rundfunks" }], [{ line: "X49", dir: "Wilmersdorfer Str" }], [{ line: "135", dir: "Alt-Kladow" }, { line: "135", dir: "Landstadt Gatow" }, { line: "135", dir: "Hottengrund" }], [{ line: "638", dir: "Hauptbahnhof" }, { line: "638", dir: "Campus Jungfernsee" }], [{ line: "338", dir: "Havelpark" }], [{ line: "M49", dir: "Nennhauser Damm" }, { line: "M49", dir: "Reimerweg" }], [{ line: "X49", dir: "Hahneberg" }, { line: "X49", dir: "Spektefeld" }]]];
           break;
       }
+      this.getData();
     });
   }
-  evalData(array) {
+  evalData(array, index) {
     if (array.length > 0) {
       const header = document.createElement('h2');
       header.innerHTML = `Abfahrten ab ${array[0].stop.name}`;
       this.container.appendChild(header);
 
-      this.filter.forEach(filterSet => {
+      this.filter[index].forEach(filterSet => {
         var subheader_ident = true;
         for (let i = 0; i < array.length; i++) {
           let identifier = false;
@@ -378,15 +257,15 @@ class Station {
     this._filter = newFilter;
   }
   getData() {
-    const url = `https://1.bvg.transport.rest/stations/${this.stop}/departures?duration=60&includeRelatedStations=${this.neighboring}`;
-    fetch(url)
-      .then(response => {
-        return response.json();
-      }).then(data => {
-        this.evalData(data);
-      }).catch(function (err) {
-        console.log(err);
-      });
+    this.stop.forEach((stop, index) => {
+      const url = `https://1.bvg.transport.rest/stations/${stop}/departures?duration=60&includeRelatedStations=false`;
+      fetch(url)
+        .then(response => {
+          return response.json();
+        }).then(data => {
+          this.evalData(data, index);
+        }).catch(err => console.log(err));
+    });
   }
   getMean(line) {
     switch (true) {
@@ -486,11 +365,4 @@ class Station {
     this._stop = newStop;
   }
 }
-
-const jov = new Station("#JOV", 900000160541, true, [[{ line: "240", dir: "Storkower" }], [{ line: "N50", dir: "Hugenottenplatz" }, { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" }, { line: "N50", dir: "Pankow" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }], [{ line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof Lichtenberg" }]]);
-const bae = new Station("#Bae", 900000160509, false, [[{ line: "M8", dir: "Hauptbahnhof" }, { line: "M8", dir: "Petersburger" }], [{ line: "M5", dir: "Petersburger" }], [{ line: "21", dir: "Schöneweide" }, { line: "21", dir: "Bersarinplatz" }, { line: "21", dir: "Treskowallee/Ehrlichstr" }], [{ line: "M8", dir: "Ahrensfelde/Stadtgrenze" }, { line: "M8", dir: "Betriebshof Marzahn" }], [{ line: "21", dir: "Gudrunstr" }]]);
-const moe = new Station("#Moe", 900000160014, true, [[{ line: "M13", dir: "Warschauer" }, { line: "M13", dir: "Frankfurter" }], [{ line: "16", dir: "Frankfurter" }], [{ line: "21", dir: "Schöneweide" }, { line: "21", dir: "Bersarinplatz" }, { line: "21", dir: "Treskowallee/Ehrlichstr" }], [{ line: "M13", dir: "Virchow-Klinikum" }, { line: "M13", dir: "Degnerstr" }, { line: "M13", dir: "Betriebshof Lichtenberg" }], [{ line: "16", dir: "Ahrensfelde/Stadtgrenze" }], [{ line: "21", dir: "Gudrunstr" }]]);
-const bsto = new Station("#BSTO", 900000110012, true, [[{ line: "S41", dir: null }], [{ line: "S8", dir: "Grünau" }, { line: "S8", dir: "Zeuthen" }], [{ line: "S85", dir: "Schöneweide" }, { line: "S85", dir: "Grünau" }], [{ line: "S42", dir: null }], [{ line: "S8", dir: "Birkenwerder" }, { line: "S8", dir: "Blankenburg" }], [{ line: "S85", dir: "Pankow" }], [{ line: "156", dir: "Stadion Buschallee" }, { line: "156", dir: "Große Seestr" }, { line: "156", dir: "Pasedagplatz" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }]]);
-const bmn = new Station("#BMN", 900000024106, false, [[{ line: "S41", dir: null }], [{ line: "S46", dir: "Westend" }, { line: "S46", dir: "Gesundbrunnen" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }], [{ line: "M49", dir: "Nennhauser Damm" }, { line: "M49", dir: "Reimerweg" }, { line: "M49", dir: "Gatower Str" }], [{ line: "X34", dir: "Hottengrund" }, { line: "X34", dir: "Gutsstr" }, { line: "X34", dir: "Gatower Str" }], [{ line: "X49", dir: "Hahneberg" }, { line: "X49", dir: "Spektefeld" }, { line: "X49", dir: "Gatower Str" }], [{ line: "139", dir: "Werderstr" }], [{ line: "218", dir: "Pfaueninsel" }], [{ line: "M49", dir: "Zoologischer Garten" }, { line: "M49", dir: "Savignyplatz" }, { line: "M49", dir: "Wilmersdorfer Str" }], [{ line: "X34", dir: "Zoologischer Garten" }, { line: "X34", dir: "Savignyplatz" }, { line: "X34", dir: "Wilmersdorfer" }], [{ line: "X49", dir: "Wilmersdorfer" }]]);
-const gat = new Station("#Gat", 900000032106, true, [[{ line: "M49", dir: "Zoologischer Garten" }, { line: "M49", dir: "Savignyplatz" }, { line: "M49", dir: "Wilmersdorfer Str" }, { line: "M49", dir: "Haus des Rundfunks" }], [{ line: "X34", dir: "Zoologischer Garten" }, { line: "X34", dir: "Savignyplatz" }, { line: "X34", dir: "Wilmersdorfer Str" }], [{ line: "X49", dir: "Wilmersdorfer" }], [{ line: "X34", dir: "Hottengrund" }, { line: "X34", dir: "Gutsstr" }], [{ line: "134", dir: "Hottengrund" }, { line: "134", dir: "Alt-Gatow" }, { line: "134", dir: "Alt-Kladow" }], [{ line: "M49", dir: "Nennhauser Damm" }, { line: "M49", dir: "Reimerweg" }], [{ line: "X49", dir: "Hahneberg" }, { line: "X49", dir: "Spektefeld" }], [{ line: "134", dir: "Wasserwerk Spandau" }, { line: "134", dir: "Kisseln" }, { line: "134", dir: "Rathaus Spandau" }], [{ line: "136", dir: "Aalemannufer" }, { line: "136", dir: "Hennigsdorf" }, { line: "136", dir: "Werderstr" }, { line: "136", dir: "Rathaus Spandau" }], [{ line: "236", dir: "Haselhorst" }, { line: "236", dir: "Rathaus Spandau" }], [{ line: "136", dir: "Am Omnibushof" }], [{ line: "236", dir: "Am Omnibushof" }]]);
-const wil = new Station("#Wil", 900000032102, true, [[{ line: "135", dir: "Rathaus Spandau" }, { line: "135", dir: "Am Omnibushof" }], [{ line: "638", dir: "Rathaus Spandau" }], [{ line: "135", dir: "Alt-Kladow" }, { line: "135", dir: "Landstadt Gatow" }, { line: "135", dir: "Hottengrund" }], [{ line: "638", dir: "Hauptbahnhof" }, { line: "638", dir: "Campus Jungfernsee" }], [{ line: "338", dir: "Havelpark" }]]);
+const jov = new Station([900000160541], [[[{ line: "240", dir: "Storkower" }], [{ line: "N50", dir: "Hugenottenplatz" }, { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" }, { line: "N50", dir: "Pankow" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }], [{ line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof Lichtenberg" }]]]);
