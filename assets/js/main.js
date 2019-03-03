@@ -205,6 +205,9 @@ addS45(){
 addS46(){
   this.S46 = { KW: { line: "S46", dir: "Königs Wusterhausen" }, WI: { line: "S46", dir: "Wildau" }, ZTH: { line: "S46", dir: "Zeuthen" }, EIW: { line: "S46", dir: "Eichwalde" }, GAS: { line: "S46", dir: "Grünau" }, ADL: { line: "S46", dir: "Adlershof" }, SCF: { line: "S46", dir: "Betriebsbahnhof Schöneweide" }, SW: { line: "S46", dir: "Schöneweide" }, BMW: { line: "S46", dir: "Baumschulenweg" }, PWA: { line: "S46", dir: "Plänterwald" }, TP: { line: "S46", dir: "Treptower Park" }, KHD: { line: "S46", dir: "Köllnische Heide" }, NK: { line: "S46", dir: "Neukölln" }, HER: { line: "S46", dir: "Hermannstr" }, THF: { line: "S46", dir: "Tempelhof" }, SKR: { line: "S46", dir: "Südkreuz" }, SGR: { line: "S46", dir: "Schöneberg" }, IP: { line: "S46", dir: "Innsbrucker Platz" }, BUP: { line: "S46", dir: "Bundesplatz" }, HEI: { line: "S46", dir: "Heidelberger Platz" }, HO: { line: "S46", dir: "Hohenzollerndamm" }, HAL: { line: "S46", dir: "Halensee" }, WKRR: { line: "S46", dir: "Westkreuz" }, MN: { line: "S46", dir: "Messe Nord/ICC" }, WES: { line: "S46", dir: "Westend" }, JUN: { line: "S46", dir: "Jungfernheide" }, BEU: { line: "S46", dir: "Beusselstr" }, WH: { line: "S46", dir: "Westhafen" }, WED: { line: "S46", dir: "Wedding" }, GB: { line: "S46", dir: "Gesundbrunnen" } };
 }
+addS47(){
+  this.S47 = { SPF: { line: "S47", dir: "Spindlersfeld" }, OSP: { line: "S47", dir: "Oberspree" }, SW: { line: "S47", dir: "Schöneweide" }, BMW: { line: "S47", dir: "Baumschulenweg" }, PWA: { line: "S47", dir: "Plänterwald" }, ; TP: { line: "S47", dir: "Treptower Park" }, KHD: { line: "S47", dir: "Köllnische Heide" }, NK: { line: "S47", ; dir: "Neukölln" }, HER: { line: "S47", dir: "Hermannstr" } };
+}
 evalData(array, index) {
   if (array.length > 0) {
     const header = document.createElement('h2');
