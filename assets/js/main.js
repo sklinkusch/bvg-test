@@ -257,6 +257,11 @@ class Station {
           this.neighboring = false;
           this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "U6", dir: "Alt-Tegel" }, { line: "U6", dir: "Kurt-Schumacher-Platz" }, { line: "U6", dir: "Seestr" }], [{ line: "U6", dir: "Alt-Mariendorf" }, { line: "U6", dir: "Tempelhof" }, { line: "U6", dir: "Platz der Luftbrücke" }, { line: "U6", dir: "Hallesches Tor" }], [{ line: "120", dir: "Wilhelmsruher Damm" }, { line: "120", dir: "Wittenau" }, { line: "120", dir: "Paracelsus-Bad" }, { line: "120", dir: "Leopoldplatz" }], [{ line: "N6", dir: "Alt-Tegel" }], [{ line: "N20", dir: "Hainbuchenstr" }]], [[{ line: "M27", dir: "Jungfernheide" }], [{ line: "247", dir: "Leopoldplatz" }], [{ line: "M27", dir: "Pankow" }], [{ line: "247", dir: "Nordbahnhof" }, { line: "247", dir: "Bernauer Str" }]]];
           break;
+        case "BWES":
+          this.stop = [900000026207];
+          this.neighboring = false;
+          this.filter = [[[{ line: "S41", dir: null }], [{ line: "S46", dir: "Gesundbrunnen" }], [{ line: "S42", dir: null }], [{ line: "S46", dir: "Königs Wusterhausen" }, { line: "S46", dir: "Grünau" }], [{ line: "M45", dir: "Johannesstift" }, { line: "M45", dir: "DRK-Kliniken Westend" }, { line: "M45", dir: "Rathaus Spandau" }], [{ line: "M45", dir: "Zoologischer Garten" }]]];
+          break;
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
