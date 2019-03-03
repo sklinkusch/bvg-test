@@ -1,10 +1,10 @@
 class Station {
   constructor(station, filterValues) {
+    this.addLines();
     this.container = document.querySelector("#container");
     this._stop = station;
     this._neighboring = false;
     this._filter = filterValues;
-    this.addLines();
     this.getData();
     this.addEventListeners();
   }
