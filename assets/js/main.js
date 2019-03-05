@@ -134,145 +134,22 @@ class Station {
         case "BWED":
           this.stop = [900000009104, 900000008103];
           this.neighboring = false;
-          this.filter = [
-            [
-              [{ line: "S41", dir: null }],
-              [{ line: "S46", dir: "Gesundbrunnen" }],
-              [{ line: "S42", dir: null }],
-              [
-                { line: "S46", dir: "Königs Wusterhausen" },
-                { line: "S46", dir: "Grünau" }
-              ],
-              [
-                { line: "U6", dir: "Alt-Tegel" },
-                { line: "U6", dir: "Kurt-Schumacher-Platz" },
-                { line: "U6", dir: "Seestr" }
-              ],
-              [
-                { line: "U6", dir: "Alt-Mariendorf" },
-                { line: "U6", dir: "Tempelhof" },
-                { line: "U6", dir: "Platz der Luftbrücke" },
-                { line: "U6", dir: "Hallesches Tor" }
-              ],
-              [
-                { line: "120", dir: "Wilhelmsruher Damm" },
-                { line: "120", dir: "Wittenau" },
-                { line: "120", dir: "Paracelsus-Bad" },
-                { line: "120", dir: "Leopoldplatz" }
-              ],
-              [{ line: "N6", dir: "Alt-Tegel" }],
-              [{ line: "N20", dir: "Hainbuchenstr" }]
-            ],
-            [
-              [{ line: "M27", dir: "Jungfernheide" }],
-              [{ line: "247", dir: "Leopoldplatz" }],
-              [{ line: "M27", dir: "Pankow" }],
-              [
-                { line: "247", dir: "Nordbahnhof" },
-                { line: "247", dir: "Bernauer Str" }
-              ]
-            ]
-          ];
+          this.filter = [[[this.S41], [this.S46.GB], [this.S42], [this.S46.KW, this.S46.WI, this.S46.ZTH, this.S46.EIW, this.S46.GAS, this.S46.ADL, this.S46.SCF, this.S46.SW, this.S46.BMW, this.S46.KHD, this.S46.NK, this.S46.HER, this.S46.THF, this.S46.SKR, this.S46.SGR, this.S46.IP, this.S46.BUP, this.S46.HEI, this.S46.HO, this.S46.HAL, this.S46.WKRR, this.S46.MN, this.S46.WES, this.S46.JUN, this.S46.BEU, this.S46.WH], [{ line: "U6", dir: "Alt-Tegel" }, { line: "U6", dir: "Kurt-Schumacher-Platz" }, { line: "U6", dir: "Seestr" }], [{ line: "U6", dir: "Alt-Mariendorf" }, { line: "U6", dir: "Tempelhof" }, { line: "U6", dir: "Platz der Luftbrücke" }, { line: "U6", dir: "Hallesches Tor" }], [{ line: "120", dir: "Wilhelmsruher Damm" }, { line: "120", dir: "Wittenau" }, { line: "120", dir: "Paracelsus-Bad" }, { line: "120", dir: "Leopoldplatz" }], [{ line: "N6", dir: "Alt-Tegel" }], [{ line: "N20", dir: "Hainbuchenstr" }]], [[{ line: "M27", dir: "Jungfernheide" }], [{ line: "247", dir: "Leopoldplatz" }], [{ line: "M27", dir: "Pankow" }], [{ line: "247", dir: "Nordbahnhof" }, { line: "247", dir: "Bernauer Str" }]]];
           break;
         case "BWES":
           this.stop = [900000026207];
           this.neighboring = false;
-          this.filter = [
-            [
-              [{ line: "S41", dir: null }],
-              [{ line: "S46", dir: "Gesundbrunnen" }],
-              [{ line: "S42", dir: null }],
-              [
-                { line: "S46", dir: "Königs Wusterhausen" },
-                { line: "S46", dir: "Grünau" }
-              ],
-              [
-                { line: "M45", dir: "Johannesstift" },
-                { line: "M45", dir: "DRK-Kliniken Westend" },
-                { line: "M45", dir: "Rathaus Spandau" }
-              ],
-              [{ line: "M45", dir: "Zoologischer Garten" }]
-            ]
-          ];
+          this.filter = [[[this.S41], [this.S46.GB, this.S46.WED, this.S46.WH, this.S46.BEU, this.S46.JUN], [this.S42], [this.S46.KW, this.S46.WI, this.S46.ZTH, this.S46.EIW, this.S46.GAS, this.S46.ADL, this.S46.SCF, this.S46.SW, this.S46.BMW, this.S46.KHD, this.S46.NK, this.S46.HER, this.S46.THF, this.S46.SKR, this.S46.SGR, this.S46.IP, this.S46.BUP, this.S46.HEI, this.S46.HO, this.S46.HAL, this.S46.WKRR, this.S46.MN], [{ line: "M45", dir: "Johannesstift" }, { line: "M45", dir: "DRK-Kliniken Westend" }, { line: "M45", dir: "Rathaus Spandau" }], [{ line: "M45", dir: "Zoologischer Garten" }]]];
           break;
         case "BWH":
           this.stop = [900000001201];
           this.neighboring = false;
-          this.filter = [
-            [
-              [{ line: "S41", dir: null }],
-              [{ line: "S46", dir: "Gesundbrunnen" }],
-              [{ line: "S42", dir: null }],
-              [
-                { line: "S46", dir: "Königs Wusterhausen" },
-                { line: "S46", dir: "Grünau" }
-              ],
-              [{ line: "U9", dir: "Osloer Str" }],
-              [
-                { line: "U9", dir: "Rathaus Steglitz" },
-                { line: "U9", dir: "Zoologischer Garten" }
-              ],
-              [{ line: "N9", dir: "Osloer Str" }],
-              [
-                { line: "N9", dir: "Rathaus Steglitz" },
-                { line: "N9", dir: "Zoologischer Garten" }
-              ]
-            ]
-          ];
+          this.filter = [[[this.S41], [this.S46.GB, this.S46.WED], [this.S42], [this.S46.KW, this.S46.WI, this.S46.ZTH, this.S46.EIW, this.S46.GAS, this.S46.ADL, this.S46.SCF, this.S46.SW, this.S46.BMW, this.S46.KHD, this.S46.NK, this.S46.HER, this.S46.THF, this.S46.SKR, this.S46.SGR, this.S46.IP, this.S46.BUP, this.S46.HEI, this.S46.HO, this.S46.HAL, this.S46.WKRR, this.S46.MN, this.S46.WES, this.S46.JUN, this.S46.BEU], [{ line: "U9", dir: "Osloer Str" }], [{ line: "U9", dir: "Rathaus Steglitz" }, { line: "U9", dir: "Zoologischer Garten" }], [{ line: "N9", dir: "Osloer Str" }], [{ line: "N9", dir: "Rathaus Steglitz" }, { line: "N9", dir: "Zoologischer Garten" }]]];
           break;
         case "BWK":
           this.stop = [900000024102];
           this.neighboring = false;
-          this.filter = [
-            [
-              [
-                { line: "S3", dir: "Grunewald" },
-                { line: "S3", dir: "Spandau" }
-              ],
-              [{ line: "S5", dir: "Grunewald" }],
-              [
-                { line: "S7", dir: "Potsdam" },
-                { line: "S7", dir: "Wannsee" },
-                { line: "S7", dir: "Grunewald" }
-              ],
-              [{ line: "S9", dir: "Spandau" }],
-              [
-                { line: "S3", dir: "Erkner" },
-                { line: "S3", dir: "Friedrichshagen" },
-                { line: "S3", dir: "Köpenick" }
-              ],
-              [
-                { line: "S5", dir: "Strausberg" },
-                { line: "S5", dir: "Hoppegarten" },
-                { line: "S5", dir: "Mahlsdorf" },
-                { line: "S5", dir: "Lichtenberg" }
-              ],
-              [
-                { line: "S7", dir: "Ahrensfelde" },
-                { line: "S7", dir: "Lichtenberg" },
-                { line: "S7", dir: "Ostbahnhof" }
-              ],
-              [
-                { line: "S9", dir: "Schönefeld" },
-                { line: "S9", dir: "Schöneweide" }
-              ],
-              [{ line: "S41", dir: null }],
-              [
-                { line: "S46", dir: "Gesundbrunnen" },
-                { line: "S46", dir: "Westend" }
-              ],
-              [{ line: "S42", dir: null }],
-              [
-                { line: "S46", dir: "Königs Wusterhausen" },
-                { line: "S46", dir: "Grünau" }
-              ],
-              [
-                { line: "104", dir: "Brixplatz" },
-                { line: "104", dir: "Theodor-Heuss-Platz" }
-              ],
-              [{ line: "N42", dir: "Theodor-Heuss-Platz" }]
-            ]
-          ];
+          this.filter = [[[this.S3.GWD, this.S3.SPA, this.S3.SRW, this.S3.PIC, this.S3.OLS, this.S3.HST, this.S3.MS], [this.S5.GWD, this.S5.OLS, this.S5.HST, this.S5.MS], [this.S7.PDH, this.S7.BAB, this.S7.GRI, this.S7.WSS, this.S7.NIS, this.S7.GWD], [this.S9.GWD, this.S9.SPA, this.S9.SRW, this.S9.PIC, this.S9.OLS, this.S9.HST, this.S9.MS], [this.S3.E, this.S3.WIG, this.S3.RD, this.S3.FRH, this.S3.HIG, this.S3.KPK, this.S3.WHH, this.S3.KLH, this.S3.RB, this.S3.RH, this.S3.OKS, this.S3.WRS, this.S3.OSB, this.S3.JB, this.S3.ALX, this.S3.HKM, this.S3.FST, this.S3.HBF, this.S3.BEV, this.S3.TGN, this.S3.ZOS, this.S3.SAP, this.S3.CHS], [this.S5.STN, this.S5.STR, this.S5.HGM, this.S5.STV, this.S5.PEN, this.S5.FD, this.S5.NG, this.S5.HPG, this.S5.BIS, this.S5.MDF, this.S5.KAD, this.S5.WT, this.S5.BDF, this.S5.FFO, this.S5.LI, this.S5.NPL, this.S5.OKS, this.S5.WRS, this.S5.OSB, this.S5.JB, this.S5.ALX, this.S5.HKM, this.S5.FST, this.S5.HBF, this.S5.BEV, this.S5.TGN, this.S5.ZOS, this.S5.SAP, this.S5.CHS], [this.S7.AF, this.S7.MEA, this.S7.RW, this.S7.MAZ, this.S7.POE, this.S7.SPH, this.S7.FFO, this.S7.LI, this.S7.NPL, this.S7.OKS, this.S7.WRS, this.S7.OSB, this.S7.JB, this.S7.ALX, this.S7.HKM, this.S7.FST, this.S7.HBF, this.S7.BEV, this.S7.TGN, this.S7.ZOS, this.S7.SAP, this.S7.CHS], [this.S9.LI, this.S9.NPL, this.S9.OKS, this.S9.FLH, this.S9.GBA, this.S9.AGL, this.S9.GAS, this.S9.ADL, this.S9.SCF, this.S9.SW, this.S9.BMW, this.S9.PWA, this.S9.TP, this.S9.WRS, this.S9.OSB, this.S9.JB, this.S9.ALX, this.S9.HKM, this.S9.FST, this.S9.HBF, this.S9.BEV, this.S9.TGN, this.S9.ZOS, this.S9.SAP, this.S9.CHS], [this.S41], [this.S46.GB, this.S46.WED, this.S46.WH, this.S46.BEU, this.S46.JUN, this.S46.WES, this.S46.MN], [this.S42], [this.S46.KW, this.S46.WI, this.S46.ZTH, this.S46.EIW, this.S46.GAS, this.S46.ADL, this.S46.SCF, this.S46.SW, this.S46.BMW, this.S46.KHD, this.S46.NK, this.S46.HER, this.S46.THF, this.S46.SKR, this.S46.SGR, this.S46.IP, this.S46.BUP, this.S46.HEI, this.S46.HO, this.S46.HAL], [{ line: "104", dir: "Brixplatz" }, { line: "104", dir: "Theodor-Heuss-Platz" }], [{ line: "N42", dir: "Theodor-Heuss-Platz" }]]];
           break;
         case "jov":
           this.stop = [900000160541];
