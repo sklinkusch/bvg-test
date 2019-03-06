@@ -1,0 +1,25 @@
+{
+  "name": "bvg-test",
+  "version": "1.0.0",
+  "description": "a timetable app for Berlin transport service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sklinkusch/bvg-test.git"
+  },
+  "keywords": [
+    "timetable",
+    "BVG",
+    "S-Bahn",
+    "DB"
+  ],
+  "author": "Stefan Klinkusch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sklinkusch/bvg-test/issues"
+  },
+  "homepage": "https://github.com/sklinkusch/bvg-test#readme"
+}
