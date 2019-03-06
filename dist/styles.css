@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #111a29;
+  background-image: url("../src/soroush-karimi-192112-unsplash.min.jpg");
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+
+header,
+footer {
+  background: #333;
+  opacity: 0.7;
+  color: white;
+  width: 85%;
+  margin: 35px auto;
+  padding: 20px;
+  text-align: center; }
+
+main {
+  background: white;
+  opacity: 0.7;
+  width: 85%;
+  margin: 20px auto;
+  padding: 10px; }
+
+main > div {
+  margin: 15px 15px 15px 15px; }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
+
+.row > * {
+  flex: 1; }
+
+h2 {
+  margin: 10px 0 10px 0; }
+
+h3 {
+  margin: 5px 0 5px 0; }
+
+.planTime,
+.realTime {
+  flex: 0 0 50px; }
+
+.delay {
+  flex: 0 0 30px;
+  text-align: right;
+  padding-right: 10px; }
+
+.transport {
+  flex: 0 0 35px;
+  text-align: center; }
+
+.line {
+  flex: 0 0 80px; }
+
+/*# sourceMappingURL=styles.css.map */
