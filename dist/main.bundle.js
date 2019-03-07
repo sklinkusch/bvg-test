@@ -2000,6 +2000,7 @@ function () {
       this.addU2();
       this.addU3();
       this.addU4();
+      this.addU5();
     }
   }, {
     key: "addS1",
@@ -3893,6 +3894,96 @@ function () {
         },
         NULL: {
           line: "U4",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU5",
+    value: function addU5() {
+      this.U5 = {
+        Hö: {
+          line: "U5",
+          dir: "Hönow"
+        },
+        LL: {
+          line: "U5",
+          dir: "Louis-Lewin-Str"
+        },
+        HD: {
+          line: "U5",
+          dir: "Hellersdorf"
+        },
+        C: {
+          line: "U5",
+          dir: "Cottbusser Platz"
+        },
+        GK: {
+          line: "U5",
+          dir: "Kienberg"
+        },
+        KL: {
+          line: "U5",
+          dir: "Kaulsdorf-Nord"
+        },
+        Wh: {
+          line: "U5",
+          dir: "Wuhletal"
+        },
+        E: {
+          line: "U5",
+          dir: "Elsterwerdaer Platz"
+        },
+        Bü: {
+          line: "U5",
+          dir: "Biesdorf-Süd"
+        },
+        Tk: {
+          line: "U5",
+          dir: "Tierpark"
+        },
+        Fi: {
+          line: "U5",
+          dir: "Friedrichsfelde"
+        },
+        Li: {
+          line: "U5",
+          dir: "Lichtenberg"
+        },
+        Md: {
+          line: "U5",
+          dir: "Magdalenenstr"
+        },
+        Ff: {
+          line: "U5",
+          dir: "Frankfurter Allee"
+        },
+        Sa: {
+          line: "U5",
+          dir: "Samariterstr"
+        },
+        FT: {
+          line: "U5",
+          dir: "Frankfurter Tor"
+        },
+        WR: {
+          line: "U5",
+          dir: "Weberwiese"
+        },
+        Sr: {
+          line: "U5",
+          dir: "Strausberger Platz"
+        },
+        Si: {
+          line: "U5",
+          dir: "Schillingstr"
+        },
+        Al: {
+          line: "U5",
+          dir: "Alexanderplatz"
+        },
+        NULL: {
+          line: "U5",
           dir: null
         }
       };
