@@ -27,17 +27,15 @@ main {
   width: 85%;
   margin: 20px auto;
   padding: 10px; }
-
-main > div {
-  margin: 15px 15px 15px 15px; }
+  main div#container {
+    margin: 15px; }
 
 .row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap; }
-
-.row > * {
-  flex: 1; }
+  .row * {
+    flex: 1; }
 
 h2 {
   margin: 10px 0 10px 0; }
