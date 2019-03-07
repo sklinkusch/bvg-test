@@ -409,6 +409,38 @@ class Station {
   addS9() {
     this.S9 = { FLH: { line: "S9", dir: "Flughafen Berlin-Schönefeld" }, GBA: { line: "S9", dir: "Grünbergallee" }, AGL: { line: "S9", dir: "Altglienicke" }, GAS: { line: "S9", dir: "Grünau" }, ADL: { line: "S9", dir: "Adlershof" }, SCF: { line: "S9", dir: "Betriebsbahnhof Schöneweide" }, SW: { line: "S9", dir: "Schöneweide" }, BMW: { line: "S9", dir: "Baumschulenweg" }, PWA: { line: "S9", dir: "Plänterwald" }, TP: { line: "S9", dir: "Treptower Park" }, WRS: { line: "S9", dir: "Warschauer Str" }, OSB: { line: "S9", dir: "Ostbahnhof" }, JB: { line: "S9", dir: "Jannowitzbrücke" }, ALX: { line: "S9", dir: "Alexanderplatz" }, HKM: { line: "S9", dir: "Hackescher Markt" }, FST: { line: "S9", dir: "Friedrichstr" }, HBF: { line: "S9", dir: "Hauptbahnhof" }, BEV: { line: "S9", dir: "Bellevue" }, TGN: { line: "S9", dir: "Tiergarten" }, ZOS: { line: "S9", dir: "Zoologischer Garten" }, SAP: { line: "S9", dir: "Savignyplatz" }, CHS: { line: "S9", dir: "Charlottenburg" }, WKS: { line: "S9", dir: "Westkreuz" }, GWD: { line: "S9", dir: "Grunewald" }, MS: { line: "S9", dir: "Messe Süd" }, HST: { line: "S9", dir: "Heerstr" }, OLS: { line: "S9", dir: "Olympiastadion" }, PIC: { line: "S9", dir: "Pichelsberg" }, SRW: { line: "S9", dir: "Stresow" }, SPA: { line: "S9", dir: "Spandau" }, OKS: { line: "S9", dir: "Ostkreuz" }, NPL: { line: "S9", dir: "Nöldnerplatz" }, LI: { line: "S9", dir: "Lichtenberg" }, NULL: { line: "S9", dir: null } };
   }
+  checkBarrier(array){
+    for(let i = 0; i < array.length; i++){
+      if(array[i].code == "bf"){
+        return `<span class="fas fa-wheelchair" title="barrier-free">&nbsp;</span>`;
+      }
+    }
+    return "";
+  }
+  checkBike(array){
+    for(let i = 0; i < array.length; i++){
+      if(array[i].code == "FB"){
+        return `<span class="fas fa-bicycle" title="You can take your bike with you.">&nbsp;</span>`;
+      }
+    }
+    return "";
+  }
+  checkState(array){
+    for(let i = 0; i < array.length; i++){
+      if(array[i].type == "status"){
+        return `<span class="fas fa-times" title="${array[i].text}">&nbsp;</span>`;
+      }
+    }
+    return "";
+  }
+  checkWarning(array){
+    for(let i = 0; i < array.length; i++){
+      if(array[i].type == "warning"){
+        return `<span class="fas fa-exclamation-triangle" title="${array[i].validFrom} - ${array[i].validUntil}: ${array[i].summary}, ${array[i].text}">&nbsp;</span>`
+      }
+    }
+    return "";
+  }
   evalData(array, index) {
     if (array.length > 0) {
       const header = document.createElement("h2");
@@ -467,6 +499,11 @@ class Station {
             const line = array[i].line.name;
             const mean = this.getMean(line);
             const target = array[i].direction;
+            const remarks = array[i].remarks;
+            const barrier = this.checkBarrier(remarks);
+            const bike = this.checkBike(remarks);
+            const warning = this.checkWarning(remarks);
+            const state = this.checkState(remarks);
             const row = document.createElement("div");
             row.className = "row";
             row.innerHTML = `
@@ -476,6 +513,10 @@ class Station {
             <div class="transport">${mean}</div>
             <div class="line">${line}</div>
             <div class="direction">${target}</div>
+            <div class="barrier">${barrier}</div>
+            <div class="bike">${bike}</div>
+            <div class="warning">${warning}</div>
+            <div class="status">${state}</div>
             `;
             this.container.appendChild(row);
           }

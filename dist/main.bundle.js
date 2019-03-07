@@ -3554,6 +3554,50 @@ function () {
       };
     }
   }, {
+    key: "checkBarrier",
+    value: function checkBarrier(array) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].code == "bf") {
+          return "<span class=\"fas fa-wheelchair\" title=\"barrier-free\">&nbsp;</span>";
+        }
+      }
+
+      return "";
+    }
+  }, {
+    key: "checkBike",
+    value: function checkBike(array) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].code == "FB") {
+          return "<span class=\"fas fa-bicycle\" title=\"You can take your bike with you.\">&nbsp;</span>";
+        }
+      }
+
+      return "";
+    }
+  }, {
+    key: "checkState",
+    value: function checkState(array) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].type == "status") {
+          return "<span class=\"fas fa-times\" title=\"".concat(array[i].text, "\">&nbsp;</span>");
+        }
+      }
+
+      return "";
+    }
+  }, {
+    key: "checkWarning",
+    value: function checkWarning(array) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].type == "warning") {
+          return "<span class=\"fas fa-exclamation-triangle\" title=\"".concat(array[i].validFrom, " - ").concat(array[i].validUntil, ": ").concat(array[i].summary, ", ").concat(array[i].text, "\">&nbsp;</span>");
+        }
+      }
+
+      return "";
+    }
+  }, {
     key: "evalData",
     value: function evalData(array, index) {
       var _this2 = this;
@@ -3623,9 +3667,19 @@ function () {
               var mean = _this2.getMean(line);
 
               var target = array[i].direction;
+              var remarks = array[i].remarks;
+
+              var barrier = _this2.checkBarrier(remarks);
+
+              var bike = _this2.checkBike(remarks);
+
+              var warning = _this2.checkWarning(remarks);
+
+              var state = _this2.checkState(remarks);
+
               var row = document.createElement("div");
               row.className = "row";
-              row.innerHTML = "\n            <div class=\"planTime\">".concat(planTime, "</div>\n            <div class=\"realTime\">").concat(realTime, "</div>\n            <div class=\"delay\">").concat(delay, "</div>\n            <div class=\"transport\">").concat(mean, "</div>\n            <div class=\"line\">").concat(line, "</div>\n            <div class=\"direction\">").concat(target, "</div>\n            ");
+              row.innerHTML = "\n            <div class=\"planTime\">".concat(planTime, "</div>\n            <div class=\"realTime\">").concat(realTime, "</div>\n            <div class=\"delay\">").concat(delay, "</div>\n            <div class=\"transport\">").concat(mean, "</div>\n            <div class=\"line\">").concat(line, "</div>\n            <div class=\"direction\">").concat(target, "</div>\n            <div class=\"barrier\">").concat(barrier, "</div>\n            <div class=\"bike\">").concat(bike, "</div>\n            <div class=\"warning\">").concat(warning, "</div>\n            <div class=\"status\">").concat(state, "</div>\n            ");
 
               _this2.container.appendChild(row);
             }
