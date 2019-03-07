@@ -1998,6 +1998,7 @@ function () {
       this.addS9();
       this.addU1();
       this.addU2();
+      this.addU3();
     }
   }, {
     key: "addS1",
@@ -3755,6 +3756,112 @@ function () {
         },
         NULL: {
           line: "U2",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU3",
+    value: function addU3() {
+      this.U3 = {
+        K: {
+          line: "U3",
+          dir: "Krumme Lanke"
+        },
+        Ot: {
+          line: "U3",
+          dir: "Onkel Toms Hütte"
+        },
+        Os: {
+          line: "U3",
+          dir: "Oskar-Helene-Heim"
+        },
+        T: {
+          line: "U3",
+          dir: "Freie Universität"
+        },
+        Dd: {
+          line: "U3",
+          dir: "Dahlem-Dorf"
+        },
+        Po: {
+          line: "U3",
+          dir: "Podbielskiallee"
+        },
+        Bt: {
+          line: "U3",
+          dir: "Breitenbachplatz"
+        },
+        Rd: {
+          line: "U3",
+          dir: "Rüdesheimer Platz"
+        },
+        Hb: {
+          line: "U3",
+          dir: "Heidelberger Platz"
+        },
+        Fpo: {
+          line: "U3",
+          dir: "Fehrbelliner Platz"
+        },
+        Hz: {
+          line: "U3",
+          dir: "Hohenzollernplatz"
+        },
+        Sno: {
+          line: "U3",
+          dir: "Spichernstr"
+        },
+        Au: {
+          line: "U3",
+          dir: "Augsburger Str"
+        },
+        Wt: {
+          line: "U3",
+          dir: "Wittenbergplatz"
+        },
+        N: {
+          line: "U3",
+          dir: "Nollendorfplatz"
+        },
+        Kus: {
+          line: "U3",
+          dir: "Kurfürstenstr"
+        },
+        Go: {
+          line: "U3",
+          dir: "Gleisdreieck"
+        },
+        Mo: {
+          line: "U3",
+          dir: "Möckernbrücke"
+        },
+        Ho: {
+          line: "U3",
+          dir: "Hallesches Tor"
+        },
+        Pr: {
+          line: "U3",
+          dir: "Prinzenstr"
+        },
+        Kbo: {
+          line: "U3",
+          dir: "Kottbusser Tor"
+        },
+        Gr: {
+          line: "U3",
+          dir: "Görlitzer Bahnhof"
+        },
+        S: {
+          line: "U3",
+          dir: "Schlesisches Tor"
+        },
+        WA: {
+          line: "U3",
+          dir: "Warschauer Str"
+        },
+        NULL: {
+          line: "U3",
           dir: null
         }
       };
