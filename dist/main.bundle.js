@@ -3737,6 +3737,22 @@ function () {
           line: "U2",
           dir: "Ruhleben"
         },
+        Au: {
+          line: "U2",
+          dir: "Augsburger Str"
+        },
+        Sno: {
+          line: "U2",
+          dir: "Spichernstr"
+        },
+        Hz: {
+          line: "U2",
+          dir: "Hohenzollernplatz"
+        },
+        Fpo: {
+          line: "U2",
+          dir: "Fehrbelliner Platz"
+        },
         NULL: {
           line: "U2",
           dir: null
