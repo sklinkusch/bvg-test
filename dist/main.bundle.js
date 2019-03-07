@@ -1999,6 +1999,7 @@ function () {
       this.addU1();
       this.addU2();
       this.addU3();
+      this.addU4();
     }
   }, {
     key: "addS1",
@@ -3862,6 +3863,36 @@ function () {
         },
         NULL: {
           line: "U3",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU4",
+    value: function addU4() {
+      this.addU4 = {
+        Nm: {
+          line: "U4",
+          dir: "Nollendorfplatz"
+        },
+        V: {
+          line: "U4",
+          dir: "Viktoria-Luise-Platz"
+        },
+        Bpo: {
+          line: "U4",
+          dir: "Bayerischer Platz"
+        },
+        RS: {
+          line: "U4",
+          dir: "Rathaus Schöneberg"
+        },
+        Ip: {
+          line: "U4",
+          dir: "Innsbrucker Platz"
+        },
+        NULL: {
+          line: "U4",
           dir: null
         }
       };

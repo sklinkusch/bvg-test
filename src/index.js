@@ -363,6 +363,7 @@ class Station {
     this.addU1();
     this.addU2();
     this.addU3();
+    this.addU4();
   }
   addS1() {
     this.S1 = { PDH: { line: "S1", dir: "Potsdam" }, BAB: { line: "S1", dir: "Babelsberg" }, GRI: { line: "S1", dir: "Griebnitzsee" }, WSS: { line: "S1", dir: "Wannsee" }, NIW: { line: "S1", dir: "Nikolassee" }, SLS: { line: "S1", dir: "Schlachtensee" }, MEX: { line: "S1", dir: "Mexikoplatz" }, ZD: { line: "S1", dir: "Zehlendorf" }, SDG: { line: "S1", dir: "Sundgauer Str" }, LWE: { line: "S1", dir: "Lichterfelde West" }, BGT: { line: "S1", dir: "Botanischer Garten" }, RST: { line: "S1", dir: "Rathaus Steglitz" }, FB: { line: "S1", dir: "Feuerbachstr" }, FRU: { line: "S1", dir: "Friedenau" }, SGV: { line: "S1", dir: "Schöneberg" }, JLB: { line: "S1", dir: "Julius-Leber-Brücke" }, YOR: { line: "S1", dir: "Yorckstr" }, AHU: { line: "S1", dir: "Anhalter Bahnhof" }, POP: { line: "S1", dir: "Potsdamer Platz" }, TOR: { line: "S1", dir: "Brandenburger Tor" }, FSTT: { line: "S1", dir: "Friedrichstr" }, ORS: { line: "S1", dir: "Oranienburger Str" }, NB: { line: "S1", dir: "Nordbahnhof" }, HUM: { line: "S1", dir: "Humboldthain" }, GB: { line: "S1", dir: "Gesundbrunnen" }, BOS: { line: "S1", dir: "Bornholmer Str" }, WOK: { line: "S1", dir: "Wollankstr" }, SNH: { line: "S1", dir: "Schönholz" }, WM: { line: "S1", dir: "Wilhelmsruh" }, WIN: { line: "S1", dir: "Wittenau" }, WAI: { line: "S1", dir: "Waidmannslust" }, HED: { line: "S1", dir: "Hermsdorf" }, FOH: { line: "S1", dir: "Frohnau" }, HN: { line: "S1", dir: "Hohen Neuendorf" }, BIW: { line: "S1", dir: "Birkenwerder" }, BOR: { line: "S1", dir: "Borgsdorf" }, LEN: { line: "S1", dir: "Lehnitz" }, ORB: { line: "S1", dir: "Oranienburg" }, NULL: { line: "S1", dir: null } };
@@ -420,6 +421,9 @@ class Station {
   }
   addU3(){
     this.U3 = {K: {line: "U3", dir: "Krumme Lanke"}, Ot: {line: "U3", dir: "Onkel Toms Hütte"}, Os: {line: "U3", dir: "Oskar-Helene-Heim"}, T: {line: "U3", dir: "Freie Universität"}, Dd: {line: "U3", dir: "Dahlem-Dorf"}, Po: {line: "U3", dir: "Podbielskiallee"}, Bt: {line: "U3", dir: "Breitenbachplatz"}, Rd: {line: "U3", dir: "Rüdesheimer Platz"}, Hb: {line: "U3", dir: "Heidelberger Platz"}, Fpo: {line: "U3", dir: "Fehrbelliner Platz"}, Hz: {line: "U3", dir: "Hohenzollernplatz"}, Sno: {line: "U3", dir: "Spichernstr"}, Au: {line: "U3", dir: "Augsburger Str"}, Wt: {line: "U3", dir: "Wittenbergplatz"}, N: {line: "U3", dir: "Nollendorfplatz"}, Kus: {line: "U3", dir: "Kurfürstenstr"}, Go: {line: "U3", dir: "Gleisdreieck"}, Mo: {line: "U3", dir: "Möckernbrücke"}, Ho: {line: "U3", dir: "Hallesches Tor"}, Pr: {line: "U3", dir: "Prinzenstr"}, Kbo: {line: "U3", dir: "Kottbusser Tor"}, Gr: {line: "U3", dir: "Görlitzer Bahnhof"}, S: {line: "U3", dir: "Schlesisches Tor"}, WA: {line: "U3", dir: "Warschauer Str"}, NULL: {line: "U3", dir: null}};
+  }
+  addU4(){
+    this.addU4 = {Nm: {line: "U4", dir: "Nollendorfplatz"}, V: {line: "U4", dir: "Viktoria-Luise-Platz"}, Bpo: {line: "U4", dir: "Bayerischer Platz"}, RS: {line: "U4", dir: "Rathaus Schöneberg"}, Ip: {line: "U4", dir: "Innsbrucker Platz"}, NULL: {line: "U4", dir: null}};
   }
   checkBarrier(array){
     for(let i = 0; i < array.length; i++){
