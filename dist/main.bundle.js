@@ -1996,6 +1996,8 @@ function () {
       this.addS8();
       this.addS85();
       this.addS9();
+      this.addU1();
+      this.addU2();
     }
   }, {
     key: "addS1",
@@ -3549,6 +3551,194 @@ function () {
         },
         NULL: {
           line: "S9",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU1",
+    value: function addU1() {
+      this.U1 = {
+        U: {
+          line: "U1",
+          dir: "Uhlandstr"
+        },
+        Kfo: {
+          line: "U1",
+          dir: "Kurfürstendamm"
+        },
+        Wt: {
+          line: "U1",
+          dir: "Wittenbergplatz"
+        },
+        N: {
+          line: "U1",
+          dir: "Nollendorfplatz"
+        },
+        Kus: {
+          line: "U1",
+          dir: "Kurfürstenstr"
+        },
+        Go: {
+          line: "U1",
+          dir: "Gleisdreieck"
+        },
+        Mo: {
+          line: "U1",
+          dir: "Mehringdamm"
+        },
+        Ho: {
+          line: "U1",
+          dir: "Hallesches Tor"
+        },
+        Pr: {
+          line: "U1",
+          dir: "Prinzenstr"
+        },
+        Kbo: {
+          line: "U1",
+          dir: "Kottbusser Tor"
+        },
+        Gr: {
+          line: "U1",
+          dir: "Görlitzer Bahnhof"
+        },
+        S: {
+          line: "U1",
+          dir: "Schlesisches Tor"
+        },
+        WA: {
+          line: "U1",
+          dir: "Warschauer Str"
+        },
+        NULL: {
+          line: "U1",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU2",
+    value: function addU2() {
+      this.U2 = {
+        PA: {
+          line: "U2",
+          dir: "Pankow"
+        },
+        VIN: {
+          line: "U2",
+          dir: "Vinetastr"
+        },
+        Sh: {
+          line: "U2",
+          dir: "Schönhauser Allee"
+        },
+        EB: {
+          line: "U2",
+          dir: "Eberswalder Str"
+        },
+        Sz: {
+          line: "U2",
+          dir: "Senefelderplatz"
+        },
+        Lu: {
+          line: "U2",
+          dir: "Rosa-Luxemburg-Platz"
+        },
+        A: {
+          line: "U2",
+          dir: "Alexanderplatz"
+        },
+        Ko: {
+          line: "U2",
+          dir: "Klosterstr"
+        },
+        Mk: {
+          line: "U2",
+          dir: "Märkisches Museum"
+        },
+        Sp: {
+          line: "U2",
+          dir: "Spittelmarkt"
+        },
+        Hv: {
+          line: "U2",
+          dir: "Hausvogteiplatz"
+        },
+        Mi: {
+          line: "U2",
+          dir: "Stadtmitte"
+        },
+        MH: {
+          line: "U2",
+          dir: "Mohrenstr"
+        },
+        Pd: {
+          line: "U2",
+          dir: "Potsdamer Platz"
+        },
+        MB: {
+          line: "U2",
+          dir: "Mendelssohn-Bartholdy-Park"
+        },
+        Gu: {
+          line: "U2",
+          dir: "Gleisdreieck"
+        },
+        BS: {
+          line: "U2",
+          dir: "Bülowstr"
+        },
+        No: {
+          line: "U2",
+          dir: "Nollendorfplatz"
+        },
+        Wt: {
+          line: "U2",
+          dir: "Wittenbergplatz"
+        },
+        Zo: {
+          line: "U2",
+          dir: "Zoologischer Garten"
+        },
+        RP: {
+          line: "U2",
+          dir: "Ernst-Reuter-Platz"
+        },
+        Obi: {
+          line: "U2",
+          dir: "Deutsche Oper"
+        },
+        Bmo: {
+          line: "U2",
+          dir: "Bismarckstr"
+        },
+        So: {
+          line: "U2",
+          dir: "Sophie-Charlotte-Platz"
+        },
+        Kd: {
+          line: "U2",
+          dir: "Kaiserdamm"
+        },
+        Th: {
+          line: "U2",
+          dir: "Theodor-Heuss-Platz"
+        },
+        Nd: {
+          line: "U2",
+          dir: "Neu-Westend"
+        },
+        Sd: {
+          line: "U2",
+          dir: "Olympia-Stadion"
+        },
+        Rl: {
+          line: "U2",
+          dir: "Ruhleben"
+        },
+        NULL: {
+          line: "U2",
           dir: null
         }
       };
