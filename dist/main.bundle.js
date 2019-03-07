@@ -2002,6 +2002,7 @@ function () {
       this.addU4();
       this.addU5();
       this.addU55();
+      this.addU6();
     }
   }, {
     key: "addS1",
@@ -4007,6 +4008,132 @@ function () {
         },
         NULL: {
           line: "U55",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU6",
+    value: function addU6() {
+      this.U6 = {
+        Tg: {
+          line: "U6",
+          dir: "Alt-Tegel"
+        },
+        Bk: {
+          line: "U6",
+          dir: "Borsigwerke"
+        },
+        Hh: {
+          line: "U6",
+          dir: "Holzhauser Str"
+        },
+        OTI: {
+          line: "U6",
+          dir: "Otisstr"
+        },
+        Scha: {
+          line: "U6",
+          dir: "Scharnweberstr"
+        },
+        Sch: {
+          line: "U6",
+          dir: "Kurt-Schumacher-Platz"
+        },
+        Afr: {
+          line: "U6",
+          dir: "Afrikanische Str"
+        },
+        Rb: {
+          line: "U6",
+          dir: "Rehberge"
+        },
+        Se: {
+          line: "U6",
+          dir: "Seestr"
+        },
+        Lpo: {
+          line: "U6",
+          dir: "Leopoldplatz"
+        },
+        We: {
+          line: "U6",
+          dir: "Wedding"
+        },
+        Ri: {
+          line: "U6",
+          dir: "Reinickendorfer Str"
+        },
+        SK: {
+          line: "U6",
+          dir: "Schwartzkopffstr"
+        },
+        NA: {
+          line: "U6",
+          dir: "Naturkundemuseum"
+        },
+        Ob: {
+          line: "U6",
+          dir: "Oranienburger Tor"
+        },
+        F: {
+          line: "U6",
+          dir: "Friedrichstr"
+        },
+        Fr: {
+          line: "U6",
+          dir: "Französische Str"
+        },
+        Mic: {
+          line: "U6",
+          dir: "Stadtmitte"
+        },
+        Ks: {
+          line: "U6",
+          dir: "Kochstr"
+        },
+        Hu: {
+          line: "U6",
+          dir: "Hallesches Tor"
+        },
+        Me: {
+          line: "U6",
+          dir: "Mehringdamm"
+        },
+        PL: {
+          line: "U6",
+          dir: "Platz der Luftbrücke"
+        },
+        Ps: {
+          line: "U6",
+          dir: "Paradestr"
+        },
+        Ts: {
+          line: "U6",
+          dir: "Tempelhof"
+        },
+        At: {
+          line: "U6",
+          dir: "Alt-Tempelhof"
+        },
+        Ka: {
+          line: "U6",
+          dir: "Kaiserin-Augusta-Str"
+        },
+        Ull: {
+          line: "U6",
+          dir: "Ullsteinstr"
+        },
+        Wl: {
+          line: "U6",
+          dir: "Westphalweg"
+        },
+        Mf: {
+          line: "U6",
+          dir: "Alt-Mariendorf"
+        },
+        NULL: {
+          line: "U6",
           dir: null
         }
       };

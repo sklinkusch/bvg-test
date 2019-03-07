@@ -366,6 +366,7 @@ class Station {
     this.addU4();
     this.addU5();
     this.addU55();
+    this.addU6();
   }
   addS1() {
     this.S1 = { PDH: { line: "S1", dir: "Potsdam" }, BAB: { line: "S1", dir: "Babelsberg" }, GRI: { line: "S1", dir: "Griebnitzsee" }, WSS: { line: "S1", dir: "Wannsee" }, NIW: { line: "S1", dir: "Nikolassee" }, SLS: { line: "S1", dir: "Schlachtensee" }, MEX: { line: "S1", dir: "Mexikoplatz" }, ZD: { line: "S1", dir: "Zehlendorf" }, SDG: { line: "S1", dir: "Sundgauer Str" }, LWE: { line: "S1", dir: "Lichterfelde West" }, BGT: { line: "S1", dir: "Botanischer Garten" }, RST: { line: "S1", dir: "Rathaus Steglitz" }, FB: { line: "S1", dir: "Feuerbachstr" }, FRU: { line: "S1", dir: "Friedenau" }, SGV: { line: "S1", dir: "Schöneberg" }, JLB: { line: "S1", dir: "Julius-Leber-Brücke" }, YOR: { line: "S1", dir: "Yorckstr" }, AHU: { line: "S1", dir: "Anhalter Bahnhof" }, POP: { line: "S1", dir: "Potsdamer Platz" }, TOR: { line: "S1", dir: "Brandenburger Tor" }, FSTT: { line: "S1", dir: "Friedrichstr" }, ORS: { line: "S1", dir: "Oranienburger Str" }, NB: { line: "S1", dir: "Nordbahnhof" }, HUM: { line: "S1", dir: "Humboldthain" }, GB: { line: "S1", dir: "Gesundbrunnen" }, BOS: { line: "S1", dir: "Bornholmer Str" }, WOK: { line: "S1", dir: "Wollankstr" }, SNH: { line: "S1", dir: "Schönholz" }, WM: { line: "S1", dir: "Wilhelmsruh" }, WIN: { line: "S1", dir: "Wittenau" }, WAI: { line: "S1", dir: "Waidmannslust" }, HED: { line: "S1", dir: "Hermsdorf" }, FOH: { line: "S1", dir: "Frohnau" }, HN: { line: "S1", dir: "Hohen Neuendorf" }, BIW: { line: "S1", dir: "Birkenwerder" }, BOR: { line: "S1", dir: "Borgsdorf" }, LEN: { line: "S1", dir: "Lehnitz" }, ORB: { line: "S1", dir: "Oranienburg" }, NULL: { line: "S1", dir: null } };
@@ -432,6 +433,9 @@ class Station {
   }
   addU55(){
     this.U55 = {HBF: {line: "U55", dir: "Hauptbahnhof"}, BUN: {line: "U55", dir: "Bundestag"}, BRT: {line: "U55", dir: "Brandenburger Tor"}, NULL: {line: "U55", dir: null}};
+  }
+  addU6(){
+    this.U6 = {Tg: {line: "U6", dir: "Alt-Tegel"}, Bk: {line: "U6", dir: "Borsigwerke"}, Hh: {line: "U6", dir: "Holzhauser Str"}, OTI: {line: "U6", dir: "Otisstr"}, Scha: {line: "U6", dir: "Scharnweberstr"}, Sch: {line: "U6", dir: "Kurt-Schumacher-Platz"}, Afr: {line: "U6", dir: "Afrikanische Str"}, Rb: {line: "U6", dir: "Rehberge"}, Se: {line: "U6", dir: "Seestr"}, Lpo: {line: "U6", dir: "Leopoldplatz"}, We: {line: "U6", dir: "Wedding"}, Ri: {line: "U6", dir: "Reinickendorfer Str"}, SK: {line: "U6", dir: "Schwartzkopffstr"}, NA: {line: "U6", dir: "Naturkundemuseum"}, Ob: {line: "U6", dir: "Oranienburger Tor"}, F: {line: "U6", dir: "Friedrichstr"}, Fr: {line: "U6", dir: "Französische Str"}, Mic: {line: "U6", dir: "Stadtmitte"}, Ks: {line: "U6", dir: "Kochstr"}, Hu: {line: "U6", dir: "Hallesches Tor"}, Me: {line: "U6", dir: "Mehringdamm"}, PL: {line: "U6", dir: "Platz der Luftbrücke"}, Ps: {line: "U6", dir: "Paradestr"}, Ts: {line: "U6", dir: "Tempelhof"}, At: {line: "U6", dir: "Alt-Tempelhof"}, Ka: {line: "U6", dir: "Kaiserin-Augusta-Str"}, Ull: {line: "U6", dir: "Ullsteinstr"}, Wl: {line: "U6", dir: "Westphalweg"}, Mf: {line: "U6", dir: "Alt-Mariendorf"}, NULL: {line: "U6", dir: null}};
   }
   checkBarrier(array){
     for(let i = 0; i < array.length; i++){
