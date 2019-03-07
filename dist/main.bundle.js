@@ -2001,6 +2001,7 @@ function () {
       this.addU3();
       this.addU4();
       this.addU5();
+      this.addU55();
     }
   }, {
     key: "addS1",
@@ -3984,6 +3985,28 @@ function () {
         },
         NULL: {
           line: "U5",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU55",
+    value: function addU55() {
+      this.U55 = {
+        HBF: {
+          line: "U55",
+          dir: "Hauptbahnhof"
+        },
+        BUN: {
+          line: "U55",
+          dir: "Bundestag"
+        },
+        BRT: {
+          line: "U55",
+          dir: "Brandenburger Tor"
+        },
+        NULL: {
+          line: "U55",
           dir: null
         }
       };

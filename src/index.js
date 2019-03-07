@@ -365,6 +365,7 @@ class Station {
     this.addU3();
     this.addU4();
     this.addU5();
+    this.addU55();
   }
   addS1() {
     this.S1 = { PDH: { line: "S1", dir: "Potsdam" }, BAB: { line: "S1", dir: "Babelsberg" }, GRI: { line: "S1", dir: "Griebnitzsee" }, WSS: { line: "S1", dir: "Wannsee" }, NIW: { line: "S1", dir: "Nikolassee" }, SLS: { line: "S1", dir: "Schlachtensee" }, MEX: { line: "S1", dir: "Mexikoplatz" }, ZD: { line: "S1", dir: "Zehlendorf" }, SDG: { line: "S1", dir: "Sundgauer Str" }, LWE: { line: "S1", dir: "Lichterfelde West" }, BGT: { line: "S1", dir: "Botanischer Garten" }, RST: { line: "S1", dir: "Rathaus Steglitz" }, FB: { line: "S1", dir: "Feuerbachstr" }, FRU: { line: "S1", dir: "Friedenau" }, SGV: { line: "S1", dir: "Schöneberg" }, JLB: { line: "S1", dir: "Julius-Leber-Brücke" }, YOR: { line: "S1", dir: "Yorckstr" }, AHU: { line: "S1", dir: "Anhalter Bahnhof" }, POP: { line: "S1", dir: "Potsdamer Platz" }, TOR: { line: "S1", dir: "Brandenburger Tor" }, FSTT: { line: "S1", dir: "Friedrichstr" }, ORS: { line: "S1", dir: "Oranienburger Str" }, NB: { line: "S1", dir: "Nordbahnhof" }, HUM: { line: "S1", dir: "Humboldthain" }, GB: { line: "S1", dir: "Gesundbrunnen" }, BOS: { line: "S1", dir: "Bornholmer Str" }, WOK: { line: "S1", dir: "Wollankstr" }, SNH: { line: "S1", dir: "Schönholz" }, WM: { line: "S1", dir: "Wilhelmsruh" }, WIN: { line: "S1", dir: "Wittenau" }, WAI: { line: "S1", dir: "Waidmannslust" }, HED: { line: "S1", dir: "Hermsdorf" }, FOH: { line: "S1", dir: "Frohnau" }, HN: { line: "S1", dir: "Hohen Neuendorf" }, BIW: { line: "S1", dir: "Birkenwerder" }, BOR: { line: "S1", dir: "Borgsdorf" }, LEN: { line: "S1", dir: "Lehnitz" }, ORB: { line: "S1", dir: "Oranienburg" }, NULL: { line: "S1", dir: null } };
@@ -428,6 +429,9 @@ class Station {
   }
   addU5(){
     this.U5 = {Hö: {line: "U5", dir: "Hönow"}, LL: {line: "U5", dir: "Louis-Lewin-Str"}, HD: {line: "U5", dir: "Hellersdorf"}, C: {line: "U5", dir: "Cottbusser Platz"}, GK: {line: "U5", dir: "Kienberg"}, KL: {line: "U5", dir: "Kaulsdorf-Nord"}, Wh: {line: "U5", dir: "Wuhletal"}, E: {line: "U5", dir: "Elsterwerdaer Platz"}, Bü: {line: "U5", dir: "Biesdorf-Süd"}, Tk: {line: "U5", dir: "Tierpark"}, Fi: {line: "U5", dir: "Friedrichsfelde"}, Li: {line: "U5", dir: "Lichtenberg"}, Md: {line: "U5", dir: "Magdalenenstr"}, Ff: {line: "U5", dir: "Frankfurter Allee"}, Sa: {line: "U5", dir: "Samariterstr"}, FT: {line: "U5", dir: "Frankfurter Tor"}, WR: {line: "U5", dir: "Weberwiese"}, Sr: {line: "U5", dir: "Strausberger Platz"}, Si: {line: "U5", dir: "Schillingstr"}, Al: {line: "U5", dir: "Alexanderplatz"}, NULL: {line: "U5", dir: null}};
+  }
+  addU55(){
+    this.U55 = {HBF: {line: "U55", dir: "Hauptbahnhof"}, BUN: {line: "U55", dir: "Bundestag"}, BRT: {line: "U55", dir: "Brandenburger Tor"}, NULL: {line: "U55", dir: null}};
   }
   checkBarrier(array){
     for(let i = 0; i < array.length; i++){
