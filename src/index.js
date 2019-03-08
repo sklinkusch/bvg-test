@@ -149,7 +149,7 @@ class Station {
         case "BWH":
           this.stop = [900000001201];
           this.neighboring = false;
-          this.filter = [[[this.S41], [this.S46.GB, this.S46.WED], [this.S42], [this.S46.KW, this.S46.WI, this.S46.ZTH, this.S46.EIW, this.S46.GAS, this.S46.ADL, this.S46.SCF, this.S46.SW, this.S46.BMW, this.S46.KHD, this.S46.NK, this.S46.HER, this.S46.THF, this.S46.SKR, this.S46.SGR, this.S46.IP, this.S46.BUP, this.S46.HEI, this.S46.HO, this.S46.HAL, this.S46.WKRR, this.S46.MN, this.S46.WES, this.S46.JUN, this.S46.BEU], [{ line: "U9", dir: "Osloer Str" }], [{ line: "U9", dir: "Rathaus Steglitz" }, { line: "U9", dir: "Zoologischer Garten" }], [{ line: "N9", dir: "Osloer Str" }], [{ line: "N9", dir: "Rathaus Steglitz" }, { line: "N9", dir: "Zoologischer Garten" }]]];
+          this.filter = [[[this.S41], [this.S46.GB, this.S46.WED], [this.S42], [this.S46.KW, this.S46.WI, this.S46.ZTH, this.S46.EIW, this.S46.GAS, this.S46.ADL, this.S46.SCF, this.S46.SW, this.S46.BMW, this.S46.KHD, this.S46.NK, this.S46.HER, this.S46.THF, this.S46.SKR, this.S46.SGR, this.S46.IP, this.S46.BUP, this.S46.HEI, this.S46.HO, this.S46.HAL, this.S46.WKRR, this.S46.MN, this.S46.WES, this.S46.JUN, this.S46.BEU], [this.U9.Olo, this.U9.Np, this.U9.Lpu, this.U9.Am], [this.U9.Rzu, this.U9.Sl, this.U9.Wsg, this.U9.Fw, this.U9.Bd, this.U9.Beo, this.U9.Gt, this.U9.Snu, this.U9.Kfu, this.U9.Zu, this.U9.Ha, this.U9.Tm, this.U9.Bi], [{ line: "N9", dir: "Osloer Str" }], [{ line: "N9", dir: "Rathaus Steglitz" }, { line: "N9", dir: "Zoologischer Garten" }]]];
           break;
         case "BWK":
           this.stop = [900000024102];

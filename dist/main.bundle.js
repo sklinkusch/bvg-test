@@ -1523,16 +1523,7 @@ function () {
           case "BWH":
             _this.stop = [900000001201];
             _this.neighboring = false;
-            _this.filter = [[[_this.S41], [_this.S46.GB, _this.S46.WED], [_this.S42], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK, _this.S46.HER, _this.S46.THF, _this.S46.SKR, _this.S46.SGR, _this.S46.IP, _this.S46.BUP, _this.S46.HEI, _this.S46.HO, _this.S46.HAL, _this.S46.WKRR, _this.S46.MN, _this.S46.WES, _this.S46.JUN, _this.S46.BEU], [{
-              line: "U9",
-              dir: "Osloer Str"
-            }], [{
-              line: "U9",
-              dir: "Rathaus Steglitz"
-            }, {
-              line: "U9",
-              dir: "Zoologischer Garten"
-            }], [{
+            _this.filter = [[[_this.S41], [_this.S46.GB, _this.S46.WED], [_this.S42], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK, _this.S46.HER, _this.S46.THF, _this.S46.SKR, _this.S46.SGR, _this.S46.IP, _this.S46.BUP, _this.S46.HEI, _this.S46.HO, _this.S46.HAL, _this.S46.WKRR, _this.S46.MN, _this.S46.WES, _this.S46.JUN, _this.S46.BEU], [_this.U9.Olo, _this.U9.Np, _this.U9.Lpu, _this.U9.Am], [_this.U9.Rzu, _this.U9.Sl, _this.U9.Wsg, _this.U9.Fw, _this.U9.Bd, _this.U9.Beo, _this.U9.Gt, _this.U9.Snu, _this.U9.Kfu, _this.U9.Zu, _this.U9.Ha, _this.U9.Tm, _this.U9.Bi], [{
               line: "N9",
               dir: "Osloer Str"
             }], [{
