@@ -206,19 +206,7 @@ function () {
           case "BFA":
             _this.stop = [900000120001];
             _this.neighboring = false;
-            _this.filter = [[[_this.S41], [_this.S8.ZTH, _this.S8.EIW, _this.S8.GAS, _this.S8.ADL, _this.S8.SCF, _this.S8.SW, _this.S8.BMW, _this.S8.PWA, _this.S8.TP, _this.S8.OK], [_this.S85.GAS, _this.S85.ADL, _this.S85.SCF, _this.S85.SW, _this.S85.BMW, _this.S85.PWA, _this.S85.TP, _this.S85.OK], [_this.S42], [_this.S8.BIW, _this.S8.HN, _this.S8.BFE, _this.S8.SNF, _this.S8.MM, _this.S8.BLB, _this.S8.PHD, _this.S8.PKW, _this.S8.BOS, _this.S8.SAL, _this.S8.PLA, _this.S8.GSS, _this.S8.LST, _this.S8.STO], [_this.S85.NB, _this.S85.HUM, _this.S85.GB, _this.S85.PKW, _this.S85.BOS, _this.S85.SAL, _this.S85.PLA, _this.S85.GSS, _this.S85.LST, _this.S85.STO], [{
-              line: "U5",
-              dir: "Hönow"
-            }, {
-              line: "U5",
-              dir: "Kaulsdorf-Nord"
-            }, {
-              line: "U5",
-              dir: "Friedrichsfelde"
-            }], [{
-              line: "U5",
-              dir: "Alexanderplatz"
-            }], [{
+            _this.filter = [[[_this.S41], [_this.S8.ZTH, _this.S8.EIW, _this.S8.GAS, _this.S8.ADL, _this.S8.SCF, _this.S8.SW, _this.S8.BMW, _this.S8.PWA, _this.S8.TP, _this.S8.OK], [_this.S85.GAS, _this.S85.ADL, _this.S85.SCF, _this.S85.SW, _this.S85.BMW, _this.S85.PWA, _this.S85.TP, _this.S85.OK], [_this.S42], [_this.S8.BIW, _this.S8.HN, _this.S8.BFE, _this.S8.SNF, _this.S8.MM, _this.S8.BLB, _this.S8.PHD, _this.S8.PKW, _this.S8.BOS, _this.S8.SAL, _this.S8.PLA, _this.S8.GSS, _this.S8.LST, _this.S8.STO], [_this.S85.NB, _this.S85.HUM, _this.S85.GB, _this.S85.PKW, _this.S85.BOS, _this.S85.SAL, _this.S85.PLA, _this.S85.GSS, _this.S85.LST, _this.S85.STO], [_this.U5.Hö, _this.U5.LL, _this.U5.HD, _this.U5.C, _this.U5.GK, _this.U5.KL, _this.U5.Wh, _this.U5.E, _this.U5.Bü, _this.U5.Tk, _this.U5.Fi, _this.U5.Li, _this.U5.Md], [_this.U5.Al, _this.U5.Si, _this.U5.Sr, _this.U5.WR, _this.U5.FT, _this.U5.Sa], [{
               line: "M13",
               dir: "Virchow-Klinikum"
             }, {
