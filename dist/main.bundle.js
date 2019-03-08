@@ -2005,6 +2005,7 @@ function () {
       this.addU6();
       this.addU7();
       this.addU8();
+      this.addU9();
     }
   }, {
     key: "addS1",
@@ -4412,6 +4413,88 @@ function () {
         },
         NULL: {
           line: "U8",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU9",
+    value: function addU9() {
+      this.U9 = {
+        Olo: {
+          line: "U9",
+          dir: "Osloer Str"
+        },
+        Np: {
+          line: "U9",
+          dir: "Nauener Platz"
+        },
+        Lpu: {
+          line: "U9",
+          dir: "Leopoldplatz"
+        },
+        Am: {
+          line: "U9",
+          dir: "Amrumer Str"
+        },
+        WF: {
+          line: "U9",
+          dir: "Westhafen"
+        },
+        Bi: {
+          line: "U9",
+          dir: "Birkenstr"
+        },
+        Tm: {
+          line: "U9",
+          dir: "Turmstr"
+        },
+        Ha: {
+          line: "U9",
+          dir: "Hansaplatz"
+        },
+        Zu: {
+          line: "U9",
+          dir: "Zoologischer Garten"
+        },
+        Kfu: {
+          line: "U9",
+          dir: "Kurfürstendamm"
+        },
+        Snu: {
+          line: "U9",
+          dir: "Spichernstr"
+        },
+        Gt: {
+          line: "U9",
+          dir: "Güntzelstr"
+        },
+        Beo: {
+          line: "U9",
+          dir: "Berliner Str"
+        },
+        Bd: {
+          line: "U9",
+          dir: "Bundesplatz"
+        },
+        Fw: {
+          line: "U9",
+          dir: "Friedrich-Wilhelm-Platz"
+        },
+        Wsg: {
+          line: "U9",
+          dir: "Walther-Schreiber-Platz"
+        },
+        Sl: {
+          line: "U9",
+          dir: "Schloßstr"
+        },
+        Rzu: {
+          line: "U9",
+          dir: "Rathaus Steglitz"
+        },
+        NULL: {
+          line: "U9",
           dir: null
         }
       };
