@@ -1110,7 +1110,7 @@ function () {
             break;
 
           case "BSTO":
-            _this.stop = [900000110012];
+            _this.stop = [900000110012, 900000160504];
             _this.neighboring = false;
             _this.filter = [[[_this.S41], [_this.S8.ZTH, _this.S8.EIW, _this.S8.GAS, _this.S8.ADL, _this.S8.SCF, _this.S8.SW, _this.S8.BMW, _this.S8.TP, _this.S8.OK, _this.S8.FA], [_this.S85.GAS, _this.S85.ADL, _this.S85.SCF, _this.S85.SW, _this.S85.BMW, _this.S85.TP, _this.S85.OK, _this.S85.FA], [_this.S42], [_this.S8.BIW, _this.S8.HN, _this.S8.BFE, _this.S8.SNF, _this.S8.MM, _this.S8.BLB, _this.S8.PHD, _this.S8.PKW, _this.S8.BOS, _this.S8.SAL, _this.S8.PLA, _this.S8.GSS, _this.S8.LST], [_this.S85.NB, _this.S85.HUM, _this.S85.GB, _this.S85.PKW, _this.S85.BOS, _this.S85.SAL, _this.S85.PLA, _this.S85.GSS, _this.S85.LST], [{
               line: "156",
@@ -1127,6 +1127,18 @@ function () {
             }, {
               line: "240",
               dir: "Betriebshof Lichtenberg"
+            }]], [[{
+              line: "156",
+              dir: "Stadion Buschallee"
+            }, {
+              line: "156",
+              dir: "Große Seestr"
+            }, {
+              line: "156",
+              dir: "Pasedagplatz"
+            }], [{
+              line: "156",
+              dir: "Storkower Str"
             }]]];
             break;
 
@@ -1247,32 +1259,11 @@ function () {
           case "BTHF":
             _this.stop = [900000068201, 900000068272];
             _this.neighboring = false;
-            _this.filter = [[[_this.S41], [_this.S45.SKR], [_this.S46.GB, _this.S46.WED, _this.S46.WH, _this.S46.BEU, _this.S46.JUN, _this.S46.WES, _this.S46.MN, _this.S46.WKRR, _this.S46.HAL, _this.S46.HO, _this.S46.HEI, _this.S46.BUP, _this.S46.IP, _this.S46.SGR, _this.S46.SKR], [_this.S42], [_this.S45.GAS, _this.S45.FLH, _this.S45.GBA, _this.S45.AGL, _this.S45.ADL, _this.S45.SCF, _this.S45.SW, _this.S45.BMW, _this.S45.KHD, _this.S45.NK, _this.S45.HER], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK, _this.S46.HER], [{
-              line: "U6",
-              dir: "Alt-Tegel"
-            }, {
-              line: "U6",
-              dir: "Kurt-Schumacher-Platz"
-            }, {
-              line: "U6",
-              dir: "Seestr"
-            }, {
-              line: "U6",
-              dir: "Wedding"
-            }, {
-              line: "U6",
-              dir: "Hallesches Tor"
-            }, {
-              line: "U6",
-              dir: "Platz der Luftbrücke"
-            }], [{
-              line: "U6",
-              dir: "Alt-Mariendorf"
-            }], [{
+            _this.filter = [[[_this.S41], [_this.S45.SKR], [_this.S46.GB, _this.S46.WED, _this.S46.WH, _this.S46.BEU, _this.S46.JUN, _this.S46.WES, _this.S46.MN, _this.S46.WKRR, _this.S46.HAL, _this.S46.HO, _this.S46.HEI, _this.S46.BUP, _this.S46.IP, _this.S46.SGR, _this.S46.SKR], [_this.S42], [_this.S45.GAS, _this.S45.FLH, _this.S45.GBA, _this.S45.AGL, _this.S45.ADL, _this.S45.SCF, _this.S45.SW, _this.S45.BMW, _this.S45.KHD, _this.S45.NK, _this.S45.HER], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK, _this.S46.HER], [_this.U6.Tg, _this.U6.Bk, _this.U6.Hh, _this.U6.OTI, _this.U6.Scha, _this.U6.Sch, _this.U6.Afr, _this.U6.Rb, _this.U6.Se, _this.U6.Lpo, _this.U6.We, _this.U6.Ri, _this.U6.SK, _this.U6.NA, _this.U6.Ob, _this.U6.F, _this.U6.Fr, _this.U6.Mic, _this.U6.Ks, _this.U6.Hu, _this.U6.Me, _this.U6.PL, _this.U6.Ps], [_this.U6.Mf, _this.U6.Wl, _this.U6.Ull, _this.U6.At], [{
               line: "184",
               dir: "Südkreuz"
             }], [{
-              line: "U6",
+              line: "N6",
               dir: "Alt-Tegel"
             }], [{
               line: "140",
