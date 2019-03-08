@@ -296,19 +296,7 @@ function () {
             }], [{
               line: "RB54",
               dir: "Lichtenberg"
-            }], [_this.S1.ORB, _this.S1.LEN, _this.S1.BOR, _this.S1.BIW, _this.S1.HN, _this.S1.FOH, _this.S1.HED, _this.S1.WAI, _this.S1.WIN, _this.S1.WM, _this.S1.SNH, _this.S1.WOK, _this.S1.BOS], [_this.S2.BER, _this.S2.BRF, _this.S2.ZEP, _this.S2.RGT, _this.S2.BU, _this.S2.KRW, _this.S2.BLB, _this.S2.PHD, _this.S2.PKW, _this.S2.BOS], [_this.S25.HD, _this.S25.HLS, _this.S25.SZF, _this.S25.TG, _this.S25.EBD, _this.S25.KBO, _this.S25.ARF, _this.S25.SNH, _this.S25.WOK, _this.S25.BOS], [_this.S26.WAI, _this.S26.WIN, _this.S26.WM, _this.S26.SNH, _this.S26.WOK, _this.S26.BOS], [_this.S41], [_this.S1.PDH, _this.S1.BAB, _this.S1.GRI, _this.S1.WSS, _this.S1.NIW, _this.S1.SLS, _this.S1.MEX, _this.S1.ZD, _this.S1.SDG, _this.S1.LWE, _this.S1.BGT, _this.S1.RST, _this.S1.FB, _this.S1.FRU, _this.S1.SGV, _this.S1.JLB, _this.S1.YOR, _this.S1.AHU, _this.S1.POP, _this.S1.TOR, _this.S1.FSTT, _this.S1.ORS, _this.S1.NB, _this.S1.HUM], [_this.S2.BFD, _this.S2.MAH, _this.S2.LRD, _this.S2.SC, _this.S2.BCH, _this.S2.MF, _this.S2.ATS, _this.S2.PRS, _this.S2.SKV, _this.S2.YOR, _this.S2.AHU, _this.S2.POP, _this.S2.TOR, _this.S2.FSTT, _this.S2.ORS, _this.S2.NB, _this.S2.HUM], [_this.S25.TLS, _this.S25.LIS, _this.S25.OSS, _this.S25.LIO, _this.S25.LAK, _this.S25.SDE, _this.S25.PRS, _this.S25.SKV, _this.S25.YOR, _this.S25.AHU, _this.S25.POP, _this.S25.TOR, _this.S25.FSTT, _this.S25.ORS, _this.S25.NB, _this.S25.HUM], [_this.S26.TLS, _this.S26.LIS, _this.S26.OSS, _this.S26.LIO, _this.S26.LAK, _this.S26.SDE, _this.S26.PRS, _this.S26.SKV, _this.S26.YOR, _this.S26.AHU, _this.S26.POP, _this.S26.TOR, _this.S26.FSTT, _this.S26.ORS, _this.S26.NB, _this.S26.HUM], [_this.S42], [_this.S46.NULL], [{
-              line: "U8",
-              dir: "Wittenau"
-            }, {
-              line: "U8",
-              dir: "Paracelsus-Bad"
-            }, {
-              line: "U8",
-              dir: "Osloer Str"
-            }], [{
-              line: "U8",
-              dir: "Hermannstr"
-            }], [{
+            }], [_this.S1.ORB, _this.S1.LEN, _this.S1.BOR, _this.S1.BIW, _this.S1.HN, _this.S1.FOH, _this.S1.HED, _this.S1.WAI, _this.S1.WIN, _this.S1.WM, _this.S1.SNH, _this.S1.WOK, _this.S1.BOS], [_this.S2.BER, _this.S2.BRF, _this.S2.ZEP, _this.S2.RGT, _this.S2.BU, _this.S2.KRW, _this.S2.BLB, _this.S2.PHD, _this.S2.PKW, _this.S2.BOS], [_this.S25.HD, _this.S25.HLS, _this.S25.SZF, _this.S25.TG, _this.S25.EBD, _this.S25.KBO, _this.S25.ARF, _this.S25.SNH, _this.S25.WOK, _this.S25.BOS], [_this.S26.WAI, _this.S26.WIN, _this.S26.WM, _this.S26.SNH, _this.S26.WOK, _this.S26.BOS], [_this.S41], [_this.S1.PDH, _this.S1.BAB, _this.S1.GRI, _this.S1.WSS, _this.S1.NIW, _this.S1.SLS, _this.S1.MEX, _this.S1.ZD, _this.S1.SDG, _this.S1.LWE, _this.S1.BGT, _this.S1.RST, _this.S1.FB, _this.S1.FRU, _this.S1.SGV, _this.S1.JLB, _this.S1.YOR, _this.S1.AHU, _this.S1.POP, _this.S1.TOR, _this.S1.FSTT, _this.S1.ORS, _this.S1.NB, _this.S1.HUM], [_this.S2.BFD, _this.S2.MAH, _this.S2.LRD, _this.S2.SC, _this.S2.BCH, _this.S2.MF, _this.S2.ATS, _this.S2.PRS, _this.S2.SKV, _this.S2.YOR, _this.S2.AHU, _this.S2.POP, _this.S2.TOR, _this.S2.FSTT, _this.S2.ORS, _this.S2.NB, _this.S2.HUM], [_this.S25.TLS, _this.S25.LIS, _this.S25.OSS, _this.S25.LIO, _this.S25.LAK, _this.S25.SDE, _this.S25.PRS, _this.S25.SKV, _this.S25.YOR, _this.S25.AHU, _this.S25.POP, _this.S25.TOR, _this.S25.FSTT, _this.S25.ORS, _this.S25.NB, _this.S25.HUM], [_this.S26.TLS, _this.S26.LIS, _this.S26.OSS, _this.S26.LIO, _this.S26.LAK, _this.S26.SDE, _this.S26.PRS, _this.S26.SKV, _this.S26.YOR, _this.S26.AHU, _this.S26.POP, _this.S26.TOR, _this.S26.FSTT, _this.S26.ORS, _this.S26.NB, _this.S26.HUM], [_this.S42], [_this.S46.NULL], [_this.U8.WIU, _this.U8.RR, _this.U8.KB, _this.U8.LD, _this.U8.PB, _this.U8.RE, _this.U8.FN, _this.U8.Olu, _this.U8.Pk], [_this.U8.HMS, _this.U8.L, _this.U8.Bo, _this.U8.Hpo, _this.U8.ST, _this.U8.Kbu, _this.U8.Mr, _this.U8.He, _this.U8.Jb, _this.U8.Ap, _this.U8.W, _this.U8.Ro, _this.U8.B, _this.U8.Vo], [{
               line: "247",
               dir: "Leopoldplatz"
             }], [{
