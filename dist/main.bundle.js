@@ -755,28 +755,7 @@ function () {
           case "BNK":
             _this.stop = [900000078201, 900000078272, 900000078273, 900000078271];
             _this.neighboring = false;
-            _this.filter = [[[_this.S41], [_this.S45.SKR, _this.S45.THF, _this.S45.HER], [_this.S46.GB, _this.S46.WED, _this.S46.WH, _this.S46.BEU, _this.S46.JUN, _this.S46.WES, _this.S46.MN, _this.S46.WKRR, _this.S46.HAL, _this.S46.HO, _this.S46.HEI, _this.S46.BUP, _this.S46.IP, _this.S46.SGR, _this.S46.SKR, _this.S46.THF, _this.S46.HER], [_this.S47.HER], [_this.S42], [_this.S45.FLH, _this.S45.GBA, _this.S45.AGL, _this.S45.GAS, _this.S45.ADL, _this.S45.SCF, _this.S45.SW, _this.S45.BMW, _this.S45.KHD], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD], [_this.S47.SPF, _this.S47.OSP, _this.S47.SW, _this.S47.BMW, _this.S47.KHD]], [[{
-              line: "U7",
-              dir: "Rudow"
-            }, {
-              line: "U7",
-              dir: "Britz-Süd"
-            }], [{
-              line: "U7",
-              dir: "Rathaus Spandau"
-            }, {
-              line: "U7",
-              dir: "Rohrdamm"
-            }, {
-              line: "U7",
-              dir: "Richard-Wagner-Platz"
-            }, {
-              line: "U7",
-              dir: "Fehrbelliner Platz"
-            }, {
-              line: "U7",
-              dir: "Hermannplatz"
-            }]], [[{
+            _this.filter = [[[_this.S41], [_this.S45.SKR, _this.S45.THF, _this.S45.HER], [_this.S46.GB, _this.S46.WED, _this.S46.WH, _this.S46.BEU, _this.S46.JUN, _this.S46.WES, _this.S46.MN, _this.S46.WKRR, _this.S46.HAL, _this.S46.HO, _this.S46.HEI, _this.S46.BUP, _this.S46.IP, _this.S46.SGR, _this.S46.SKR, _this.S46.THF, _this.S46.HER], [_this.S47.HER], [_this.S42], [_this.S45.FLH, _this.S45.GBA, _this.S45.AGL, _this.S45.GAS, _this.S45.ADL, _this.S45.SCF, _this.S45.SW, _this.S45.BMW, _this.S45.KHD], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD], [_this.S47.SPF, _this.S47.OSP, _this.S47.SW, _this.S47.BMW, _this.S47.KHD]], [[_this.U7.R, _this.U7.Zd, _this.U7.Wk, _this.U7.La, _this.U7.Jt, _this.U7.Br, _this.U7.Pi, _this.U7.Bl, _this.U7.Gz], [_this.U7.RSp, _this.U7.AS, _this.U7.Zi, _this.U7.Hs, _this.U7.P, _this.U7.Rm, _this.U7.Sie, _this.U7.Hl, _this.U7.JK, _this.U7.Jh, _this.U7.Mp, _this.U7.Rw, _this.U7.Bmu, _this.U7.Wd, _this.U7.Ad, _this.U7.Kn, _this.U7.Fpu, _this.U7.Bli, _this.U7.Beu, _this.U7.Bpu, _this.U7.Ei, _this.U7.Kt, _this.U7.Y, _this.U7.Mu, _this.U7.Me, _this.U7.Gs, _this.U7.Sü, _this.U7.Hpu, _this.U7.Rk, _this.U7.KM]], [[{
               line: "171",
               dir: "Schönefeld"
             }, {
