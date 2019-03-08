@@ -1485,7 +1485,7 @@ function () {
             break;
 
           case "BWES":
-            _this.stop = [900000026207];
+            _this.stop = [900000026207, 900000020204];
             _this.neighboring = false;
             _this.filter = [[[_this.S41], [_this.S46.GB, _this.S46.WED, _this.S46.WH, _this.S46.BEU, _this.S46.JUN], [_this.S42], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK, _this.S46.HER, _this.S46.THF, _this.S46.SKR, _this.S46.SGR, _this.S46.IP, _this.S46.BUP, _this.S46.HEI, _this.S46.HO, _this.S46.HAL, _this.S46.WKRR, _this.S46.MN], [{
               line: "M45",
@@ -1499,6 +1499,24 @@ function () {
             }], [{
               line: "M45",
               dir: "Zoologischer Garten"
+            }]], [[{
+              line: "M45",
+              dir: "Johannesstift"
+            }, {
+              line: "M45",
+              dir: "Rathaus Spandau"
+            }, {
+              line: "M45",
+              dir: "DRK-Kliniken Westend"
+            }], [{
+              line: "309",
+              dir: "Schlosspark-Klinik"
+            }], [{
+              line: "M45",
+              dir: "Zoologischer Garten"
+            }], [{
+              line: "309",
+              dir: "Wilmersdorfer"
             }]]];
             break;
 
