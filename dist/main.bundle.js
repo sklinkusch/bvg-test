@@ -1448,28 +1448,7 @@ function () {
           case "BWED":
             _this.stop = [900000009104, 900000008103];
             _this.neighboring = false;
-            _this.filter = [[[_this.S41], [_this.S46.GB], [_this.S42], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK, _this.S46.HER, _this.S46.THF, _this.S46.SKR, _this.S46.SGR, _this.S46.IP, _this.S46.BUP, _this.S46.HEI, _this.S46.HO, _this.S46.HAL, _this.S46.WKRR, _this.S46.MN, _this.S46.WES, _this.S46.JUN, _this.S46.BEU, _this.S46.WH], [{
-              line: "U6",
-              dir: "Alt-Tegel"
-            }, {
-              line: "U6",
-              dir: "Kurt-Schumacher-Platz"
-            }, {
-              line: "U6",
-              dir: "Seestr"
-            }], [{
-              line: "U6",
-              dir: "Alt-Mariendorf"
-            }, {
-              line: "U6",
-              dir: "Tempelhof"
-            }, {
-              line: "U6",
-              dir: "Platz der Luftbrücke"
-            }, {
-              line: "U6",
-              dir: "Hallesches Tor"
-            }], [{
+            _this.filter = [[[_this.S41], [_this.S46.GB], [_this.S42], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK, _this.S46.HER, _this.S46.THF, _this.S46.SKR, _this.S46.SGR, _this.S46.IP, _this.S46.BUP, _this.S46.HEI, _this.S46.HO, _this.S46.HAL, _this.S46.WKRR, _this.S46.MN, _this.S46.WES, _this.S46.JUN, _this.S46.BEU, _this.S46.WH], [_this.U6.Tg, _this.U6.Bk, _this.U6.Hh, _this.U6.OTI, _this.U6.Scha, _this.U6.Sch, _this.U6.Afr, _this.U6.Rb, _this.U6.Se, _this.U6.Lpo], [_this.U6.Mf, _this.U6.Wl, _this.U6.Ull, _this.U6.Ka, _this.U6.At, _this.U6.Ts, _this.U6.Ps, _this.U6.PL, _this.U6.Me, _this.U6.Ks, _this.U6.Mic, _this.U6.Fr, _this.U6.F, _this.U6.Ob, _this.U6.NA, _this.U6.SK, _this.U6.Ri], [{
               line: "120",
               dir: "Wilhelmsruher Damm"
             }, {
