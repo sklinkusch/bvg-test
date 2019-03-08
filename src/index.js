@@ -159,86 +159,19 @@ class Station {
         case "jov":
           this.stop = [900000160541];
           this.neighboring = false;
-          this.filter = [
-            [
-              [{ line: "240", dir: "Storkower Str" }],
-              [
-                { line: "N50", dir: "Hugenottenplatz" },
-                { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" },
-                { line: "N50", dir: "Pankow" }
-              ],
-              [
-                { line: "240", dir: "Ostbahnhof" },
-                { line: "240", dir: "Betriebshof Lichtenberg" }
-              ],
-              [
-                { line: "N50", dir: "Tierpark" },
-                { line: "N50", dir: "Betriebshof Lichtenberg" }
-              ]
-            ]
-          ];
+          this.filter = [[[{ line: "240", dir: "Storkower Str" }], [{ line: "N50", dir: "Hugenottenplatz" }, { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" }, { line: "N50", dir: "Pankow" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }], [{ line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof Lichtenberg" }]]];
           break;
         case "bae":
-          this.stop = [900000160509];
+          this.stop = [900000160509,900000160010,900000160710];
           this.neighboring = false;
           this.filter = [
-            [
-              [
-                { line: "M8", dir: "Hauptbahnhof" },
-                { line: "M8", dir: "Petersburger" }
-              ],
-              [{ line: "M5", dir: "Petersburger" }],
-              [
-                { line: "21", dir: "Schöneweide" },
-                { line: "21", dir: "Bersarinplatz" },
-                { line: "21", dir: "Treskowallee/Ehrlichstr" }
-              ],
-              [
-                { line: "M8", dir: "Ahrensfelde/Stadtgrenze" },
-                { line: "M8", dir: "Betriebshof Marzahn" }
-              ],
-              [{ line: "21", dir: "Gudrunstr" }]
-            ]
-          ];
+            [[{ line: "M8", dir: "Hauptbahnhof" }, { line: "M8", dir: "Petersburger" }],
+              [{ line: "M5", dir: "Petersburger" }], [{ line: "21", dir: "Schöneweide" }, { line: "21", dir: "Bersarinplatz" }, { line: "21", dir: "Treskowallee/Ehrlichstr" }], [{ line: "M8", dir: "Ahrensfelde/Stadtgrenze" }, { line: "M8", dir: "Betriebshof Marzahn" }], [{ line: "21", dir: "Gudrunstr" }]],[[{line: "M13", dir: "Warschauer"}]]];
           break;
         case "moe":
           this.stop = [900000160014];
           this.neighboring = false;
-          this.filter = [
-            [
-              [
-                { line: "M13", dir: "Warschauer" },
-                { line: "M13", dir: "Frankfurter" }
-              ],
-              [{ line: "16", dir: "Frankfurter" }],
-              [
-                { line: "21", dir: "Schöneweide" },
-                { line: "21", dir: "Bersarinplatz" },
-                { line: "21", dir: "Treskowallee/Ehrlichstr" }
-              ],
-              [
-                { line: "M13", dir: "Virchow-Klinikum" },
-                { line: "M13", dir: "Degnerstr" },
-                { line: "M13", dir: "Betriebshof Lichtenberg" }
-              ],
-              [{ line: "16", dir: "Ahrensfelde/Stadtgrenze" }],
-              [{ line: "21", dir: "Gudrunstr" }],
-              [{ line: "240", dir: "Storkower Str" }],
-              [
-                { line: "N50", dir: "Hugenottenplatz" },
-                { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" },
-                { line: "N50", dir: "Pankow" }
-              ],
-              [
-                { line: "240", dir: "Ostbahnhof" },
-                { line: "240", dir: "Betriebshof Lichtenberg" }
-              ],
-              [
-                { line: "N50", dir: "Tierpark" },
-                { line: "N50", dir: "Betriebshof Lichtenberg" }
-              ]
-            ]
-          ];
+          this.filter = [[[{ line: "M13", dir: "Warschauer" }, { line: "M13", dir: "Frankfurter" }], [{ line: "16", dir: "Frankfurter" }], [{ line: "21", dir: "Schöneweide" }, { line: "21", dir: "Bersarinplatz" }, { line: "21", dir: "Treskowallee/Ehrlichstr" }], [{ line: "M13", dir: "Virchow-Klinikum" }, { line: "M13", dir: "Degnerstr" }, { line: "M13", dir: "Betriebshof Lichtenberg" }], [{ line: "16", dir: "Ahrensfelde/Stadtgrenze" }], [{ line: "21", dir: "Gudrunstr" }], [{ line: "240", dir: "Storkower Str" }], [{ line: "N50", dir: "Hugenottenplatz" }, { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" }, { line: "N50", dir: "Pankow" }], [{ line: "240", dir: "Ostbahnhof" }, { line: "240", dir: "Betriebshof Lichtenberg" }], [{ line: "N50", dir: "Tierpark" }, { line: "N50", dir: "Betriebshof Lichtenberg" }]]];
           break;
         case "gat":
           this.stop = [900000032106];
