@@ -687,7 +687,7 @@ function () {
             break;
 
           case "BMN":
-            _this.stop = [900000024106];
+            _this.stop = [900000024106, 900000026204, 900000026202];
             _this.neighboring = false;
             _this.filter = [[[_this.S41], [_this.S46.GB, _this.S46.WED, _this.S46.WH, _this.S46.BEU, _this.S46.JUN, _this.S46.WES], [_this.S42], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK, _this.S46.HER, _this.S46.THF, _this.S46.SKR, _this.S46.SGR, _this.S46.IP, _this.S46.BUP, _this.S46.HEI, _this.S46.HO, _this.S46.HAL, _this.S46.WKRR], [{
               line: "M49",
@@ -743,7 +743,13 @@ function () {
             }], [{
               line: "X49",
               dir: "Wilmersdorfer"
-            }]]];
+            }]], [[{
+              line: "139",
+              dir: "Werderstr"
+            }], [{
+              line: "139",
+              dir: "Messe Nord/ICC"
+            }]], [[_this.U2.Rl, _this.U2.Sd, _this.U2.Nd, _this.U2.Th], [_this.U2.PA, _this.U2.VIN, _this.U2.Sh, _this.U2.EB, _this.U2.Sz, _this.U2.Lu, _this.U2.A, _this.U2.Ko, _this.U2.Mk, _this.U2.Sp, _this.U2.Hv, _this.U2.Mi, _this.U2.MH, _this.U2.Pd, _this.U2.MB, _this.U2.Gu, _this.U2.BS, _this.U2.No, _this.U2.Wt, _this.U2.Zo, _this.U2.RP, _this.U2.Obi, _this.U2.Bmo, _this.U2.So]]];
             break;
 
           case "BNK":
