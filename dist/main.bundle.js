@@ -2004,6 +2004,7 @@ function () {
       this.addU55();
       this.addU6();
       this.addU7();
+      this.addU8();
     }
   }, {
     key: "addS1",
@@ -4305,6 +4306,112 @@ function () {
         },
         NULL: {
           line: "U7",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU8",
+    value: function addU8() {
+      this.U8 = {
+        WIU: {
+          line: "U8",
+          dir: "Wittenau"
+        },
+        RR: {
+          line: "U8",
+          dir: "Rathaus Reinickendorf"
+        },
+        KB: {
+          line: "U8",
+          dir: "Karl-Bonhoeffer-Nervenklinik"
+        },
+        LD: {
+          line: "U8",
+          dir: "Lindauer Allee"
+        },
+        PB: {
+          line: "U8",
+          dir: "Paracelsus-Bad"
+        },
+        RE: {
+          line: "U8",
+          dir: "Residenzstr"
+        },
+        FN: {
+          line: "U8",
+          dir: "Franz-Neumann-Platz"
+        },
+        Olu: {
+          line: "U8",
+          dir: "Osloer Str"
+        },
+        Pk: {
+          line: "U8",
+          dir: "Pankstr"
+        },
+        Gb: {
+          line: "U8",
+          dir: "Gesundbrunnen"
+        },
+        Vo: {
+          line: "U8",
+          dir: "Voltastr"
+        },
+        B: {
+          line: "U8",
+          dir: "Bernauer Str"
+        },
+        Ro: {
+          line: "U8",
+          dir: "Rosenthaler Platz"
+        },
+        W: {
+          line: "U8",
+          dir: "Weinmeisterstr"
+        },
+        Ap: {
+          line: "U8",
+          dir: "Alexanderplatz"
+        },
+        Jb: {
+          line: "U8",
+          dir: "Jannowitzbrücke"
+        },
+        He: {
+          line: "U8",
+          dir: "Heinrich-Heine-Str"
+        },
+        Mr: {
+          line: "U8",
+          dir: "Moritzplatz"
+        },
+        Kbu: {
+          line: "U8",
+          dir: "Kottbusser Tor"
+        },
+        ST: {
+          line: "U8",
+          dir: "Schönleinstr"
+        },
+        Hpo: {
+          line: "U8",
+          dir: "Hermannplatz"
+        },
+        Bo: {
+          line: "U8",
+          dir: "Boddinstr"
+        },
+        L: {
+          line: "U8",
+          dir: "Leinestr"
+        },
+        HMS: {
+          line: "U8",
+          dir: "Hermannstr"
+        },
+        NULL: {
+          line: "U8",
           dir: null
         }
       };
