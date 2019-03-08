@@ -422,10 +422,7 @@ function () {
           case "BHER":
             _this.stop = [900000079221, 900000079220];
             _this.neighboring = false;
-            _this.filter = [[[_this.S41], [_this.S45.SKR, _this.S45.THF], [_this.S46.GB, _this.S46.WED, _this.S46.WH, _this.S46.BEU, _this.S46.JUN, _this.S46.WES, _this.S46.MN, _this.S46.WKRR, _this.S46.HAL, _this.S46.HO, _this.S46.HEI, _this.S46.BUP, _this.S46.IP, _this.S46.SGR, _this.S46.SKR, _this.S46.THF], [_this.S42], [_this.S45.FLH, _this.S45.GBA, _this.S45.AGL, _this.S45.GAS, _this.S45.ADL, _this.S45.SCF, _this.S45.SW, _this.S45.BMW, _this.S45.KHD, _this.S45.NK], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK], [_this.S47.NULL], [{
-              line: "U8",
-              dir: null
-            }], [{
+            _this.filter = [[[_this.S41], [_this.S45.SKR, _this.S45.THF], [_this.S46.GB, _this.S46.WED, _this.S46.WH, _this.S46.BEU, _this.S46.JUN, _this.S46.WES, _this.S46.MN, _this.S46.WKRR, _this.S46.HAL, _this.S46.HO, _this.S46.HEI, _this.S46.BUP, _this.S46.IP, _this.S46.SGR, _this.S46.SKR, _this.S46.THF], [_this.S42], [_this.S45.FLH, _this.S45.GBA, _this.S45.AGL, _this.S45.GAS, _this.S45.ADL, _this.S45.SCF, _this.S45.SW, _this.S45.BMW, _this.S45.KHD, _this.S45.NK], [_this.S46.KW, _this.S46.WI, _this.S46.ZTH, _this.S46.EIW, _this.S46.GAS, _this.S46.ADL, _this.S46.SCF, _this.S46.SW, _this.S46.BMW, _this.S46.KHD, _this.S46.NK], [_this.S47.NULL], [_this.U8.NULL], [{
               line: "377",
               dir: "Plänterwald"
             }], [{
