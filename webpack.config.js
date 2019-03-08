@@ -64,7 +64,7 @@ module.exports = (env, argv) => {
         path: "./.env"
       }),
       new MiniCssExtractPlugin({
-        filename: "[name].scss",
+        filename: "[name].css",
         chunkFilename: "[id].css"
       })
     ]
