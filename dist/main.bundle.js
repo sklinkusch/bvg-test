@@ -1040,49 +1040,7 @@ function () {
           case "BSAL":
             _this.stop = [900000110001];
             _this.neighboring = false;
-            _this.filter = [[[_this.S41], [_this.S8.ZTH, _this.S8.EIW, _this.S8.GAS, _this.S8.ADL, _this.S8.SCF, _this.S8.SW, _this.S8.BMW, _this.S8.PWA, _this.S8.TP, _this.S8.OK, _this.S8.FA, _this.S8.STO, _this.S8.LST, _this.S8.GSS, _this.S8.PLA], [_this.S85.GAS, _this.S85.ADL, _this.S85.SCF, _this.S85.SW, _this.S85.BMW, _this.S85.PWA, _this.S85.TP, _this.S85.OK, _this.S85.FA, _this.S85.STO, _this.S85.LST, _this.S85.GSS, _this.S85.PLA], [_this.S42], [_this.S8.BIW, _this.S8.HN, _this.S8.BFE, _this.S8.SNF, _this.S8.MM, _this.S8.BLB, _this.S8.PHD, _this.S8.PKW, _this.S8.BOS], [_this.S85.NB, _this.S85.HUM, _this.S85.GB, _this.S85.PKW, _this.S85.BOS], [{
-              line: "U2",
-              dir: "Pankow"
-            }, {
-              line: "U2",
-              dir: "Vinetastr"
-            }], [{
-              line: "U2",
-              dir: "Ruhleben"
-            }, {
-              line: "U2",
-              dir: "Olympia-Stadion"
-            }, {
-              line: "U2",
-              dir: "Theodor-Heuss-Platz"
-            }, {
-              line: "U2",
-              dir: "Deutsche Oper"
-            }, {
-              line: "U2",
-              dir: "Zoologischer Garten"
-            }, {
-              line: "U2",
-              dir: "Breitenbachplatz"
-            }, {
-              line: "U2",
-              dir: "Fehrbelliner Platz"
-            }, {
-              line: "U2",
-              dir: "Spichernstr"
-            }, {
-              line: "U2",
-              dir: "Potsdamer Platz"
-            }, {
-              line: "U2",
-              dir: "Spittelmarkt"
-            }, {
-              line: "U2",
-              dir: "Alexanderplatz"
-            }, {
-              line: "U2",
-              dir: "Rosa-Luxemburg-Platz"
-            }], [{
+            _this.filter = [[[_this.S41], [_this.S8.ZTH, _this.S8.EIW, _this.S8.GAS, _this.S8.ADL, _this.S8.SCF, _this.S8.SW, _this.S8.BMW, _this.S8.PWA, _this.S8.TP, _this.S8.OK, _this.S8.FA, _this.S8.STO, _this.S8.LST, _this.S8.GSS, _this.S8.PLA], [_this.S85.GAS, _this.S85.ADL, _this.S85.SCF, _this.S85.SW, _this.S85.BMW, _this.S85.PWA, _this.S85.TP, _this.S85.OK, _this.S85.FA, _this.S85.STO, _this.S85.LST, _this.S85.GSS, _this.S85.PLA], [_this.S42], [_this.S8.BIW, _this.S8.HN, _this.S8.BFE, _this.S8.SNF, _this.S8.MM, _this.S8.BLB, _this.S8.PHD, _this.S8.PKW, _this.S8.BOS], [_this.S85.NB, _this.S85.HUM, _this.S85.GB, _this.S85.PKW, _this.S85.BOS], [_this.U2.PA, _this.U2.VIN], [_this.U2.Fpo, _this.U2.Hz, _this.U2.Sno, _this.U2.Au, _this.U2.Rl, _this.U2.Sd, _this.U2.Nd, _this.U2.Th, _this.U2.Kd, _this.U2.So, _this.U2.Bmo, _this.U2.Obi, _this.U2.RP, _this.U2.Zo, _this.U2.Wt, _this.U2.No, _this.U2.BS, _this.U2.Gu, _this.U2.MB, _this.U2.Pd, _this.U2.MH, _this.U2.Mi, _this.U2.Hv, _this.U2.Sp, _this.U2.Mk, _this.U2.Ko, _this.U2.A, _this.U2.Lu, _this.U2.Sz, _this.U2.EB], [{
               line: "M1",
               dir: "Schillerstr"
             }, {
