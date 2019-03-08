@@ -1581,7 +1581,7 @@ function () {
             break;
 
           case "bae":
-            _this.stop = [900000160509];
+            _this.stop = [900000160509, 900000160010, 900000160710];
             _this.neighboring = false;
             _this.filter = [[[{
               line: "M8",
@@ -1610,6 +1610,9 @@ function () {
             }], [{
               line: "21",
               dir: "Gudrunstr"
+            }]], [[{
+              line: "M13",
+              dir: "Warschauer"
             }]]];
             break;
 
