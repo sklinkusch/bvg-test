@@ -2003,6 +2003,7 @@ function () {
       this.addU5();
       this.addU55();
       this.addU6();
+      this.addU7();
     }
   }, {
     key: "addS1",
@@ -4134,6 +4135,176 @@ function () {
         },
         NULL: {
           line: "U6",
+          dir: null
+        }
+      };
+    }
+  }, {
+    key: "addU7",
+    value: function addU7() {
+      this.U7 = {
+        R: {
+          line: "U7",
+          dir: "Rudow"
+        },
+        Zd: {
+          line: "U7",
+          dir: "Zwickauer Damm"
+        },
+        Wk: {
+          line: "U7",
+          dir: "Wutzkyallee"
+        },
+        La: {
+          line: "U7",
+          dir: "Lipschitzallee"
+        },
+        Jt: {
+          line: "U7",
+          dir: "Johannisthaler Chaussee"
+        },
+        Br: {
+          line: "U7",
+          dir: "Britz-Süd"
+        },
+        Pi: {
+          line: "U7",
+          dir: "Parchimer Allee"
+        },
+        Bl: {
+          line: "U7",
+          dir: "Blaschkoallee"
+        },
+        Gz: {
+          line: "U7",
+          dir: "Grenzallee"
+        },
+        Nk: {
+          line: "U7",
+          dir: "Neukölln"
+        },
+        KM: {
+          line: "U7",
+          dir: "Karl-Marx-Allee"
+        },
+        Rk: {
+          line: "U7",
+          dir: "Rathaus Neukölln"
+        },
+        Hpu: {
+          line: "U7",
+          dir: "Hermannplatz"
+        },
+        Sü: {
+          line: "U7",
+          dir: "Südstern"
+        },
+        Gs: {
+          line: "U7",
+          dir: "Gneisenaustr"
+        },
+        Me: {
+          line: "U7",
+          dir: "Mehringdamm"
+        },
+        Mu: {
+          line: "U7",
+          dir: "Möckernbrücke"
+        },
+        Y: {
+          line: "U7",
+          dir: "Yorckstr"
+        },
+        Kt: {
+          line: "U7",
+          dir: "Kleistpark"
+        },
+        Ei: {
+          line: "U7",
+          dir: "Eisenacher Str"
+        },
+        Bpu: {
+          line: "U7",
+          dir: "Bayerischer Platz"
+        },
+        Beu: {
+          line: "U7",
+          dir: "Berliner Str"
+        },
+        Bli: {
+          line: "U7",
+          dir: "Blissestr"
+        },
+        Fpu: {
+          line: "U7",
+          dir: "Fehrbelliner Platz"
+        },
+        Kn: {
+          line: "U7",
+          dir: "Konstanzer Str"
+        },
+        Ad: {
+          line: "U7",
+          dir: "Adenauerplatz"
+        },
+        Wd: {
+          line: "U7",
+          dir: "Wilmersdorfer Str"
+        },
+        Bmu: {
+          line: "U7",
+          dir: "Bismarckstr"
+        },
+        Rw: {
+          line: "U7",
+          dir: "Richard-Wagner-Platz"
+        },
+        Mp: {
+          line: "U7",
+          dir: "Mierendorffplatz"
+        },
+        Jh: {
+          line: "U7",
+          dir: "Jungfernheide"
+        },
+        JK: {
+          line: "U7",
+          dir: "Jakob-Kaiser-Platz"
+        },
+        Hl: {
+          line: "U7",
+          dir: "Halemweg"
+        },
+        Sie: {
+          line: "U7",
+          dir: "Siemensdamm"
+        },
+        Rm: {
+          line: "U7",
+          dir: "Rohrdamm"
+        },
+        P: {
+          line: "U7",
+          dir: "Paulsternstr"
+        },
+        Hs: {
+          line: "U7",
+          dir: "Haselhorst"
+        },
+        Zi: {
+          line: "U7",
+          dir: "Zitadelle"
+        },
+        AS: {
+          line: "U7",
+          dir: "Altstadt Spandau"
+        },
+        RSp: {
+          line: "U7",
+          dir: "Rathaus Spandau"
+        },
+        NULL: {
+          line: "U7",
           dir: null
         }
       };
