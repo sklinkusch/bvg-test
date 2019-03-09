@@ -166,7 +166,7 @@ class Station {
           this.neighboring = false;
           this.filter = [
             [[{ line: "M8", dir: "Hauptbahnhof" }, { line: "M8", dir: "Petersburger" }],
-              [{ line: "M5", dir: "Petersburger" }], [{ line: "21", dir: "Schöneweide" }, { line: "21", dir: "Bersarinplatz" }, { line: "21", dir: "Treskowallee/Ehrlichstr" }], [{ line: "M8", dir: "Ahrensfelde/Stadtgrenze" }, { line: "M8", dir: "Betriebshof Marzahn" }], [{ line: "21", dir: "Gudrunstr" }]],[[{line: "M13", dir: "Warschauer"}]]];
+              [{ line: "M5", dir: "Petersburger" }], [{ line: "21", dir: "Schöneweide" }, { line: "21", dir: "Bersarinplatz" }, { line: "21", dir: "Treskowallee/Ehrlichstr" }], [{ line: "M8", dir: "Ahrensfelde/Stadtgrenze" }, { line: "M8", dir: "Betriebshof Marzahn" }], [{ line: "21", dir: "Gudrunstr" }]],[[{line: "M13", dir: "Warschauer"},{line: "M13", dir: "Frankfurter"}], [{line: "16", dir: "Frankfurter"}], [{line: "N50", dir: "Hugenottenplatz"}, {line: "N50", dir: "Pankow"}, {line: "N50", dir: "Betriebshof Indira-Gandhi-Str"}], [{line: "M13", dir: "Virchow-Klinikum"}, {line: "M13", dir: "Degnerstr"}],[{line: "16", dir: "Ahrensfelde/Stadtgrenze"}],[{line: "N50", dir: "Tierpark"}, {line: "N50", dir: "Betriebshof Lichtenberg"}]],[[{line: "M8", dir: "Hauptbahnhof"}, {line: "M8", dir: "Petersburger"}], [{line: "M5", dir: "Petersburger"}]]];
           break;
         case "moe":
           this.stop = [900000160014];
