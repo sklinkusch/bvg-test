@@ -557,6 +557,30 @@ function () {
             }]]];
             break;
 
+          case "BJB":
+            _this.stop = [900000100004];
+            _this.neighboring = false;
+            _this.filter = [[[_this.S3.GWD, _this.S3.SPA, _this.S3.SRW, _this.S3.PIC, _this.S3.OLS, _this.S3.HST, _this.S3.MS, _this.S3.WKS, _this.S3.CHS, _this.S3.SAP, _this.S3.ZOS, _this.S3.TGN, _this.S3.BEV, _this.S3.HBF, _this.S3.FST, _this.S3.HKM, _this.S3.ALX], [_this.S5.GWD, _this.S5.OLS, _this.S5.HST, _this.S5.MS, _this.S5.WKS, _this.S5.CHS, _this.S5.SAP, _this.S5.ZOS, _this.S5.TGN, _this.S5.BEV, _this.S5.HBF, _this.S5.FST, _this.S5.HKM, _this.S5.ALX], [_this.S7.PDH, _this.S7.BAB, _this.S7.GRI, _this.S7.WSS, _this.S7.NIS, _this.S7.GWD, _this.S7.WKS, _this.S7.CHS, _this.S7.SAP, _this.S7.ZOS, _this.S7.TGN, _this.S7.BEV, _this.S7.HBF, _this.S7.FST, _this.S7.HKM, _this.S7.ALX], [_this.S9.GWD, _this.S9.SPA, _this.S9.SRW, _this.S9.PIC, _this.S9.OLS, _this.S9.HST, _this.S9.MS, _this.S9.WKS, _this.S9.CHS, _this.S9.SAP, _this.S9.ZOS, _this.S9.TGN, _this.S9.BEV, _this.S9.HBF, _this.S9.FST, _this.S9.HKM, _this.S9.ALX], [_this.S3.E, _this.S3.WIG, _this.S3.RD, _this.S3.FRH, _this.S3.HIG, _this.S3.KPK, _this.S3.WHH, _this.S3.KLH, _this.S3.RB, _this.S3.RH, _this.S3.OKS, _this.S3.WRS, _this.S3.OSB], [_this.S5.STN, _this.S5.STR, _this.S5.HGM, _this.S5.STV, _this.S5.PEN, _this.S5.FD, _this.S5.NG, _this.S5.HPG, _this.S5.BIS, _this.S5.MDF, _this.S5.KAD, _this.S5.WT, _this.S5.BDF, _this.S5.FFO, _this.S5.LI, _this.S5.NPL, _this.S5.OKS, _this.S5.WRS, _this.S5.OSB], [_this.S7.AF, _this.S7.MEA, _this.S7.RW, _this.S7.MAZ, _this.S7.POE, _this.S7.SPH, _this.S7.FFO, _this.S7.LI, _this.S7.NPL, _this.S7.OKS, _this.S7.WRS, _this.S7.OSB], [_this.S9.LI, _this.S9.NPL, _this.S9.OKS, _this.S9.GAS, _this.S9.FLH, _this.S9.GBA, _this.S9.AGL, _this.S9.ADL, _this.S9.SCF, _this.S9.SW, _this.S9.BMW, _this.S9.PWA, _this.S9.TP, _this.S9.WRS, _this.S9.OSB], [_this.U8.WIU, _this.U8.RR, _this.U8.KB, _this.U8.LD, _this.U8.PB, _this.U8.RE, _this.U8.FN, _this.U8.Olu, _this.U8.Pk, _this.U8.Gb, _this.U8.Vo, _this.U8.B, _this.U8.Ro, _this.U8.W, _this.U8.Ap], [_this.U8.HMS, _this.U8.L, _this.U8.Bo, _this.U8.Hpo, _this.U8.ST, _this.U8.Kbu, _this.U8.Mr, _this.U8.He], [{
+              line: "248",
+              dir: "Breitenbachplatz"
+            }, {
+              line: "248",
+              dir: "Südkreuz"
+            }, {
+              line: "248",
+              dir: "Hallesches Tor"
+            }, {
+              line: "248",
+              dir: "Alexanderplatz"
+            }], [{
+              line: "248",
+              dir: "Warschauer Str"
+            }, {
+              line: "248",
+              dir: "Ostbahnhof"
+            }]]];
+            break;
+
           case "BJUN":
             _this.stop = [900000020201, 900000020207];
             _this.neighboring = false;
