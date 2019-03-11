@@ -2395,640 +2395,183 @@ function () {
   }, {
     key: "addS1",
     value: function addS1() {
-      this.S1 = {
-        PDH: {
-          line: "S1",
-          dir: "Potsdam"
-        },
-        BAB: {
-          line: "S1",
-          dir: "Babelsberg"
-        },
-        GRI: {
-          line: "S1",
-          dir: "Griebnitzsee"
-        },
-        WSS: {
-          line: "S1",
-          dir: "Wannsee"
-        },
-        NIW: {
-          line: "S1",
-          dir: "Nikolassee"
-        },
-        SLS: {
-          line: "S1",
-          dir: "Schlachtensee"
-        },
-        MEX: {
-          line: "S1",
-          dir: "Mexikoplatz"
-        },
-        ZD: {
-          line: "S1",
-          dir: "Zehlendorf"
-        },
-        SDG: {
-          line: "S1",
-          dir: "Sundgauer Str"
-        },
-        LWE: {
-          line: "S1",
-          dir: "Lichterfelde West"
-        },
-        BGT: {
-          line: "S1",
-          dir: "Botanischer Garten"
-        },
-        RST: {
-          line: "S1",
-          dir: "Rathaus Steglitz"
-        },
-        FB: {
-          line: "S1",
-          dir: "Feuerbachstr"
-        },
-        FRU: {
-          line: "S1",
-          dir: "Friedenau"
-        },
-        SGV: {
-          line: "S1",
-          dir: "Schöneberg"
-        },
-        JLB: {
-          line: "S1",
-          dir: "Julius-Leber-Brücke"
-        },
-        YOR: {
-          line: "S1",
-          dir: "Yorckstr"
-        },
-        AHU: {
-          line: "S1",
-          dir: "Anhalter Bahnhof"
-        },
-        POP: {
-          line: "S1",
-          dir: "Potsdamer Platz"
-        },
-        TOR: {
-          line: "S1",
-          dir: "Brandenburger Tor"
-        },
-        FSTT: {
-          line: "S1",
-          dir: "Friedrichstr"
-        },
-        ORS: {
-          line: "S1",
-          dir: "Oranienburger Str"
-        },
-        NB: {
-          line: "S1",
-          dir: "Nordbahnhof"
-        },
-        HUM: {
-          line: "S1",
-          dir: "Humboldthain"
-        },
-        GB: {
-          line: "S1",
-          dir: "Gesundbrunnen"
-        },
-        BOS: {
-          line: "S1",
-          dir: "Bornholmer Str"
-        },
-        WOK: {
-          line: "S1",
-          dir: "Wollankstr"
-        },
-        SNH: {
-          line: "S1",
-          dir: "Schönholz"
-        },
-        WM: {
-          line: "S1",
-          dir: "Wilhelmsruh"
-        },
-        WIN: {
-          line: "S1",
-          dir: "Wittenau"
-        },
-        WAI: {
-          line: "S1",
-          dir: "Waidmannslust"
-        },
-        HED: {
-          line: "S1",
-          dir: "Hermsdorf"
-        },
-        FOH: {
-          line: "S1",
-          dir: "Frohnau"
-        },
-        HN: {
-          line: "S1",
-          dir: "Hohen Neuendorf"
-        },
-        BIW: {
-          line: "S1",
-          dir: "Birkenwerder"
-        },
-        BOR: {
-          line: "S1",
-          dir: "Borgsdorf"
-        },
-        LEN: {
-          line: "S1",
-          dir: "Lehnitz"
-        },
-        ORB: {
-          line: "S1",
-          dir: "Oranienburg"
-        },
-        NULL: {
-          line: "S1",
-          dir: null
-        }
-      };
+      this.S1 = this.addBLine("S1", {
+        PDH: "Potsdam",
+        BAB: "Babelsberg",
+        GRI: "Griebnitzsee",
+        WSS: "Wannsee",
+        NIS: "Nikolassee",
+        SLS: "Schlachtensee",
+        MEX: "Mexikoplatz",
+        ZD: "Zehlendorf",
+        SDG: "Sundgauer Str",
+        LWE: "Lichterfelde West",
+        BGT: "Botanischer Garten",
+        RST: "Rathaus Steglitz",
+        FB: "Feuerbachstr",
+        FRU: "Friedenau",
+        SGV: "Schöneberg",
+        JLB: "Julius-Leber-Brücke",
+        YOR: "Yorckstr",
+        AHU: "Anhalter Bahnhof",
+        POP: "Potsdamer Platz",
+        TOR: "Brandenburger Tor",
+        FSTT: "Friedrichstr",
+        ORS: "Oranienburger Str",
+        NB: "Nordbahnhof",
+        HUM: "Humboldthain",
+        GB: "Gesundbrunnen",
+        BOS: "Bornholmer Str",
+        WOK: "Wollankstr",
+        SNH: "Schönholz",
+        WM: "Wilhelmsruh",
+        WIN: "Wittenau",
+        WAI: "Waidmannslust",
+        HED: "Hermsdorf",
+        FOH: "Frohnau",
+        HN: "Hohen Neuendorf",
+        BIW: "Birkenwerder",
+        BOR: "Borgsdorf",
+        LEN: "Lehnitz",
+        ORB: "Oranienburg",
+        NULL: null
+      });
     }
   }, {
     key: "addS2",
     value: function addS2() {
-      this.S2 = {
-        BFD: {
-          line: "S2",
-          dir: "Blankenfelde"
-        },
-        MAH: {
-          line: "S2",
-          dir: "Mahlow"
-        },
-        LRD: {
-          line: "S2",
-          dir: "Lichtenrade"
-        },
-        SC: {
-          line: "S2",
-          dir: "Schichauweg"
-        },
-        BCH: {
-          line: "S2",
-          dir: "Buckower Chaussee"
-        },
-        MF: {
-          line: "S2",
-          dir: "Marienfelde"
-        },
-        ATS: {
-          line: "S2",
-          dir: "Attilastr"
-        },
-        PRS: {
-          line: "S2",
-          dir: "Priesterweg"
-        },
-        SKV: {
-          line: "S2",
-          dir: "Südkreuz"
-        },
-        YOR: {
-          line: "S2",
-          dir: "Yorckstr"
-        },
-        AHU: {
-          line: "S2",
-          dir: "Anhalter Bahnhof"
-        },
-        POP: {
-          line: "S2",
-          dir: "Potsdamer Platz"
-        },
-        TOR: {
-          line: "S2",
-          dir: "Brandenburger Tor"
-        },
-        FSTT: {
-          line: "S2",
-          dir: "Friedrichstr"
-        },
-        ORS: {
-          line: "S2",
-          dir: "Oranienburger Str"
-        },
-        NB: {
-          line: "S2",
-          dir: "Nordbahnhof"
-        },
-        HUM: {
-          line: "S2",
-          dir: "Humboldthain"
-        },
-        GB: {
-          line: "S2",
-          dir: "Gesundbrunnen"
-        },
-        BOS: {
-          line: "S2",
-          dir: "Bornholmer Str"
-        },
-        PKW: {
-          line: "S2",
-          dir: "Pankow"
-        },
-        PHD: {
-          line: "S2",
-          dir: "Pankow-Heinersdorf"
-        },
-        BLB: {
-          line: "S2",
-          dir: "Blankenburg"
-        },
-        KRW: {
-          line: "S2",
-          dir: "Karow"
-        },
-        BU: {
-          line: "S2",
-          dir: "Buch"
-        },
-        RGT: {
-          line: "S2",
-          dir: "Röntgental"
-        },
-        ZEP: {
-          line: "S2",
-          dir: "Zepernick"
-        },
-        BRF: {
-          line: "S2",
-          dir: "Bernau-Friedenstal"
-        },
-        BER: {
-          line: "S2",
-          dir: "Bernau"
-        },
-        NULL: {
-          line: "S2",
-          dir: null
-        }
-      };
+      this.S2 = this.addBLine("S2", {
+        BFD: "Blankenfelde",
+        MAH: "Mahlow",
+        LRD: "Lichtenrade",
+        SC: "Schichauweg",
+        BCH: "Buckower Chaussee",
+        MF: "Marienfelde",
+        ATS: "Attilastr",
+        PRS: "Priesterweg",
+        SKV: "Südkreuz",
+        YOR: "Yorckstr",
+        AHU: "Anhalter Bahnhof",
+        POP: "Potsdamer Platz",
+        TOR: "Brandenburger Tor",
+        FSTT: "Friedrichstr",
+        ORS: "Oranienburger Str",
+        NB: "Nordbahnhof",
+        HUM: "Humboldthain",
+        GB: "Gesundbrunnen",
+        BOS: "Bornholmer Str",
+        PKW: "Pankow",
+        PHD: "Pankow-Heinersdorf",
+        BLB: "Blankenburg",
+        KRW: "Karow",
+        BU: "Buch",
+        RGT: "Röntgental",
+        ZEP: "Zepernick",
+        BRF: "Bernau-Friedenstal",
+        BER: "Bernau",
+        NULL: null
+      });
     }
   }, {
     key: "addS25",
     value: function addS25() {
-      this.S25 = {
-        TLS: {
-          line: "S25",
-          dir: "Teltow Stadt"
-        },
-        LIS: {
-          line: "S25",
-          dir: "Lichterfelde Süd"
-        },
-        OSS: {
-          line: "S25",
-          dir: "Osdorfer Str"
-        },
-        LIO: {
-          line: "S25",
-          dir: "Lichterfelde Ost"
-        },
-        LAK: {
-          line: "S25",
-          dir: "Lankwitz"
-        },
-        SDE: {
-          line: "S25",
-          dir: "Südende"
-        },
-        PRS: {
-          line: "S25",
-          dir: "Priesterweg"
-        },
-        SKV: {
-          line: "S25",
-          dir: "Südkreuz"
-        },
-        YOR: {
-          line: "S25",
-          dir: "Yorckstr"
-        },
-        AHU: {
-          line: "S25",
-          dir: "Anhalter Bahnhof"
-        },
-        POP: {
-          line: "S25",
-          dir: "Potsdamer Platz"
-        },
-        TOR: {
-          line: "S25",
-          dir: "Brandenburger Tor"
-        },
-        FSTT: {
-          line: "S25",
-          dir: "Friedrichstr"
-        },
-        ORS: {
-          line: "S25",
-          dir: "Oranienburger Str"
-        },
-        NB: {
-          line: "S25",
-          dir: "Nordbahnhof"
-        },
-        HUM: {
-          line: "S25",
-          dir: "Humboldthain"
-        },
-        GB: {
-          line: "S25",
-          dir: "Gesundbrunnen"
-        },
-        BOS: {
-          line: "S25",
-          dir: "Bornholmer Str"
-        },
-        WOK: {
-          line: "S25",
-          dir: "Wollankstr"
-        },
-        SNH: {
-          line: "S25",
-          dir: "Schönholz"
-        },
-        ARF: {
-          line: "S25",
-          dir: "Alt-Reinickendorf"
-        },
-        KBO: {
-          line: "S25",
-          dir: "Karl-Bonhoeffer-Nervenklinik"
-        },
-        EBD: {
-          line: "S25",
-          dir: "Eichborndamm"
-        },
-        TG: {
-          line: "S25",
-          dir: "Tegel"
-        },
-        SZF: {
-          line: "S25",
-          dir: "Schulzendorf"
-        },
-        HLS: {
-          line: "S25",
-          dir: "Schulzendorf"
-        },
-        HD: {
-          line: "S25",
-          dir: "Hennigsdorf"
-        },
-        NULL: {
-          line: "S25",
-          dir: null
-        }
-      };
+      this.S25 = this.addBLine("S25", {
+        TLS: "Teltow Stadt",
+        LIS: "Lichterfelde Süd",
+        OSS: "Osdorfer Str",
+        LIO: "Lichterfelde Ost",
+        LAK: "Lankwitz",
+        SDE: "Südende",
+        PRS: "Priesterweg",
+        SKV: "Südkreuz",
+        YOR: "Yorckstr",
+        AHU: "Anhalter Bahnhof",
+        POP: "Potsdamer Platz",
+        TOR: "Brandenburger Tor",
+        FSTT: "Friedrichstr",
+        ORS: "Oranienburger Str",
+        NB: "Nordbahnhof",
+        HUM: "Humboldthain",
+        GB: "Gesundbrunnen",
+        WOK: "Wollankstr",
+        SNH: "Schönholz",
+        ARF: "Alt-Reinickendorf",
+        KBO: "Karl-Bonhoeffer-Nervenklinik",
+        EBD: "Eichborndamm",
+        TG: "Tegel",
+        SZF: "Schulzendorf",
+        HLS: "Heiligensee",
+        HD: "Hennigsdorf",
+        NULL: null
+      });
     }
   }, {
     key: "addS26",
     value: function addS26() {
-      this.S26 = {
-        TLS: {
-          line: "S26",
-          dir: "Teltow Stadt"
-        },
-        LIS: {
-          line: "S26",
-          dir: "Lichterfelde Süd"
-        },
-        OSS: {
-          line: "S26",
-          dir: "Osdorfer Str"
-        },
-        LIO: {
-          line: "S26",
-          dir: "Lichterfelde Ost"
-        },
-        LAK: {
-          line: "S26",
-          dir: "Lankwitz"
-        },
-        SDE: {
-          line: "S26",
-          dir: "Südende"
-        },
-        PRS: {
-          line: "S26",
-          dir: "Priesterweg"
-        },
-        SKV: {
-          line: "S26",
-          dir: "Südkreuz"
-        },
-        YOR: {
-          line: "S26",
-          dir: "Yorckstr"
-        },
-        AHU: {
-          line: "S26",
-          dir: "Anhalter Bahnhof"
-        },
-        POP: {
-          line: "S26",
-          dir: "Potsdamer Platz"
-        },
-        TOR: {
-          line: "S26",
-          dir: "Brandenburger Tor"
-        },
-        FSTT: {
-          line: "S26",
-          dir: "Friedrichstr"
-        },
-        ORS: {
-          line: "S26",
-          dir: "Oranienburger Str"
-        },
-        NB: {
-          line: "S26",
-          dir: "Nordbahnhof"
-        },
-        HUM: {
-          line: "S26",
-          dir: "Humboldthain"
-        },
-        GB: {
-          line: "S26",
-          dir: "Gesundbrunnen"
-        },
-        BOS: {
-          line: "S26",
-          dir: "Bornholmer Str"
-        },
-        WOK: {
-          line: "S26",
-          dir: "Wollankstr"
-        },
-        SNH: {
-          line: "S26",
-          dir: "Schönholz"
-        },
-        WM: {
-          line: "S26",
-          dir: "Wilhelmsruh"
-        },
-        WIN: {
-          line: "S26",
-          dir: "Wittenau"
-        },
-        WAI: {
-          line: "S26",
-          dir: "Waidmannslust"
-        },
-        NULL: {
-          line: "S26",
-          dir: null
-        }
-      };
+      this.S26 = this.addBLine("S26", {
+        TLS: "Teltow Stadt",
+        LIS: "Lichterfelde Süd",
+        OSS: "Osdorfer Str",
+        LIO: "Lichterfelde Ost",
+        LAK: "Lankwitz",
+        SDE: "Südende",
+        PRS: "Priesterweg",
+        SKV: "Südkreuz",
+        YOR: "Yorckstr",
+        AHU: "Anhalter Bahnhof",
+        POP: "Potsdamer Platz",
+        TOR: "Brandenburger Tor",
+        FSTT: "Friedrichstr",
+        ORS: "Oranienburger Str",
+        NB: "Nordbahnhof",
+        HUM: "Humboldthain",
+        GB: "Gesundbrunnen",
+        BOS: "Bornholmer Str",
+        WOK: "Wollankstr",
+        SNH: "Schönholz",
+        WM: "Wilhelmsruh",
+        WIN: "Wittenau",
+        WAI: "Waidmannslust",
+        NULL: null
+      });
     }
   }, {
     key: "addS3",
     value: function addS3() {
-      this.S3 = {
-        E: {
-          line: "S3",
-          dir: "Erkner"
-        },
-        WIG: {
-          line: "S3",
-          dir: "Wilhelmshagen"
-        },
-        RD: {
-          line: "S3",
-          dir: "Rahnsdorf"
-        },
-        FRH: {
-          line: "S3",
-          dir: "Friedrichshagen"
-        },
-        HIG: {
-          line: "S3",
-          dir: "Hirschgarten"
-        },
-        KPK: {
-          line: "S3",
-          dir: "Köpenick"
-        },
-        WHH: {
-          line: "S3",
-          dir: "Wuhlheide"
-        },
-        KLH: {
-          line: "S3",
-          dir: "Karlshorst"
-        },
-        RB: {
-          line: "S3",
-          dir: "Betriebsbahnhof Rummelsburg"
-        },
-        RH: {
-          line: "S3",
-          dir: "Rummelsburg"
-        },
-        OKS: {
-          line: "S3",
-          dir: "Ostkreuz"
-        },
-        WRS: {
-          line: "S3",
-          dir: "Warschauer Str"
-        },
-        OSB: {
-          line: "S3",
-          dir: "Ostbahnhof"
-        },
-        JB: {
-          line: "S3",
-          dir: "Jannowitzbrücke"
-        },
-        ALX: {
-          line: "S3",
-          dir: "Alexanderplatz"
-        },
-        HKM: {
-          line: "S3",
-          dir: "Hackescher Markt"
-        },
-        FST: {
-          line: "S3",
-          dir: "Friedrichstr"
-        },
-        HBF: {
-          line: "S3",
-          dir: "Hauptbahnhof"
-        },
-        BEV: {
-          line: "S3",
-          dir: "Bellevue"
-        },
-        TGN: {
-          line: "S3",
-          dir: "Tiergarten"
-        },
-        ZOS: {
-          line: "S3",
-          dir: "Zoologischer Garten"
-        },
-        SAP: {
-          line: "S3",
-          dir: "Savignyplatz"
-        },
-        CHS: {
-          line: "S3",
-          dir: "Charlottenburg"
-        },
-        WKS: {
-          line: "S3",
-          dir: "Westkreuz"
-        },
-        GWD: {
-          line: "S3",
-          dir: "Grunewald"
-        },
-        MS: {
-          line: "S3",
-          dir: "Messe Süd"
-        },
-        HST: {
-          line: "S3",
-          dir: "Heerstr"
-        },
-        OLS: {
-          line: "S3",
-          dir: "Olympiastadion"
-        },
-        PIC: {
-          line: "S3",
-          dir: "Pichelsberg"
-        },
-        SRW: {
-          line: "S3",
-          dir: "Stresow"
-        },
-        SPA: {
-          line: "S3",
-          dir: "Spandau"
-        },
-        NULL: {
-          line: "S3",
-          dir: null
-        }
-      };
+      this.S3 = this.addBLine("S3", {
+        E: "Erkner",
+        WIG: "Wilhelmshagen",
+        RD: "Rahnsdorf",
+        FRH: "Friedrichshagen",
+        HIG: "Hirschgarten",
+        KPK: "Köpenick",
+        WHH: "Wuhlheide",
+        KLH: "Karlshorst",
+        RB: "Betriebsbahnhof Rummelsburg",
+        RH: "Rummelsburg",
+        OKS: "Ostkreuz",
+        WRS: "Warschauer Str",
+        OSB: "Ostbahnhof",
+        JB: "Jannowitzbrücke",
+        ALX: "Alexanderplatz",
+        HKM: "Hackescher Markt",
+        FST: "Friedrichstr",
+        HBF: "Hauptbahnhof",
+        BEV: "Bellevue",
+        TGN: "Tiergarten",
+        ZOS: "Zoologischer Garten",
+        SAP: "Savignyplatz",
+        CHS: "Charlottenburg",
+        WKS: "Westkreuz",
+        GWD: "Grunewald",
+        MS: "Messe Süd",
+        HST: "Heerstr",
+        OLS: "Olympiastadion",
+        PIC: "Pichelsberg",
+        SRW: "Stresow",
+        SPA: "Spandau",
+        NULL: null
+      });
     }
   }, {
     key: "addS4",
@@ -3045,908 +2588,269 @@ function () {
   }, {
     key: "addS45",
     value: function addS45() {
-      this.S45 = {
-        FLH: {
-          line: "S45",
-          dir: "Flughafen Berlin-Schönefeld"
-        },
-        GBA: {
-          line: "S45",
-          dir: "Grünbergallee"
-        },
-        AGL: {
-          line: "S45",
-          dir: "Altglienicke"
-        },
-        GAS: {
-          line: "S45",
-          dir: "Grünau"
-        },
-        ADL: {
-          line: "S45",
-          dir: "Adlershof"
-        },
-        SCF: {
-          line: "S45",
-          dir: "Betriebsbahnhof Schöneweide"
-        },
-        SW: {
-          line: "S45",
-          dir: "Schöneweide"
-        },
-        BMW: {
-          line: "S45",
-          dir: "Baumschulenweg"
-        },
-        PWA: {
-          line: "S45",
-          dir: "Plänterwald"
-        },
-        TP: {
-          line: "S45",
-          dir: "Treptower Park"
-        },
-        KHD: {
-          line: "S45",
-          dir: "Köllnische Heide"
-        },
-        NK: {
-          line: "S45",
-          dir: "Neukölln"
-        },
-        HER: {
-          line: "S45",
-          dir: "Hermannstr"
-        },
-        THF: {
-          line: "S45",
-          dir: "Tempelhof"
-        },
-        SKR: {
-          line: "S45",
-          dir: "Südkreuz"
-        },
-        NULL: {
-          line: "S45",
-          dir: null
-        }
-      };
+      this.S45 = this.addBLine("S45", {
+        FLH: "Flughafen Berlin-Schönefeld",
+        GBA: "Grünbergallee",
+        AGL: "Altglienicke",
+        GAS: "Grünau",
+        ADL: "Adlershof",
+        SCF: "Betriebsbahnhof Schöneweide",
+        SW: "Schöneweide",
+        BMW: "Baumschulenweg",
+        PWA: "Plänterwald",
+        TP: "Treptower Park",
+        KHD: "Köllnische Heide",
+        NK: "Neukölln",
+        HER: "Hermannstr",
+        THF: "Tempelhof",
+        SKR: "Südkreuz",
+        NULL: null
+      });
     }
   }, {
     key: "addS46",
     value: function addS46() {
-      this.S46 = {
-        KW: {
-          line: "S46",
-          dir: "Königs Wusterhausen"
-        },
-        WI: {
-          line: "S46",
-          dir: "Wildau"
-        },
-        ZTH: {
-          line: "S46",
-          dir: "Zeuthen"
-        },
-        EIW: {
-          line: "S46",
-          dir: "Eichwalde"
-        },
-        GAS: {
-          line: "S46",
-          dir: "Grünau"
-        },
-        ADL: {
-          line: "S46",
-          dir: "Adlershof"
-        },
-        SCF: {
-          line: "S46",
-          dir: "Betriebsbahnhof Schöneweide"
-        },
-        SW: {
-          line: "S46",
-          dir: "Schöneweide"
-        },
-        BMW: {
-          line: "S46",
-          dir: "Baumschulenweg"
-        },
-        PWA: {
-          line: "S46",
-          dir: "Plänterwald"
-        },
-        TP: {
-          line: "S46",
-          dir: "Treptower Park"
-        },
-        KHD: {
-          line: "S46",
-          dir: "Köllnische Heide"
-        },
-        NK: {
-          line: "S46",
-          dir: "Neukölln"
-        },
-        HER: {
-          line: "S46",
-          dir: "Hermannstr"
-        },
-        THF: {
-          line: "S46",
-          dir: "Tempelhof"
-        },
-        SKR: {
-          line: "S46",
-          dir: "Südkreuz"
-        },
-        SGR: {
-          line: "S46",
-          dir: "Schöneberg"
-        },
-        IP: {
-          line: "S46",
-          dir: "Innsbrucker Platz"
-        },
-        BUP: {
-          line: "S46",
-          dir: "Bundesplatz"
-        },
-        HEI: {
-          line: "S46",
-          dir: "Heidelberger Platz"
-        },
-        HO: {
-          line: "S46",
-          dir: "Hohenzollerndamm"
-        },
-        HAL: {
-          line: "S46",
-          dir: "Halensee"
-        },
-        WKRR: {
-          line: "S46",
-          dir: "Westkreuz"
-        },
-        MN: {
-          line: "S46",
-          dir: "Messe Nord/ICC"
-        },
-        WES: {
-          line: "S46",
-          dir: "Westend"
-        },
-        JUN: {
-          line: "S46",
-          dir: "Jungfernheide"
-        },
-        BEU: {
-          line: "S46",
-          dir: "Beusselstr"
-        },
-        WH: {
-          line: "S46",
-          dir: "Westhafen"
-        },
-        WED: {
-          line: "S46",
-          dir: "Wedding"
-        },
-        GB: {
-          line: "S46",
-          dir: "Gesundbrunnen"
-        },
-        NULL: {
-          line: "S46",
-          dir: null
-        }
-      };
+      this.S46 = this.addBLine("S46", {
+        KW: "Königs Wusterhausen",
+        WI: "Wildau",
+        ZTH: "Zeuthen",
+        EIW: "Eichwalde",
+        GAS: "Grünau",
+        ADL: "Adlershof",
+        SCF: "Betriebsbahnhof Schöneweide",
+        SW: "Schöneweide",
+        BMW: "Baumschulenweg",
+        PWA: "Plänterwald",
+        TP: "Treptower Park",
+        KHD: "Köllnische Heide",
+        NK: "Neukölln",
+        HER: "Hermannstr",
+        THF: "Tempelhof",
+        SKR: "Südkreuz",
+        SGR: "Schöneberg",
+        IP: "Innsbrucker Platz",
+        BUP: "Bundesplatz",
+        HEI: "Heidelberger Platz",
+        HO: "Hohenzollerndamm",
+        HAL: "Halensee",
+        WKRR: "Westkreuz",
+        MN: "Messe Nord/ICC",
+        WES: "Westend",
+        JUN: "Jungfernheide",
+        BEU: "Beusselstr",
+        WH: "Westhafen",
+        WED: "Wedding",
+        GB: "Gesundbrunnen",
+        NULL: null
+      });
     }
   }, {
     key: "addS47",
     value: function addS47() {
-      this.S47 = {
-        SPF: {
-          line: "S47",
-          dir: "Spindlersfeld"
-        },
-        OSP: {
-          line: "S47",
-          dir: "Oberspree"
-        },
-        SW: {
-          line: "S47",
-          dir: "Schöneweide"
-        },
-        BMW: {
-          line: "S47",
-          dir: "Baumschulenweg"
-        },
-        PWA: {
-          line: "S47",
-          dir: "Plänterwald"
-        },
-        TP: {
-          line: "S47",
-          dir: "Treptower Park"
-        },
-        KHD: {
-          line: "S47",
-          dir: "Köllnische Heide"
-        },
-        NK: {
-          line: "S47",
-          dir: "Neukölln"
-        },
-        HER: {
-          line: "S47",
-          dir: "Hermannstr"
-        },
-        NULL: {
-          line: "S47",
-          dir: null
-        }
-      };
+      this.S47 = this.addBLine("S47", {
+        SPF: "Spindlersfeld",
+        OSP: "Oberspree",
+        SW: "Schöneweide",
+        BMW: "Baumschulenweg",
+        PWA: "Plänterwald",
+        TP: "Treptower Park",
+        KHD: "Köllnische Heide",
+        NK: "Neukölln",
+        HER: "Hermannstr",
+        NULL: null
+      });
     }
   }, {
     key: "addS5",
     value: function addS5() {
-      this.S5 = {
-        STN: {
-          line: "S5",
-          dir: "Strausberg Nord"
-        },
-        STR: {
-          line: "S5",
-          dir: "Strausberg Stadt"
-        },
-        HGM: {
-          line: "S5",
-          dir: "Hegermühle"
-        },
-        STV: {
-          line: "S5",
-          dir: "Strausberg"
-        },
-        PEN: {
-          line: "S5",
-          dir: "Petershagen Nord"
-        },
-        FD: {
-          line: "S5",
-          dir: "Fredersdorf"
-        },
-        NG: {
-          line: "S5",
-          dir: "Neuenhagen"
-        },
-        HPG: {
-          line: "S5",
-          dir: "Hoppegarten"
-        },
-        BIS: {
-          line: "S5",
-          dir: "Birkenstein"
-        },
-        MDF: {
-          line: "S5",
-          dir: "Mahlsdorf"
-        },
-        KAD: {
-          line: "S5",
-          dir: "Kaulsdorf"
-        },
-        WT: {
-          line: "S5",
-          dir: "Wuhletal"
-        },
-        BDF: {
-          line: "S5",
-          dir: "Biesdorf"
-        },
-        FFO: {
-          line: "S5",
-          dir: "Friedrichsfelde Ost"
-        },
-        LI: {
-          line: "S5",
-          dir: "Lichtenberg"
-        },
-        NPL: {
-          line: "S5",
-          dir: "Nöldnerplatz"
-        },
-        OKS: {
-          line: "S5",
-          dir: "Ostkreuz"
-        },
-        WRS: {
-          line: "S5",
-          dir: "Warschauer Str"
-        },
-        OSB: {
-          line: "S5",
-          dir: "Ostbahnhof"
-        },
-        JB: {
-          line: "S5",
-          dir: "Jannowitzbrücke"
-        },
-        ALX: {
-          line: "S5",
-          dir: "Alexanderplatz"
-        },
-        HKM: {
-          line: "S5",
-          dir: "Hackescher Markt"
-        },
-        FST: {
-          line: "S5",
-          dir: "Friedrichstr"
-        },
-        HBF: {
-          line: "S5",
-          dir: "Hauptbahnhof"
-        },
-        BEV: {
-          line: "S5",
-          dir: "Bellevue"
-        },
-        TGN: {
-          line: "S5",
-          dir: "Tiergarten"
-        },
-        ZOS: {
-          line: "S5",
-          dir: "Zoologischer Garten"
-        },
-        SAP: {
-          line: "S5",
-          dir: "Savignyplatz"
-        },
-        CHS: {
-          line: "S5",
-          dir: "Charlottenburg"
-        },
-        WKS: {
-          line: "S5",
-          dir: "Westkreuz"
-        },
-        MS: {
-          line: "S5",
-          dir: "Messe Süd"
-        },
-        HST: {
-          line: "S5",
-          dir: "Heerstr"
-        },
-        OLS: {
-          line: "S5",
-          dir: "Olympiastadion"
-        },
-        GWD: {
-          line: "S5",
-          dir: "Grunewald"
-        },
-        NULL: {
-          line: "S5",
-          dir: null
-        }
-      };
+      this.S5 = this.addBLine("S5", {
+        STN: "Strausberg Nord",
+        STR: "Strausberg Stadt",
+        HGM: "Hegermühle",
+        STV: "Strausberg",
+        PEN: "Petershagen Nord",
+        FD: "Fredersdorf",
+        NG: "Neuenhagen",
+        HPG: "Hoppegarten",
+        BIS: "Birkenstein",
+        MDF: "Mahlsdorf",
+        KAD: "Kaulsdorf",
+        WT: "Wuhletal",
+        BDF: "Biesdorf",
+        FFO: "Friedrichsfelde Ost",
+        LI: "Lichtenberg",
+        NPL: "Nöldnerplatz",
+        OKS: "Ostkreuz",
+        WRS: "Warschauer Str",
+        OSB: "Ostbahnhof",
+        JB: "Jannowitzbrücke",
+        ALX: "Alexanderplatz",
+        HKM: "Hackescher Markt",
+        FST: "Friedrichstr",
+        HBF: "Hauptbahnhof",
+        BEV: "Bellevue",
+        TGN: "Tiergarten",
+        ZOS: "Zoologischer Garten",
+        SAP: "Savignyplatz",
+        CHS: "Charlottenburg",
+        WKS: "Westkreuz",
+        GWD: "Grunewald",
+        MS: "Messe Süd",
+        HST: "Heerstr",
+        OLS: "Olympiastadion",
+        NULL: null
+      });
     }
   }, {
     key: "addS7",
     value: function addS7() {
-      this.S7 = {
-        AF: {
-          line: "S7",
-          dir: "Ahrensfelde"
-        },
-        MEA: {
-          line: "S7",
-          dir: "Mehrower Allee"
-        },
-        RW: {
-          line: "S7",
-          dir: "Raoul-Wallenberg-Str"
-        },
-        MAZ: {
-          line: "S7",
-          dir: "Marzahn"
-        },
-        POE: {
-          line: "S7",
-          dir: "Poelchaustr"
-        },
-        SPH: {
-          line: "S7",
-          dir: "Springpfuhl"
-        },
-        FFO: {
-          line: "S7",
-          dir: "Friedrichsfelde Ost"
-        },
-        LI: {
-          line: "S7",
-          dir: "Lichtenberg"
-        },
-        NPL: {
-          line: "S7",
-          dir: "Nöldnerplatz"
-        },
-        OKS: {
-          line: "S7",
-          dir: "Ostkreuz"
-        },
-        WRS: {
-          line: "S7",
-          dir: "Warschauer Str"
-        },
-        OSB: {
-          line: "S7",
-          dir: "Ostbahnhof"
-        },
-        JB: {
-          line: "S7",
-          dir: "Jannowitzbrücke"
-        },
-        ALX: {
-          line: "S7",
-          dir: "Alexanderplatz"
-        },
-        HKM: {
-          line: "S7",
-          dir: "Hackescher Markt"
-        },
-        FST: {
-          line: "S7",
-          dir: "Friedrichstr"
-        },
-        HBF: {
-          line: "S7",
-          dir: "Hauptbahnhof"
-        },
-        BEV: {
-          line: "S7",
-          dir: "Bellevue"
-        },
-        TGN: {
-          line: "S7",
-          dir: "Tiergarten"
-        },
-        ZOS: {
-          line: "S7",
-          dir: "Zoologischer Garten"
-        },
-        SAP: {
-          line: "S7",
-          dir: "Savignyplatz"
-        },
-        CHS: {
-          line: "S7",
-          dir: "Charlottenburg"
-        },
-        WKS: {
-          line: "S7",
-          dir: "Westkreuz"
-        },
-        GWD: {
-          line: "S7",
-          dir: "Grunewald"
-        },
-        NIS: {
-          line: "S7",
-          dir: "Nikolassee"
-        },
-        WSS: {
-          line: "S7",
-          dir: "Wannsee"
-        },
-        GRI: {
-          line: "S7",
-          dir: "Griebnitzsee"
-        },
-        BAB: {
-          line: "S7",
-          dir: "Babelsberg"
-        },
-        PDH: {
-          line: "S7",
-          dir: "Potsdam"
-        },
-        NULL: {
-          line: "S7",
-          dir: null
-        }
-      };
+      this.S7 = this.addBLine("S7", {
+        AF: "Ahrensfelde",
+        MEA: "Mehrower Allee",
+        RW: "Raoul-Wallenberg-Str",
+        MAZ: "Marzahn",
+        POE: "Poelchaustr",
+        SPH: "Springpfuhl",
+        FFO: "Friedrichsfelde Ost",
+        LI: "Lichtenberg",
+        NPL: "Nöldnerplatz",
+        OKS: "Ostkreuz",
+        WRS: "Warschauer Str",
+        OSB: "Ostbahnhof",
+        JB: "Jannowitzbrücke",
+        ALX: "Alexanderplatz",
+        HKM: "Hackescher Markt",
+        FST: "Friedrichstr",
+        HBF: "Hauptbahnhof",
+        BEV: "Bellevue",
+        TGN: "Tiergarten",
+        ZOS: "Zoologischer Garten",
+        SAP: "Savignyplatz",
+        CHS: "Charlottenburg",
+        WKS: "Westkreuz",
+        GWD: "Grunewald",
+        NIS: "Nikolassee",
+        WSS: "Wannsee",
+        GRI: "Griebnitzsee",
+        BAB: "Babelsberg",
+        PDH: "Potsdam",
+        NULL: null
+      });
     }
   }, {
     key: "addS75",
     value: function addS75() {
-      this.S75 = {
-        WAB: {
-          line: "S75",
-          dir: "Wartenberg"
-        },
-        HH: {
-          line: "S75",
-          dir: "Hohenschönhausen"
-        },
-        GSE: {
-          line: "S75",
-          dir: "Gehrenseestr"
-        },
-        SPH: {
-          line: "S75",
-          dir: "Springpfuhl"
-        },
-        FFO: {
-          line: "S75",
-          dir: "Friedrichsfelde Ost"
-        },
-        LI: {
-          line: "S75",
-          dir: "Lichtenberg"
-        },
-        NPL: {
-          line: "S75",
-          dir: "Nöldnerplatz"
-        },
-        OKS: {
-          line: "S75",
-          dir: "Ostkreuz"
-        },
-        WRS: {
-          line: "S75",
-          dir: "Warschauer Str"
-        },
-        OSB: {
-          line: "S75",
-          dir: "Ostbahnhof"
-        },
-        NULL: {
-          line: "S75",
-          dir: null
-        }
-      };
+      this.S75 = this.addBLine("S75", {
+        WAB: "Wartenberg",
+        HH: "Hohenschönhausen",
+        GSE: "Gehrenseestr",
+        SPH: "Springpfuhl",
+        FFO: "Friedrichsfelde Ost",
+        LI: "Lichtenberg",
+        NPL: "Nöldnerplatz",
+        OKS: "Ostkreuz",
+        WRS: "Warschauer Str",
+        OSB: "Ostbahnhof",
+        NULL: null
+      });
     }
   }, {
     key: "addS8",
     value: function addS8() {
-      this.S8 = {
-        ZTH: {
-          line: "S8",
-          dir: "Zeuthen"
-        },
-        EIW: {
-          line: "S8",
-          dir: "Eichwalde"
-        },
-        GAS: {
-          line: "S8",
-          dir: "Grünau"
-        },
-        ADL: {
-          line: "S8",
-          dir: "Adlershof"
-        },
-        SCF: {
-          line: "S8",
-          dir: "Betriebsbahnhof Schöneweide"
-        },
-        SW: {
-          line: "S8",
-          dir: "Schöneweide"
-        },
-        BMW: {
-          line: "S8",
-          dir: "Baumschulenweg"
-        },
-        PWA: {
-          line: "S8",
-          dir: "Plänterwald"
-        },
-        TP: {
-          line: "S8",
-          dir: "Treptower Park"
-        },
-        OK: {
-          line: "S8",
-          dir: "Ostkreuz"
-        },
-        FA: {
-          line: "S8",
-          dir: "Frankfurter Allee"
-        },
-        STO: {
-          line: "S8",
-          dir: "Storkower Str"
-        },
-        LST: {
-          line: "S8",
-          dir: "Landsberger Allee"
-        },
-        GSS: {
-          line: "S8",
-          dir: "Greifswalder Str"
-        },
-        PLA: {
-          line: "S8",
-          dir: "Prenzlauer Allee"
-        },
-        SAL: {
-          line: "S8",
-          dir: "Schönhauser Allee"
-        },
-        BOS: {
-          line: "S8",
-          dir: "Bornholmer Str"
-        },
-        PKW: {
-          line: "S8",
-          dir: "Pankow"
-        },
-        PHD: {
-          line: "S8",
-          dir: "Pankow-Heinersdorf"
-        },
-        BLB: {
-          line: "S8",
-          dir: "Blankenburg"
-        },
-        MM: {
-          line: "S8",
-          dir: "Mühlenbeck-Mönchmühle"
-        },
-        SNF: {
-          line: "S8",
-          dir: "Schönfließ"
-        },
-        BFE: {
-          line: "S8",
-          dir: "Bergfelde"
-        },
-        HN: {
-          line: "S8",
-          dir: "Hohen Neuendorf"
-        },
-        BIW: {
-          line: "S8",
-          dir: "Birkenwerder"
-        },
-        NULL: {
-          line: "S8",
-          dir: null
-        }
-      };
+      this.S8 = this.addBLine("S8", {
+        ZTH: "Zeuthen",
+        EIW: "Eichwalde",
+        GAS: "Grünau",
+        ADL: "Adlershof",
+        SCF: "Betriebsbahnhof Schöneweide",
+        SW: "Schöneweide",
+        BMW: "Baumschulenweg",
+        PWA: "Plänterwald",
+        TP: "Treptower Park",
+        OK: "Ostkreuz",
+        FA: "Frankfurter Allee",
+        STO: "Storkower Str",
+        LST: "Landsberger Allee",
+        GSS: "Greifswalder Str",
+        PLA: "Prenzlauer Allee",
+        SAL: "Schönhauser Allee",
+        BOS: "Bornholmer Str",
+        PKW: "Pankow",
+        PHD: "Pankow-Heinersdorf",
+        BLB: "Blankenburg",
+        MM: "Mühlenbeck-Mönchmühle",
+        SNF: "Schönfließ",
+        BFE: "Bergfelde",
+        HN: "Hohen Neuendorf",
+        BIW: "Birkenwerder",
+        NULL: null
+      });
     }
   }, {
     key: "addS85",
     value: function addS85() {
-      this.S85 = {
-        GAS: {
-          line: "S85",
-          dir: "Grünau"
-        },
-        ADL: {
-          line: "S85",
-          dir: "Adlershof"
-        },
-        SCF: {
-          line: "S85",
-          dir: "Betriebsbahnhof Schöneweide"
-        },
-        SW: {
-          line: "S85",
-          dir: "Schöneweide"
-        },
-        BMW: {
-          line: "S85",
-          dir: "Baumschulenweg"
-        },
-        PWA: {
-          line: "S85",
-          dir: "Plänterwald"
-        },
-        TP: {
-          line: "S85",
-          dir: "Treptower Park"
-        },
-        OK: {
-          line: "S85",
-          dir: "Ostkreuz"
-        },
-        FA: {
-          line: "S85",
-          dir: "Frankfurter Allee"
-        },
-        STO: {
-          line: "S85",
-          dir: "Storkower Str"
-        },
-        LST: {
-          line: "S85",
-          dir: "Landsberger Allee"
-        },
-        GSS: {
-          line: "S85",
-          dir: "Greifswalder Str"
-        },
-        PLA: {
-          line: "S85",
-          dir: "Prenzlauer Allee"
-        },
-        SAL: {
-          line: "S85",
-          dir: "Schönhauser Allee"
-        },
-        BOS: {
-          line: "S85",
-          dir: "Bornholmer Str"
-        },
-        PKW: {
-          line: "S85",
-          dir: "Pankow"
-        },
-        GB: {
-          line: "S85",
-          dir: "Gesundbrunnen"
-        },
-        HUM: {
-          line: "S85",
-          dir: "Humboldthain"
-        },
-        NB: {
-          line: "S85",
-          dir: "Nordbahnhof"
-        },
-        NULL: {
-          line: "S85",
-          dir: null
-        }
-      };
+      this.S85 = this.addBLine("S85", {
+        GAS: "Grünau",
+        ADL: "Adlershof",
+        SCF: "Betriebsbahnhof Schöneweide",
+        SW: "Schöneweide",
+        BMW: "Baumschulenweg",
+        PWA: "Plänterwald",
+        TP: "Treptower Park",
+        OK: "Ostkreuz",
+        FA: "Frankfurter Allee",
+        STO: "Storkower Str",
+        LST: "Landsberger Allee",
+        GSS: "Greifswalder Str",
+        PLA: "Prenzlauer Allee",
+        SAL: "Schönhauser Allee",
+        BOS: "Bornholmer Str",
+        PKW: "Pankow",
+        GB: "Gesundbrunnen",
+        HUM: "Humboldthain",
+        NB: "Nordbahnhof",
+        NULL: null
+      });
     }
   }, {
     key: "addS9",
     value: function addS9() {
-      this.S9 = {
-        FLH: {
-          line: "S9",
-          dir: "Flughafen Berlin-Schönefeld"
-        },
-        GBA: {
-          line: "S9",
-          dir: "Grünbergallee"
-        },
-        AGL: {
-          line: "S9",
-          dir: "Altglienicke"
-        },
-        GAS: {
-          line: "S9",
-          dir: "Grünau"
-        },
-        ADL: {
-          line: "S9",
-          dir: "Adlershof"
-        },
-        SCF: {
-          line: "S9",
-          dir: "Betriebsbahnhof Schöneweide"
-        },
-        SW: {
-          line: "S9",
-          dir: "Schöneweide"
-        },
-        BMW: {
-          line: "S9",
-          dir: "Baumschulenweg"
-        },
-        PWA: {
-          line: "S9",
-          dir: "Plänterwald"
-        },
-        TP: {
-          line: "S9",
-          dir: "Treptower Park"
-        },
-        WRS: {
-          line: "S9",
-          dir: "Warschauer Str"
-        },
-        OSB: {
-          line: "S9",
-          dir: "Ostbahnhof"
-        },
-        JB: {
-          line: "S9",
-          dir: "Jannowitzbrücke"
-        },
-        ALX: {
-          line: "S9",
-          dir: "Alexanderplatz"
-        },
-        HKM: {
-          line: "S9",
-          dir: "Hackescher Markt"
-        },
-        FST: {
-          line: "S9",
-          dir: "Friedrichstr"
-        },
-        HBF: {
-          line: "S9",
-          dir: "Hauptbahnhof"
-        },
-        BEV: {
-          line: "S9",
-          dir: "Bellevue"
-        },
-        TGN: {
-          line: "S9",
-          dir: "Tiergarten"
-        },
-        ZOS: {
-          line: "S9",
-          dir: "Zoologischer Garten"
-        },
-        SAP: {
-          line: "S9",
-          dir: "Savignyplatz"
-        },
-        CHS: {
-          line: "S9",
-          dir: "Charlottenburg"
-        },
-        WKS: {
-          line: "S9",
-          dir: "Westkreuz"
-        },
-        GWD: {
-          line: "S9",
-          dir: "Grunewald"
-        },
-        MS: {
-          line: "S9",
-          dir: "Messe Süd"
-        },
-        HST: {
-          line: "S9",
-          dir: "Heerstr"
-        },
-        OLS: {
-          line: "S9",
-          dir: "Olympiastadion"
-        },
-        PIC: {
-          line: "S9",
-          dir: "Pichelsberg"
-        },
-        SRW: {
-          line: "S9",
-          dir: "Stresow"
-        },
-        SPA: {
-          line: "S9",
-          dir: "Spandau"
-        },
-        OKS: {
-          line: "S9",
-          dir: "Ostkreuz"
-        },
-        NPL: {
-          line: "S9",
-          dir: "Nöldnerplatz"
-        },
-        LI: {
-          line: "S9",
-          dir: "Lichtenberg"
-        },
-        NULL: {
-          line: "S9",
-          dir: null
-        }
-      };
+      this.S9 = this.addBLine("S9", {
+        FLH: "Flughafen Berlin-Schönefeld",
+        GBA: "Grünbergallee",
+        AGL: "Altglienicke",
+        GAS: "Grünau",
+        ADL: "Adlershof",
+        SCF: "Betriebsbahnhof Schöneweide",
+        SW: "Schöneweide",
+        BMW: "Baumschulenweg",
+        PWA: "Plänterwald",
+        TP: "Treptower Park",
+        LI: "Lichtenberg",
+        NPL: "Nöldnerplatz",
+        OKS: "Ostkreuz",
+        WRS: "Warschauer Str",
+        OSB: "Ostbahnhof",
+        JB: "Jannowitzbrücke",
+        ALX: "Alexanderplatz",
+        HKM: "Hackescher Markt",
+        FST: "Friedrichstr",
+        HBF: "Hauptbahnhof",
+        BEV: "Bellevue",
+        TGN: "Tiergarten",
+        ZOS: "Zoologischer Garten",
+        SAP: "Savignyplatz",
+        CHS: "Charlottenburg",
+        WKS: "Westkreuz",
+        GWD: "Grunewald",
+        MS: "Messe Süd",
+        HST: "Heerstr",
+        OLS: "Olympiastadion",
+        PIC: "Pichelsberg",
+        SRW: "Stresow",
+        SPA: "Spandau",
+        NULL: null
+      });
     }
   }, {
     key: "addU1",
@@ -4883,6 +3787,18 @@ function () {
           dir: null
         }
       };
+    }
+  }, {
+    key: "addBLine",
+    value: function addBLine(line, object) {
+      var output = {};
+
+      for (var property in object) {
+        output.prop = {
+          line: line,
+          dir: object[property]
+        };
+      }
     }
   }, {
     key: "checkBarrier",
