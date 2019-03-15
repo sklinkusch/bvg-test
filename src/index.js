@@ -631,6 +631,9 @@ class Station {
     let minuteString = minutes < 10 ? `0${minutes}` : `${minutes}`;
     return `${hourString}:${minuteString}`;
   }
+  getStation(line, ...stations){
+    return stations.map(station => line[station]);
+  }
   get neighboring() {
     return this._neighboring;
   }
