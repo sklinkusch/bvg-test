@@ -1967,34 +1967,22 @@ class Station {
               )
             ],
             [
-              [
-                { line: "171", dir: "Schönefeld" },
-                { line: "171", dir: "Rudow" }
-              ],
-              [{ line: "N7", dir: "Schönefeld" }],
-              [{ line: "N79", dir: "Alt-Mariendorf" }],
-              [
-                { line: "171", dir: "Hermannplatz" },
-                { line: "171", dir: "Sonnenallee" }
-              ],
-              [{ line: "N7", dir: "Rathaus Spandau" }],
-              [{ line: "N79", dir: "Plänterwald" }]
+              this.getTerminus("171", "Schönefeld", "Rudow"),
+              this.getTerminus("N7", "Schönefeld"),
+              this.getTerminus("N79", "Alt-Mariendorf"),
+              this.getTerminus("171", "Hermannplatz", "Sonnenallee"),
+              this.getTerminus("N7", "Rathaus Spandau"),
+              this.getTerminus("N79", "Plänterwald")
             ],
             [
-              [
-                { line: "171", dir: "Schönefeld" },
-                { line: "171", dir: "Rudow" }
-              ],
-              [{ line: "N7", dir: "Schönefeld" }],
-              [{ line: "370", dir: "Neuköllnische Brücke" }],
-              [{ line: "377", dir: "Plänterwald" }],
-              [
-                { line: "171", dir: "Hermannplatz" },
-                { line: "171", dir: "Sonnenallee" }
-              ],
-              [{ line: "N7", dir: "Rathaus Spandau" }],
-              [{ line: "370", dir: "Hermannstr" }],
-              [{ line: "377", dir: "Hermannstr" }]
+              this.getTerminus("171", "Schönefeld", "Rudow"),
+              this.getTerminus("N7", "Schönefeld"),
+              this.getTerminus("370", "Neuköllnische Brücke"),
+              this.getTerminus("377", "Plänterwald"),
+              this.getTerminus("171", "Hermannplatz", "Sonnenallee"),
+              this.getTerminus("N7", "Rathaus Spandau"),
+              this.getTerminus("370", "Hermannstr"),
+              this.getTerminus("377", "Hermannstr")
             ]
           ];
           break;
@@ -2002,33 +1990,14 @@ class Station {
           this.stop = [900000120005];
           this.filter = [
             [
-              [
-                { line: "RE1", dir: "Magdeburg" },
-                { line: "RE1", dir: "Brandenburg" },
-                { line: "Potsdam" }
-              ],
-              [
-                { line: "RE2", dir: "Wismar" },
-                { line: "RE2", dir: "Bad Kleinen" },
-                { line: "RE2", dir: "Schwerin" },
-                { line: "RE2", dir: "Wittenberge" }
-              ],
-              [
-                { line: "RE7", dir: "Dessau" },
-                { line: "RE7", dir: "Bad Belzig" }
-              ],
-              [{ line: "RB14", dir: "Nauen" }],
-              [
-                { line: "RE1", dir: "Cottbus" },
-                { line: "RE1", dir: "Eisenhüttenstadt" },
-                { line: "RE1", dir: "Frankfurt" }
-              ],
-              [{ line: "RE2", dir: "Cottbus" }],
-              [
-                { line: "RE7", dir: "Wünsdorf-Waldstadt" },
-                { line: "RE7", dir: "Schönefeld" }
-              ],
-              [{ line: "RB14", dir: "Schönefeld" }],
+              this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"),
+              this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"),
+              this.getTerminus("RE7", "Dessau", "Bad Belzig"),
+              this.getTerminus("RB14", "Nauen"),
+              this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"),
+              this.getTerminus("RE2", "Cottbus"),
+              this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"),
+              this.getTerminus("RB14", "Schönefeld"),
               this.getStation(
                 this.S3,
                 "GWD",
@@ -2180,32 +2149,14 @@ class Station {
                 "TP",
                 "WRS"
               ),
-              [
-                { line: "142", dir: "Leopoldplatz" },
-                { line: "142", dir: "Hauptbahnhof" }
-              ],
-              [
-                { line: "248", dir: "Breitenbachplatz" },
-                { line: "248", dir: "Südkreuz" },
-                { line: "248", dir: "Hallesches Tor" },
-                { line: "248", dir: "Alexanderplatz" }
-              ],
-              [{ line: "N40", dir: "Turmstr" }],
-              [
-                { line: "147", dir: "Hauptbahnhof" },
-                { line: "147", dir: "Unter den Linden/Friedrichstr" },
-                { line: "147", dir: "Märkisches Museum" }
-              ],
-              [
-                { line: "240", dir: "Storkower Str" },
-                { line: "240", dir: "Betriebshof Lichtenberg" }
-              ],
-              [{ line: "248", dir: "Warschauer Str" }],
-              [
-                { line: "347", dir: "Tunnelstr" },
-                { line: "347", dir: "Warschauer Str" }
-              ],
-              [{ line: "N40", dir: "Wühlischplatz" }]
+              this.getTerminus("142", "Leopoldplatz", "Hauptbahnhof"),
+              this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz"),
+              this.getTerminus("N40", "Turmstr"),
+              this.getTerminus("147", "Hauptbahnhof", "Unter den Linden/Friedrichstr", "Märkisches Museum"),
+              this.getTerminus("240", "Storkower Str", "Betriebshof Lichtenberg"),
+              this.getTerminus("248", "Warschauer Str"),
+              this.getTerminus("347", "Tunnelstr", "Warschauer Str"),
+              this.getTerminus("N40", "Wühlischplatz")
             ]
           ];
           break;
@@ -2213,44 +2164,19 @@ class Station {
           this.stop = [900000120003];
           this.filter = [
             [
-              [
-                { line: "RE1", dir: "Cottbus" },
-                { line: "RE1", dir: "Eisenhüttenstadt" },
-                { line: "RE1", dir: "Frankfurt" }
-              ],
-              [{ line: "RE2", dir: "Cottbus" }],
-              [
-                { line: "RE7", dir: "Wünsdorf-Waldstadt" },
-                { line: "RE7", dir: "Schönefeld" }
-              ],
-              [{ line: "RB12", dir: "Templin" }],
-              [{ line: "RB14", dir: "Schönefeld" }],
-              [{ line: "RB24", dir: "Eberswalde" }],
-              [{ line: "RB25", dir: "Werneuchen" }],
-              [
-                { line: "RB26", dir: "Gorz&#243;w" },
-                { line: "RB26", dir: "Kostrzyn" }
-              ],
-              [
-                { line: "RE1", dir: "Magdeburg" },
-                { line: "RE1", dir: "Brandenburg" },
-                { line: "RE1", dir: "Potsdam" }
-              ],
-              [
-                { line: "RE2", dir: "Wismar" },
-                { line: "RE2", dir: "Bad Kleinen" },
-                { line: "RE2", dir: "Schwerin" },
-                { line: "RE2", dir: "Wittenberge" }
-              ],
-              [
-                { line: "RE7", dir: "Dessau" },
-                { line: "RE7", dir: "Bad Belzig" }
-              ],
-              [{ line: "RB14", dir: "Nauen" }],
-              [
-                { line: "RB24", dir: "Senftenberg" },
-                { line: "RB24", dir: "Cottbus" }
-              ],
+              this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"),
+              this.getTerminus("RE2", "Cottbus"),
+              this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"),
+              this.getTerminus("RB12", "Templin"),
+              this.getTerminus("RB14", "Schönefeld"),
+              this.getTerminus("RB24", "Eberswalde"),
+              this.getTerminus("RB25", "Werneuchen"),
+              this.getTerminus("RB26", "Gorz&#243;w", "Kostrzyn"),
+              this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"),
+              this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"),
+              this.getTerminus("RE7", "Dessau", "Bad Belzig"),
+              this.getTerminus("RB14", "Nauen"),
+              this.getTerminus("RB24", "Senftenberg", "Cottbus"),
               this.getStation(
                 this.S3,
                 "GWD",
@@ -2454,22 +2380,12 @@ class Station {
                 "STO",
                 "FA"
               ),
-              [
-                { line: "194", dir: "Helene-Weigel-Platz" },
-                { line: "194", dir: "Friedrichsfelde Ost" },
-                { line: "194", dir: "Nöldnerplatz" }
-              ],
-              [{ line: "347", dir: "Tunnelstr" }],
-              [{ line: "N94", dir: "Magdalenenstr" }],
-              [
-                { line: "194", dir: "Hermannplatz" },
-                { line: "194", dir: "Treptower Park" }
-              ],
-              [
-                { line: "347", dir: "Ostbahnhof" },
-                { line: "347", dir: "Warschauer Str" }
-              ],
-              [{ line: "N94", dir: "Hermannplatz" }]
+              this.getTerminus("194", "Helene-Weigel-Platz", "Friedrichsfelde Ost", "Nöldnerplatz"),
+              this.getTerminus("347", "Tunnelstr"),
+              this.getTerminus("N94", "Magdalenenstr"),
+              this.getTerminus("194", "Hermannplatz", "Treptower Park"),
+              this.getTerminus("347", "Ostbahnhof", "Warschauer Str"),
+              this.getTerminus("N94", "Hermannplatz")
             ]
           ];
           break;
@@ -2584,30 +2500,18 @@ class Station {
                 "SW",
                 "BMW"
               ),
-              [{ line: "377", dir: "Hermannstr" }],
-              [{ line: "N79", dir: "Alt-Mariendorf" }]
+              this.getTerminus("377", "Hermannstr"),
+              this.getTerminus("N79", "Alt-Mariendorf")
             ],
             [
-              [
-                { line: "165", dir: "Märkisches Museum" },
-                { line: "165", dir: "Treptower Park" }
-              ],
-              [
-                { line: "166", dir: "Boddinstr" },
-                { line: "166", dir: "Treptower Park" }
-              ],
-              [{ line: "N65", dir: "Hackescher Markt" }],
-              [
-                { line: "165", dir: "Schöneweide" },
-                { line: "165", dir: "Müggelschlößchenweg" }
-              ],
-              [{ line: "166", dir: "Schöneweide" }],
-              [{ line: "377", dir: "Hermannstr" }],
-              [
-                { line: "N65", dir: "Müggelschlößchenweg" },
-                { line: "N65", dir: "Schöneweide" }
-              ],
-              [{ line: "N79", dir: "Alt-Mariendorf" }]
+              this.getTerminus("165", "Märkisches Museum", "Treptower Park"),
+              this.getTerminus("166", "Boddinstr", "Treptower Park"),
+              this.getTerminus("N65", "Hackescher Markt"),
+              this.getTerminus("165", "Schöneweide", "Müggelschlößchenweg"),
+              this.getTerminus("166", "Schöneweide"),
+              this.getTerminus("377", "Hermannstr"),
+              this.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide"),
+              this.getTerminus("N79", "Alt-Mariendorf")
             ]
           ];
           break;
@@ -2663,20 +2567,10 @@ class Station {
                 "SAL"
               ),
               this.getStation(this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL"),
-              [
-                { line: "M2", dir: "Am Steinberg" },
-                { line: "M2", dir: "Heinersdorf" }
-              ],
-              [{ line: "M2", dir: "Alexanderplatz" }],
-              [
-                { line: "156", dir: "Stadion Buschallee/Hansastr" },
-                { line: "156", dir: "Große Seestr" },
-                { line: "156", dir: "Pasedagplatz" }
-              ],
-              [
-                { line: "156", dir: "Storkower Str" },
-                { line: "156", dir: "Michelangelostr" }
-              ]
+              this.getTerminus("M2", "Heinersdorf", "Am Steinberg"),
+              this.getTerminus("M2", "Alexanderplatz"),
+              this.getTerminus("156", "Stadion Buschallee/Hansastr", "Große Seestr", "Pasedagplatz"),
+              this.getTerminus("156", "Storkower Str", "Michelangelostr")
             ]
           ];
           break;
@@ -2762,23 +2656,10 @@ class Station {
                 "THF",
                 "SKR"
               ),
-              [
-                { line: "M46", dir: "Zoologischer Garten" },
-                { line: "M46", dir: "Wittenbergplatz" }
-              ],
-              [{ line: "248", dir: "Breitenbachplatz" }],
-              [
-                { line: "M46", dir: "Britz-Süd" },
-                { line: "M46", dir: "Alt-Tempelhof" },
-                { line: "M46", dir: "Südkreuz" }
-              ],
-              [
-                { line: "248", dir: "Warschauer Str" },
-                { line: "248", dir: "Ostbahnhof" },
-                { line: "248", dir: "Alexanderplatz" },
-                { line: "248", dir: "Hallesches Tor" },
-                { line: "248", dir: "Südkreuz" }
-              ]
+              this.getTerminus("M46", "Zoologischer Garten", "Wittenbergplatz"),
+              this.getTerminus("248", "Breitenbachplatz"),
+              this.getTerminus("M46", "Britz-Süd", "Alt-Tempelhof", "Südkreuz"),
+              this.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor", "Südkreuz")
             ]
           ];
           break;
@@ -2869,14 +2750,8 @@ class Station {
                 "Sz",
                 "EB"
               ),
-              [
-                { line: "M1", dir: "Schillerstr" },
-                { line: "M1", dir: "Rosenthal Nord" }
-              ],
-              [
-                { line: "M1", dir: "Am Kupfergraben" },
-                { line: "M1", dir: "Hackescher Markt" }
-              ]
+              this.getTerminus("M1", "Schillerstr", "Rosenthal Nord"),
+              this.getTerminus("M1", "Am Kupfergraben", "Hackescher Markt")
             ]
           ];
           break;
@@ -2886,32 +2761,18 @@ class Station {
             [
               [this.S41],
               [this.S42],
-              [
-                { line: "M41", dir: "Hauptbahnhof" },
-                { line: "M41", dir: "Philharmonie" },
-                { line: "M41", dir: "Hallesches Tor" },
-                { line: "M41", dir: "Hermannplatz" }
-              ],
-              [{ line: "171", dir: "Hermannplatz" }],
-              [{ line: "N79", dir: "Alt-Mariendorf" }],
-              [{ line: "M41", dir: "Sonnenallee/Baumschulenstr" }],
-              [
-                { line: "171", dir: "Schönefeld" },
-                { line: "171", dir: "Rudow" }
-              ],
-              [{ line: "N79", dir: "Plänterwald" }]
+              this.getTerminus("M41", "Hauptbahnhof", "Philharmonie", "Hallesches Tor", "Hermannplatz"),
+              this.getTerminus("171", "Hermannplatz"),
+              this.getTerminus("N79", "Alt-Mariendorf"),
+              this.getTerminus("M41", "Sonnenallee/Baumschulenstr"),
+              this.getTerminus("171", "Schönefeld", "Rudow"),
+              this.getTerminus("N79", "Plänterwald")
             ],
             [
-              [
-                { line: "171", dir: "Schönefeld" },
-                { line: "171", dir: "Rudow" }
-              ],
-              [{ line: "N79", dir: "Alt-Mariendorf" }],
-              [
-                { line: "171", dir: "Hermannplatz" },
-                { line: "171", dir: "Sonnenallee" }
-              ],
-              [{ line: "N79", dir: "Plänterwald" }]
+              this.getTerminus("171", "Schönefeld", "Rudow"),
+              this.getTerminus("N79", "Alt-Mariendorf"),
+              this.getTerminus("171", "Hermannplatz", "Sonnenallee"),
+              this.getTerminus("N79", "Plänterwald")
             ]
           ];
           break;
@@ -2973,23 +2834,12 @@ class Station {
                 "GSS",
                 "LST"
               ),
-              [
-                { line: "156", dir: "Stadion Buschallee" },
-                { line: "156", dir: "Große Seestr" },
-                { line: "156", dir: "Pasedagplatz" }
-              ],
-              [
-                { line: "240", dir: "Ostbahnhof" },
-                { line: "240", dir: "Betriebshof Lichtenberg" }
-              ]
+              this.getTerminus("156", "Stadion Buschallee", "Große Seestr", "Pasedagplatz"),
+              this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg")
             ],
             [
-              [
-                { line: "156", dir: "Stadion Buschallee" },
-                { line: "156", dir: "Große Seestr" },
-                { line: "156", dir: "Pasedagplatz" }
-              ],
-              [{ line: "156", dir: "Storkower Str" }]
+              this.getTerminus("156", "Stadion Buschallee", "Große Seestr", "Pasedagplatz"),
+              this.getTerminus("156", "Storkower Str")
             ]
           ];
           break;
@@ -2997,36 +2847,13 @@ class Station {
           this.stop = [900000058101, 900000058100];
           this.filter = [
             [
-              [
-                { line: "RE3", dir: "Schwedt" },
-                { line: "RE3", dir: "Stralsund" },
-                { line: "RE3", dir: "Prenzlau" },
-                { line: "RE3", dir: "Angermünde" },
-                { line: "RE3", dir: "Eberswalde" }
-              ],
-              [
-                { line: "RE4", dir: "Stendal" },
-                { line: "RE4", dir: "Rathenow" }
-              ],
-              [
-                { line: "RE5", dir: "Rostock" },
-                { line: "RE5", dir: "Stralsund" }
-              ],
-              [{ line: "RB10", dir: "Nauen" }],
-              [
-                { line: "RE3", dir: "Wittenberg" },
-                { line: "RE3", dir: "Falkenberg" },
-                { line: "RE3", dir: "Halle" }
-              ],
-              [
-                { line: "RE4", dir: "Jüterbog" },
-                { line: "RE4", dir: "Luckenwalde" },
-                { line: "RE4", dir: "Ludwigsfelde" }
-              ],
-              [
-                { line: "RE5", dir: "Elsterwerda" },
-                { line: "RE5", dir: "Wünsdorf" }
-              ],
+              this.getTerminus("RE3", "Schwedt", "Stralsund", "Prenzlau", "Angermünde", "Eberswalde"),
+              this.getTerminus("RE4", "Stendal", "Rathenow"),
+              this.getTerminus("RE5", "Rostock", "Stralsund"),
+              this.getTerminus("RB10", "Nauen"),
+              this.getTerminus("RE3", "Wittenberg", "Falkenberg", "Halle"),
+              this.getTerminus("RE4", "Jüterbog", "Luckenwalde", "Ludwigsfelde"),
+              this.getTerminus("RE5", "Elsterwerda", "Wünsdorf-Waldstadt"),
               this.getStation(
                 this.S2,
                 "BER",
@@ -3156,36 +2983,17 @@ class Station {
                 "HER",
                 "THF"
               ),
-              [
-                { line: "M46", dir: "Zoologischer Garten" },
-                { line: "M46", dir: "Wittenbergplatz" }
-              ],
-              [
-                { line: "106", dir: "Seestr" },
-                { line: "106", dir: "Kurfürstenstr" }
-              ],
-              [{ line: "204", dir: "Zoologischer Garten" }],
-              [
-                { line: "M46", dir: "Britz-Süd" },
-                { line: "M46", dir: "Alt-Tempelhof" }
-              ],
-              [{ line: "106", dir: "Lindenhof" }]
+              this.getTerminus("M46", "Zoologischer Garten", "Wittenbergplatz"),
+              this.getTerminus("106", "Seestr", "Kurfürstenstr"),
+              this.getTerminus("204", "Zoologischer Garten"),
+              this.getTerminus("M46", "Britz-Süd", "Alt-Tempelhof"),
+              this.getTerminus("106", "Lindenhof")
             ],
             [
-              [{ line: "184", dir: "Reichartstr" }],
-              [{ line: "248", dir: "Breitenbachplatz" }],
-              [
-                { line: "184", dir: "Warthestr" },
-                { line: "184", dir: "Wismarer Str" },
-                { line: "184", dir: "Saaleckstr" },
-                { line: "184", dir: "Lichterfelde Ost" }
-              ],
-              [
-                { line: "248", dir: "Warschauer Str" },
-                { line: "248", dir: "Ostbahnhof" },
-                { line: "248", dir: "Alexanderplatz" },
-                { line: "248", dir: "Hallesches Tor" }
-              ]
+              this.getTerminus("184", "Reichartstr"),
+              this.getTerminus("248", "Breitenbachplatz"),
+              this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckstr", "Lichterfelde Ost"),
+              this.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor")
             ]
           ];
           break;
