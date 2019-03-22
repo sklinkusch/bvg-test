@@ -3798,11 +3798,8 @@ class Station {
                 "HO",
                 "HAL"
               ),
-              [
-                { line: "104", dir: "Brixplatz" },
-                { line: "104", dir: "Theodor-Heuss-Platz" }
-              ],
-              [{ line: "N42", dir: "Theodor-Heuss-Platz" }]
+              this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz"),
+              this.getTerminus("N42", "Theodor-Heuss-Platz")
             ]
           ];
           break;

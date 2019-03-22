@@ -292,16 +292,7 @@ function () {
 
           case "BWK":
             _this.stop = [900000024102];
-            _this.filter = [[_this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), [_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL"), [{
-              line: "104",
-              dir: "Brixplatz"
-            }, {
-              line: "104",
-              dir: "Theodor-Heuss-Platz"
-            }], [{
-              line: "N42",
-              dir: "Theodor-Heuss-Platz"
-            }]]];
+            _this.filter = [[_this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), [_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL"), _this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz"), _this.getTerminus("N42", "Theodor-Heuss-Platz")]];
             break;
 
           case "jov":
