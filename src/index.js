@@ -3807,20 +3807,10 @@ class Station {
           this.stop = [900000160541];
           this.filter = [
             [
-              [{ line: "240", dir: "Storkower Str" }],
-              [
-                { line: "N50", dir: "Hugenottenplatz" },
-                { line: "N50", dir: "Betriebshof Indira-Gandhi-Str" },
-                { line: "N50", dir: "Pankow" }
-              ],
-              [
-                { line: "240", dir: "Ostbahnhof" },
-                { line: "240", dir: "Betriebshof Lichtenberg" }
-              ],
-              [
-                { line: "N50", dir: "Tierpark" },
-                { line: "N50", dir: "Betriebshof Lichtenberg" }
-              ]
+              this.getTerminus("240", "Storkower Str"),
+              this.getTerminus("N50", "Hugenottenplatz", "Betriebshof Indira-Gandhi-Str", "Pankow"),
+              this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg"),
+              this.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")
             ]
           ];
           break;
