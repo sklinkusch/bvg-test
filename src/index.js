@@ -3216,70 +3216,31 @@ class Station {
               )
             ],
             [
-              [
-                { line: "165", dir: "Märkisches Museum" },
-                { line: "165", dir: "Treptower Park" }
-              ],
-              [
-                { line: "166", dir: "Boddinstr" },
-                { line: "166", dir: "Treptower Park" }
-              ],
-              [
-                { line: "265", dir: "Stadtmitte" },
-                { line: "265", dir: "Märkisches Museum" },
-                { line: "265", dir: "Schlesisches Tor" },
-                { line: "265", dir: "Treptower Park" }
-              ],
-              [{ line: "N65", dir: "Hackescher Markt" }]
+              this.getTerminus("165", "Märkisches Museum", "Treptower Park"),
+              this.getTerminus("166", "Boddinstr", "Treptower Park"),
+              this.getTerminus("265", "Stadtmitte", "Märkisches Museum", "Schlesisches Tor", "Treptower Park"),
+              this.getTerminus("N65", "Hackescher Markt")
             ],
             [
-              [
-                { line: "104", dir: "Brixplatz" },
-                { line: "104", dir: "Theodor-Heuss-Platz" },
-                { line: "104", dir: "Berliner Str" },
-                { line: "104", dir: "Platz der Luftbrücke" },
-                { line: "104", dir: "Boddinstr" }
-              ],
-              [{ line: "194", dir: "Hermannplatz" }],
-              [{ line: "N94", dir: "Hermannplatz" }],
-              [{ line: "104", dir: "Tunnelstr" }],
-              [
-                { line: "194", dir: "Helene-Weigel-Platz" },
-                { line: "194", dir: "Friedrichsfelde Ost" },
-                { line: "194", dir: "Nöldnerplatz" }
-              ],
-              [{ line: "N94", dir: "Magdalenenstr" }]
+              this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz", "Halensee", "Berliner Str", "Platz der Luftbrücke", "Boddinstr"),
+              this.getTerminus("194", "Hermannplatz"),
+              this.getTerminus("N94", "Hermannplatz"),
+              this.getTerminus("104", "Tunnelstr"),
+              this.getTerminus("194", "Helene-Weigel-Platz", "Friedrichsfelde Ost", "Nöldnerplatz"),
+              this.getTerminus("N94", "Magdalenenstr")
             ],
             [
-              [
-                { line: "104", dir: "Brixplatz" },
-                { line: "104", dir: "Theodor-Heuss-Platz" },
-                { line: "104", dir: "Berliner Str" },
-                { line: "104", dir: "Platz der Luftbrücke" },
-                { line: "104", dir: "Boddinstr" }
-              ],
-              [
-                { line: "165", dir: "Müggelschlößchenweg" },
-                { line: "165", dir: "Schöneweide" }
-              ],
-              [{ line: "166", dir: "Boddinstr" }],
-              [{ line: "194", dir: "Hermannplatz" }],
-              [
-                { line: "265", dir: "Schöneweide" },
-                { line: "265", dir: "Baumschulenstr" }
-              ],
-              [
-                { line: "N65", dir: "Müggelschlößchenweg" },
-                { line: "N65", dir: "Schöneweide" }
-              ],
-              [{ line: "N94", dir: "Hermannplatz" }],
-              [{ line: "165", dir: "Märkisches Museum" }],
-              [
-                { line: "265", dir: "Stadtmitte" },
-                { line: "265", dir: "Märkisches Museum" },
-                { line: "265", dir: "Schlesisches Tor" }
-              ],
-              [{ line: "N65", dir: "Hackescher Markt" }]
+              this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz", "Halensee", "Berliner Str", "Platz der Luftbrücke", "Boddinstr"),
+              this.getTerminus("165", "Müggelschlößchenweg", "Schöneweide"),
+              this.getTerminus("166", "Boddinstr"),
+              this.getTerminus("194", "Hermannplatz"),
+              this.getTerminus("265", "Schöneweide", "Baumschulenstr"),
+              this.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide"),
+              this.getTerminus("N94", "Hermannplatz"),
+              this.getTerminus("104", "Eichenstr./Puschkinallee"),
+              this.getTerminus("165", "Märkisches Museum"),
+              this.getTerminus("265", "Stadtmitte", "Märkisches Museum", "Schlesisches Tor"),
+              this.getTerminus("N65", "Hackescher Markt")
             ]
           ];
           break;
