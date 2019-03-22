@@ -282,37 +282,7 @@ function () {
 
           case "BWES":
             _this.stop = [900000026207, 900000020204];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN"), [{
-              line: "M45",
-              dir: "Johannesstift"
-            }, {
-              line: "M45",
-              dir: "DRK-Kliniken Westend"
-            }, {
-              line: "M45",
-              dir: "Rathaus Spandau"
-            }], [{
-              line: "M45",
-              dir: "Zoologischer Garten"
-            }]], [[{
-              line: "M45",
-              dir: "Johannesstift"
-            }, {
-              line: "M45",
-              dir: "Rathaus Spandau"
-            }, {
-              line: "M45",
-              dir: "DRK-Kliniken Westend"
-            }], [{
-              line: "309",
-              dir: "Schlosspark-Klinik"
-            }], [{
-              line: "M45",
-              dir: "Zoologischer Garten"
-            }], [{
-              line: "309",
-              dir: "Wilmersdorfer"
-            }]]];
+            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN"), _this.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"), _this.getTerminus("M45", "Zoologischer Garten")], [_this.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"), _this.getTerminus("309", "Schlosspark-Klinik"), _this.getTerminus("M45", "Zoologischer Garten"), _this.getTerminus("309", "Wilmersdorfer Str")]];
             break;
 
           case "BWH":

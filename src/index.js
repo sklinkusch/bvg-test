@@ -3547,22 +3547,14 @@ class Station {
                 "WKRR",
                 "MN"
               ),
-              [
-                { line: "M45", dir: "Johannesstift" },
-                { line: "M45", dir: "DRK-Kliniken Westend" },
-                { line: "M45", dir: "Rathaus Spandau" }
-              ],
-              [{ line: "M45", dir: "Zoologischer Garten" }]
+              this.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"),
+              this.getTerminus("M45", "Zoologischer Garten")
             ],
             [
-              [
-                { line: "M45", dir: "Johannesstift" },
-                { line: "M45", dir: "Rathaus Spandau" },
-                { line: "M45", dir: "DRK-Kliniken Westend" }
-              ],
-              [{ line: "309", dir: "Schlosspark-Klinik" }],
-              [{ line: "M45", dir: "Zoologischer Garten" }],
-              [{ line: "309", dir: "Wilmersdorfer" }]
+              this.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"),
+              this.getTerminus("309", "Schlosspark-Klinik"),
+              this.getTerminus("M45", "Zoologischer Garten"),
+              this.getTerminus("309", "Wilmersdorfer Str")
             ]
           ];
           break;
