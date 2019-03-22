@@ -3078,37 +3078,18 @@ class Station {
                 "Ps"
               ),
               this.getStation(this.U6, "Mf", "Wl", "Ull", "At"),
-              [{ line: "184", dir: "Südkreuz" }],
-              [{ line: "N6", dir: "Alt-Tegel" }],
-              [
-                { line: "140", dir: "Ostbahnhof" },
-                { line: "140", dir: "Mehringdamm" }
-              ],
-              [
-                { line: "184", dir: "Warthestr" },
-                { line: "184", dir: "Wismarer Str" },
-                { line: "184", dir: "Saaleckplatz" },
-                { line: "184", dir: "Lichterfelde Ost" }
-              ],
-              [{ line: "N6", dir: "Alt-Mariendorf" }],
-              [
-                { line: "N84", dir: "Zehlendorf Eiche" },
-                { line: "N84", dir: "Alt-Tempelhof" }
-              ]
+              this.getTerminus("184", "Südkreuz"),
+              this.getTerminus("N6", "Alt-Tegel"),
+              this.getTerminus("140", "Ostbahnhof", "Mehringdamm"),
+              this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckplatz", "Lichterfelde Ost"),
+              this.getTerminus("N6", "Alt-Mariendorf"),
+              this.getTerminus("N84", "Zehlendorf Eiche", "Alt-Tempelhof")
             ],
             [
-              [
-                { line: "184", dir: "Südkreuz" },
-                { line: "184", dir: "Tempelhof" }
-              ],
-              [{ line: "N6", dir: "Alt-Tegel" }],
-              [
-                { line: "184", dir: "Warthestr" },
-                { line: "184", dir: "Wismarer Str" },
-                { line: "184", dir: "Saaleckplatz" },
-                { line: "184", dir: "Lichterfelde Ost" }
-              ],
-              [{ line: "N6", dir: "Alt-Mariendorf" }]
+              this.getTerminus("184", "Südkreuz", "Tempelhof"),
+              this.getTerminus("N6", "Alt-Tegel"),
+              this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckplatz", "Lichterfelde Ost"),
+              this.getTerminus("N6", "Alt-Mariendorf")
             ]
           ];
           break;
