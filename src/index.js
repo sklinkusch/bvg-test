@@ -3610,14 +3610,12 @@ class Station {
                 "Tm",
                 "Bi"
               ),
-              [{ line: "N9", dir: "Osloer Str" }],
-              [
-                { line: "N9", dir: "Rathaus Steglitz" },
-                { line: "N9", dir: "Zoologischer Garten" }
-              ]
+              this.getTerminus("N9", "Osloer Str"),
+              this.getTerminus("N9", "Rathaus Steglitz", "Zoologischer Garten")
             ]
           ];
           break;
+        case "BWK":
           this.stop = [900000024102];
           this.filter = [
             [
