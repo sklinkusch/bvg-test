@@ -3503,23 +3503,15 @@ class Station {
                 "SK",
                 "Ri"
               ),
-              [
-                { line: "120", dir: "Wilhelmsruher Damm" },
-                { line: "120", dir: "Wittenau" },
-                { line: "120", dir: "Paracelsus-Bad" },
-                { line: "120", dir: "Leopoldplatz" }
-              ],
-              [{ line: "N6", dir: "Alt-Tegel" }],
-              [{ line: "N20", dir: "Hainbuchenstr" }]
+              this.getTerminus("120", "Wilhelmsruher Damm", "Wittenau", "Paracelsus-Bad", "Leopoldplatz"),
+              this.getTerminus("N6", "Alt-Tegel"),
+              this.getTerminus("N20", "Hainbuchenstr")
             ],
             [
-              [{ line: "M27", dir: "Jungfernheide" }],
-              [{ line: "247", dir: "Leopoldplatz" }],
-              [{ line: "M27", dir: "Pankow" }],
-              [
-                { line: "247", dir: "Nordbahnhof" },
-                { line: "247", dir: "Bernauer Str" }
-              ]
+              this.getTerminus("M27", "Jungfernheide"),
+              this.getTerminus("247", "Leopoldplatz"),
+              this.getTerminus("M27", "Pankow"),
+              this.getTerminus("247", "Nordbahnhof", "Bernauer Str")
             ]
           ];
           break;

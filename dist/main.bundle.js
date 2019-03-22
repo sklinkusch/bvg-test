@@ -277,40 +277,7 @@ function () {
 
           case "BWED":
             _this.stop = [900000009104, 900000008103];
-            _this.filter = [[[_this.S41], [_this.S46.GB], [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN", "BEU", "WH"), _this.getStation(_this.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo"), _this.getStation(_this.U6, "Mf", "Wl", "Ull", "Ka", "At", "Ts", "Ps", "PL", "Me", "Ks", "Mic", "Fr", "F", "Ob", "NA", "SK", "Ri"), [{
-              line: "120",
-              dir: "Wilhelmsruher Damm"
-            }, {
-              line: "120",
-              dir: "Wittenau"
-            }, {
-              line: "120",
-              dir: "Paracelsus-Bad"
-            }, {
-              line: "120",
-              dir: "Leopoldplatz"
-            }], [{
-              line: "N6",
-              dir: "Alt-Tegel"
-            }], [{
-              line: "N20",
-              dir: "Hainbuchenstr"
-            }]], [[{
-              line: "M27",
-              dir: "Jungfernheide"
-            }], [{
-              line: "247",
-              dir: "Leopoldplatz"
-            }], [{
-              line: "M27",
-              dir: "Pankow"
-            }], [{
-              line: "247",
-              dir: "Nordbahnhof"
-            }, {
-              line: "247",
-              dir: "Bernauer Str"
-            }]]];
+            _this.filter = [[[_this.S41], [_this.S46.GB], [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN", "BEU", "WH"), _this.getStation(_this.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo"), _this.getStation(_this.U6, "Mf", "Wl", "Ull", "Ka", "At", "Ts", "Ps", "PL", "Me", "Ks", "Mic", "Fr", "F", "Ob", "NA", "SK", "Ri"), _this.getTerminus("120", "Wilhelmsruher Damm", "Wittenau", "Paracelsus-Bad", "Leopoldplatz"), _this.getTerminus("N6", "Alt-Tegel"), _this.getTerminus("N20", "Hainbuchenstr")], [_this.getTerminus("M27", "Jungfernheide"), _this.getTerminus("247", "Leopoldplatz"), _this.getTerminus("M27", "Pankow"), _this.getTerminus("247", "Nordbahnhof", "Bernauer Str")]];
             break;
 
           case "BWES":
