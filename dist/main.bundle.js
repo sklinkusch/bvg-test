@@ -307,64 +307,7 @@ function () {
 
           case "moe":
             _this.stop = [900000160014];
-            _this.filter = [[[{
-              line: "M13",
-              dir: "Warschauer"
-            }, {
-              line: "M13",
-              dir: "Frankfurter"
-            }], [{
-              line: "16",
-              dir: "Frankfurter"
-            }], [{
-              line: "21",
-              dir: "Schöneweide"
-            }, {
-              line: "21",
-              dir: "Bersarinplatz"
-            }, {
-              line: "21",
-              dir: "Treskowallee/Ehrlichstr"
-            }], [{
-              line: "M13",
-              dir: "Virchow-Klinikum"
-            }, {
-              line: "M13",
-              dir: "Degnerstr"
-            }, {
-              line: "M13",
-              dir: "Betriebshof Lichtenberg"
-            }], [{
-              line: "16",
-              dir: "Ahrensfelde/Stadtgrenze"
-            }], [{
-              line: "21",
-              dir: "Gudrunstr"
-            }], [{
-              line: "240",
-              dir: "Storkower Str"
-            }], [{
-              line: "N50",
-              dir: "Hugenottenplatz"
-            }, {
-              line: "N50",
-              dir: "Betriebshof Indira-Gandhi-Str"
-            }, {
-              line: "N50",
-              dir: "Pankow"
-            }], [{
-              line: "240",
-              dir: "Ostbahnhof"
-            }, {
-              line: "240",
-              dir: "Betriebshof Lichtenberg"
-            }], [{
-              line: "N50",
-              dir: "Tierpark"
-            }, {
-              line: "N50",
-              dir: "Betriebshof Lichtenberg"
-            }]]];
+            _this.filter = [[_this.getTerminus("M13", "Warschauer Str", "Frankfurter Allee"), _this.getTerminus("16", "Frankfurter Allee"), _this.getTerminus("21", "Schöneweide", "Treskowallee/Ehrlichstr", "Bersarinplatz"), _this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg"), _this.getTerminus("16", "Ahrensfelde/Stadtgrenze"), _this.getTerminus("21", "Lichtenberg/Gudrunstr"), _this.getTerminus("240", "Storkower Str"), _this.getTerminus("N50", "Hugenottenplatz", "Pankow", "Betriebshof Indira-Gandhi-Str"), _this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg"), _this.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")]];
             break;
 
           case "gat":
