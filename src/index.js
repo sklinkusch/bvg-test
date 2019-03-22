@@ -3880,36 +3880,15 @@ class Station {
           this.stop = [900000032102];
           this.filter = [
             [
-              [
-                { line: "135", dir: "Rathaus Spandau" },
-                { line: "135", dir: "Am Omnibushof" }
-              ],
-              [{ line: "638", dir: "Rathaus Spandau" }],
-              [
-                { line: "M49", dir: "Zoologischer Garten" },
-                { line: "M49", dir: "Savignyplatz" },
-                { line: "M49", dir: "Wilmersdorfer Str" },
-                { line: "M49", dir: "Haus des Rundfunks" }
-              ],
-              [{ line: "X49", dir: "Wilmersdorfer Str" }],
-              [
-                { line: "135", dir: "Alt-Kladow" },
-                { line: "135", dir: "Landstadt Gatow" },
-                { line: "135", dir: "Hottengrund" }
-              ],
-              [
-                { line: "638", dir: "Hauptbahnhof" },
-                { line: "638", dir: "Campus Jungfernsee" }
-              ],
-              [{ line: "338", dir: "Havelpark" }],
-              [
-                { line: "M49", dir: "Nennhauser Damm" },
-                { line: "M49", dir: "Reimerweg" }
-              ],
-              [
-                { line: "X49", dir: "Hahneberg" },
-                { line: "X49", dir: "Spektefeld" }
-              ]
+              this.getTerminus("135", "Rathaus Spandau", "Am Omnibushof"),
+              this.getTerminus("638", "Rathaus Spandau"),
+              this.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str", "Haus des Rundfunks"),
+              this.getTerminus("X49", "Wilmersdorfer Str"),
+              this.getTerminus("135", "Hottengrund", "Alt-Kladow", "Landstadt Gatow"),
+              this.getTerminus("338", "Havelpark"),
+              this.getTerminus("638", "Potsdam", "Hauptbahnhof", "Campus Jungfernsee"),
+              this.getTerminus("M49", "Nennhauser Damm", "Reimerweg"),
+              this.getTerminus("X49", "Hahneberg", "Im Spektefeld")
             ]
           ];
           break;
