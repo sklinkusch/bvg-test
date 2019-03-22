@@ -3412,44 +3412,25 @@ class Station {
               ),
               [this.U1.NULL],
               [this.U3.NULL],
-              [
-                { line: "M10", dir: "Hauptbahnhof" },
-                { line: "M10", dir: "Friedrich-Ludwig-Jahn-Sportpark" }
-              ],
-              [{ line: "347", dir: "Ostbahnhof" }],
-              [{ line: "N1", dir: "Helsingforser Platz" }],
-              [{ line: "347", dir: "Tunnelstr" }],
-              [{ line: "N1", dir: "Zoologischer Garten" }],
-              [
-                { line: "248", dir: "Breitenbachplatz" },
-                { line: "248", dir: "Südkreuz" },
-                { line: "248", dir: "Hallesches Tor" },
-                { line: "248", dir: "Alexanderplatz" },
-                { line: "248", dir: "Ostbahnhof" }
-              ]
+              this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"),
+              this.getTerminus("347", "Ostbahnhof"),
+              this.getTerminus("N1", "Helsingforser Platz"),
+              this.getTerminus("347", "Tunnelstr"),
+              this.getTerminus("N1", "Zoologischer Garten"),
+              this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz", "Ostbahnhof")
             ],
             [
-              [
-                { line: "M10", dir: "Hauptbahnhof" },
-                { line: "M10", dir: "Friedrich-Ludwig-Jahn-Sportpark" }
-              ],
-              [{ line: "M10", dir: "Warschauer Str" }]
+              this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"),
+              this.getTerminus("M10", "Warschauer Str")
             ],
             [
-              [{ line: "347", dir: "Ostbahnhof" }],
-              [{ line: "347", dir: "Tunnelstr" }],
-              [{ line: "N1", dir: "Zoologischer Garten" }]
+              this.getTerminus("347", "Ostbahnhof"),
+              this.getTerminus("347", "Tunnelstr"),
+              this.getTerminus("N1", "Zoologischer Garten")
             ],
             [
-              [
-                { line: "M10", dir: "Hauptbahnhof" },
-                { line: "M10", dir: "Friedrich-Ludwig-Jahn-Sportpark" }
-              ],
-              [
-                { line: "M13", dir: "Virchow-Klinikum" },
-                { line: "M13", dir: "Degnerstr" },
-                { line: "M13", dir: "Betriebshof Lichtenberg" }
-              ]
+              this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"),
+              this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg")
             ]
           ];
           break;

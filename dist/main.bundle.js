@@ -272,73 +272,7 @@ function () {
 
           case "BWRS":
             _this.stop = [900000120004, 900000120011, 900000120020, 900000120021];
-            _this.filter = [[_this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), [_this.S75.OSB], _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S75, "WAB", "HH", "GSE", "SPH", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP"), [_this.U1.NULL], [_this.U3.NULL], [{
-              line: "M10",
-              dir: "Hauptbahnhof"
-            }, {
-              line: "M10",
-              dir: "Friedrich-Ludwig-Jahn-Sportpark"
-            }], [{
-              line: "347",
-              dir: "Ostbahnhof"
-            }], [{
-              line: "N1",
-              dir: "Helsingforser Platz"
-            }], [{
-              line: "347",
-              dir: "Tunnelstr"
-            }], [{
-              line: "N1",
-              dir: "Zoologischer Garten"
-            }], [{
-              line: "248",
-              dir: "Breitenbachplatz"
-            }, {
-              line: "248",
-              dir: "Südkreuz"
-            }, {
-              line: "248",
-              dir: "Hallesches Tor"
-            }, {
-              line: "248",
-              dir: "Alexanderplatz"
-            }, {
-              line: "248",
-              dir: "Ostbahnhof"
-            }]], [[{
-              line: "M10",
-              dir: "Hauptbahnhof"
-            }, {
-              line: "M10",
-              dir: "Friedrich-Ludwig-Jahn-Sportpark"
-            }], [{
-              line: "M10",
-              dir: "Warschauer Str"
-            }]], [[{
-              line: "347",
-              dir: "Ostbahnhof"
-            }], [{
-              line: "347",
-              dir: "Tunnelstr"
-            }], [{
-              line: "N1",
-              dir: "Zoologischer Garten"
-            }]], [[{
-              line: "M10",
-              dir: "Hauptbahnhof"
-            }, {
-              line: "M10",
-              dir: "Friedrich-Ludwig-Jahn-Sportpark"
-            }], [{
-              line: "M13",
-              dir: "Virchow-Klinikum"
-            }, {
-              line: "M13",
-              dir: "Degnerstr"
-            }, {
-              line: "M13",
-              dir: "Betriebshof Lichtenberg"
-            }]]];
+            _this.filter = [[_this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), [_this.S75.OSB], _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S75, "WAB", "HH", "GSE", "SPH", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP"), [_this.U1.NULL], [_this.U3.NULL], _this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this.getTerminus("347", "Ostbahnhof"), _this.getTerminus("N1", "Helsingforser Platz"), _this.getTerminus("347", "Tunnelstr"), _this.getTerminus("N1", "Zoologischer Garten"), _this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz", "Ostbahnhof")], [_this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this.getTerminus("M10", "Warschauer Str")], [_this.getTerminus("347", "Ostbahnhof"), _this.getTerminus("347", "Tunnelstr"), _this.getTerminus("N1", "Zoologischer Garten")], [_this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg")]];
             break;
 
           case "BWED":
