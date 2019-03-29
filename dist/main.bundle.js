@@ -148,6 +148,10 @@ function (_Line) {
           stop: [900000100003, 900000100703, 900000100704, 900000100705, 900000100708, 900000100024, 900000100026, 900000100712, 900000100711, 900000100031, 900000100005, 900000100707, 900000100030],
           filter: [[this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge"), this.getTerminus("RE7", "Dessau", "Bad Belzig"), this.getTerminus("RB14", "Nauen"), this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), this.getTerminus("RE2", "Cottbus"), this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), this.getTerminus("RB14", "Schönefeld"), this.getStation(this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), this.getStation(this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), this.getStation(this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), this.getStation(this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), this.getStation(this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB"), this.getStation(this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB"), this.getStation(this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB"), this.getStation(this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB")], [this.getStation(this.U2, "PA", "VIN", "Sh", "EB", "Sz", "Lu"), this.getStation(this.U2, "Fpo", "Hz", "Sno", "Au", "Rl", "Sd", "Nd", "Th", "Kd", "So", "Bmo", "Obi", "RP", "Zo", "Wt", "No", "BS", "Gu", "MB", "Pd", "MH", "Mi", "Hv", "Sp", "Mk", "Ko")], [[this.U5.NULL]], [this.getStation(this.U8, "WIU", "RR", "KB", "LD", "RE", "FN", "Olu", "Pk", "Gb", "Vo", "B", "Ro", "W"), this.getStation(this.U8, "HMS", "L", "Bo", "Hpo", "ST", "Kbu", "Mr", "He", "Jb")], [this.getTerminus("M48", "Busseallee", "Zehlendorf Eiche", "Rathaus Steglitz", "Potsdamer Platz"), this.getTerminus("TXL", "Flughafen Tegel"), this.getTerminus("100", "Zoologischer Garten"), this.getTerminus("200", "Zoologischer Garten", "Unter den Linden/Friedrichstr"), this.getTerminus("N5", "Hackescher Markt")], [this.getTerminus("M2", null)], [this.getTerminus("M4", "Hackescher Markt"), this.getTerminus("M5", "Hauptbahnhof", "Hackescher Markt"), this.getTerminus("M6", "Hackescher Markt"), this.getTerminus("M4", "Falkenberg", "Zingster Str", "Sulzfelder Str"), this.getTerminus("M5", "Zingster Str"), this.getTerminus("M6", "Riesaer Str", "Betriebshof Marzahn", "Marzahn")], [this.getTerminus("248", "Warschauer Str", "Ostbahnhof")], [this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor")], [this.getTerminus("TXL", "Flughafen Tegel"), this.getTerminus("100", "Zoologischer Garten"), this.getTerminus("200", "Zoologischer Garten", "Unter den Linden/Friedrichstr"), this.getTerminus("N2", "Zoologischer Garten"), this.getTerminus("N5", "Hackescher Markt"), this.getTerminus("N42", "Theodor-Heuss-Platz"), this.getTerminus("TXL", "Memhardstr"), this.getTerminus("200", "Michelangelostr")], [this.getTerminus("M4", "Hackescher Markt"), this.getTerminus("M5", "Hauptbahnhof", "Hackescher Markt"), this.getTerminus("M6", "Hackescher Markt"), this.getTerminus("M4", "Falkenberg", "Zingster Str", "Sulzfelder Str"), this.getTerminus("M5", "Zingster Str"), this.getTerminus("M6", "Riesaer Str", "Betriebshof Marzahn", "Marzahn")], [this.getTerminus("N5", "Hackescher Markt"), this.getTerminus("N5", "Riesaer Str", "Wuhletal"), this.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide")], [this.getTerminus("M2", "Alexanderplatz"), this.getTerminus("M2", "Heinersdorf", "Am Steinberg"), this.getTerminus("N65", "Hackescher Markt")]]
         },
+        BBEV: {
+          stop: [900000003102],
+          filter: [[this.getStation(this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN"), this.getStation(this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN"), this.getStation(this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN"), this.getStation(this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN"), this.getStation(this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF"), this.getStation(this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF"), this.getStation(this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF"), this.getStation(this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF")]]
+        },
         BBEU: {
           stop: [900000020202],
           filter: [[[this.S41], this.getStation(this.S46, "GB", "WED", "WH"), [this.S42], this.getStation(this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN"), this.getTerminus("TXL", "Flughafen Tegel"), this.getTerminus("106", "Seestr"), this.getTerminus("123", "Mäckeritzwiesen", "Goebelplatz"), this.getTerminus("N26", "Seestr"), this.getTerminus("TXL", "Alexanderplatz", "Hauptbahnhof"), this.getTerminus("106", "Lindenhof", "Südkreuz", "Kurfüstenstr"), this.getTerminus("123", "Hauptbahnhof"), this.getTerminus("N26", "Zoologischer Garten")]]
@@ -963,7 +967,7 @@ function () {
         ALX: "Alexanderplatz",
         HKM: "Hackescher Markt",
         FST: "Friedrichstr",
-        HBF: "Hauptbahnhof",
+        HBF: "Berlin Hauptbahnhof",
         BEV: "Bellevue",
         TGN: "Tiergarten",
         ZOS: "Zoologischer Garten",
@@ -1094,7 +1098,7 @@ function () {
         ALX: "Alexanderplatz",
         HKM: "Hackescher Markt",
         FST: "Friedrichstr",
-        HBF: "Hauptbahnhof",
+        HBF: "Berlin Hauptbahnhof",
         BEV: "Bellevue",
         TGN: "Tiergarten",
         ZOS: "Zoologischer Garten",
@@ -1128,7 +1132,7 @@ function () {
         ALX: "Alexanderplatz",
         HKM: "Hackescher Markt",
         FST: "Friedrichstr",
-        HBF: "Hauptbahnhof",
+        HBF: "Berlin Hauptbahnhof",
         BEV: "Bellevue",
         TGN: "Tiergarten",
         ZOS: "Zoologischer Garten",
@@ -1242,7 +1246,7 @@ function () {
         ALX: "Alexanderplatz",
         HKM: "Hackescher Markt",
         FST: "Friedrichstr",
-        HBF: "Hauptbahnhof",
+        HBF: "Berlin Hauptbahnhof",
         BEV: "Bellevue",
         TGN: "Tiergarten",
         ZOS: "Zoologischer Garten",

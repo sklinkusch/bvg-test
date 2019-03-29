@@ -342,6 +342,7 @@ export default class Direction extends Line {
           ]
         ]
       },
+      BBEV: {stop: [900000003102], filter: [[this.getStation(this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN"), this.getStation(this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN"), this.getStation(this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN"), this.getStation(this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN"), this.getStation(this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF"), this.getStation(this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF"), this.getStation(this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF"), this.getStation(this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF")]]},
       BBEU: {
         stop: [900000020202],
         filter: [
