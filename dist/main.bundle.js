@@ -96,247 +96,658 @@
 "use strict";
 
 
+var _lines = _interopRequireDefault(__webpack_require__(/*! ./lines */ "./src/lines.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 var Station =
 /*#__PURE__*/
-function () {
+function (_Line) {
+  _inherits(Station, _Line);
+
   function Station(station, filterValues) {
+    var _this;
+
     _classCallCheck(this, Station);
 
-    this.addLines();
-    this.container = document.querySelector("#container");
-    this._stop = station;
-    this._filter = filterValues;
-    this.getData();
-    this.addEventListeners();
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Station).call(this));
+    _this.container = document.querySelector("#container");
+    _this._stop = station;
+    _this._filter = filterValues;
+
+    _this.getData();
+
+    _this.addEventListeners();
+
+    return _this;
   }
 
   _createClass(Station, [{
     key: "addEventListeners",
     value: function addEventListeners() {
-      var _this = this;
+      var _this2 = this;
 
       var dropdown = document.querySelector("#dropdown");
       dropdown.addEventListener("input", function (e) {
-        while (_this.container.firstChild) {
-          _this.container.removeChild(_this.container.firstChild);
+        while (_this2.container.firstChild) {
+          _this2.container.removeChild(_this2.container.firstChild);
         }
 
         var selectValue = e.target.value;
 
         switch (selectValue) {
           case "BALX":
-            _this.stop = [900000100003, 900000100703, 900000100704, 900000100705, 900000100708, 900000100024, 900000100026, 900000100712, 900000100711, 900000100031, 900000100005, 900000100707, 900000100030];
-            _this.filter = [[_this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), _this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge"), _this.getTerminus("RE7", "Dessau", "Bad Belzig"), _this.getTerminus("RB14", "Nauen"), _this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), _this.getTerminus("RE2", "Cottbus"), _this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), _this.getTerminus("RB14", "Schönefeld"), _this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB")], [_this.getStation(_this.U2, "PA", "VIN", "Sh", "EB", "Sz", "Lu"), _this.getStation(_this.U2, "Fpo", "Hz", "Sno", "Au", "Rl", "Sd", "Nd", "Th", "Kd", "So", "Bmo", "Obi", "RP", "Zo", "Wt", "No", "BS", "Gu", "MB", "Pd", "MH", "Mi", "Hv", "Sp", "Mk", "Ko")], [[_this.U5.NULL]], [_this.getStation(_this.U8, "WIU", "RR", "KB", "LD", "RE", "FN", "Olu", "Pk", "Gb", "Vo", "B", "Ro", "W"), _this.getStation(_this.U8, "HMS", "L", "Bo", "Hpo", "ST", "Kbu", "Mr", "He", "Jb")], [_this.getTerminus("M48", "Busseallee", "Zehlendorf Eiche", "Rathaus Steglitz", "Potsdamer Platz"), _this.getTerminus("TXL", "Flughafen Tegel"), _this.getTerminus("100", "Zoologischer Garten"), _this.getTerminus("200", "Zoologischer Garten", "Unter den Linden/Friedrichstr"), _this.getTerminus("N5", "Hackescher Markt")], [_this.getTerminus("M2", null)], [_this.getTerminus("M4", "Hackescher Markt"), _this.getTerminus("M5", "Hauptbahnhof", "Hackescher Markt"), _this.getTerminus("M6", "Hackescher Markt"), _this.getTerminus("M4", "Falkenberg", "Zingster Str", "Sulzfelder Str"), _this.getTerminus("M5", "Zingster Str"), _this.getTerminus("M6", "Riesaer Str", "Betriebshof Marzahn", "Marzahn")], [_this.getTerminus("248", "Warschauer Str", "Ostbahnhof")], [_this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor")], [_this.getTerminus("TXL", "Flughafen Tegel"), _this.getTerminus("100", "Zoologischer Garten"), _this.getTerminus("200", "Zoologischer Garten", "Unter den Linden/Friedrichstr"), _this.getTerminus("N2", "Zoologischer Garten"), _this.getTerminus("N5", "Hackescher Markt"), _this.getTerminus("N42", "Theodor-Heuss-Platz"), _this.getTerminus("TXL", "Memhardstr"), _this.getTerminus("200", "Michelangelostr")], [_this.getTerminus("M4", "Hackescher Markt"), _this.getTerminus("M5", "Hauptbahnhof", "Hackescher Markt"), _this.getTerminus("M6", "Hackescher Markt"), _this.getTerminus("M4", "Falkenberg", "Zingster Str", "Sulzfelder Str"), _this.getTerminus("M5", "Zingster Str"), _this.getTerminus("M6", "Riesaer Str", "Betriebshof Marzahn", "Marzahn")], [_this.getTerminus("N5", "Hackescher Markt"), _this.getTerminus("N5", "Riesaer Str", "Wuhletal"), _this.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide")], [_this.getTerminus("M2", "Alexanderplatz"), _this.getTerminus("M2", "Heinersdorf", "Am Steinberg"), _this.getTerminus("N65", "Hackescher Markt")]];
+            _this2.stop = [900000100003, 900000100703, 900000100704, 900000100705, 900000100708, 900000100024, 900000100026, 900000100712, 900000100711, 900000100031, 900000100005, 900000100707, 900000100030];
+            _this2.filter = [[_this2.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), _this2.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge"), _this2.getTerminus("RE7", "Dessau", "Bad Belzig"), _this2.getTerminus("RB14", "Nauen"), _this2.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), _this2.getTerminus("RE2", "Cottbus"), _this2.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), _this2.getTerminus("RB14", "Schönefeld"), _this2.getStation(_this2.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), _this2.getStation(_this2.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), _this2.getStation(_this2.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM"), _this2.getStation(_this2.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB"), _this2.getStation(_this2.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB"), _this2.getStation(_this2.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB"), _this2.getStation(_this2.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB")], [_this2.getStation(_this2.U2, "PA", "VIN", "Sh", "EB", "Sz", "Lu"), _this2.getStation(_this2.U2, "Fpo", "Hz", "Sno", "Au", "Rl", "Sd", "Nd", "Th", "Kd", "So", "Bmo", "Obi", "RP", "Zo", "Wt", "No", "BS", "Gu", "MB", "Pd", "MH", "Mi", "Hv", "Sp", "Mk", "Ko")], [[_this2.U5.NULL]], [_this2.getStation(_this2.U8, "WIU", "RR", "KB", "LD", "RE", "FN", "Olu", "Pk", "Gb", "Vo", "B", "Ro", "W"), _this2.getStation(_this2.U8, "HMS", "L", "Bo", "Hpo", "ST", "Kbu", "Mr", "He", "Jb")], [_this2.getTerminus("M48", "Busseallee", "Zehlendorf Eiche", "Rathaus Steglitz", "Potsdamer Platz"), _this2.getTerminus("TXL", "Flughafen Tegel"), _this2.getTerminus("100", "Zoologischer Garten"), _this2.getTerminus("200", "Zoologischer Garten", "Unter den Linden/Friedrichstr"), _this2.getTerminus("N5", "Hackescher Markt")], [_this2.getTerminus("M2", null)], [_this2.getTerminus("M4", "Hackescher Markt"), _this2.getTerminus("M5", "Hauptbahnhof", "Hackescher Markt"), _this2.getTerminus("M6", "Hackescher Markt"), _this2.getTerminus("M4", "Falkenberg", "Zingster Str", "Sulzfelder Str"), _this2.getTerminus("M5", "Zingster Str"), _this2.getTerminus("M6", "Riesaer Str", "Betriebshof Marzahn", "Marzahn")], [_this2.getTerminus("248", "Warschauer Str", "Ostbahnhof")], [_this2.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor")], [_this2.getTerminus("TXL", "Flughafen Tegel"), _this2.getTerminus("100", "Zoologischer Garten"), _this2.getTerminus("200", "Zoologischer Garten", "Unter den Linden/Friedrichstr"), _this2.getTerminus("N2", "Zoologischer Garten"), _this2.getTerminus("N5", "Hackescher Markt"), _this2.getTerminus("N42", "Theodor-Heuss-Platz"), _this2.getTerminus("TXL", "Memhardstr"), _this2.getTerminus("200", "Michelangelostr")], [_this2.getTerminus("M4", "Hackescher Markt"), _this2.getTerminus("M5", "Hauptbahnhof", "Hackescher Markt"), _this2.getTerminus("M6", "Hackescher Markt"), _this2.getTerminus("M4", "Falkenberg", "Zingster Str", "Sulzfelder Str"), _this2.getTerminus("M5", "Zingster Str"), _this2.getTerminus("M6", "Riesaer Str", "Betriebshof Marzahn", "Marzahn")], [_this2.getTerminus("N5", "Hackescher Markt"), _this2.getTerminus("N5", "Riesaer Str", "Wuhletal"), _this2.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide")], [_this2.getTerminus("M2", "Alexanderplatz"), _this2.getTerminus("M2", "Heinersdorf", "Am Steinberg"), _this2.getTerminus("N65", "Hackescher Markt")]];
             break;
 
           case "BBEU":
-            _this.stop = [900000020202];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN"), _this.getTerminus("TXL", "Flughafen Tegel"), _this.getTerminus("106", "Seestr"), _this.getTerminus("123", "Mäckeritzwiesen", "Goebelplatz"), _this.getTerminus("N26", "Seestr"), _this.getTerminus("TXL", "Alexanderplatz", "Hauptbahnhof"), _this.getTerminus("106", "Lindenhof", "Südkreuz", "Kurfüstenstr"), _this.getTerminus("123", "Hauptbahnhof"), _this.getTerminus("N26", "Zoologischer Garten")]];
+            _this2.stop = [900000020202];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN"), _this2.getTerminus("TXL", "Flughafen Tegel"), _this2.getTerminus("106", "Seestr"), _this2.getTerminus("123", "Mäckeritzwiesen", "Goebelplatz"), _this2.getTerminus("N26", "Seestr"), _this2.getTerminus("TXL", "Alexanderplatz", "Hauptbahnhof"), _this2.getTerminus("106", "Lindenhof", "Südkreuz", "Kurfüstenstr"), _this2.getTerminus("123", "Hauptbahnhof"), _this2.getTerminus("N26", "Zoologischer Garten")]];
             break;
 
           case "BBUP":
-            _this.stop = [900000044202];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP"), _this.getStation(_this.U9, "Olo", "Np", "Lpu", "Am", "WF", "Bi", "Tm", "Ha", "Zu", "Kfu", "Snu", "Gt", "Beo"), _this.getStation(_this.U9, "Rzu", "Sl", "Wsg", "Fw"), _this.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Südkreuz"), _this.getTerminus("N9", "Osloer Str", "Zoologischer Garten"), _this.getTerminus("248", "Breitenbachplatz"), _this.getTerminus("N9", "Rathaus Steglitz")]];
+            _this2.stop = [900000044202];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP"), _this2.getStation(_this2.U9, "Olo", "Np", "Lpu", "Am", "WF", "Bi", "Tm", "Ha", "Zu", "Kfu", "Snu", "Gt", "Beo"), _this2.getStation(_this2.U9, "Rzu", "Sl", "Wsg", "Fw"), _this2.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Südkreuz"), _this2.getTerminus("N9", "Osloer Str", "Zoologischer Garten"), _this2.getTerminus("248", "Breitenbachplatz"), _this2.getTerminus("N9", "Rathaus Steglitz")]];
             break;
 
           case "BFA":
-            _this.stop = [900000120001];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK"), [_this.S42], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO"), _this.getStation(_this.U5, "Hö", "LL", "HD", "C", "GK", "KL", "Wh", "E", "Bü", "Tk", "Fi", "Li", "Md"), _this.getStation(_this.U5, "Al", "Si", "Sr", "WR", "FT", "Sa"), _this.getTerminus("M13", "Virchow-Klinikum", "Björnsonstr", "Betriebshof Indira-Gandhi-Str", "Degnerstr", "Betriebshof Lichtenberg"), _this.getTerminus("16", "Ahrensfelde/Stadtgrenze"), _this.getTerminus("M13", "S Warschauer Str", "Scharnweberstr./Weichselstr"), _this.getTerminus("16", "Scharnweberstr./Weichselstr"), _this.getTerminus("N5", "Riesaer Str", "Wuhletal"), _this.getTerminus("N5", "Hackescher Markt")]];
+            _this2.stop = [900000120001];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK"), [_this2.S42], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO"), _this2.getStation(_this2.U5, "Hö", "LL", "HD", "C", "GK", "KL", "Wh", "E", "Bü", "Tk", "Fi", "Li", "Md"), _this2.getStation(_this2.U5, "Al", "Si", "Sr", "WR", "FT", "Sa"), _this2.getTerminus("M13", "Virchow-Klinikum", "Björnsonstr", "Betriebshof Indira-Gandhi-Str", "Degnerstr", "Betriebshof Lichtenberg"), _this2.getTerminus("16", "Ahrensfelde/Stadtgrenze"), _this2.getTerminus("M13", "S Warschauer Str", "Scharnweberstr./Weichselstr"), _this2.getTerminus("16", "Scharnweberstr./Weichselstr"), _this2.getTerminus("N5", "Riesaer Str", "Wuhletal"), _this2.getTerminus("N5", "Hackescher Markt")]];
             break;
 
           case "BFST":
-            _this.stop = [900000100001];
-            _this.filter = [[_this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), _this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"), _this.getTerminus("RE7", "Dessau", "Bad Belzig"), _this.getTerminus("RB14", "Nauen"), _this.getTerminus("RB21", "Wustermark", "Golm", "Potsdam"), _this.getTerminus("RB22", "Königs Wusterhausen", "Schönefeld", "Golm", "Potsdam"), _this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), _this.getTerminus("RE2", "Cottbus"), _this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), _this.getTerminus("RB14", "Schönefeld"), _this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX", "HKM"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX", "HKM"), _this.getStation(_this.S1, "ORB", "LEN", "BOR", "BIW", "HN", "FOH", "HED", "WAI", "WIN", "WM", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS"), _this.getStation(_this.S2, "BER", "BRF", "ZEP", "RGT", "BU", "KRW", "BLB", "PHD", "PKW", "BOS", "GB", "HUM", "NB", "ORS"), _this.getStation(_this.S25, "HD", "HLS", "SZF", "TG", "EBD", "KBO", "ARF", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS"), _this.getStation(_this.S26, "WAI", "WIN", "WM", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS"), _this.getStation(_this.S1, "PDH", "BAB", "GRI", "WSS", "NIW", "SLS", "MEX", "ZD", "SDG", "LWE", "BGT", "RST", "FB", "FRU", "SGV", "JLB", "YOR", "AHU", "POP", "TOR"), _this.getStation(_this.S2, "BFD", "MAH", "LRD", "SC", "BCH", "MF", "ATS", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), _this.getStation(_this.S25, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), _this.getStation(_this.S26, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), _this.getStation(_this.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo", "We", "Ri", "SK", "NA", "Ob"), _this.getStation(_this.U6, "Mf", "Wl", "Ull", "Ka", "At", "Ts", "Ps", "PL", "Me", "Hu", "Ks", "Mic", "Fr"), _this.getTerminus("M1", "Schillerstr", "Rosenthal Nord"), _this.getTerminus("12", "Pasedagplatz"), _this.getTerminus("M1", "Am Kupfergraben"), _this.getTerminus("12", "Am Kupfergraben"), _this.getTerminus("147", "Hauptbahnhof"), _this.getTerminus("147", "Ostbahnhof", "Märkisches Museum", "Unter den Linden/Friedrichstr")]];
+            _this2.stop = [900000100001];
+            _this2.filter = [[_this2.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), _this2.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"), _this2.getTerminus("RE7", "Dessau", "Bad Belzig"), _this2.getTerminus("RB14", "Nauen"), _this2.getTerminus("RB21", "Wustermark", "Golm", "Potsdam"), _this2.getTerminus("RB22", "Königs Wusterhausen", "Schönefeld", "Golm", "Potsdam"), _this2.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), _this2.getTerminus("RE2", "Cottbus"), _this2.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), _this2.getTerminus("RB14", "Schönefeld"), _this2.getStation(_this2.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF"), _this2.getStation(_this2.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF"), _this2.getStation(_this2.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF"), _this2.getStation(_this2.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX", "HKM"), _this2.getStation(_this2.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM"), _this2.getStation(_this2.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM"), _this2.getStation(_this2.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX", "HKM"), _this2.getStation(_this2.S1, "ORB", "LEN", "BOR", "BIW", "HN", "FOH", "HED", "WAI", "WIN", "WM", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS"), _this2.getStation(_this2.S2, "BER", "BRF", "ZEP", "RGT", "BU", "KRW", "BLB", "PHD", "PKW", "BOS", "GB", "HUM", "NB", "ORS"), _this2.getStation(_this2.S25, "HD", "HLS", "SZF", "TG", "EBD", "KBO", "ARF", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS"), _this2.getStation(_this2.S26, "WAI", "WIN", "WM", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS"), _this2.getStation(_this2.S1, "PDH", "BAB", "GRI", "WSS", "NIW", "SLS", "MEX", "ZD", "SDG", "LWE", "BGT", "RST", "FB", "FRU", "SGV", "JLB", "YOR", "AHU", "POP", "TOR"), _this2.getStation(_this2.S2, "BFD", "MAH", "LRD", "SC", "BCH", "MF", "ATS", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), _this2.getStation(_this2.S25, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), _this2.getStation(_this2.S26, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), _this2.getStation(_this2.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo", "We", "Ri", "SK", "NA", "Ob"), _this2.getStation(_this2.U6, "Mf", "Wl", "Ull", "Ka", "At", "Ts", "Ps", "PL", "Me", "Hu", "Ks", "Mic", "Fr"), _this2.getTerminus("M1", "Schillerstr", "Rosenthal Nord"), _this2.getTerminus("12", "Pasedagplatz"), _this2.getTerminus("M1", "Am Kupfergraben"), _this2.getTerminus("12", "Am Kupfergraben"), _this2.getTerminus("147", "Hauptbahnhof"), _this2.getTerminus("147", "Ostbahnhof", "Märkisches Museum", "Unter den Linden/Friedrichstr")]];
             break;
 
           case "BGB":
-            _this.stop = [900000007102];
-            _this.filter = [[_this.getTerminus("RE3", "Schwedt", "Stralsund", "Prenzlau", "Angermünde", "Eberswalde"), _this.getTerminus("RE5", "Rostock", "Stralsund"), _this.getTerminus("RB54", "Rheinsberg"), _this.getTerminus("RE66", null), _this.getTerminus("RB27", null), _this.getTerminus("RE3", "Wittenberg", "Falkenberg", "Halle"), _this.getTerminus("RE5", "Elsterwerda", "Wünsdorf-Waldstadt"), _this.getTerminus("RE6", null), _this.getTerminus("RB54", "Lichtenberg"), _this.getStation(_this.S1, "ORB", "LEN", "BOR", "BIW", "HN", "FOH", "HED", "WAI", "WIN", "WM", "SNH", "WOK", "BOS"), _this.getStation(_this.S2, "BER", "BRF", "ZEP", "RGT", "BU", "KRW", "BLB", "PHD", "PKW", "BOS"), _this.getStation(_this.S25, "HD", "HLS", "SZF", "TG", "EBD", "KBO", "ARF", "SNH", "WOK", "BOS"), _this.getStation(_this.S26, "WAI", "WIN", "WM", "SNH", "WOK", "BOS"), [_this.S41], _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS", "PLA", "SAL"), _this.getStation(_this.S1, "PDH", "BAB", "GRI", "WSS", "NIW", "SLS", "MEX", "ZD", "SDG", "LWE", "BGT", "RST", "FB", "FRU", "SGV", "JLB", "YOR", "AHU", "POP", "TOR", "FSTT", "ORS", "NB", "HUM"), _this.getStation(_this.S2, "BFD", "MAH", "LRD", "SC", "BCH", "MF", "ATS", "PRS", "SKV", "YOR", "AHU", "POP", "TOR", "FSTT", "ORS", "NB", "HUM"), _this.getStation(_this.S25, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR", "FSTT", "ORS", "NB", "HUM"), _this.getStation(_this.S26, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR", "FSTT", "ORS", "NB", "HUM"), [_this.S42], [_this.S46.NULL], _this.getStation(_this.S85, "NB", "HUM"), _this.getStation(_this.U8, "WIU", "RR", "KB", "LD", "PB", "RE", "FN", "Olu", "Pk"), _this.getStation(_this.U8, "HMS", "L", "Bo", "Hpo", "ST", "Kbu", "Mr", "He", "Jb", "Ap", "W", "Ro", "B", "Vo"), _this.getTerminus("247", "Leopoldplatz"), _this.getTerminus("N8", "Wilhelmsruher Damm", "Osloer Str"), _this.getTerminus("247", "Nordbahnhof", "Bernauer Str"), _this.getTerminus("N8", "Hermannstr", "Hermannplatz")]];
+            _this2.stop = [900000007102];
+            _this2.filter = [[_this2.getTerminus("RE3", "Schwedt", "Stralsund", "Prenzlau", "Angermünde", "Eberswalde"), _this2.getTerminus("RE5", "Rostock", "Stralsund"), _this2.getTerminus("RB54", "Rheinsberg"), _this2.getTerminus("RE66", null), _this2.getTerminus("RB27", null), _this2.getTerminus("RE3", "Wittenberg", "Falkenberg", "Halle"), _this2.getTerminus("RE5", "Elsterwerda", "Wünsdorf-Waldstadt"), _this2.getTerminus("RE6", null), _this2.getTerminus("RB54", "Lichtenberg"), _this2.getStation(_this2.S1, "ORB", "LEN", "BOR", "BIW", "HN", "FOH", "HED", "WAI", "WIN", "WM", "SNH", "WOK", "BOS"), _this2.getStation(_this2.S2, "BER", "BRF", "ZEP", "RGT", "BU", "KRW", "BLB", "PHD", "PKW", "BOS"), _this2.getStation(_this2.S25, "HD", "HLS", "SZF", "TG", "EBD", "KBO", "ARF", "SNH", "WOK", "BOS"), _this2.getStation(_this2.S26, "WAI", "WIN", "WM", "SNH", "WOK", "BOS"), [_this2.S41], _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS", "PLA", "SAL"), _this2.getStation(_this2.S1, "PDH", "BAB", "GRI", "WSS", "NIW", "SLS", "MEX", "ZD", "SDG", "LWE", "BGT", "RST", "FB", "FRU", "SGV", "JLB", "YOR", "AHU", "POP", "TOR", "FSTT", "ORS", "NB", "HUM"), _this2.getStation(_this2.S2, "BFD", "MAH", "LRD", "SC", "BCH", "MF", "ATS", "PRS", "SKV", "YOR", "AHU", "POP", "TOR", "FSTT", "ORS", "NB", "HUM"), _this2.getStation(_this2.S25, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR", "FSTT", "ORS", "NB", "HUM"), _this2.getStation(_this2.S26, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR", "FSTT", "ORS", "NB", "HUM"), [_this2.S42], [_this2.S46.NULL], _this2.getStation(_this2.S85, "NB", "HUM"), _this2.getStation(_this2.U8, "WIU", "RR", "KB", "LD", "PB", "RE", "FN", "Olu", "Pk"), _this2.getStation(_this2.U8, "HMS", "L", "Bo", "Hpo", "ST", "Kbu", "Mr", "He", "Jb", "Ap", "W", "Ro", "B", "Vo"), _this2.getTerminus("247", "Leopoldplatz"), _this2.getTerminus("N8", "Wilhelmsruher Damm", "Osloer Str"), _this2.getTerminus("247", "Nordbahnhof", "Bernauer Str"), _this2.getTerminus("N8", "Hermannstr", "Hermannplatz")]];
             break;
 
           case "BGSS":
-            _this.stop = [900000110003];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST"), [_this.S42], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA"), _this.getTerminus("M4", "Falkenberg", "Zingster Str", "Sulzfelder Str"), _this.getTerminus("M4", "Hackescher Markt")]];
+            _this2.stop = [900000110003];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST"), [_this2.S42], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA"), _this2.getTerminus("M4", "Falkenberg", "Zingster Str", "Sulzfelder Str"), _this2.getTerminus("M4", "Hackescher Markt")]];
             break;
 
           case "BHKM":
-            _this.stop = [900000100002];
-            _this.filter = [[_this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX"), _this.getTerminus("M1", "Rosenthal Nord", "Schillerstr"), _this.getTerminus("M1", "Am Kupfergraben"), _this.getTerminus("M4", null), _this.getTerminus("M5", "Zingster Str", "Petersburger Str"), _this.getTerminus("M6", null), _this.getTerminus("M5", "Hauptbahnhof"), _this.getTerminus("N2", "Pankow"), _this.getTerminus("N8", "Wilhelmsruher Damm", "Osloer Str"), _this.getTerminus("N40", "Turmstr"), _this.getTerminus("N42", "Alexanderplatz"), _this.getTerminus("N2", "Ruhleben", "Zoologischer Garten"), _this.getTerminus("N5", "Riesaer Str", "Wuhletal"), _this.getTerminus("N8", "Hermannstr", "Hermannplatz"), _this.getTerminus("N40", "Wühlischplatz"), _this.getTerminus("N42", "Theodor-Heuss-Platz"), _this.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide")]];
+            _this2.stop = [900000100002];
+            _this2.filter = [[_this2.getStation(_this2.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST"), _this2.getStation(_this2.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST"), _this2.getStation(_this2.S7, "OLS", "HST", "MS", "PDH", "BAB", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST"), _this2.getStation(_this2.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX"), _this2.getStation(_this2.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX"), _this2.getStation(_this2.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX"), _this2.getStation(_this2.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX"), _this2.getTerminus("M1", "Rosenthal Nord", "Schillerstr"), _this2.getTerminus("M1", "Am Kupfergraben"), _this2.getTerminus("M4", null), _this2.getTerminus("M5", "Zingster Str", "Petersburger Str"), _this2.getTerminus("M6", null), _this2.getTerminus("M5", "Hauptbahnhof"), _this2.getTerminus("N2", "Pankow"), _this2.getTerminus("N8", "Wilhelmsruher Damm", "Osloer Str"), _this2.getTerminus("N40", "Turmstr"), _this2.getTerminus("N42", "Alexanderplatz"), _this2.getTerminus("N2", "Ruhleben", "Zoologischer Garten"), _this2.getTerminus("N5", "Riesaer Str", "Wuhletal"), _this2.getTerminus("N8", "Hermannstr", "Hermannplatz"), _this2.getTerminus("N40", "Wühlischplatz"), _this2.getTerminus("N42", "Theodor-Heuss-Platz"), _this2.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide")]];
             break;
 
           case "BHAL":
-            _this.stop = [900000040101];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO"), _this.getTerminus("M19", "Grunewald", "Hagenplatz", "Rathenauplatz"), _this.getTerminus("M29", "Roseneck", "Rathenauplatz"), _this.getTerminus("X10", "Teltow", "Andr#233ezeile"), _this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz"), _this.getTerminus("N42", "Theodor-Heuss-Platz", "Rathenauplatz"), _this.getTerminus("M19", "Mehringdamm"), _this.getTerminus("M29", "Hermannplatz"), _this.getTerminus("X10", "Zoologischer Garten"), _this.getTerminus("104", "Tunnelstr", "Eichenstr./Puschkinallee", "Treptower Park"), _this.getTerminus("N42", "Alexanderplatz")]];
+            _this2.stop = [900000040101];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO"), _this2.getTerminus("M19", "Grunewald", "Hagenplatz", "Rathenauplatz"), _this2.getTerminus("M29", "Roseneck", "Rathenauplatz"), _this2.getTerminus("X10", "Teltow", "Andr#233ezeile"), _this2.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz"), _this2.getTerminus("N42", "Theodor-Heuss-Platz", "Rathenauplatz"), _this2.getTerminus("M19", "Mehringdamm"), _this2.getTerminus("M29", "Hermannplatz"), _this2.getTerminus("X10", "Zoologischer Garten"), _this2.getTerminus("104", "Tunnelstr", "Eichenstr./Puschkinallee", "Treptower Park"), _this2.getTerminus("N42", "Alexanderplatz")]];
             break;
 
           case "BHEI":
-            _this.stop = [900000045102];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP"), _this.getStation(_this.U3, "WA", "S", "Gr", "Kbo", "Pr", "Ho", "Mo", "Go", "Kus", "N", "Wt", "Au", "Sno", "Hz", "Fpo"), _this.getStation(_this.U3, "K", "Ot", "Os", "T", "Dd", "Po", "Bt", "Rd"), _this.getTerminus("249", "Roseneck"), _this.getTerminus("310", "Wilmersdorfer Str"), _this.getTerminus("N3", "Mexikoplatz"), _this.getTerminus("249", "Zoologischer Garten"), _this.getTerminus("310", "Blissestr"), _this.getTerminus("N3", "Wittenbergplatz")]];
+            _this2.stop = [900000045102];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP"), _this2.getStation(_this2.U3, "WA", "S", "Gr", "Kbo", "Pr", "Ho", "Mo", "Go", "Kus", "N", "Wt", "Au", "Sno", "Hz", "Fpo"), _this2.getStation(_this2.U3, "K", "Ot", "Os", "T", "Dd", "Po", "Bt", "Rd"), _this2.getTerminus("249", "Roseneck"), _this2.getTerminus("310", "Wilmersdorfer Str"), _this2.getTerminus("N3", "Mexikoplatz"), _this2.getTerminus("249", "Zoologischer Garten"), _this2.getTerminus("310", "Blissestr"), _this2.getTerminus("N3", "Wittenbergplatz")]];
             break;
 
           case "BHER":
-            _this.stop = [900000079221, 900000079220];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S45, "SKR", "THF"), _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP", "SGR", "SKR", "THF"), [_this.S42], _this.getStation(_this.S45, "FLH", "GBA", "AGL", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK"), _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK"), [_this.S47.NULL], [_this.U8.NULL], _this.getTerminus("377", "Plänterwald"), _this.getTerminus("N8", null), _this.getTerminus("N79", "Plänterwald"), _this.getTerminus("M44", null), _this.getTerminus("246", null), _this.getTerminus("277", null), _this.getTerminus("370", "Neuköllnische Brücke"), _this.getTerminus("377", "Kranoldstr"), _this.getTerminus("N79", "Alt-Mariendorf")], [_this.getTerminus("246", "Friedrich-Wilhelm-Platz", "Alt-Tempelhof"), _this.getTerminus("370", "Neuköllnische Brücke")]];
+            _this2.stop = [900000079221, 900000079220];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S45, "SKR", "THF"), _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP", "SGR", "SKR", "THF"), [_this2.S42], _this2.getStation(_this2.S45, "FLH", "GBA", "AGL", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK"), _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK"), [_this2.S47.NULL], [_this2.U8.NULL], _this2.getTerminus("377", "Plänterwald"), _this2.getTerminus("N8", null), _this2.getTerminus("N79", "Plänterwald"), _this2.getTerminus("M44", null), _this2.getTerminus("246", null), _this2.getTerminus("277", null), _this2.getTerminus("370", "Neuköllnische Brücke"), _this2.getTerminus("377", "Kranoldstr"), _this2.getTerminus("N79", "Alt-Mariendorf")], [_this2.getTerminus("246", "Friedrich-Wilhelm-Platz", "Alt-Tempelhof"), _this2.getTerminus("370", "Neuköllnische Brücke")]];
             break;
 
           case "BHO":
-            _this.stop = [900000044101];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI"), _this.getTerminus("115", "Spanische Allee/Potsdamer Ch", "Neuruppiner Str", "Roseneck"), _this.getTerminus("N3", "Mexikoplatz"), _this.getTerminus("N10", "Sachtlebenstr"), _this.getTerminus("115", "Fehrbelliner Platz"), _this.getTerminus("N3", "Wittenbergplatz"), _this.getTerminus("N10", "Zoologischer Garten")]];
+            _this2.stop = [900000044101];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI"), _this2.getTerminus("115", "Spanische Allee/Potsdamer Ch", "Neuruppiner Str", "Roseneck"), _this2.getTerminus("N3", "Mexikoplatz"), _this2.getTerminus("N10", "Sachtlebenstr"), _this2.getTerminus("115", "Fehrbelliner Platz"), _this2.getTerminus("N3", "Wittenbergplatz"), _this2.getTerminus("N10", "Zoologischer Garten")]];
             break;
 
           case "BIP":
-            _this.stop = [900000054105];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR"), [_this.U4.NULL], _this.getTerminus("M48", "Alexanderplatz", "Mohrenstr"), _this.getTerminus("M85", "Hauptbahnhof", "Potsdamer Platz"), _this.getTerminus("187", "Turmstr", "Kurfürstenstr"), _this.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor", "Südkreuz"), _this.getTerminus("M48", "Busseallee", "Zehlendorf Eiche", "Rathaus Steglitz"), _this.getTerminus("M85", "Lichterfelde Süd", "Rathaus Steglitz"), _this.getTerminus("187", "Halbauer Weg", "Lankwitz Kirche", "Insulaner"), _this.getTerminus("248", "Breitenbachplatz")]];
+            _this2.stop = [900000054105];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR"), [_this2.U4.NULL], _this2.getTerminus("M48", "Alexanderplatz", "Mohrenstr"), _this2.getTerminus("M85", "Hauptbahnhof", "Potsdamer Platz"), _this2.getTerminus("187", "Turmstr", "Kurfürstenstr"), _this2.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor", "Südkreuz"), _this2.getTerminus("M48", "Busseallee", "Zehlendorf Eiche", "Rathaus Steglitz"), _this2.getTerminus("M85", "Lichterfelde Süd", "Rathaus Steglitz"), _this2.getTerminus("187", "Halbauer Weg", "Lankwitz Kirche", "Insulaner"), _this2.getTerminus("248", "Breitenbachplatz")]];
             break;
 
           case "BJB":
-            _this.stop = [900000100004];
-            _this.filter = [[_this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB"), _this.getStation(_this.U8, "WIU", "RR", "KB", "LD", "PB", "RE", "FN", "Olu", "Pk", "Gb", "Vo", "B", "Ro", "W", "Ap"), _this.getStation(_this.U8, "HMS", "L", "Bo", "Hpo", "ST", "Kbu", "Mr", "He"), _this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz"), _this.getTerminus("N40", "Turmstr"), _this.getTerminus("Warschauer Str", "Ostbahnhof"), _this.getTerminus("N40", "Wühlischplatz"), _this.getTerminus("N8", "Wilhelmsruher Damm", "Osloer Str"), _this.getTerminus("N65", "Hackescher Markt"), _this.getTerminus("N8", "Hermannstr", "Hermannplatz"), _this.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide")]];
+            _this2.stop = [900000100004];
+            _this2.filter = [[_this2.getStation(_this2.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX"), _this2.getStation(_this2.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX"), _this2.getStation(_this2.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX"), _this2.getStation(_this2.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB"), _this2.getStation(_this2.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB"), _this2.getStation(_this2.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB"), _this2.getStation(_this2.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB"), _this2.getStation(_this2.U8, "WIU", "RR", "KB", "LD", "PB", "RE", "FN", "Olu", "Pk", "Gb", "Vo", "B", "Ro", "W", "Ap"), _this2.getStation(_this2.U8, "HMS", "L", "Bo", "Hpo", "ST", "Kbu", "Mr", "He"), _this2.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz"), _this2.getTerminus("N40", "Turmstr"), _this2.getTerminus("Warschauer Str", "Ostbahnhof"), _this2.getTerminus("N40", "Wühlischplatz"), _this2.getTerminus("N8", "Wilhelmsruher Damm", "Osloer Str"), _this2.getTerminus("N65", "Hackescher Markt"), _this2.getTerminus("N8", "Hermannstr", "Hermannplatz"), _this2.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide")]];
             break;
 
           case "BJUN":
-            _this.stop = [900000020201, 900000020207];
-            _this.filter = [[_this.getTerminus("RE4", "Stendal", "Rathenow"), _this.getTerminus("RE6", "Wittenberge", "Neuruppin"), _this.getTerminus("RB10", "Nauen"), _this.getTerminus("RB13", "Wustermark"), _this.getTerminus("RE4", "Jüterbog", "Luckenwalde", "Ludwigsfelde"), _this.getTerminus("RE6", "Gesundbrunnen"), _this.getTerminus("RB10", "Südkreuz"), [_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES"), _this.getStation(_this.U7, "R", "Zd", "Wk", "La", "Jt", "Br", "Pi", "Bl", "Gz", "Nk", "KM", "Rk", "Hpu", "Sü", "Gs", "Me", "Mu", "Y", "Kt", "Ei", "Bpu", "Beu", "Bli", "Ad", "Wd", "Bmu", "Rw", "Mp"), _this.getStation(_this.U7, "RSp", "AS", "Zi", "Hs", "P", "Rm", "Sie", "Hl", "JK"), _this.getTerminus("M21", "Uhlandstr"), _this.getTerminus("M21", "Goerdelersteg"), _this.getTerminus("M27", "Pankow"), _this.getTerminus("X9", "Zoologischer Garten"), _this.getTerminus("N7", "Schönefeld"), _this.getTerminus("M27", "Jungfernheide"), _this.getTerminus("N7", "Rathaus Spandau")], [_this.getTerminus("M27", "Jungfernheide"), _this.getTerminus("X9", "Flughafen Tegel"), _this.getTerminus("109", "Flughafen Tegel"), _this.getTerminus("N7", "Rathaus Spandau"), _this.getTerminus("109", "Zoologischer Garten")]];
+            _this2.stop = [900000020201, 900000020207];
+            _this2.filter = [[_this2.getTerminus("RE4", "Stendal", "Rathenow"), _this2.getTerminus("RE6", "Wittenberge", "Neuruppin"), _this2.getTerminus("RB10", "Nauen"), _this2.getTerminus("RB13", "Wustermark"), _this2.getTerminus("RE4", "Jüterbog", "Luckenwalde", "Ludwigsfelde"), _this2.getTerminus("RE6", "Gesundbrunnen"), _this2.getTerminus("RB10", "Südkreuz"), [_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES"), _this2.getStation(_this2.U7, "R", "Zd", "Wk", "La", "Jt", "Br", "Pi", "Bl", "Gz", "Nk", "KM", "Rk", "Hpu", "Sü", "Gs", "Me", "Mu", "Y", "Kt", "Ei", "Bpu", "Beu", "Bli", "Ad", "Wd", "Bmu", "Rw", "Mp"), _this2.getStation(_this2.U7, "RSp", "AS", "Zi", "Hs", "P", "Rm", "Sie", "Hl", "JK"), _this2.getTerminus("M21", "Uhlandstr"), _this2.getTerminus("M21", "Goerdelersteg"), _this2.getTerminus("M27", "Pankow"), _this2.getTerminus("X9", "Zoologischer Garten"), _this2.getTerminus("N7", "Schönefeld"), _this2.getTerminus("M27", "Jungfernheide"), _this2.getTerminus("N7", "Rathaus Spandau")], [_this2.getTerminus("M27", "Jungfernheide"), _this2.getTerminus("X9", "Flughafen Tegel"), _this2.getTerminus("109", "Flughafen Tegel"), _this2.getTerminus("N7", "Rathaus Spandau"), _this2.getTerminus("109", "Zoologischer Garten")]];
             break;
 
           case "BLST":
-            _this.stop = [900000110004];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO"), [_this.S42], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS"), _this.getTerminus("M5", "Hauptbahnhof", "Hackescher Markt", "Landsberger Allee/Petersburger Str"), _this.getTerminus("M6", "Hackescher Markt", "Landsberger Allee/Petersburger Str"), _this.getTerminus("M8", "Hauptbahnhof", "Landsberger Allee/Petersburger Str"), _this.getTerminus("M5", "Zingster Str"), _this.getTerminus("M6", "Riesaer Str", "Betriebshof Marzahn", "Marzahn"), _this.getTerminus("M8", "Ahrensfelde/Stadtgrenze", "Betriebshof Marzahn"), _this.getTerminus("156", "Stadion Buschallee/Hansastr", "Große Seestr", "Pasedagplatz"), _this.getTerminus("156", "Storkower Str")]];
+            _this2.stop = [900000110004];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO"), [_this2.S42], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS"), _this2.getTerminus("M5", "Hauptbahnhof", "Hackescher Markt", "Landsberger Allee/Petersburger Str"), _this2.getTerminus("M6", "Hackescher Markt", "Landsberger Allee/Petersburger Str"), _this2.getTerminus("M8", "Hauptbahnhof", "Landsberger Allee/Petersburger Str"), _this2.getTerminus("M5", "Zingster Str"), _this2.getTerminus("M6", "Riesaer Str", "Betriebshof Marzahn", "Marzahn"), _this2.getTerminus("M8", "Ahrensfelde/Stadtgrenze", "Betriebshof Marzahn"), _this2.getTerminus("156", "Stadion Buschallee/Hansastr", "Große Seestr", "Pasedagplatz"), _this2.getTerminus("156", "Storkower Str")]];
             break;
 
           case "BMN":
-            _this.stop = [900000024106, 900000026204, 900000026202];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR"), _this.getTerminus("M49", "Nennhauser Damm", "Reimerweg", "Gatower Str"), _this.getTerminus("X34", "Hottengrund", "Gutsstr", "Gatower Str"), _this.getTerminus("X49", "Hahneberg", "Spektefeld", "Gatower Str"), _this.getTerminus("139", "Werderstr"), _this.getTerminus("218", "Pfaueninsel"), _this.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str"), _this.getTerminus("X34", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str"), _this.getTerminus("X49", "Wilmersdorfer Str")], [_this.getTerminus("139", "Werderstr"), _this.getTerminus("139", "Messe Nord/ICC")], [_this.getStation(_this.U2, "Rl", "Sd", "Nd", "Th"), _this.getStation(_this.U2, "PA", "VIN", "Sh", "EB", "Sz", "Lu", "A", "Ko", "Mk", "Sp", "Hv", "Mi", "MH", "Pd", "MB", "Gu", "BS", "No", "Wt", "Zo", "RP", "Obi", "Bmo", "So"), _this.getTerminus("139", "Werderstr"), _this.getTerminus("139", "Messe Nord/ICC"), _this.getTerminus("N2", "Ruhleben"), _this.getTerminus("N2", "Pankow", "Hackescher Markt", "Zoologischer Garten")]];
+            _this2.stop = [900000024106, 900000026204, 900000026202];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR"), _this2.getTerminus("M49", "Nennhauser Damm", "Reimerweg", "Gatower Str"), _this2.getTerminus("X34", "Hottengrund", "Gutsstr", "Gatower Str"), _this2.getTerminus("X49", "Hahneberg", "Spektefeld", "Gatower Str"), _this2.getTerminus("139", "Werderstr"), _this2.getTerminus("218", "Pfaueninsel"), _this2.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str"), _this2.getTerminus("X34", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str"), _this2.getTerminus("X49", "Wilmersdorfer Str")], [_this2.getTerminus("139", "Werderstr"), _this2.getTerminus("139", "Messe Nord/ICC")], [_this2.getStation(_this2.U2, "Rl", "Sd", "Nd", "Th"), _this2.getStation(_this2.U2, "PA", "VIN", "Sh", "EB", "Sz", "Lu", "A", "Ko", "Mk", "Sp", "Hv", "Mi", "MH", "Pd", "MB", "Gu", "BS", "No", "Wt", "Zo", "RP", "Obi", "Bmo", "So"), _this2.getTerminus("139", "Werderstr"), _this2.getTerminus("139", "Messe Nord/ICC"), _this2.getTerminus("N2", "Ruhleben"), _this2.getTerminus("N2", "Pankow", "Hackescher Markt", "Zoologischer Garten")]];
             break;
 
           case "BNK":
-            _this.stop = [900000078201, 900000078272, 900000078273, 900000078271];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S45, "SKR", "THF", "HER"), _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP", "SGR", "SKR", "THF", "HER"), [_this.S47.HER], [_this.S42], _this.getStation(_this.S45, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "KHD"), _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD"), _this.getStation(_this.S47, "SPF", "OSP", "SW", "BMW", "KHD")], [_this.getStation(_this.U7, "R", "Zd", "Wk", "La", "Jt", "Br", "Pi", "Bl", "Gz"), _this.getStation(_this.U7, "RSp", "AS", "Zi", "Hs", "P", "Rm", "Sie", "Hl", "JK", "Jh", "Mp", "Rw", "Bmu", "Wd", "Ad", "Kn", "Fpu", "Bli", "Beu", "Bpu", "Ei", "Kt", "Y", "Mu", "Me", "Gs", "Sü", "Hpu", "Rk", "KM")], [_this.getTerminus("171", "Schönefeld", "Rudow"), _this.getTerminus("N7", "Schönefeld"), _this.getTerminus("N79", "Alt-Mariendorf"), _this.getTerminus("171", "Hermannplatz", "Sonnenallee"), _this.getTerminus("N7", "Rathaus Spandau"), _this.getTerminus("N79", "Plänterwald")], [_this.getTerminus("171", "Schönefeld", "Rudow"), _this.getTerminus("N7", "Schönefeld"), _this.getTerminus("370", "Neuköllnische Brücke"), _this.getTerminus("377", "Plänterwald"), _this.getTerminus("171", "Hermannplatz", "Sonnenallee"), _this.getTerminus("N7", "Rathaus Spandau"), _this.getTerminus("370", "Hermannstr"), _this.getTerminus("377", "Hermannstr")]];
+            _this2.stop = [900000078201, 900000078272, 900000078273, 900000078271];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S45, "SKR", "THF", "HER"), _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP", "SGR", "SKR", "THF", "HER"), [_this2.S47.HER], [_this2.S42], _this2.getStation(_this2.S45, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "KHD"), _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD"), _this2.getStation(_this2.S47, "SPF", "OSP", "SW", "BMW", "KHD")], [_this2.getStation(_this2.U7, "R", "Zd", "Wk", "La", "Jt", "Br", "Pi", "Bl", "Gz"), _this2.getStation(_this2.U7, "RSp", "AS", "Zi", "Hs", "P", "Rm", "Sie", "Hl", "JK", "Jh", "Mp", "Rw", "Bmu", "Wd", "Ad", "Kn", "Fpu", "Bli", "Beu", "Bpu", "Ei", "Kt", "Y", "Mu", "Me", "Gs", "Sü", "Hpu", "Rk", "KM")], [_this2.getTerminus("171", "Schönefeld", "Rudow"), _this2.getTerminus("N7", "Schönefeld"), _this2.getTerminus("N79", "Alt-Mariendorf"), _this2.getTerminus("171", "Hermannplatz", "Sonnenallee"), _this2.getTerminus("N7", "Rathaus Spandau"), _this2.getTerminus("N79", "Plänterwald")], [_this2.getTerminus("171", "Schönefeld", "Rudow"), _this2.getTerminus("N7", "Schönefeld"), _this2.getTerminus("370", "Neuköllnische Brücke"), _this2.getTerminus("377", "Plänterwald"), _this2.getTerminus("171", "Hermannplatz", "Sonnenallee"), _this2.getTerminus("N7", "Rathaus Spandau"), _this2.getTerminus("370", "Hermannstr"), _this2.getTerminus("377", "Hermannstr")]];
             break;
 
           case "BOSB":
-            _this.stop = [900000120005];
-            _this.filter = [[_this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), _this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"), _this.getTerminus("RE7", "Dessau", "Bad Belzig"), _this.getTerminus("RB14", "Nauen"), _this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), _this.getTerminus("RE2", "Cottbus"), _this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), _this.getTerminus("RB14", "Schönefeld"), _this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS"), [_this.S75.NULL], _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS"), _this.getTerminus("142", "Leopoldplatz", "Hauptbahnhof"), _this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz"), _this.getTerminus("N40", "Turmstr"), _this.getTerminus("147", "Hauptbahnhof", "Unter den Linden/Friedrichstr", "Märkisches Museum"), _this.getTerminus("240", "Storkower Str", "Betriebshof Lichtenberg"), _this.getTerminus("248", "Warschauer Str"), _this.getTerminus("347", "Tunnelstr", "Warschauer Str"), _this.getTerminus("N40", "Wühlischplatz")]];
+            _this2.stop = [900000120005];
+            _this2.filter = [[_this2.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), _this2.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"), _this2.getTerminus("RE7", "Dessau", "Bad Belzig"), _this2.getTerminus("RB14", "Nauen"), _this2.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), _this2.getTerminus("RE2", "Cottbus"), _this2.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), _this2.getTerminus("RB14", "Schönefeld"), _this2.getStation(_this2.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB"), _this2.getStation(_this2.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB"), _this2.getStation(_this2.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB"), _this2.getStation(_this2.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS"), _this2.getStation(_this2.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS"), _this2.getStation(_this2.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS"), [_this2.S75.NULL], _this2.getStation(_this2.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS"), _this2.getTerminus("142", "Leopoldplatz", "Hauptbahnhof"), _this2.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz"), _this2.getTerminus("N40", "Turmstr"), _this2.getTerminus("147", "Hauptbahnhof", "Unter den Linden/Friedrichstr", "Märkisches Museum"), _this2.getTerminus("240", "Storkower Str", "Betriebshof Lichtenberg"), _this2.getTerminus("248", "Warschauer Str"), _this2.getTerminus("347", "Tunnelstr", "Warschauer Str"), _this2.getTerminus("N40", "Wühlischplatz")]];
             break;
 
           case "BOK":
-            _this.stop = [900000120003];
-            _this.filter = [[_this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), _this.getTerminus("RE2", "Cottbus"), _this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), _this.getTerminus("RB12", "Templin"), _this.getTerminus("RB14", "Schönefeld"), _this.getTerminus("RB24", "Eberswalde"), _this.getTerminus("RB25", "Werneuchen"), _this.getTerminus("RB26", "Gorz&#243;w", "Kostrzyn"), _this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), _this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"), _this.getTerminus("RE7", "Dessau", "Bad Belzig"), _this.getTerminus("RB14", "Nauen"), _this.getTerminus("RB24", "Senftenberg", "Cottbus"), _this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS"), _this.getStation(_this.S75, "OSB", "WRS"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL"), _this.getStation(_this.S75, "WAB", "HH", "GSE", "SPH", "FFO", "LI", "NPL"), _this.getStation(_this.S9, "LI", "NPL"), [_this.S41], _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP"), [_this.S42], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA"), _this.getTerminus("194", "Helene-Weigel-Platz", "Friedrichsfelde Ost", "Nöldnerplatz"), _this.getTerminus("347", "Tunnelstr"), _this.getTerminus("N94", "Magdalenenstr"), _this.getTerminus("194", "Hermannplatz", "Treptower Park"), _this.getTerminus("347", "Ostbahnhof", "Warschauer Str"), _this.getTerminus("N94", "Hermannplatz")]];
+            _this2.stop = [900000120003];
+            _this2.filter = [[_this2.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"), _this2.getTerminus("RE2", "Cottbus"), _this2.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"), _this2.getTerminus("RB12", "Templin"), _this2.getTerminus("RB14", "Schönefeld"), _this2.getTerminus("RB24", "Eberswalde"), _this2.getTerminus("RB25", "Werneuchen"), _this2.getTerminus("RB26", "Gorz&#243;w", "Kostrzyn"), _this2.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"), _this2.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"), _this2.getTerminus("RE7", "Dessau", "Bad Belzig"), _this2.getTerminus("RB14", "Nauen"), _this2.getTerminus("RB24", "Senftenberg", "Cottbus"), _this2.getStation(_this2.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS"), _this2.getStation(_this2.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS"), _this2.getStation(_this2.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS"), _this2.getStation(_this2.S75, "OSB", "WRS"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS"), _this2.getStation(_this2.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH"), _this2.getStation(_this2.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL"), _this2.getStation(_this2.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL"), _this2.getStation(_this2.S75, "WAB", "HH", "GSE", "SPH", "FFO", "LI", "NPL"), _this2.getStation(_this2.S9, "LI", "NPL"), [_this2.S41], _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP"), [_this2.S42], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA"), _this2.getTerminus("194", "Helene-Weigel-Platz", "Friedrichsfelde Ost", "Nöldnerplatz"), _this2.getTerminus("347", "Tunnelstr"), _this2.getTerminus("N94", "Magdalenenstr"), _this2.getTerminus("194", "Hermannplatz", "Treptower Park"), _this2.getTerminus("347", "Ostbahnhof", "Warschauer Str"), _this2.getTerminus("N94", "Hermannplatz")]];
             break;
 
           case "BPWA":
-            _this.stop = [900000191002, 900000191802];
-            _this.filter = [[[_this.S45.TP], [_this.S46.TP], [_this.S47.TP], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA", "OK", "TP"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS", "TP"), _this.getStation(_this.S45, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW"), _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW"), _this.getStation(_this.S47, "SPF", "OSP", "SW", "BMW"), _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW"), _this.getStation(_this.S9, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW"), _this.getTerminus("377", "Hermannstr"), _this.getTerminus("N79", "Alt-Mariendorf")], [_this.getTerminus("165", "Märkisches Museum", "Treptower Park"), _this.getTerminus("166", "Boddinstr", "Treptower Park"), _this.getTerminus("N65", "Hackescher Markt"), _this.getTerminus("165", "Schöneweide", "Müggelschlößchenweg"), _this.getTerminus("166", "Schöneweide"), _this.getTerminus("377", "Hermannstr"), _this.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide"), _this.getTerminus("N79", "Alt-Mariendorf")]];
+            _this2.stop = [900000191002, 900000191802];
+            _this2.filter = [[[_this2.S45.TP], [_this2.S46.TP], [_this2.S47.TP], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA", "OK", "TP"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS", "TP"), _this2.getStation(_this2.S45, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW"), _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW"), _this2.getStation(_this2.S47, "SPF", "OSP", "SW", "BMW"), _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW"), _this2.getStation(_this2.S9, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW"), _this2.getTerminus("377", "Hermannstr"), _this2.getTerminus("N79", "Alt-Mariendorf")], [_this2.getTerminus("165", "Märkisches Museum", "Treptower Park"), _this2.getTerminus("166", "Boddinstr", "Treptower Park"), _this2.getTerminus("N65", "Hackescher Markt"), _this2.getTerminus("165", "Schöneweide", "Müggelschlößchenweg"), _this2.getTerminus("166", "Schöneweide"), _this2.getTerminus("377", "Hermannstr"), _this2.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide"), _this2.getTerminus("N79", "Alt-Mariendorf")]];
             break;
 
           case "BPLA":
-            _this.stop = [900000110002];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS"), [_this.S42], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL"), _this.getTerminus("M2", "Heinersdorf", "Am Steinberg"), _this.getTerminus("M2", "Alexanderplatz"), _this.getTerminus("156", "Stadion Buschallee/Hansastr", "Große Seestr", "Pasedagplatz"), _this.getTerminus("156", "Storkower Str", "Michelangelostr")]];
+            _this2.stop = [900000110002];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS"), [_this2.S42], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL"), _this2.getTerminus("M2", "Heinersdorf", "Am Steinberg"), _this2.getTerminus("M2", "Alexanderplatz"), _this2.getTerminus("156", "Stadion Buschallee/Hansastr", "Große Seestr", "Pasedagplatz"), _this2.getTerminus("156", "Storkower Str", "Michelangelostr")]];
             break;
 
           case "BSG":
-            _this.stop = [900000054104];
-            _this.filter = [[_this.getStation(_this.S1, "ORB", "LEN", "BOR", "BIW", "HN", "FOH", "HED", "WAI", "WIN", "WM", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS", "FSTT", "TOR", "POP", "AHU", "YOR", "JLB"), _this.getStation(_this.S1, "PDH", "BAB", "GRI", "WSS", "NIW", "SLS", "MEX", "ZD", "SDG", "LWE", "BGT", "RST", "FB", "FRU"), [_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR"), _this.getTerminus("M46", "Zoologischer Garten", "Wittenbergplatz"), _this.getTerminus("248", "Breitenbachplatz"), _this.getTerminus("M46", "Britz-Süd", "Alt-Tempelhof", "Südkreuz"), _this.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor", "Südkreuz")]];
+            _this2.stop = [900000054104];
+            _this2.filter = [[_this2.getStation(_this2.S1, "ORB", "LEN", "BOR", "BIW", "HN", "FOH", "HED", "WAI", "WIN", "WM", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS", "FSTT", "TOR", "POP", "AHU", "YOR", "JLB"), _this2.getStation(_this2.S1, "PDH", "BAB", "GRI", "WSS", "NIW", "SLS", "MEX", "ZD", "SDG", "LWE", "BGT", "RST", "FB", "FRU"), [_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR"), _this2.getTerminus("M46", "Zoologischer Garten", "Wittenbergplatz"), _this2.getTerminus("248", "Breitenbachplatz"), _this2.getTerminus("M46", "Britz-Süd", "Alt-Tempelhof", "Südkreuz"), _this2.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor", "Südkreuz")]];
             break;
 
           case "BSAL":
-            _this.stop = [900000110001];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS", "PLA"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS", "PLA"), [_this.S42], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS"), _this.getStation(_this.U2, "PA", "VIN"), _this.getStation(_this.U2, "Fpo", "Hz", "Sno", "Au", "Rl", "Sd", "Nd", "Th", "Kd", "So", "Bmo", "Obi", "RP", "Zo", "Wt", "No", "BS", "Gu", "MB", "Pd", "MH", "Mi", "Hv", "Sp", "Mk", "Ko", "A", "Lu", "Sz", "EB"), _this.getTerminus("M1", "Schillerstr", "Rosenthal Nord"), _this.getTerminus("M1", "Am Kupfergraben", "Hackescher Markt")]];
+            _this2.stop = [900000110001];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS", "PLA"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "OK", "FA", "STO", "LST", "GSS", "PLA"), [_this2.S42], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS"), _this2.getStation(_this2.U2, "PA", "VIN"), _this2.getStation(_this2.U2, "Fpo", "Hz", "Sno", "Au", "Rl", "Sd", "Nd", "Th", "Kd", "So", "Bmo", "Obi", "RP", "Zo", "Wt", "No", "BS", "Gu", "MB", "Pd", "MH", "Mi", "Hv", "Sp", "Mk", "Ko", "A", "Lu", "Sz", "EB"), _this2.getTerminus("M1", "Schillerstr", "Rosenthal Nord"), _this2.getTerminus("M1", "Am Kupfergraben", "Hackescher Markt")]];
             break;
 
           case "BSO":
-            _this.stop = [900000077106, 900000077110];
-            _this.filter = [[[_this.S41], [_this.S42], _this.getTerminus("M41", "Hauptbahnhof", "Philharmonie", "Hallesches Tor", "Hermannplatz"), _this.getTerminus("171", "Hermannplatz"), _this.getTerminus("N79", "Alt-Mariendorf"), _this.getTerminus("M41", "Sonnenallee/Baumschulenstr"), _this.getTerminus("171", "Schönefeld", "Rudow"), _this.getTerminus("N79", "Plänterwald")], [_this.getTerminus("171", "Schönefeld", "Rudow"), _this.getTerminus("N79", "Alt-Mariendorf"), _this.getTerminus("171", "Hermannplatz", "Sonnenallee"), _this.getTerminus("N79", "Plänterwald")]];
+            _this2.stop = [900000077106, 900000077110];
+            _this2.filter = [[[_this2.S41], [_this2.S42], _this2.getTerminus("M41", "Hauptbahnhof", "Philharmonie", "Hallesches Tor", "Hermannplatz"), _this2.getTerminus("171", "Hermannplatz"), _this2.getTerminus("N79", "Alt-Mariendorf"), _this2.getTerminus("M41", "Sonnenallee/Baumschulenstr"), _this2.getTerminus("171", "Schönefeld", "Rudow"), _this2.getTerminus("N79", "Plänterwald")], [_this2.getTerminus("171", "Schönefeld", "Rudow"), _this2.getTerminus("N79", "Alt-Mariendorf"), _this2.getTerminus("171", "Hermannplatz", "Sonnenallee"), _this2.getTerminus("N79", "Plänterwald")]];
             break;
 
           case "BSTO":
-            _this.stop = [900000110012, 900000160504];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "TP", "OK", "FA"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "TP", "OK", "FA"), [_this.S42], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST"), _this.getTerminus("156", "Stadion Buschallee", "Große Seestr", "Pasedagplatz"), _this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg")], [_this.getTerminus("156", "Stadion Buschallee", "Große Seestr", "Pasedagplatz"), _this.getTerminus("156", "Storkower Str")]];
+            _this2.stop = [900000110012, 900000160504];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "TP", "OK", "FA"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "TP", "OK", "FA"), [_this2.S42], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST"), _this2.getTerminus("156", "Stadion Buschallee", "Große Seestr", "Pasedagplatz"), _this2.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg")], [_this2.getTerminus("156", "Stadion Buschallee", "Große Seestr", "Pasedagplatz"), _this2.getTerminus("156", "Storkower Str")]];
             break;
 
           case "BSK":
-            _this.stop = [900000058101, 900000058100];
-            _this.filter = [[_this.getTerminus("RE3", "Schwedt", "Stralsund", "Prenzlau", "Angermünde", "Eberswalde"), _this.getTerminus("RE4", "Stendal", "Rathenow"), _this.getTerminus("RE5", "Rostock", "Stralsund"), _this.getTerminus("RB10", "Nauen"), _this.getTerminus("RE3", "Wittenberg", "Falkenberg", "Halle"), _this.getTerminus("RE4", "Jüterbog", "Luckenwalde", "Ludwigsfelde"), _this.getTerminus("RE5", "Elsterwerda", "Wünsdorf-Waldstadt"), _this.getStation(_this.S2, "BER", "BRF", "ZEP", "RGT", "BU", "KRW", "BLB", "PHD", "PKW", "BOS", "GB", "HUM", "NB", "ORS", "FSTT", "TOR", "POP", "AHU", "YOR"), _this.getStation(_this.S25, "HD", "HLS", "SZF", "TG", "EBD", "KBO", "ARF", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS", "FSTT", "TOR", "POP", "AHU", "YOR"), _this.getStation(_this.S26, "WAI", "WIN", "WM", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS", "FSTT", "TOR", "POP", "AHU", "YOR"), _this.getStation(_this.S2, "BFD", "MAH", "LRD", "SC", "BCH", "MF", "ATS", "PRS"), _this.getStation(_this.S25, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS"), _this.getStation(_this.S26, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS"), [_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP", "SGR"), [_this.S42], [_this.S45.NULL], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF"), _this.getTerminus("M46", "Zoologischer Garten", "Wittenbergplatz"), _this.getTerminus("106", "Seestr", "Kurfürstenstr"), _this.getTerminus("204", "Zoologischer Garten"), _this.getTerminus("M46", "Britz-Süd", "Alt-Tempelhof"), _this.getTerminus("106", "Lindenhof")], [_this.getTerminus("184", "Reichartstr"), _this.getTerminus("248", "Breitenbachplatz"), _this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckstr", "Lichterfelde Ost"), _this.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor")]];
+            _this2.stop = [900000058101, 900000058100];
+            _this2.filter = [[_this2.getTerminus("RE3", "Schwedt", "Stralsund", "Prenzlau", "Angermünde", "Eberswalde"), _this2.getTerminus("RE4", "Stendal", "Rathenow"), _this2.getTerminus("RE5", "Rostock", "Stralsund"), _this2.getTerminus("RB10", "Nauen"), _this2.getTerminus("RE3", "Wittenberg", "Falkenberg", "Halle"), _this2.getTerminus("RE4", "Jüterbog", "Luckenwalde", "Ludwigsfelde"), _this2.getTerminus("RE5", "Elsterwerda", "Wünsdorf-Waldstadt"), _this2.getStation(_this2.S2, "BER", "BRF", "ZEP", "RGT", "BU", "KRW", "BLB", "PHD", "PKW", "BOS", "GB", "HUM", "NB", "ORS", "FSTT", "TOR", "POP", "AHU", "YOR"), _this2.getStation(_this2.S25, "HD", "HLS", "SZF", "TG", "EBD", "KBO", "ARF", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS", "FSTT", "TOR", "POP", "AHU", "YOR"), _this2.getStation(_this2.S26, "WAI", "WIN", "WM", "SNH", "WOK", "BOS", "GB", "HUM", "NB", "ORS", "FSTT", "TOR", "POP", "AHU", "YOR"), _this2.getStation(_this2.S2, "BFD", "MAH", "LRD", "SC", "BCH", "MF", "ATS", "PRS"), _this2.getStation(_this2.S25, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS"), _this2.getStation(_this2.S26, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS"), [_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP", "SGR"), [_this2.S42], [_this2.S45.NULL], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF"), _this2.getTerminus("M46", "Zoologischer Garten", "Wittenbergplatz"), _this2.getTerminus("106", "Seestr", "Kurfürstenstr"), _this2.getTerminus("204", "Zoologischer Garten"), _this2.getTerminus("M46", "Britz-Süd", "Alt-Tempelhof"), _this2.getTerminus("106", "Lindenhof")], [_this2.getTerminus("184", "Reichartstr"), _this2.getTerminus("248", "Breitenbachplatz"), _this2.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckstr", "Lichterfelde Ost"), _this2.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor")]];
             break;
 
           case "BTHF":
-            _this.stop = [900000068201, 900000068272];
-            _this.filter = [[[_this.S41], [_this.S45.SKR], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP", "SGR", "SKR"), [_this.S42], _this.getStation(_this.S45, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER"), _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER"), _this.getStation(_this.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo", "We", "Ri", "SK", "NA", "Ob", "F", "Fr", "Mic", "Ks", "Hu", "Me", "PL", "Ps"), _this.getStation(_this.U6, "Mf", "Wl", "Ull", "At"), _this.getTerminus("184", "Südkreuz"), _this.getTerminus("N6", "Alt-Tegel"), _this.getTerminus("140", "Ostbahnhof", "Mehringdamm"), _this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckplatz", "Lichterfelde Ost"), _this.getTerminus("N6", "Alt-Mariendorf"), _this.getTerminus("N84", "Zehlendorf Eiche", "Alt-Tempelhof")], [_this.getTerminus("184", "Südkreuz", "Tempelhof"), _this.getTerminus("N6", "Alt-Tegel"), _this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckplatz", "Lichterfelde Ost"), _this.getTerminus("N6", "Alt-Mariendorf")]];
+            _this2.stop = [900000068201, 900000068272];
+            _this2.filter = [[[_this2.S41], [_this2.S45.SKR], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN", "WKRR", "HAL", "HO", "HEI", "BUP", "IP", "SGR", "SKR"), [_this2.S42], _this2.getStation(_this2.S45, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER"), _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER"), _this2.getStation(_this2.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo", "We", "Ri", "SK", "NA", "Ob", "F", "Fr", "Mic", "Ks", "Hu", "Me", "PL", "Ps"), _this2.getStation(_this2.U6, "Mf", "Wl", "Ull", "At"), _this2.getTerminus("184", "Südkreuz"), _this2.getTerminus("N6", "Alt-Tegel"), _this2.getTerminus("140", "Ostbahnhof", "Mehringdamm"), _this2.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckplatz", "Lichterfelde Ost"), _this2.getTerminus("N6", "Alt-Mariendorf"), _this2.getTerminus("N84", "Zehlendorf Eiche", "Alt-Tempelhof")], [_this2.getTerminus("184", "Südkreuz", "Tempelhof"), _this2.getTerminus("N6", "Alt-Tegel"), _this2.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckplatz", "Lichterfelde Ost"), _this2.getTerminus("N6", "Alt-Mariendorf")]];
             break;
 
           case "BTP":
-            _this.stop = [900000190001, 900000190701, 900000190702, 900000190100];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S45, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA"), _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA"), _this.getStation(_this.S47, "SPF", "OSP", "SW", "BMW", "PWA"), _this.getStation(_this.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA"), _this.getStation(_this.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA"), _this.getStation(_this.S9, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA"), [_this.S42], _this.getStation(_this.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA", "OK"), _this.getStation(_this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA", "OK"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS")], [_this.getTerminus("165", "Märkisches Museum", "Treptower Park"), _this.getTerminus("166", "Boddinstr", "Treptower Park"), _this.getTerminus("265", "Stadtmitte", "Märkisches Museum", "Schlesisches Tor", "Treptower Park"), _this.getTerminus("N65", "Hackescher Markt")], [_this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz", "Halensee", "Berliner Str", "Platz der Luftbrücke", "Boddinstr"), _this.getTerminus("194", "Hermannplatz"), _this.getTerminus("N94", "Hermannplatz"), _this.getTerminus("104", "Tunnelstr"), _this.getTerminus("194", "Helene-Weigel-Platz", "Friedrichsfelde Ost", "Nöldnerplatz"), _this.getTerminus("N94", "Magdalenenstr")], [_this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz", "Halensee", "Berliner Str", "Platz der Luftbrücke", "Boddinstr"), _this.getTerminus("165", "Müggelschlößchenweg", "Schöneweide"), _this.getTerminus("166", "Boddinstr"), _this.getTerminus("194", "Hermannplatz"), _this.getTerminus("265", "Schöneweide", "Baumschulenstr"), _this.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide"), _this.getTerminus("N94", "Hermannplatz"), _this.getTerminus("104", "Eichenstr./Puschkinallee"), _this.getTerminus("165", "Märkisches Museum"), _this.getTerminus("265", "Stadtmitte", "Märkisches Museum", "Schlesisches Tor"), _this.getTerminus("N65", "Hackescher Markt")]];
+            _this2.stop = [900000190001, 900000190701, 900000190702, 900000190100];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S45, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA"), _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA"), _this2.getStation(_this2.S47, "SPF", "OSP", "SW", "BMW", "PWA"), _this2.getStation(_this2.S8, "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "PWA"), _this2.getStation(_this2.S85, "GAS", "ADL", "SCF", "SW", "BMW", "PWA"), _this2.getStation(_this2.S9, "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA"), [_this2.S42], _this2.getStation(_this2.S8, "BIW", "HN", "BFE", "SNF", "MM", "BLB", "PHD", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA", "OK"), _this2.getStation(_this2.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL", "PLA", "GSS", "LST", "STO", "FA", "OK"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB", "WRS")], [_this2.getTerminus("165", "Märkisches Museum", "Treptower Park"), _this2.getTerminus("166", "Boddinstr", "Treptower Park"), _this2.getTerminus("265", "Stadtmitte", "Märkisches Museum", "Schlesisches Tor", "Treptower Park"), _this2.getTerminus("N65", "Hackescher Markt")], [_this2.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz", "Halensee", "Berliner Str", "Platz der Luftbrücke", "Boddinstr"), _this2.getTerminus("194", "Hermannplatz"), _this2.getTerminus("N94", "Hermannplatz"), _this2.getTerminus("104", "Tunnelstr"), _this2.getTerminus("194", "Helene-Weigel-Platz", "Friedrichsfelde Ost", "Nöldnerplatz"), _this2.getTerminus("N94", "Magdalenenstr")], [_this2.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz", "Halensee", "Berliner Str", "Platz der Luftbrücke", "Boddinstr"), _this2.getTerminus("165", "Müggelschlößchenweg", "Schöneweide"), _this2.getTerminus("166", "Boddinstr"), _this2.getTerminus("194", "Hermannplatz"), _this2.getTerminus("265", "Schöneweide", "Baumschulenstr"), _this2.getTerminus("N65", "Müggelschlößchenweg", "Schöneweide"), _this2.getTerminus("N94", "Hermannplatz"), _this2.getTerminus("104", "Eichenstr./Puschkinallee"), _this2.getTerminus("165", "Märkisches Museum"), _this2.getTerminus("265", "Stadtmitte", "Märkisches Museum", "Schlesisches Tor"), _this2.getTerminus("N65", "Hackescher Markt")]];
             break;
 
           case "BWRS":
-            _this.stop = [900000120004, 900000120011, 900000120020, 900000120021];
-            _this.filter = [[_this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), [_this.S75.OSB], _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S75, "WAB", "HH", "GSE", "SPH", "FFO", "LI", "NPL", "OKS"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP"), [_this.U1.NULL], [_this.U3.NULL], _this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this.getTerminus("347", "Ostbahnhof"), _this.getTerminus("N1", "Helsingforser Platz"), _this.getTerminus("347", "Tunnelstr"), _this.getTerminus("N1", "Zoologischer Garten"), _this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz", "Ostbahnhof")], [_this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this.getTerminus("M10", "Warschauer Str")], [_this.getTerminus("347", "Ostbahnhof"), _this.getTerminus("347", "Tunnelstr"), _this.getTerminus("N1", "Zoologischer Garten")], [_this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg")]];
+            _this2.stop = [900000120004, 900000120011, 900000120020, 900000120021];
+            _this2.filter = [[_this2.getStation(_this2.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this2.getStation(_this2.S5, "GWD", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this2.getStation(_this2.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), [_this2.S75.OSB], _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS", "WKS", "CHS", "SAP", "ZOS", "TGN", "BEV", "HBF", "FST", "HKM", "ALX", "JB", "OSB"), _this2.getStation(_this2.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS"), _this2.getStation(_this2.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS"), _this2.getStation(_this2.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS"), _this2.getStation(_this2.S75, "WAB", "HH", "GSE", "SPH", "FFO", "LI", "NPL", "OKS"), _this2.getStation(_this2.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP"), [_this2.U1.NULL], [_this2.U3.NULL], _this2.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this2.getTerminus("347", "Ostbahnhof"), _this2.getTerminus("N1", "Helsingforser Platz"), _this2.getTerminus("347", "Tunnelstr"), _this2.getTerminus("N1", "Zoologischer Garten"), _this2.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz", "Ostbahnhof")], [_this2.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this2.getTerminus("M10", "Warschauer Str")], [_this2.getTerminus("347", "Ostbahnhof"), _this2.getTerminus("347", "Tunnelstr"), _this2.getTerminus("N1", "Zoologischer Garten")], [_this2.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"), _this2.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg")]];
             break;
 
           case "BWED":
-            _this.stop = [900000009104, 900000008103];
-            _this.filter = [[[_this.S41], [_this.S46.GB], [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN", "BEU", "WH"), _this.getStation(_this.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo"), _this.getStation(_this.U6, "Mf", "Wl", "Ull", "Ka", "At", "Ts", "Ps", "PL", "Me", "Ks", "Mic", "Fr", "F", "Ob", "NA", "SK", "Ri"), _this.getTerminus("120", "Wilhelmsruher Damm", "Wittenau", "Paracelsus-Bad", "Leopoldplatz"), _this.getTerminus("N6", "Alt-Tegel"), _this.getTerminus("N20", "Hainbuchenstr")], [_this.getTerminus("M27", "Jungfernheide"), _this.getTerminus("247", "Leopoldplatz"), _this.getTerminus("M27", "Pankow"), _this.getTerminus("247", "Nordbahnhof", "Bernauer Str")]];
+            _this2.stop = [900000009104, 900000008103];
+            _this2.filter = [[[_this2.S41], [_this2.S46.GB], [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN", "BEU", "WH"), _this2.getStation(_this2.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo"), _this2.getStation(_this2.U6, "Mf", "Wl", "Ull", "Ka", "At", "Ts", "Ps", "PL", "Me", "Ks", "Mic", "Fr", "F", "Ob", "NA", "SK", "Ri"), _this2.getTerminus("120", "Wilhelmsruher Damm", "Wittenau", "Paracelsus-Bad", "Leopoldplatz"), _this2.getTerminus("N6", "Alt-Tegel"), _this2.getTerminus("N20", "Hainbuchenstr")], [_this2.getTerminus("M27", "Jungfernheide"), _this2.getTerminus("247", "Leopoldplatz"), _this2.getTerminus("M27", "Pankow"), _this2.getTerminus("247", "Nordbahnhof", "Bernauer Str")]];
             break;
 
           case "BWES":
-            _this.stop = [900000026207, 900000020204];
-            _this.filter = [[[_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN"), _this.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"), _this.getTerminus("M45", "Zoologischer Garten")], [_this.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"), _this.getTerminus("309", "Schlosspark-Klinik"), _this.getTerminus("M45", "Zoologischer Garten"), _this.getTerminus("309", "Wilmersdorfer Str")]];
+            _this2.stop = [900000026207, 900000020204];
+            _this2.filter = [[[_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN"), _this2.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"), _this2.getTerminus("M45", "Zoologischer Garten")], [_this2.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"), _this2.getTerminus("309", "Schlosspark-Klinik"), _this2.getTerminus("M45", "Zoologischer Garten"), _this2.getTerminus("309", "Wilmersdorfer Str")]];
             break;
 
           case "BWH":
-            _this.stop = [900000001201];
-            _this.filter = [[[_this.S41], [_this.S46.GB, _this.S46.WED], [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN", "BEU"), _this.getStation(_this.U9, "Olo", "Np", "Lpu", "Am"), _this.getStation(_this.U9, "Rzu", "Sl", "Wsg", "Fw", "Bd", "Beo", "Gt", "Snu", "Kfu", "Zu", "Ha", "Tm", "Bi"), _this.getTerminus("N9", "Osloer Str"), _this.getTerminus("N9", "Rathaus Steglitz", "Zoologischer Garten")]];
+            _this2.stop = [900000001201];
+            _this2.filter = [[[_this2.S41], [_this2.S46.GB, _this2.S46.WED], [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL", "WKRR", "MN", "WES", "JUN", "BEU"), _this2.getStation(_this2.U9, "Olo", "Np", "Lpu", "Am"), _this2.getStation(_this2.U9, "Rzu", "Sl", "Wsg", "Fw", "Bd", "Beo", "Gt", "Snu", "Kfu", "Zu", "Ha", "Tm", "Bi"), _this2.getTerminus("N9", "Osloer Str"), _this2.getTerminus("N9", "Rathaus Steglitz", "Zoologischer Garten")]];
             break;
 
           case "BWK":
-            _this.stop = [900000024102];
-            _this.filter = [[_this.getStation(_this.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS"), _this.getStation(_this.S5, "GWD", "OLS", "HST", "MS"), _this.getStation(_this.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD"), _this.getStation(_this.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS"), _this.getStation(_this.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this.getStation(_this.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), [_this.S41], _this.getStation(_this.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN"), [_this.S42], _this.getStation(_this.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL"), _this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz"), _this.getTerminus("N42", "Theodor-Heuss-Platz")]];
+            _this2.stop = [900000024102];
+            _this2.filter = [[_this2.getStation(_this2.S3, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS"), _this2.getStation(_this2.S5, "GWD", "OLS", "HST", "MS"), _this2.getStation(_this2.S7, "OLS", "HST", "MS", "PDH", "BAB", "GRI", "WSS", "NIS", "GWD"), _this2.getStation(_this2.S9, "GWD", "SPA", "SRW", "PIC", "OLS", "HST", "MS"), _this2.getStation(_this2.S3, "E", "WIG", "RD", "FRH", "HIG", "KPK", "WHH", "KLH", "RB", "RH", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this2.getStation(_this2.S5, "STN", "STR", "HGM", "STV", "PEN", "FD", "NG", "HPG", "BIS", "MDF", "KAD", "WT", "BDF", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this2.getStation(_this2.S7, "AF", "MEA", "RW", "MAZ", "POE", "SPH", "FFO", "LI", "NPL", "OKS", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), _this2.getStation(_this2.S9, "LI", "NPL", "OKS", "GAS", "FLH", "GBA", "AGL", "ADL", "SCF", "SW", "BMW", "PWA", "TP", "WRS", "OSB", "JB", "ALX", "HKM", "FST", "HBF", "BEV", "TGN", "ZOS", "SAP", "CHS"), [_this2.S41], _this2.getStation(_this2.S46, "GB", "WED", "WH", "BEU", "JUN", "WES", "MN"), [_this2.S42], _this2.getStation(_this2.S46, "KW", "WI", "ZTH", "EIW", "GAS", "ADL", "SCF", "SW", "BMW", "KHD", "NK", "HER", "THF", "SKR", "SGR", "IP", "BUP", "HEI", "HO", "HAL"), _this2.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz"), _this2.getTerminus("N42", "Theodor-Heuss-Platz")]];
             break;
 
           case "jov":
-            _this.stop = [900000160541];
-            _this.filter = [[_this.getTerminus("240", "Storkower Str"), _this.getTerminus("N50", "Hugenottenplatz", "Betriebshof Indira-Gandhi-Str", "Pankow"), _this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg"), _this.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")]];
+            _this2.stop = [900000160541];
+            _this2.filter = [[_this2.getTerminus("240", "Storkower Str"), _this2.getTerminus("N50", "Hugenottenplatz", "Betriebshof Indira-Gandhi-Str", "Pankow"), _this2.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg"), _this2.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")]];
             break;
 
           case "bae":
-            _this.stop = [900000160509, 900000160010, 900000160710];
-            _this.filter = [[_this.getTerminus("M5", "Landsberger Allee/Petersburger Str"), _this.getTerminus("M8", "Hauptbahnhof", "Landsberger Allee/Petersburger Str"), _this.getTerminus("21", "Schöneweide", "Treskowallee/Ehrlichstr", "Bersarinplatz"), _this.getTerminus("M8", "Ahrensfelde/Stadtgrenze", "Betriebshof Marzahn"), _this.getTerminus("21", "Lichtenberg/Gudrunstr")], [_this.getTerminus("M13", "Warschauer Str", "Frankfurter Allee"), _this.getTerminus("16", "Frankfurter Allee"), _this.getTerminus("N50", "Hugenottenplatz", "Pankow", "Betriebshof Indira-Gandhi-Str"), _this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr"), _this.getTerminus("16", "Ahrensfelde/Stadtgrenze"), _this.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")], [_this.getTerminus("M5", "Landsberger Allee/Petersburger Allee"), _this.getTerminus("M8", "Hauptbahnhof", "Landsberger Allee/Petersburger Str")]];
+            _this2.stop = [900000160509, 900000160010, 900000160710];
+            _this2.filter = [[_this2.getTerminus("M5", "Landsberger Allee/Petersburger Str"), _this2.getTerminus("M8", "Hauptbahnhof", "Landsberger Allee/Petersburger Str"), _this2.getTerminus("21", "Schöneweide", "Treskowallee/Ehrlichstr", "Bersarinplatz"), _this2.getTerminus("M8", "Ahrensfelde/Stadtgrenze", "Betriebshof Marzahn"), _this2.getTerminus("21", "Lichtenberg/Gudrunstr")], [_this2.getTerminus("M13", "Warschauer Str", "Frankfurter Allee"), _this2.getTerminus("16", "Frankfurter Allee"), _this2.getTerminus("N50", "Hugenottenplatz", "Pankow", "Betriebshof Indira-Gandhi-Str"), _this2.getTerminus("M13", "Virchow-Klinikum", "Degnerstr"), _this2.getTerminus("16", "Ahrensfelde/Stadtgrenze"), _this2.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")], [_this2.getTerminus("M5", "Landsberger Allee/Petersburger Allee"), _this2.getTerminus("M8", "Hauptbahnhof", "Landsberger Allee/Petersburger Str")]];
             break;
 
           case "moe":
-            _this.stop = [900000160014];
-            _this.filter = [[_this.getTerminus("M13", "Warschauer Str", "Frankfurter Allee"), _this.getTerminus("16", "Frankfurter Allee"), _this.getTerminus("21", "Schöneweide", "Treskowallee/Ehrlichstr", "Bersarinplatz"), _this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg"), _this.getTerminus("16", "Ahrensfelde/Stadtgrenze"), _this.getTerminus("21", "Lichtenberg/Gudrunstr"), _this.getTerminus("240", "Storkower Str"), _this.getTerminus("N50", "Hugenottenplatz", "Pankow", "Betriebshof Indira-Gandhi-Str"), _this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg"), _this.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")]];
+            _this2.stop = [900000160014];
+            _this2.filter = [[_this2.getTerminus("M13", "Warschauer Str", "Frankfurter Allee"), _this2.getTerminus("16", "Frankfurter Allee"), _this2.getTerminus("21", "Schöneweide", "Treskowallee/Ehrlichstr", "Bersarinplatz"), _this2.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg"), _this2.getTerminus("16", "Ahrensfelde/Stadtgrenze"), _this2.getTerminus("21", "Lichtenberg/Gudrunstr"), _this2.getTerminus("240", "Storkower Str"), _this2.getTerminus("N50", "Hugenottenplatz", "Pankow", "Betriebshof Indira-Gandhi-Str"), _this2.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg"), _this2.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")]];
             break;
 
           case "gat":
-            _this.stop = [900000032106];
-            _this.filter = [[_this.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str", "Haus des Rundfunks"), _this.getTerminus("X34", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str"), _this.getTerminus("X49", "Wilmersdorfer Str"), _this.getTerminus("136", "Hennigsdorf", "Aalemannufer", "Werderstr", "Rathaus Spandau"), _this.getTerminus("236", "Haselhorst", "Rathaus Spandau"), _this.getTerminus("X34", "Hottengrund", "Gutsstr"), _this.getTerminus("134", "Hottengrund", "Alt-Kladow", "Alt-Gatow"), _this.getTerminus("N34", "Hottengrund"), _this.getTerminus("M49", "Nennhauser Damm", "Reimerweg"), _this.getTerminus("X49", "Hahneberg", "Im Spektefeld"), _this.getTerminus("134", "Wasserwerk Spandau", "Kisseln", "Rathaus Spandau"), _this.getTerminus("136", "Am Omnibushof"), _this.getTerminus("236", "Am Omnibushof"), _this.getTerminus("N34", "Aalemannufer")]];
+            _this2.stop = [900000032106];
+            _this2.filter = [[_this2.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str", "Haus des Rundfunks"), _this2.getTerminus("X34", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str"), _this2.getTerminus("X49", "Wilmersdorfer Str"), _this2.getTerminus("136", "Hennigsdorf", "Aalemannufer", "Werderstr", "Rathaus Spandau"), _this2.getTerminus("236", "Haselhorst", "Rathaus Spandau"), _this2.getTerminus("X34", "Hottengrund", "Gutsstr"), _this2.getTerminus("134", "Hottengrund", "Alt-Kladow", "Alt-Gatow"), _this2.getTerminus("N34", "Hottengrund"), _this2.getTerminus("M49", "Nennhauser Damm", "Reimerweg"), _this2.getTerminus("X49", "Hahneberg", "Im Spektefeld"), _this2.getTerminus("134", "Wasserwerk Spandau", "Kisseln", "Rathaus Spandau"), _this2.getTerminus("136", "Am Omnibushof"), _this2.getTerminus("236", "Am Omnibushof"), _this2.getTerminus("N34", "Aalemannufer")]];
             break;
 
           case "wil":
-            _this.stop = [900000032102];
-            _this.filter = [[_this.getTerminus("135", "Rathaus Spandau", "Am Omnibushof"), _this.getTerminus("638", "Rathaus Spandau"), _this.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str", "Haus des Rundfunks"), _this.getTerminus("X49", "Wilmersdorfer Str"), _this.getTerminus("135", "Hottengrund", "Alt-Kladow", "Landstadt Gatow"), _this.getTerminus("338", "Havelpark"), _this.getTerminus("638", "Potsdam", "Hauptbahnhof", "Campus Jungfernsee"), _this.getTerminus("M49", "Nennhauser Damm", "Reimerweg"), _this.getTerminus("X49", "Hahneberg", "Im Spektefeld")]];
+            _this2.stop = [900000032102];
+            _this2.filter = [[_this2.getTerminus("135", "Rathaus Spandau", "Am Omnibushof"), _this2.getTerminus("638", "Rathaus Spandau"), _this2.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str", "Haus des Rundfunks"), _this2.getTerminus("X49", "Wilmersdorfer Str"), _this2.getTerminus("135", "Hottengrund", "Alt-Kladow", "Landstadt Gatow"), _this2.getTerminus("338", "Havelpark"), _this2.getTerminus("638", "Potsdam", "Hauptbahnhof", "Campus Jungfernsee"), _this2.getTerminus("M49", "Nennhauser Damm", "Reimerweg"), _this2.getTerminus("X49", "Hahneberg", "Im Spektefeld")]];
             break;
         }
 
-        _this.getData();
+        _this2.getData();
       });
       document.querySelector("#refresh").addEventListener("click", function () {
-        while (_this.container.firstChild) {
-          _this.container.removeChild(_this.container.firstChild);
+        while (_this2.container.firstChild) {
+          _this2.container.removeChild(_this2.container.firstChild);
         }
 
-        _this.getData();
+        _this2.getData();
       });
     }
   }, {
+    key: "checkBarrier",
+    value: function checkBarrier(array) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].code == "bf") {
+          return "<span class=\"fas fa-wheelchair\" title=\"barrier-free\">&nbsp;</span>";
+        }
+      }
+
+      return "";
+    }
+  }, {
+    key: "checkBike",
+    value: function checkBike(array) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].code == "FB") {
+          return "<span class=\"fas fa-bicycle\" title=\"You can take your bike with you.\">&nbsp;</span>";
+        }
+      }
+
+      return "";
+    }
+  }, {
+    key: "checkState",
+    value: function checkState(array) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i].type == "status") {
+          return "<span class=\"fas fa-times\" title=\"".concat(array[i].text, "\">&nbsp;</span>");
+        }
+      }
+
+      return "";
+    }
+  }, {
+    key: "checkWarning",
+    value: function checkWarning(array) {
+      for (var i = 0; i < array.length; i++) {
+        var summary = void 0,
+            text = void 0;
+
+        if (/<a.*href=".*".*>.*<\/a>/.test(array[i].summary)) {
+          summary = this.replaceLinks(array[i].summary);
+        } else {
+          summary = array[i].summary;
+        }
+
+        if (/<a.*href=".*".*>.*<\/a>/.test(array[i].text)) {
+          text = this.replaceLinks(array[i].text);
+        } else {
+          text = array[i].text;
+        }
+
+        if (array[i].type == "warning") {
+          return "<span class=\"fas fa-exclamation-triangle\" title=\"".concat(array[i].validFrom, " - ").concat(array[i].validUntil, ": ").concat(summary, ", ").concat(text, "\">&nbsp;</span>");
+        }
+      }
+
+      return "";
+    }
+  }, {
+    key: "evalData",
+    value: function evalData(array, index) {
+      var _this3 = this;
+
+      if (array.length > 0) {
+        var header = document.createElement("h2");
+        header.innerHTML = "Abfahrten ab ".concat(array[0].stop.name);
+        this.container.appendChild(header);
+        this.filter[index].forEach(function (filterSet) {
+          var subheader_ident = true;
+
+          for (var i = 0; i < array.length; i++) {
+            var identifier = false;
+
+            for (var j = 0; j < filterSet.length; j++) {
+              if (filterSet[j].line != null && filterSet[j].dir != null) {
+                if (array[i].line.name == filterSet[j].line && array[i].direction.includes(filterSet[j].dir)) {
+                  identifier = true;
+                  break;
+                }
+              } else if (filterSet[j].line != null) {
+                if (array[i].line.name == filterSet[j].line) {
+                  identifier = true;
+                  break;
+                }
+              } else if (filterSet[j].dir != null) {
+                if (array[i].direction.includes(filterSet[j].dir)) {
+                  identifier = true;
+                  break;
+                }
+              } else {
+                identifier = true;
+                break;
+              }
+            }
+
+            if (identifier == true) {
+              if (subheader_ident == true) {
+                var subheader = document.createElement("h3");
+                subheader.innerHTML = "Richtung ".concat(array[i].direction);
+
+                _this3.container.appendChild(subheader);
+
+                subheader_ident = false;
+              }
+
+              var planTime = void 0,
+                  realTime = void 0,
+                  delay = void 0;
+
+              if (array[i].when != null && array[i].delay != null) {
+                realTime = array[i].when.substr(11, 5);
+                delay = Math.floor(array[i].delay / 60);
+                planTime = _this3.getPlanTime(realTime, delay);
+              } else if (array[i].when != null) {
+                planTime = array[i].when.substr(11, 5);
+                delay = "?";
+                realTime = "";
+              } else {
+                realTime = "Ausfall";
+                delay = "X";
+                planTime = array[i].formerScheduledWhen.substr(11, 5);
+              }
+
+              var line = array[i].line.name;
+
+              var mean = _this3.getMean(line);
+
+              var target = array[i].direction;
+              var remarks = array[i].remarks;
+
+              var barrier = _this3.checkBarrier(remarks);
+
+              var bike = _this3.checkBike(remarks);
+
+              var warning = _this3.checkWarning(remarks);
+
+              var state = _this3.checkState(remarks);
+
+              var row = document.createElement("div");
+              row.className = "row";
+              row.innerHTML = "\n            <div class=\"planTime\">".concat(planTime, "</div>\n            <div class=\"realTime\">").concat(realTime, "</div>\n            <div class=\"delay\">").concat(delay, "</div>\n            <div class=\"transport\">").concat(mean, "</div>\n            <div class=\"line\">").concat(line, "</div>\n            <div class=\"direction\">").concat(target, "</div>\n            <div class=\"barrier\">").concat(barrier, "</div>\n            <div class=\"bike\">").concat(bike, "</div>\n            <div class=\"warning\">").concat(warning, "</div>\n            <div class=\"status\">").concat(state, "</div>\n            ");
+
+              _this3.container.appendChild(row);
+            }
+          }
+        });
+      }
+    }
+  }, {
+    key: "getData",
+    value: function getData() {
+      var _this4 = this;
+
+      this.stop.forEach(function (stop, index) {
+        var url = "https://1.bvg.transport.rest/stations/".concat(stop, "/departures?duration=60&includeRelatedStations=false");
+        fetch(url).then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          _this4.evalData(data, index);
+        }).catch(function (err) {
+          return console.log(err);
+        });
+      });
+    }
+  }, {
+    key: "getMean",
+    value: function getMean(line) {
+      switch (true) {
+        case /^ICE/.test(line):
+          return "<span class=\"fas fa-train\" title=\"Intercity Express train\">&nbsp;</span>";
+          break;
+
+        case /^IC/.test(line):
+          return "<span class=\"fas fa-train\" title=\"Intercity train\">&nbsp;</span>";
+          break;
+
+        case /^EC/.test(line):
+          return "<span class=\"fas fa-train\" title=\"Eurocity train\">&nbsp;</span>";
+          break;
+
+        case /^RJ/.test(line):
+          return "<span class=\"fas fa-train\" title=\"Austrian Railjet train\">&nbsp;</span>";
+          break;
+
+        case /^EN/.test(line):
+          return "<span class=\"fas fa-train\" title=\"EuroNight train\">&nbsp;</span>";
+          break;
+
+        case /^NJ/.test(line):
+          return "<span class=\"fas fa-train\" title=\"Austrian NightJet train\">&nbsp;</span>";
+          break;
+
+        case /^TGV/.test(line):
+          return "<span class=\"fas fa-train\" title=\"French Train &#224; grande vitesse\">&nbsp;</span>";
+          break;
+
+        case /^THA/.test(line):
+          return "<span class=\"fas fa-train\" title=\"European Thalys train\">&nbsp;</span>";
+          break;
+
+        case /^FLX/.test(line):
+          return "<span class=\"fas fa-train\" title=\"FlixTrain\">&nbsp;</span>";
+          break;
+
+        case /^HBX/.test(line):
+          return "<span class=\"fas fa-train\" title=\"Harz-Berlin Express train\">&nbsp;</span>";
+          break;
+
+        case /^IRE/.test(line):
+          return "<span class=\"fas fa-train\" title=\"InterRegio Express train\">&nbsp;</span>";
+          break;
+
+        case /^RE/.test(line):
+          return "<span class=\"fas fa-train\" title=\"Regional Express train\">&nbsp;</span>";
+          break;
+
+        case /^RB/.test(line):
+          return "<span class=\"fas fa-train\" title=\"Regional train\">&nbsp;</span>";
+          break;
+
+        case /^S/.test(line):
+          return "<span class=\"fas fa-subway\" title=\"suburban railway (S-Bahn)\">&nbsp;</span>";
+
+        case /^U/.test(line):
+          return "<span class=\"fas fa-subway\" title=\"underground (U-Bahn)\">&nbsp;</span>";
+          break;
+
+        case /^M(1|2|4|5|6|8)$/.test(line):
+        case /^M1(0|3|7)$/.test(line):
+        case /^[1-9][0-9]$/.test(line):
+          return "<span class=\"fas fa-tram\" title=\"tramway\">&nbsp;</span>";
+          break;
+
+        case /^F/.test(line):
+          return "<span class=\"fas fa-ship\" title=\"ferry\">&nbsp;</span>";
+          break;
+
+        case /^[1-9][0-9]{2}$/.test(line):
+        case /^M(11|19|21|27|29|32|37|41|44|45|46|48|49|76|77|82|85)$/.test(line):
+        case /^X[0-9]{1,2}$/.test(line):
+        case /^N[0-9]{1,2}$/.test(line):
+        case /^TXL$/.test(line):
+          return "<span class=\"fas fa-bus\" title=\"bus\">&nbsp;</span>";
+          break;
+      }
+    }
+  }, {
+    key: "getPlanTime",
+    value: function getPlanTime(realtime, delay) {
+      var hours = Number(realtime.substr(0, 2));
+      var minutes = Number(realtime.substr(3, 2));
+      minutes -= delay;
+
+      if (minutes < 0) {
+        minutes += 60;
+        hours -= 1;
+      }
+
+      if (minutes > 59) {
+        minutes -= 60;
+        hours += 1;
+      }
+
+      if (hours < 0) {
+        hours += 24;
+      }
+
+      if (hours > 23) {
+        hours -= 24;
+      }
+
+      var hourString = hours < 10 ? "0".concat(hours) : "".concat(hours);
+      var minuteString = minutes < 10 ? "0".concat(minutes) : "".concat(minutes);
+      return "".concat(hourString, ":").concat(minuteString);
+    }
+  }, {
+    key: "getStation",
+    value: function getStation(line) {
+      for (var _len = arguments.length, stations = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        stations[_key - 1] = arguments[_key];
+      }
+
+      return stations.map(function (station) {
+        return line[station];
+      });
+    }
+  }, {
+    key: "getTerminus",
+    value: function getTerminus(line) {
+      for (var _len2 = arguments.length, stations = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        stations[_key2 - 1] = arguments[_key2];
+      }
+
+      return stations.map(function (station) {
+        return {
+          line: line,
+          dir: station
+        };
+      });
+    }
+  }, {
+    key: "replaceLinks",
+    value: function replaceLinks(string) {
+      var pattern = /<a.*href=\"(.*)\".*>(.*)<\/a>/g;
+      var finalString = string.replace(pattern, "$2 ($1)");
+      return finalString;
+    }
+  }, {
+    key: "filter",
+    get: function get() {
+      return this._filter;
+    },
+    set: function set(newFilter) {
+      this._filter = newFilter;
+    }
+  }, {
+    key: "stop",
+    get: function get() {
+      return this._stop;
+    },
+    set: function set(newStop) {
+      this._stop = newStop;
+    }
+  }]);
+
+  return Station;
+}(_lines.default);
+
+var jov = new Station([900000160541], [[[{
+  line: "240",
+  dir: "Storkower"
+}], [{
+  line: "N50",
+  dir: "Hugenottenplatz"
+}, {
+  line: "N50",
+  dir: "Betriebshof Indira-Gandhi-Str"
+}, {
+  line: "N50",
+  dir: "Pankow"
+}], [{
+  line: "240",
+  dir: "Ostbahnhof"
+}, {
+  line: "240",
+  dir: "Betriebshof Lichtenberg"
+}], [{
+  line: "N50",
+  dir: "Tierpark"
+}, {
+  line: "N50",
+  dir: "Betriebshof Lichtenberg"
+}]]]);
+
+/***/ }),
+
+/***/ "./src/lines.js":
+/*!**********************!*\
+  !*** ./src/lines.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Line =
+/*#__PURE__*/
+function () {
+  function Line() {
+    _classCallCheck(this, Line);
+
+    this.addLines();
+  }
+
+  _createClass(Line, [{
     key: "addLines",
     value: function addLines() {
       this.addS1();
@@ -1120,360 +1531,12 @@ function () {
         NULL: null
       });
     }
-  }, {
-    key: "checkBarrier",
-    value: function checkBarrier(array) {
-      for (var i = 0; i < array.length; i++) {
-        if (array[i].code == "bf") {
-          return "<span class=\"fas fa-wheelchair\" title=\"barrier-free\">&nbsp;</span>";
-        }
-      }
-
-      return "";
-    }
-  }, {
-    key: "checkBike",
-    value: function checkBike(array) {
-      for (var i = 0; i < array.length; i++) {
-        if (array[i].code == "FB") {
-          return "<span class=\"fas fa-bicycle\" title=\"You can take your bike with you.\">&nbsp;</span>";
-        }
-      }
-
-      return "";
-    }
-  }, {
-    key: "checkState",
-    value: function checkState(array) {
-      for (var i = 0; i < array.length; i++) {
-        if (array[i].type == "status") {
-          return "<span class=\"fas fa-times\" title=\"".concat(array[i].text, "\">&nbsp;</span>");
-        }
-      }
-
-      return "";
-    }
-  }, {
-    key: "checkWarning",
-    value: function checkWarning(array) {
-      for (var i = 0; i < array.length; i++) {
-        var summary = void 0,
-            text = void 0;
-
-        if (/<a.*href=".*".*>.*<\/a>/.test(array[i].summary)) {
-          summary = this.replaceLinks(array[i].summary);
-        } else {
-          summary = array[i].summary;
-        }
-
-        if (/<a.*href=".*".*>.*<\/a>/.test(array[i].text)) {
-          text = this.replaceLinks(array[i].text);
-        } else {
-          text = array[i].text;
-        }
-
-        if (array[i].type == "warning") {
-          return "<span class=\"fas fa-exclamation-triangle\" title=\"".concat(array[i].validFrom, " - ").concat(array[i].validUntil, ": ").concat(summary, ", ").concat(text, "\">&nbsp;</span>");
-        }
-      }
-
-      return "";
-    }
-  }, {
-    key: "evalData",
-    value: function evalData(array, index) {
-      var _this2 = this;
-
-      if (array.length > 0) {
-        var header = document.createElement("h2");
-        header.innerHTML = "Abfahrten ab ".concat(array[0].stop.name);
-        this.container.appendChild(header);
-        this.filter[index].forEach(function (filterSet) {
-          var subheader_ident = true;
-
-          for (var i = 0; i < array.length; i++) {
-            var identifier = false;
-
-            for (var j = 0; j < filterSet.length; j++) {
-              if (filterSet[j].line != null && filterSet[j].dir != null) {
-                if (array[i].line.name == filterSet[j].line && array[i].direction.includes(filterSet[j].dir)) {
-                  identifier = true;
-                  break;
-                }
-              } else if (filterSet[j].line != null) {
-                if (array[i].line.name == filterSet[j].line) {
-                  identifier = true;
-                  break;
-                }
-              } else if (filterSet[j].dir != null) {
-                if (array[i].direction.includes(filterSet[j].dir)) {
-                  identifier = true;
-                  break;
-                }
-              } else {
-                identifier = true;
-                break;
-              }
-            }
-
-            if (identifier == true) {
-              if (subheader_ident == true) {
-                var subheader = document.createElement("h3");
-                subheader.innerHTML = "Richtung ".concat(array[i].direction);
-
-                _this2.container.appendChild(subheader);
-
-                subheader_ident = false;
-              }
-
-              var planTime = void 0,
-                  realTime = void 0,
-                  delay = void 0;
-
-              if (array[i].when != null && array[i].delay != null) {
-                realTime = array[i].when.substr(11, 5);
-                delay = Math.floor(array[i].delay / 60);
-                planTime = _this2.getPlanTime(realTime, delay);
-              } else if (array[i].when != null) {
-                planTime = array[i].when.substr(11, 5);
-                delay = "?";
-                realTime = "";
-              } else {
-                realTime = "Ausfall";
-                delay = "X";
-                planTime = array[i].formerScheduledWhen.substr(11, 5);
-              }
-
-              var line = array[i].line.name;
-
-              var mean = _this2.getMean(line);
-
-              var target = array[i].direction;
-              var remarks = array[i].remarks;
-
-              var barrier = _this2.checkBarrier(remarks);
-
-              var bike = _this2.checkBike(remarks);
-
-              var warning = _this2.checkWarning(remarks);
-
-              var state = _this2.checkState(remarks);
-
-              var row = document.createElement("div");
-              row.className = "row";
-              row.innerHTML = "\n            <div class=\"planTime\">".concat(planTime, "</div>\n            <div class=\"realTime\">").concat(realTime, "</div>\n            <div class=\"delay\">").concat(delay, "</div>\n            <div class=\"transport\">").concat(mean, "</div>\n            <div class=\"line\">").concat(line, "</div>\n            <div class=\"direction\">").concat(target, "</div>\n            <div class=\"barrier\">").concat(barrier, "</div>\n            <div class=\"bike\">").concat(bike, "</div>\n            <div class=\"warning\">").concat(warning, "</div>\n            <div class=\"status\">").concat(state, "</div>\n            ");
-
-              _this2.container.appendChild(row);
-            }
-          }
-        });
-      }
-    }
-  }, {
-    key: "getData",
-    value: function getData() {
-      var _this3 = this;
-
-      this.stop.forEach(function (stop, index) {
-        var url = "https://1.bvg.transport.rest/stations/".concat(stop, "/departures?duration=60&includeRelatedStations=false");
-        fetch(url).then(function (response) {
-          return response.json();
-        }).then(function (data) {
-          _this3.evalData(data, index);
-        }).catch(function (err) {
-          return console.log(err);
-        });
-      });
-    }
-  }, {
-    key: "getMean",
-    value: function getMean(line) {
-      switch (true) {
-        case /^ICE/.test(line):
-          return "<span class=\"fas fa-train\" title=\"Intercity Express train\">&nbsp;</span>";
-          break;
-
-        case /^IC/.test(line):
-          return "<span class=\"fas fa-train\" title=\"Intercity train\">&nbsp;</span>";
-          break;
-
-        case /^EC/.test(line):
-          return "<span class=\"fas fa-train\" title=\"Eurocity train\">&nbsp;</span>";
-          break;
-
-        case /^RJ/.test(line):
-          return "<span class=\"fas fa-train\" title=\"Austrian Railjet train\">&nbsp;</span>";
-          break;
-
-        case /^EN/.test(line):
-          return "<span class=\"fas fa-train\" title=\"EuroNight train\">&nbsp;</span>";
-          break;
-
-        case /^NJ/.test(line):
-          return "<span class=\"fas fa-train\" title=\"Austrian NightJet train\">&nbsp;</span>";
-          break;
-
-        case /^TGV/.test(line):
-          return "<span class=\"fas fa-train\" title=\"French Train &#224; grande vitesse\">&nbsp;</span>";
-          break;
-
-        case /^THA/.test(line):
-          return "<span class=\"fas fa-train\" title=\"European Thalys train\">&nbsp;</span>";
-          break;
-
-        case /^FLX/.test(line):
-          return "<span class=\"fas fa-train\" title=\"FlixTrain\">&nbsp;</span>";
-          break;
-
-        case /^HBX/.test(line):
-          return "<span class=\"fas fa-train\" title=\"Harz-Berlin Express train\">&nbsp;</span>";
-          break;
-
-        case /^IRE/.test(line):
-          return "<span class=\"fas fa-train\" title=\"InterRegio Express train\">&nbsp;</span>";
-          break;
-
-        case /^RE/.test(line):
-          return "<span class=\"fas fa-train\" title=\"Regional Express train\">&nbsp;</span>";
-          break;
-
-        case /^RB/.test(line):
-          return "<span class=\"fas fa-train\" title=\"Regional train\">&nbsp;</span>";
-          break;
-
-        case /^S/.test(line):
-          return "<span class=\"fas fa-subway\" title=\"suburban railway (S-Bahn)\">&nbsp;</span>";
-
-        case /^U/.test(line):
-          return "<span class=\"fas fa-subway\" title=\"underground (U-Bahn)\">&nbsp;</span>";
-          break;
-
-        case /^M(1|2|4|5|6|8)$/.test(line):
-        case /^M1(0|3|7)$/.test(line):
-        case /^[1-9][0-9]$/.test(line):
-          return "<span class=\"fas fa-tram\" title=\"tramway\">&nbsp;</span>";
-          break;
-
-        case /^F/.test(line):
-          return "<span class=\"fas fa-ship\" title=\"ferry\">&nbsp;</span>";
-          break;
-
-        case /^[1-9][0-9]{2}$/.test(line):
-        case /^M(11|19|21|27|29|32|37|41|44|45|46|48|49|76|77|82|85)$/.test(line):
-        case /^X[0-9]{1,2}$/.test(line):
-        case /^N[0-9]{1,2}$/.test(line):
-        case /^TXL$/.test(line):
-          return "<span class=\"fas fa-bus\" title=\"bus\">&nbsp;</span>";
-          break;
-      }
-    }
-  }, {
-    key: "getPlanTime",
-    value: function getPlanTime(realtime, delay) {
-      var hours = Number(realtime.substr(0, 2));
-      var minutes = Number(realtime.substr(3, 2));
-      minutes -= delay;
-
-      if (minutes < 0) {
-        minutes += 60;
-        hours -= 1;
-      }
-
-      if (minutes > 59) {
-        minutes -= 60;
-        hours += 1;
-      }
-
-      if (hours < 0) {
-        hours += 24;
-      }
-
-      if (hours > 23) {
-        hours -= 24;
-      }
-
-      var hourString = hours < 10 ? "0".concat(hours) : "".concat(hours);
-      var minuteString = minutes < 10 ? "0".concat(minutes) : "".concat(minutes);
-      return "".concat(hourString, ":").concat(minuteString);
-    }
-  }, {
-    key: "getStation",
-    value: function getStation(line) {
-      for (var _len = arguments.length, stations = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-        stations[_key - 1] = arguments[_key];
-      }
-
-      return stations.map(function (station) {
-        return line[station];
-      });
-    }
-  }, {
-    key: "getTerminus",
-    value: function getTerminus(line) {
-      for (var _len2 = arguments.length, stations = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-        stations[_key2 - 1] = arguments[_key2];
-      }
-
-      return stations.map(function (station) {
-        return {
-          line: line,
-          dir: station
-        };
-      });
-    }
-  }, {
-    key: "replaceLinks",
-    value: function replaceLinks(string) {
-      var pattern = /<a.*href=\"(.*)\".*>(.*)<\/a>/g;
-      var finalString = string.replace(pattern, "$2 ($1)");
-      return finalString;
-    }
-  }, {
-    key: "filter",
-    get: function get() {
-      return this._filter;
-    },
-    set: function set(newFilter) {
-      this._filter = newFilter;
-    }
-  }, {
-    key: "stop",
-    get: function get() {
-      return this._stop;
-    },
-    set: function set(newStop) {
-      this._stop = newStop;
-    }
   }]);
 
-  return Station;
+  return Line;
 }();
 
-var jov = new Station([900000160541], [[[{
-  line: "240",
-  dir: "Storkower"
-}], [{
-  line: "N50",
-  dir: "Hugenottenplatz"
-}, {
-  line: "N50",
-  dir: "Betriebshof Indira-Gandhi-Str"
-}, {
-  line: "N50",
-  dir: "Pankow"
-}], [{
-  line: "240",
-  dir: "Ostbahnhof"
-}, {
-  line: "240",
-  dir: "Betriebshof Lichtenberg"
-}], [{
-  line: "N50",
-  dir: "Tierpark"
-}, {
-  line: "N50",
-  dir: "Betriebshof Lichtenberg"
-}]]]);
+exports.default = Line;
 
 /***/ })
 
