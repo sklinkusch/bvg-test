@@ -566,6 +566,259 @@ class Station {
             ]
           ];
           break;
+        case "BFST":
+          this.stop = [900000100001];
+          this.filter = [
+            [
+              this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"),
+              this.getTerminus(
+                "RE2",
+                "Wismar",
+                "Bad Kleinen",
+                "Schwerin",
+                "Wittenberge",
+                "Nauen"
+              ),
+              this.getTerminus("RE7", "Dessau", "Bad Belzig"),
+              this.getTerminus("RB14", "Nauen"),
+              this.getTerminus("RB21", "Wustermark", "Golm", "Potsdam"),
+              this.getTerminus(
+                "RB22",
+                "Königs Wusterhausen",
+                "Schönefeld",
+                "Golm",
+                "Potsdam"
+              ),
+              this.getTerminus(
+                "RE1",
+                "Cottbus",
+                "Eisenhüttenstadt",
+                "Frankfurt"
+              ),
+              this.getTerminus("RE2", "Cottbus"),
+              this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"),
+              this.getTerminus("RB14", "Schönefeld"),
+              this.getStation(
+                this.S3,
+                "GWD",
+                "SPA",
+                "SRW",
+                "PIC",
+                "OLS",
+                "HST",
+                "MS",
+                "WKS",
+                "CHS",
+                "SAP",
+                "ZOS",
+                "TGN",
+                "BEV",
+                "HBF"
+              ),
+              this.getStation(
+                this.S5,
+                "GWD",
+                "OLS",
+                "HST",
+                "MS",
+                "WKS",
+                "CHS",
+                "SAP",
+                "ZOS",
+                "TGN",
+                "BEV",
+                "HBF"
+              ),
+              this.getStation(
+                this.S7,
+                "OLS",
+                "HST",
+                "MS",
+                "PDH",
+                "BAB",
+                "GRI",
+                "WSS",
+                "NIS",
+                "GWD",
+                "WKS",
+                "CHS",
+                "SAP",
+                "ZOS",
+                "TGN",
+                "BEV",
+                "HBF"
+              ),
+              this.getStation(
+                this.S9,
+                "GWD",
+                "SPA",
+                "SRW",
+                "PIC",
+                "OLS",
+                "HST",
+                "MS",
+                "WKS",
+                "CHS",
+                "SAP",
+                "ZOS",
+                "TGN",
+                "BEV",
+                "HBF"
+              ),
+              this.getStation(
+                this.S3,
+                "E",
+                "WIG",
+                "RD",
+                "FRH",
+                "HIG",
+                "KPK",
+                "WHH",
+                "KLH",
+                "RB",
+                "RH",
+                "OKS",
+                "WRS",
+                "OSB",
+                "JB",
+                "ALX",
+                "HKM"
+              ),
+              this.getStation(
+                this.S5,
+                "STN",
+                "STR",
+                "HGM",
+                "STV",
+                "PEN",
+                "FD",
+                "NG",
+                "HPG",
+                "BIS",
+                "MDF",
+                "KAD",
+                "WT",
+                "BDF",
+                "FFO",
+                "LI",
+                "NPL",
+                "OKS",
+                "WRS",
+                "OSB",
+                "JB",
+                "ALX",
+                "HKM"
+              ),
+              this.getStation(
+                this.S7,
+                "AF",
+                "MEA",
+                "RW",
+                "MAZ",
+                "POE",
+                "SPH",
+                "FFO",
+                "LI",
+                "NPL",
+                "OKS",
+                "WRS",
+                "OSB",
+                "JB",
+                "ALX",
+                "HKM"
+              ),
+              this.getStation(
+                this.S9,
+                "LI",
+                "NPL",
+                "OKS",
+                "GAS",
+                "FLH",
+                "GBA",
+                "AGL",
+                "ADL",
+                "SCF",
+                "SW",
+                "BMW",
+                "PWA",
+                "TP",
+                "WRS",
+                "OSB",
+                "JB",
+                "ALX",
+                "HKM"
+              ),
+              this.getStation(
+                this.S1,
+                "ORB",
+                "LEN",
+                "BOR",
+                "BIW",
+                "HN",
+                "FOH",
+                "HED",
+                "WAI",
+                "WIN",
+                "WM",
+                "SNH",
+                "WOK",
+                "BOS",
+                "GB",
+                "HUM",
+                "NB",
+                "ORS"
+              ),
+              this.getStation(
+                this.S2,
+                "BER",
+                "BRF",
+                "ZEP",
+                "RGT",
+                "BU",
+                "KRW",
+                "BLB",
+                "PHD",
+                "PKW",
+                "BOS",
+                "GB",
+                "HUM",
+                "NB",
+                "ORS"
+              ),
+              this.getStation(
+                this.S25,
+                "HD",
+                "HLS",
+                "SZF",
+                "TG",
+                "EBD",
+                "KBO",
+                "ARF",
+                "SNH",
+                "WOK",
+                "BOS",
+                "GB",
+                "HUM",
+                "NB",
+                "ORS"
+              ),
+              this.getStation(
+                this.S26,
+                "WAI",
+                "WIN",
+                "WM",
+                "SNH",
+                "WOK",
+                "BOS",
+                "GB",
+                "HUM",
+                "NB",
+                "ORS"
+              ), this.getStation(this.S1, "PDH", "BAB", "GRI", "WSS", "NIW", "SLS", "MEX", "ZD", "SDG", "LWE", "BGT", "RST", "FB", "FRU", "SGV", "JLB", "YOR", "AHU", "POP", "TOR"), this.getStation(this.S2, "BFD", "MAH", "LRD", "SC", "BCH", "MF", "ATS", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), this.getStation(this.S25, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), this.getStation(this.S26, "TLS", "LIS", "OSS", "LIO", "LAK", "SDE", "PRS", "SKV", "YOR", "AHU", "POP", "TOR"), this.getStation(this.U6, "Tg", "Bk", "Hh", "OTI", "Scha", "Sch", "Afr", "Rb", "Se", "Lpo", "We", "Ri", "SK", "NA", "Ob"), this.getStation(this.U6, "Mf", "Wl", "Ull", "Ka", "At", "Ts", "Ps", "PL", "Me", "Hu", "Ks", "Mic", "Fr"), this.getTerminus("M1", "Schillerstr", "Rosenthal Nord"), this.getTerminus("12", "Pasedagplatz"), this.getTerminus("M1", "Am Kupfergraben"), this.getTerminus("12", "Am Kupfergraben"), this.getTerminus("147", "Hauptbahnhof"), this.getTerminus("147", "Ostbahnhof", "Märkisches Museum", "Unter den Linden/Friedrichstr")
+              
+            ]
+          ];
+          break;
         case "BGB":
           this.stop = [900000007102];
           this.filter = [
@@ -1991,10 +2244,22 @@ class Station {
           this.filter = [
             [
               this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"),
-              this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"),
+              this.getTerminus(
+                "RE2",
+                "Wismar",
+                "Bad Kleinen",
+                "Schwerin",
+                "Wittenberge",
+                "Nauen"
+              ),
               this.getTerminus("RE7", "Dessau", "Bad Belzig"),
               this.getTerminus("RB14", "Nauen"),
-              this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"),
+              this.getTerminus(
+                "RE1",
+                "Cottbus",
+                "Eisenhüttenstadt",
+                "Frankfurt"
+              ),
               this.getTerminus("RE2", "Cottbus"),
               this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"),
               this.getTerminus("RB14", "Schönefeld"),
@@ -2150,10 +2415,25 @@ class Station {
                 "WRS"
               ),
               this.getTerminus("142", "Leopoldplatz", "Hauptbahnhof"),
-              this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz"),
+              this.getTerminus(
+                "248",
+                "Breitenbachplatz",
+                "Südkreuz",
+                "Hallesches Tor",
+                "Alexanderplatz"
+              ),
               this.getTerminus("N40", "Turmstr"),
-              this.getTerminus("147", "Hauptbahnhof", "Unter den Linden/Friedrichstr", "Märkisches Museum"),
-              this.getTerminus("240", "Storkower Str", "Betriebshof Lichtenberg"),
+              this.getTerminus(
+                "147",
+                "Hauptbahnhof",
+                "Unter den Linden/Friedrichstr",
+                "Märkisches Museum"
+              ),
+              this.getTerminus(
+                "240",
+                "Storkower Str",
+                "Betriebshof Lichtenberg"
+              ),
               this.getTerminus("248", "Warschauer Str"),
               this.getTerminus("347", "Tunnelstr", "Warschauer Str"),
               this.getTerminus("N40", "Wühlischplatz")
@@ -2164,7 +2444,12 @@ class Station {
           this.stop = [900000120003];
           this.filter = [
             [
-              this.getTerminus("RE1", "Cottbus", "Eisenhüttenstadt", "Frankfurt"),
+              this.getTerminus(
+                "RE1",
+                "Cottbus",
+                "Eisenhüttenstadt",
+                "Frankfurt"
+              ),
               this.getTerminus("RE2", "Cottbus"),
               this.getTerminus("RE7", "Wünsdorf-Waldstadt", "Schönefeld"),
               this.getTerminus("RB12", "Templin"),
@@ -2173,7 +2458,14 @@ class Station {
               this.getTerminus("RB25", "Werneuchen"),
               this.getTerminus("RB26", "Gorz&#243;w", "Kostrzyn"),
               this.getTerminus("RE1", "Magdeburg", "Brandenburg", "Potsdam"),
-              this.getTerminus("RE2", "Wismar", "Bad Kleinen", "Schwerin", "Wittenberge", "Nauen"),
+              this.getTerminus(
+                "RE2",
+                "Wismar",
+                "Bad Kleinen",
+                "Schwerin",
+                "Wittenberge",
+                "Nauen"
+              ),
               this.getTerminus("RE7", "Dessau", "Bad Belzig"),
               this.getTerminus("RB14", "Nauen"),
               this.getTerminus("RB24", "Senftenberg", "Cottbus"),
@@ -2380,7 +2672,12 @@ class Station {
                 "STO",
                 "FA"
               ),
-              this.getTerminus("194", "Helene-Weigel-Platz", "Friedrichsfelde Ost", "Nöldnerplatz"),
+              this.getTerminus(
+                "194",
+                "Helene-Weigel-Platz",
+                "Friedrichsfelde Ost",
+                "Nöldnerplatz"
+              ),
               this.getTerminus("347", "Tunnelstr"),
               this.getTerminus("N94", "Magdalenenstr"),
               this.getTerminus("194", "Hermannplatz", "Treptower Park"),
@@ -2569,7 +2866,12 @@ class Station {
               this.getStation(this.S85, "NB", "HUM", "GB", "PKW", "BOS", "SAL"),
               this.getTerminus("M2", "Heinersdorf", "Am Steinberg"),
               this.getTerminus("M2", "Alexanderplatz"),
-              this.getTerminus("156", "Stadion Buschallee/Hansastr", "Große Seestr", "Pasedagplatz"),
+              this.getTerminus(
+                "156",
+                "Stadion Buschallee/Hansastr",
+                "Große Seestr",
+                "Pasedagplatz"
+              ),
               this.getTerminus("156", "Storkower Str", "Michelangelostr")
             ]
           ];
@@ -2659,7 +2961,14 @@ class Station {
               this.getTerminus("M46", "Zoologischer Garten", "Wittenbergplatz"),
               this.getTerminus("248", "Breitenbachplatz"),
               this.getTerminus("M46", "Britz-Süd", "Alt-Tempelhof", "Südkreuz"),
-              this.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor", "Südkreuz")
+              this.getTerminus(
+                "248",
+                "Warschauer Str",
+                "Ostbahnhof",
+                "Alexanderplatz",
+                "Hallesches Tor",
+                "Südkreuz"
+              )
             ]
           ];
           break;
@@ -2761,7 +3070,13 @@ class Station {
             [
               [this.S41],
               [this.S42],
-              this.getTerminus("M41", "Hauptbahnhof", "Philharmonie", "Hallesches Tor", "Hermannplatz"),
+              this.getTerminus(
+                "M41",
+                "Hauptbahnhof",
+                "Philharmonie",
+                "Hallesches Tor",
+                "Hermannplatz"
+              ),
               this.getTerminus("171", "Hermannplatz"),
               this.getTerminus("N79", "Alt-Mariendorf"),
               this.getTerminus("M41", "Sonnenallee/Baumschulenstr"),
@@ -2834,11 +3149,21 @@ class Station {
                 "GSS",
                 "LST"
               ),
-              this.getTerminus("156", "Stadion Buschallee", "Große Seestr", "Pasedagplatz"),
+              this.getTerminus(
+                "156",
+                "Stadion Buschallee",
+                "Große Seestr",
+                "Pasedagplatz"
+              ),
               this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg")
             ],
             [
-              this.getTerminus("156", "Stadion Buschallee", "Große Seestr", "Pasedagplatz"),
+              this.getTerminus(
+                "156",
+                "Stadion Buschallee",
+                "Große Seestr",
+                "Pasedagplatz"
+              ),
               this.getTerminus("156", "Storkower Str")
             ]
           ];
@@ -2847,12 +3172,24 @@ class Station {
           this.stop = [900000058101, 900000058100];
           this.filter = [
             [
-              this.getTerminus("RE3", "Schwedt", "Stralsund", "Prenzlau", "Angermünde", "Eberswalde"),
+              this.getTerminus(
+                "RE3",
+                "Schwedt",
+                "Stralsund",
+                "Prenzlau",
+                "Angermünde",
+                "Eberswalde"
+              ),
               this.getTerminus("RE4", "Stendal", "Rathenow"),
               this.getTerminus("RE5", "Rostock", "Stralsund"),
               this.getTerminus("RB10", "Nauen"),
               this.getTerminus("RE3", "Wittenberg", "Falkenberg", "Halle"),
-              this.getTerminus("RE4", "Jüterbog", "Luckenwalde", "Ludwigsfelde"),
+              this.getTerminus(
+                "RE4",
+                "Jüterbog",
+                "Luckenwalde",
+                "Ludwigsfelde"
+              ),
               this.getTerminus("RE5", "Elsterwerda", "Wünsdorf-Waldstadt"),
               this.getStation(
                 this.S2,
@@ -2992,8 +3329,20 @@ class Station {
             [
               this.getTerminus("184", "Reichartstr"),
               this.getTerminus("248", "Breitenbachplatz"),
-              this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckstr", "Lichterfelde Ost"),
-              this.getTerminus("248", "Warschauer Str", "Ostbahnhof", "Alexanderplatz", "Hallesches Tor")
+              this.getTerminus(
+                "184",
+                "Warthestr",
+                "Wismarer Str",
+                "Saaleckstr",
+                "Lichterfelde Ost"
+              ),
+              this.getTerminus(
+                "248",
+                "Warschauer Str",
+                "Ostbahnhof",
+                "Alexanderplatz",
+                "Hallesches Tor"
+              )
             ]
           ];
           break;
@@ -3081,14 +3430,26 @@ class Station {
               this.getTerminus("184", "Südkreuz"),
               this.getTerminus("N6", "Alt-Tegel"),
               this.getTerminus("140", "Ostbahnhof", "Mehringdamm"),
-              this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckplatz", "Lichterfelde Ost"),
+              this.getTerminus(
+                "184",
+                "Warthestr",
+                "Wismarer Str",
+                "Saaleckplatz",
+                "Lichterfelde Ost"
+              ),
               this.getTerminus("N6", "Alt-Mariendorf"),
               this.getTerminus("N84", "Zehlendorf Eiche", "Alt-Tempelhof")
             ],
             [
               this.getTerminus("184", "Südkreuz", "Tempelhof"),
               this.getTerminus("N6", "Alt-Tegel"),
-              this.getTerminus("184", "Warthestr", "Wismarer Str", "Saaleckplatz", "Lichterfelde Ost"),
+              this.getTerminus(
+                "184",
+                "Warthestr",
+                "Wismarer Str",
+                "Saaleckplatz",
+                "Lichterfelde Ost"
+              ),
               this.getTerminus("N6", "Alt-Mariendorf")
             ]
           ];
@@ -3218,19 +3579,48 @@ class Station {
             [
               this.getTerminus("165", "Märkisches Museum", "Treptower Park"),
               this.getTerminus("166", "Boddinstr", "Treptower Park"),
-              this.getTerminus("265", "Stadtmitte", "Märkisches Museum", "Schlesisches Tor", "Treptower Park"),
+              this.getTerminus(
+                "265",
+                "Stadtmitte",
+                "Märkisches Museum",
+                "Schlesisches Tor",
+                "Treptower Park"
+              ),
               this.getTerminus("N65", "Hackescher Markt")
             ],
             [
-              this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz", "Halensee", "Berliner Str", "Platz der Luftbrücke", "Boddinstr"),
+              this.getTerminus(
+                "104",
+                "Brixplatz",
+                "Theodor-Heuss-Platz",
+                "Rathenauplatz",
+                "Halensee",
+                "Berliner Str",
+                "Platz der Luftbrücke",
+                "Boddinstr"
+              ),
               this.getTerminus("194", "Hermannplatz"),
               this.getTerminus("N94", "Hermannplatz"),
               this.getTerminus("104", "Tunnelstr"),
-              this.getTerminus("194", "Helene-Weigel-Platz", "Friedrichsfelde Ost", "Nöldnerplatz"),
+              this.getTerminus(
+                "194",
+                "Helene-Weigel-Platz",
+                "Friedrichsfelde Ost",
+                "Nöldnerplatz"
+              ),
               this.getTerminus("N94", "Magdalenenstr")
             ],
             [
-              this.getTerminus("104", "Brixplatz", "Theodor-Heuss-Platz", "Rathenauplatz", "Halensee", "Berliner Str", "Platz der Luftbrücke", "Boddinstr"),
+              this.getTerminus(
+                "104",
+                "Brixplatz",
+                "Theodor-Heuss-Platz",
+                "Rathenauplatz",
+                "Halensee",
+                "Berliner Str",
+                "Platz der Luftbrücke",
+                "Boddinstr"
+              ),
               this.getTerminus("165", "Müggelschlößchenweg", "Schöneweide"),
               this.getTerminus("166", "Boddinstr"),
               this.getTerminus("194", "Hermannplatz"),
@@ -3239,7 +3629,12 @@ class Station {
               this.getTerminus("N94", "Hermannplatz"),
               this.getTerminus("104", "Eichenstr./Puschkinallee"),
               this.getTerminus("165", "Märkisches Museum"),
-              this.getTerminus("265", "Stadtmitte", "Märkisches Museum", "Schlesisches Tor"),
+              this.getTerminus(
+                "265",
+                "Stadtmitte",
+                "Märkisches Museum",
+                "Schlesisches Tor"
+              ),
               this.getTerminus("N65", "Hackescher Markt")
             ]
           ];
@@ -3412,15 +3807,30 @@ class Station {
               ),
               [this.U1.NULL],
               [this.U3.NULL],
-              this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"),
+              this.getTerminus(
+                "M10",
+                "Hauptbahnhof",
+                "Friedrich-Ludwig-Jahn-Sportpark"
+              ),
               this.getTerminus("347", "Ostbahnhof"),
               this.getTerminus("N1", "Helsingforser Platz"),
               this.getTerminus("347", "Tunnelstr"),
               this.getTerminus("N1", "Zoologischer Garten"),
-              this.getTerminus("248", "Breitenbachplatz", "Südkreuz", "Hallesches Tor", "Alexanderplatz", "Ostbahnhof")
+              this.getTerminus(
+                "248",
+                "Breitenbachplatz",
+                "Südkreuz",
+                "Hallesches Tor",
+                "Alexanderplatz",
+                "Ostbahnhof"
+              )
             ],
             [
-              this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"),
+              this.getTerminus(
+                "M10",
+                "Hauptbahnhof",
+                "Friedrich-Ludwig-Jahn-Sportpark"
+              ),
               this.getTerminus("M10", "Warschauer Str")
             ],
             [
@@ -3429,8 +3839,17 @@ class Station {
               this.getTerminus("N1", "Zoologischer Garten")
             ],
             [
-              this.getTerminus("M10", "Hauptbahnhof", "Friedrich-Ludwig-Jahn-Sportpark"),
-              this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg")
+              this.getTerminus(
+                "M10",
+                "Hauptbahnhof",
+                "Friedrich-Ludwig-Jahn-Sportpark"
+              ),
+              this.getTerminus(
+                "M13",
+                "Virchow-Klinikum",
+                "Degnerstr",
+                "Betriebshof Lichtenberg"
+              )
             ]
           ];
           break;
@@ -3503,7 +3922,13 @@ class Station {
                 "SK",
                 "Ri"
               ),
-              this.getTerminus("120", "Wilhelmsruher Damm", "Wittenau", "Paracelsus-Bad", "Leopoldplatz"),
+              this.getTerminus(
+                "120",
+                "Wilhelmsruher Damm",
+                "Wittenau",
+                "Paracelsus-Bad",
+                "Leopoldplatz"
+              ),
               this.getTerminus("N6", "Alt-Tegel"),
               this.getTerminus("N20", "Hainbuchenstr")
             ],
@@ -3547,11 +3972,21 @@ class Station {
                 "WKRR",
                 "MN"
               ),
-              this.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"),
+              this.getTerminus(
+                "M45",
+                "Johannesstift",
+                "Rathaus Spandau",
+                "DRK-Kliniken Westend"
+              ),
               this.getTerminus("M45", "Zoologischer Garten")
             ],
             [
-              this.getTerminus("M45", "Johannesstift", "Rathaus Spandau", "DRK-Kliniken Westend"),
+              this.getTerminus(
+                "M45",
+                "Johannesstift",
+                "Rathaus Spandau",
+                "DRK-Kliniken Westend"
+              ),
               this.getTerminus("309", "Schlosspark-Klinik"),
               this.getTerminus("M45", "Zoologischer Garten"),
               this.getTerminus("309", "Wilmersdorfer Str")
@@ -3808,7 +4243,12 @@ class Station {
           this.filter = [
             [
               this.getTerminus("240", "Storkower Str"),
-              this.getTerminus("N50", "Hugenottenplatz", "Betriebshof Indira-Gandhi-Str", "Pankow"),
+              this.getTerminus(
+                "N50",
+                "Hugenottenplatz",
+                "Betriebshof Indira-Gandhi-Str",
+                "Pankow"
+              ),
               this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg"),
               this.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")
             ]
@@ -3819,22 +4259,44 @@ class Station {
           this.filter = [
             [
               this.getTerminus("M5", "Landsberger Allee/Petersburger Str"),
-              this.getTerminus("M8", "Hauptbahnhof", "Landsberger Allee/Petersburger Str"),
-              this.getTerminus("21", "Schöneweide", "Treskowallee/Ehrlichstr", "Bersarinplatz"),
-              this.getTerminus("M8", "Ahrensfelde/Stadtgrenze", "Betriebshof Marzahn"),
+              this.getTerminus(
+                "M8",
+                "Hauptbahnhof",
+                "Landsberger Allee/Petersburger Str"
+              ),
+              this.getTerminus(
+                "21",
+                "Schöneweide",
+                "Treskowallee/Ehrlichstr",
+                "Bersarinplatz"
+              ),
+              this.getTerminus(
+                "M8",
+                "Ahrensfelde/Stadtgrenze",
+                "Betriebshof Marzahn"
+              ),
               this.getTerminus("21", "Lichtenberg/Gudrunstr")
             ],
             [
               this.getTerminus("M13", "Warschauer Str", "Frankfurter Allee"),
               this.getTerminus("16", "Frankfurter Allee"),
-              this.getTerminus("N50", "Hugenottenplatz", "Pankow", "Betriebshof Indira-Gandhi-Str"),
+              this.getTerminus(
+                "N50",
+                "Hugenottenplatz",
+                "Pankow",
+                "Betriebshof Indira-Gandhi-Str"
+              ),
               this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr"),
               this.getTerminus("16", "Ahrensfelde/Stadtgrenze"),
               this.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")
             ],
             [
               this.getTerminus("M5", "Landsberger Allee/Petersburger Allee"),
-              this.getTerminus("M8", "Hauptbahnhof", "Landsberger Allee/Petersburger Str")
+              this.getTerminus(
+                "M8",
+                "Hauptbahnhof",
+                "Landsberger Allee/Petersburger Str"
+              )
             ]
           ];
           break;
@@ -3844,12 +4306,27 @@ class Station {
             [
               this.getTerminus("M13", "Warschauer Str", "Frankfurter Allee"),
               this.getTerminus("16", "Frankfurter Allee"),
-              this.getTerminus("21", "Schöneweide", "Treskowallee/Ehrlichstr", "Bersarinplatz"),
-              this.getTerminus("M13", "Virchow-Klinikum", "Degnerstr", "Betriebshof Lichtenberg"),
+              this.getTerminus(
+                "21",
+                "Schöneweide",
+                "Treskowallee/Ehrlichstr",
+                "Bersarinplatz"
+              ),
+              this.getTerminus(
+                "M13",
+                "Virchow-Klinikum",
+                "Degnerstr",
+                "Betriebshof Lichtenberg"
+              ),
               this.getTerminus("16", "Ahrensfelde/Stadtgrenze"),
               this.getTerminus("21", "Lichtenberg/Gudrunstr"),
               this.getTerminus("240", "Storkower Str"),
-              this.getTerminus("N50", "Hugenottenplatz", "Pankow", "Betriebshof Indira-Gandhi-Str"),
+              this.getTerminus(
+                "N50",
+                "Hugenottenplatz",
+                "Pankow",
+                "Betriebshof Indira-Gandhi-Str"
+              ),
               this.getTerminus("240", "Ostbahnhof", "Betriebshof Lichtenberg"),
               this.getTerminus("N50", "Tierpark", "Betriebshof Lichtenberg")
             ]
@@ -3859,17 +4336,39 @@ class Station {
           this.stop = [900000032106];
           this.filter = [
             [
-              this.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str", "Haus des Rundfunks"),
-              this.getTerminus("X34", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str"),
+              this.getTerminus(
+                "M49",
+                "Zoologischer Garten",
+                "Savignyplatz",
+                "Wilmersdorfer Str",
+                "Haus des Rundfunks"
+              ),
+              this.getTerminus(
+                "X34",
+                "Zoologischer Garten",
+                "Savignyplatz",
+                "Wilmersdorfer Str"
+              ),
               this.getTerminus("X49", "Wilmersdorfer Str"),
-              this.getTerminus("136", "Hennigsdorf", "Aalemannufer", "Werderstr", "Rathaus Spandau"),
+              this.getTerminus(
+                "136",
+                "Hennigsdorf",
+                "Aalemannufer",
+                "Werderstr",
+                "Rathaus Spandau"
+              ),
               this.getTerminus("236", "Haselhorst", "Rathaus Spandau"),
               this.getTerminus("X34", "Hottengrund", "Gutsstr"),
               this.getTerminus("134", "Hottengrund", "Alt-Kladow", "Alt-Gatow"),
               this.getTerminus("N34", "Hottengrund"),
               this.getTerminus("M49", "Nennhauser Damm", "Reimerweg"),
               this.getTerminus("X49", "Hahneberg", "Im Spektefeld"),
-              this.getTerminus("134", "Wasserwerk Spandau", "Kisseln", "Rathaus Spandau"),
+              this.getTerminus(
+                "134",
+                "Wasserwerk Spandau",
+                "Kisseln",
+                "Rathaus Spandau"
+              ),
               this.getTerminus("136", "Am Omnibushof"),
               this.getTerminus("236", "Am Omnibushof"),
               this.getTerminus("N34", "Aalemannufer")
@@ -3882,11 +4381,27 @@ class Station {
             [
               this.getTerminus("135", "Rathaus Spandau", "Am Omnibushof"),
               this.getTerminus("638", "Rathaus Spandau"),
-              this.getTerminus("M49", "Zoologischer Garten", "Savignyplatz", "Wilmersdorfer Str", "Haus des Rundfunks"),
+              this.getTerminus(
+                "M49",
+                "Zoologischer Garten",
+                "Savignyplatz",
+                "Wilmersdorfer Str",
+                "Haus des Rundfunks"
+              ),
               this.getTerminus("X49", "Wilmersdorfer Str"),
-              this.getTerminus("135", "Hottengrund", "Alt-Kladow", "Landstadt Gatow"),
+              this.getTerminus(
+                "135",
+                "Hottengrund",
+                "Alt-Kladow",
+                "Landstadt Gatow"
+              ),
               this.getTerminus("338", "Havelpark"),
-              this.getTerminus("638", "Potsdam", "Hauptbahnhof", "Campus Jungfernsee"),
+              this.getTerminus(
+                "638",
+                "Potsdam",
+                "Hauptbahnhof",
+                "Campus Jungfernsee"
+              ),
               this.getTerminus("M49", "Nennhauser Damm", "Reimerweg"),
               this.getTerminus("X49", "Hahneberg", "Im Spektefeld")
             ]
