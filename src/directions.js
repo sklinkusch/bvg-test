@@ -3797,6 +3797,102 @@ export default class Direction extends Line {
           ]
         ]
       },
+      BPIC: {
+        stop: [900000025424, 900000025101],
+        filter: [
+          [
+            this.getStation(
+              this.S3,
+              "SPA",
+              "SRW"
+            ),
+            this.getStation(
+              this.S9,
+              "SPA",
+              "SRW"
+            ),
+            this.getStation(
+              this.S3,
+              "E",
+              "WIG",
+              "RD",
+              "FRH",
+              "HIG",
+              "KPK",
+              "WHH",
+              "KLH",
+              "RB",
+              "RH",
+              "OKS",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS",
+              "HST",
+              "OLS"
+            ),
+            this.getStation(
+              this.S9,
+              "LI",
+              "NPL",
+              "OKS",
+              "GAS",
+              "FLH",
+              "GBA",
+              "AGL",
+              "ADL",
+              "SCF",
+              "SW",
+              "BMW",
+              "PWA",
+              "TP",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS",
+              "HST",
+              "OLS"
+            )
+          ],
+          [
+            this.getTerminus(
+              "M49",
+              "Nennhauser Damm",
+              "Reimerweg",
+              "Gatower Str"
+            ),
+            this.getTerminus("218", "Pfaueninsel"),
+            this.getTerminus(
+              "M49",
+              "Zoologischer Garten",
+              "Savignyplatz",
+              "Wilmersdorfer Str",
+              "Haus des Rundfunks"
+            ),
+            this.getTerminus("218", "Messe Nord/ICC")
+          ]
+        ]
+      },
       BPWA: {
         stop: [900000191002, 900000191802],
         filter: [
