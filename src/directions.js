@@ -3260,6 +3260,110 @@ export default class Direction extends Line {
           ]
         ]
       },
+      BOLS: {
+        stop: [900000025321, 900000025301],
+        filter: [
+          [
+            this.getStation(
+              this.S3,
+              "SPA",
+              "SRW",
+              "PIC"
+            ),
+            this.getStation(
+              this.S9,
+              "SPA",
+              "SRW",
+              "PIC"
+            ),
+            this.getStation(
+              this.S3,
+              "E",
+              "WIG",
+              "RD",
+              "FRH",
+              "HIG",
+              "KPK",
+              "WHH",
+              "KLH",
+              "RB",
+              "RH",
+              "OKS",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS",
+              "HST"
+            ),
+            this.getStation(
+              this.S5,
+              "NULL"
+            ),
+            this.getStation(
+              this.S7,
+              "NULL"
+            ),
+            this.getStation(
+              this.S9,
+              "LI",
+              "NPL",
+              "OKS",
+              "GAS",
+              "FLH",
+              "GBA",
+              "AGL",
+              "ADL",
+              "SCF",
+              "SW",
+              "BMW",
+              "PWA",
+              "TP",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS",
+              "HST"
+            )
+          ],
+          [
+            this.getTerminus(
+              "M49",
+              "Nennhauser Damm",
+              "Reimerweg",
+              "Gatower Str"
+            ),
+            this.getTerminus("218", "Pfaueninsel"),
+            this.getTerminus(
+              "M49",
+              "Zoologischer Garten",
+              "Savignyplatz",
+              "Wilmersdorfer Str",
+              "Haus des Rundfunks"
+            ),
+            this.getTerminus("218", "Messe Nord/ICC")
+          ]
+        ]
+      },
       BOSB: {
         stop: [900000120005],
         filter: [
