@@ -2054,28 +2054,10 @@ export default class Direction extends Line {
         stop: [900000026105],
         filter: [
           [
-            this.getStation(
-              this.S3,
-              "SPA",
-              "SRW",
-              "PIC",
-              "OLS"
-            ),
-            this.getStation(
-              this.S5,
-              "OLS"
-            ),
-            this.getStation(
-              this.S7,
-              "OLS"
-            ),
-            this.getStation(
-              this.S9,
-              "SPA",
-              "SRW",
-              "PIC",
-              "OLS"
-            ),
+            this.getStation(this.S3, "SPA", "SRW", "PIC", "OLS"),
+            this.getStation(this.S5, "OLS"),
+            this.getStation(this.S7, "OLS"),
+            this.getStation(this.S9, "SPA", "SRW", "PIC", "OLS"),
             this.getStation(
               this.S3,
               "E",
@@ -2228,18 +2210,9 @@ export default class Direction extends Line {
               "Savignyplatz",
               "Wilmersdorfer Str"
             ),
-            this.getTerminus(
-              "X49",
-              "Wilmersdorfer Str"
-            ),
-            this.getTerminus(
-              "218", 
-              "Messe Nord/ICC"
-            ),
-            this.getTerminus(
-              "349",
-              "Grunewald"
-            )
+            this.getTerminus("X49", "Wilmersdorfer Str"),
+            this.getTerminus("218", "Messe Nord/ICC"),
+            this.getTerminus("349", "Grunewald")
           ]
         ]
       },
@@ -3264,18 +3237,8 @@ export default class Direction extends Line {
         stop: [900000025321, 900000025301],
         filter: [
           [
-            this.getStation(
-              this.S3,
-              "SPA",
-              "SRW",
-              "PIC"
-            ),
-            this.getStation(
-              this.S9,
-              "SPA",
-              "SRW",
-              "PIC"
-            ),
+            this.getStation(this.S3, "SPA", "SRW", "PIC"),
+            this.getStation(this.S9, "SPA", "SRW", "PIC"),
             this.getStation(
               this.S3,
               "E",
@@ -3305,14 +3268,8 @@ export default class Direction extends Line {
               "MS",
               "HST"
             ),
-            this.getStation(
-              this.S5,
-              "NULL"
-            ),
-            this.getStation(
-              this.S7,
-              "NULL"
-            ),
+            this.getStation(this.S5, "NULL"),
+            this.getStation(this.S7, "NULL"),
             this.getStation(
               this.S9,
               "LI",
@@ -3801,16 +3758,8 @@ export default class Direction extends Line {
         stop: [900000025424, 900000025101],
         filter: [
           [
-            this.getStation(
-              this.S3,
-              "SPA",
-              "SRW"
-            ),
-            this.getStation(
-              this.S9,
-              "SPA",
-              "SRW"
-            ),
+            this.getStation(this.S3, "SPA", "SRW"),
+            this.getStation(this.S9, "SPA", "SRW"),
             this.getStation(
               this.S3,
               "E",
@@ -4521,6 +4470,88 @@ export default class Direction extends Line {
               "Pasedagplatz"
             ),
             this.getTerminus("156", "Storkower Str")
+          ]
+        ]
+      },
+      BSRW: {
+        stop: [900000030202, 900000030272],
+        filter: [
+          [
+            this.getStation(this.S3, "SPA"),
+            this.getStation(this.S9, "SPA"),
+            this.getStation(
+              this.S3,
+              "E",
+              "WIG",
+              "RD",
+              "FRH",
+              "HIG",
+              "KPK",
+              "WHH",
+              "KLH",
+              "RB",
+              "RH",
+              "OKS",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS",
+              "HST",
+              "OLS",
+              "PIC"
+            ),
+            this.getStation(
+              this.S9,
+              "LI",
+              "NPL",
+              "OKS",
+              "GAS",
+              "FLH",
+              "GBA",
+              "AGL",
+              "ADL",
+              "SCF",
+              "SW",
+              "BMW",
+              "PWA",
+              "TP",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS",
+              "HST",
+              "OLS",
+              "PIC"
+            )
+          ],
+          [
+            this.getTerminus(
+              "130",
+              "Waldkrankenhaus",
+              "Westerwaldstr",
+              "Rathaus Spandau"
+            ),
+            this.getTerminus("130", "Ruhleben")
           ]
         ]
       },
