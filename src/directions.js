@@ -4396,6 +4396,129 @@ export default class Direction extends Line {
           ]
         ]
       },
+      BSPA: {
+        stop: [900000029101, 900000029302, 900000029371],
+        filter: [
+          [
+            this.getTerminus(
+              "RE2",
+              "Wismar",
+              "Bad Kleinen",
+              "Schwerin",
+              "Wittenberge"
+            ),
+            this.getTerminus(
+              "RE4",
+              "Stendal",
+              "Rathenow"
+            ),
+            this.getTerminus(
+              "RE6",
+              "Wittenberge",
+              "Neuruppin"
+            ),
+            this.getTerminus(
+              "RB10",
+              "Nauen"
+            ),
+            this.getTerminus(
+              "RB13",
+              "Wustermark"
+            ),
+            this.getTerminus(
+              "RB14",
+              "Nauen"
+            ),
+            this.getTerminus(
+              "RE2",
+              "Cottbus"
+            ),
+            this.getTerminus(
+              "RE4",
+              "Jüterbog",
+              "Luckenwalde",
+              "Ludwigsfelde"
+            ),
+            this.getTerminus(
+              "RE6",
+              "Gesundbrunnen"
+            ),
+            this.getTerminus(
+              "RB10",
+              "Südkreuz"
+            ),
+            this.getTerminus(
+              "RB13",
+              "Jungfernheide"
+            ),
+            this.getTerminus(
+              "RB14",
+              "Schönefeld"
+            ),
+            this.getStation(this.S3, "NULL"),
+            this.getStation(this.S9, "NULL")
+          ],
+          [
+            this.getStation(this.U7, "NULL"),
+            this.getTerminus(
+              "M37",
+              "Waldkrankenhaus",
+              "Im Spektefeld"
+            ),
+            this.getTerminus("M45", "Johannesstift"),
+            this.getTerminus("X33", "Wilhelmsruher Damm"),
+            this.getTerminus("X36", "Haselhorst"),
+            this.getTerminus("134", "Wasserwerk Spandau", "In den Kisseln"),
+            this.getTerminus("136", "Hennigsdorf", "Aalemannufer", "Werderstr"),
+            this.getTerminus("137", "Freudstr"),
+            this.getTerminus("236", "Haselhorst"),
+            this.getTerminus("337", "Falkensee"),
+            this.getTerminus("671", "Nauen", "Paaren"),
+            this.getTerminus("N7", "Schönefeld", "Rudow"),
+            this.getTerminus("N34", "Aalemannufer"),
+            this.getTerminus(
+              "M32",
+              "Havelpark",
+              "Heidebergplan",
+              "Brunsbütteler Damm",
+              "Döberitzer Weg"
+            ),
+            this.getTerminus("M37", "Hahneberg", "Reimerweg"),
+            this.getTerminus("M45", "Zoologischer Garten"),
+            this.getTerminus(
+              "134",
+              "Hottengrund",
+              "Alt-Kladow",
+              "Alt-Gatow",
+              "Gatower Str",
+              "Am Omnibushof"
+            ),
+            this.getTerminus(
+              "135",
+              "Hottengrund",
+              "Alt-Kladow",
+              "Landstadt Gatow",
+              "Am Omnibushof"
+            ),
+            this.getTerminus("136", "Gatower Str"),
+            this.getTerminus("137", "Reimerweg"),
+            this.getTerminus("236", "Gatower Str"),
+            this.getTerminus("638", "Potsdam", "Campus Jungfernsee"),
+            this.getTerminus("N34", "Hottengrund")
+          ],
+          [
+            this.getTerminus("130", "Waldkrankenhaus", "Westerwaldstr"),
+            this.getTerminus("237", "Isenburger Str"),
+            this.getTerminus("N30", "Westerwaldstr"),
+            this.getTerminus("X33", "Wilhelmsruher Damm"),
+            this.getTerminus("X36", "Haselhorst"),
+            this.getTerminus("130", "Ruhleben", "Stresow"),
+            this.getTerminus("337", "Falkensee"),
+            this.getTerminus("671", "Nauen", "Paaren"),
+            this.getTerminus("N7", "Schönefeld", "Rudow")
+          ]
+        ]
+      },
       BSTO: {
         stop: [900000110012, 900000160504],
         filter: [
