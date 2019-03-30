@@ -2050,6 +2050,199 @@ export default class Direction extends Line {
           ]
         ]
       },
+      BHST: {
+        stop: [900000026105],
+        filter: [
+          [
+            this.getStation(
+              this.S3,
+              "SPA",
+              "SRW",
+              "PIC",
+              "OLS"
+            ),
+            this.getStation(
+              this.S5,
+              "OLS"
+            ),
+            this.getStation(
+              this.S7,
+              "OLS"
+            ),
+            this.getStation(
+              this.S9,
+              "SPA",
+              "SRW",
+              "PIC",
+              "OLS"
+            ),
+            this.getStation(
+              this.S3,
+              "E",
+              "WIG",
+              "RD",
+              "FRH",
+              "HIG",
+              "KPK",
+              "WHH",
+              "KLH",
+              "RB",
+              "RH",
+              "OKS",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS"
+            ),
+            this.getStation(
+              this.S5,
+              "STN",
+              "STR",
+              "HGM",
+              "STV",
+              "PEN",
+              "FD",
+              "NG",
+              "HPG",
+              "BIS",
+              "MDF",
+              "KAD",
+              "WT",
+              "BDF",
+              "FFO",
+              "LI",
+              "NPL",
+              "OKS",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS"
+            ),
+            this.getStation(
+              this.S7,
+              "AF",
+              "MEA",
+              "RW",
+              "MAZ",
+              "POE",
+              "SPH",
+              "FFO",
+              "LI",
+              "NPL",
+              "OKS",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS"
+            ),
+            this.getStation(
+              this.S9,
+              "LI",
+              "NPL",
+              "OKS",
+              "GAS",
+              "FLH",
+              "GBA",
+              "AGL",
+              "ADL",
+              "SCF",
+              "SW",
+              "BMW",
+              "PWA",
+              "TP",
+              "WRS",
+              "OSB",
+              "JB",
+              "ALX",
+              "HKM",
+              "FST",
+              "HBF",
+              "BEV",
+              "TGN",
+              "ZOS",
+              "SAP",
+              "CHS",
+              "WKS",
+              "MS"
+            ),
+            this.getTerminus(
+              "M49",
+              "Nennhauser Damm",
+              "Reimerweg",
+              "Gatower Str"
+            ),
+            this.getTerminus(
+              "X34",
+              "Hottengrund",
+              "Gutsstr",
+              "Alt-Kladow",
+              "Gatower Str"
+            ),
+            this.getTerminus(
+              "X49",
+              "Hahneberg",
+              "Im Spektefeld",
+              "Gatower Str"
+            ),
+            this.getTerminus("218", "Pfaueninsel"),
+            this.getTerminus(
+              "M49",
+              "Zoologischer Garten",
+              "Savignyplatz",
+              "Wilmersdorfer Str",
+              "Haus des Rundfunks"
+            ),
+            this.getTerminus(
+              "X34",
+              "Zoologischer Garten",
+              "Savignyplatz",
+              "Wilmersdorfer Str"
+            ),
+            this.getTerminus(
+              "X49",
+              "Wilmersdorfer Str"
+            ),
+            this.getTerminus(
+              "218", 
+              "Messe Nord/ICC"
+            ),
+            this.getTerminus(
+              "349",
+              "Grunewald"
+            )
+          ]
+        ]
+      },
       BHEI: {
         stop: [900000045102],
         filter: [
