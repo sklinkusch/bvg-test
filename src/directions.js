@@ -3378,6 +3378,163 @@ export default class Direction extends Line {
           ]
         ]
       },
+      BNB: {
+        stop: [900000007104, 900000007108],
+        filter: [
+          [
+            this.getStation(
+              this.S1,
+              "ORB",
+              "LEN",
+              "BOR",
+              "BIW",
+              "HN",
+              "FOH",
+              "HED",
+              "WAI",
+              "WIN",
+              "WM",
+              "SNH",
+              "WOK",
+              "BOS",
+              "GB",
+              "HUM"
+            ),
+            this.getStation(
+              this.S2,
+              "BER",
+              "BRF",
+              "ZEP",
+              "RGT",
+              "BU",
+              "KRW",
+              "BLB",
+              "PHD",
+              "PKW",
+              "BOS",
+              "GB",
+              "HUM"
+            ),
+            this.getStation(
+              this.S25,
+              "HD",
+              "HLS",
+              "SZF",
+              "TG",
+              "EBD",
+              "KBO",
+              "ARF",
+              "SNH",
+              "WOK",
+              "BOS",
+              "GB",
+              "HUM"
+            ),
+            this.getStation(
+              this.S26,
+              "WAI",
+              "WIN",
+              "WM",
+              "SNH",
+              "WOK",
+              "BOS",
+              "GB",
+              "HUM"
+            ),
+            this.getStation(
+              this.S1,
+              "PDH",
+              "BAB",
+              "GRI",
+              "WSS",
+              "NIW",
+              "SLS",
+              "MEX",
+              "ZD",
+              "SDG",
+              "LWE",
+              "BGT",
+              "RST",
+              "FB",
+              "FRU",
+              "SGV",
+              "JLB",
+              "YOR",
+              "AHU",
+              "POP",
+              "TOR",
+              "FSTT",
+              "ORS"
+            ),
+            this.getStation(
+              this.S2,
+              "BFD",
+              "MAH",
+              "LRD",
+              "SC",
+              "BCH",
+              "MF",
+              "ATS",
+              "PRS",
+              "SKV",
+              "YOR",
+              "AHU",
+              "POP",
+              "TOR",
+              "FSTT",
+              "ORS"
+            ),
+            this.getStation(
+              this.S25,
+              "TLS",
+              "LIS",
+              "OSS",
+              "LIO",
+              "LAK",
+              "SDE",
+              "PRS",
+              "SKV",
+              "YOR",
+              "AHU",
+              "POP",
+              "TOR",
+              "FSTT",
+              "ORS"
+            ),
+            this.getStation(
+              this.S26,
+              "TLS",
+              "LIS",
+              "OSS",
+              "LIO",
+              "LAK",
+              "SDE",
+              "PRS",
+              "SKV",
+              "YOR",
+              "AHU",
+              "POP",
+              "TOR",
+              "FSTT",
+              "ORS"
+            ),
+            this.getTerminus("M8", "Hauptbahnhof"),
+            this.getTerminus("M10", "Hauptbahnhof"),
+            this.getTerminus("12", "Am Kupfergraben"),
+            this.getTerminus(
+              "M8",
+              "Ahrensfelde/Stadtgrenze",
+              "Betriebshof",
+              "Marzahn"
+            ),
+            this.getTerminus("M10", "Warschauer Str"),
+            this.getTerminus("12", "Pasedagplatz"),
+            this.getTerminus("N40", "Turmstr"),
+            this.getTerminus("247", "Leopoldplatz")
+          ],
+          [this.getTerminus("247", "Leopoldplatz")]
+        ]
+      },
       BOLS: {
         stop: [900000025321, 900000025301],
         filter: [
@@ -3463,6 +3620,160 @@ export default class Direction extends Line {
               "Haus des Rundfunks"
             ),
             this.getTerminus("218", "Messe Nord/ICC")
+          ]
+        ]
+      },
+      BORS: {
+        stop: [900000100007],
+        filter: [
+          [
+            this.getStation(
+              this.S1,
+              "ORB",
+              "LEN",
+              "BOR",
+              "BIW",
+              "HN",
+              "FOH",
+              "HED",
+              "WAI",
+              "WIN",
+              "WM",
+              "SNH",
+              "WOK",
+              "BOS",
+              "GB",
+              "HUM",
+              "NB"
+            ),
+            this.getStation(
+              this.S2,
+              "BER",
+              "BRF",
+              "ZEP",
+              "RGT",
+              "BU",
+              "KRW",
+              "BLB",
+              "PHD",
+              "PKW",
+              "BOS",
+              "GB",
+              "HUM",
+              "NB"
+            ),
+            this.getStation(
+              this.S25,
+              "HD",
+              "HLS",
+              "SZF",
+              "TG",
+              "EBD",
+              "KBO",
+              "ARF",
+              "SNH",
+              "WOK",
+              "BOS",
+              "GB",
+              "HUM",
+              "NB"
+            ),
+            this.getStation(
+              this.S26,
+              "WAI",
+              "WIN",
+              "WM",
+              "SNH",
+              "WOK",
+              "BOS",
+              "GB",
+              "HUM",
+              "NB"
+            ),
+            this.getStation(
+              this.S1,
+              "PDH",
+              "BAB",
+              "GRI",
+              "WSS",
+              "NIW",
+              "SLS",
+              "MEX",
+              "ZD",
+              "SDG",
+              "LWE",
+              "BGT",
+              "RST",
+              "FB",
+              "FRU",
+              "SGV",
+              "JLB",
+              "YOR",
+              "AHU",
+              "POP",
+              "TOR",
+              "FSTT"
+            ),
+            this.getStation(
+              this.S2,
+              "BFD",
+              "MAH",
+              "LRD",
+              "SC",
+              "BCH",
+              "MF",
+              "ATS",
+              "PRS",
+              "SKV",
+              "YOR",
+              "AHU",
+              "POP",
+              "TOR",
+              "FSTT"
+            ),
+            this.getStation(
+              this.S25,
+              "TLS",
+              "LIS",
+              "OSS",
+              "LIO",
+              "LAK",
+              "SDE",
+              "PRS",
+              "SKV",
+              "YOR",
+              "AHU",
+              "POP",
+              "TOR",
+              "FSTT"
+            ),
+            this.getStation(
+              this.S26,
+              "TLS",
+              "LIS",
+              "OSS",
+              "LIO",
+              "LAK",
+              "SDE",
+              "PRS",
+              "SKV",
+              "YOR",
+              "AHU",
+              "POP",
+              "TOR",
+              "FSTT"
+            ),
+            this.getTerminus("M1", "Am Kupfergraben"),
+            this.getTerminus("M5", "Hauptbahnhof"),
+            this.getTerminus("M8", "Hauptbahnhof"),
+            this.getTerminus("M1", "Schillerstr", "Rosenthal Nord"),
+            this.getTerminus("M5", "Zingster Str"),
+            this.getTerminus(
+              "M8",
+              "Ahrensfelde/Stadtgrenze",
+              "Betriebshof",
+              "Marzahn"
+            )
           ]
         ]
       },
@@ -4552,64 +4863,23 @@ export default class Direction extends Line {
               "Schwerin",
               "Wittenberge"
             ),
-            this.getTerminus(
-              "RE4",
-              "Stendal",
-              "Rathenow"
-            ),
-            this.getTerminus(
-              "RE6",
-              "Wittenberge",
-              "Neuruppin"
-            ),
-            this.getTerminus(
-              "RB10",
-              "Nauen"
-            ),
-            this.getTerminus(
-              "RB13",
-              "Wustermark"
-            ),
-            this.getTerminus(
-              "RB14",
-              "Nauen"
-            ),
-            this.getTerminus(
-              "RE2",
-              "Cottbus"
-            ),
-            this.getTerminus(
-              "RE4",
-              "Jüterbog",
-              "Luckenwalde",
-              "Ludwigsfelde"
-            ),
-            this.getTerminus(
-              "RE6",
-              "Gesundbrunnen"
-            ),
-            this.getTerminus(
-              "RB10",
-              "Südkreuz"
-            ),
-            this.getTerminus(
-              "RB13",
-              "Jungfernheide"
-            ),
-            this.getTerminus(
-              "RB14",
-              "Schönefeld"
-            ),
+            this.getTerminus("RE4", "Stendal", "Rathenow"),
+            this.getTerminus("RE6", "Wittenberge", "Neuruppin"),
+            this.getTerminus("RB10", "Nauen"),
+            this.getTerminus("RB13", "Wustermark"),
+            this.getTerminus("RB14", "Nauen"),
+            this.getTerminus("RE2", "Cottbus"),
+            this.getTerminus("RE4", "Jüterbog", "Luckenwalde", "Ludwigsfelde"),
+            this.getTerminus("RE6", "Gesundbrunnen"),
+            this.getTerminus("RB10", "Südkreuz"),
+            this.getTerminus("RB13", "Jungfernheide"),
+            this.getTerminus("RB14", "Schönefeld"),
             this.getStation(this.S3, "NULL"),
             this.getStation(this.S9, "NULL")
           ],
           [
             this.getStation(this.U7, "NULL"),
-            this.getTerminus(
-              "M37",
-              "Waldkrankenhaus",
-              "Im Spektefeld"
-            ),
+            this.getTerminus("M37", "Waldkrankenhaus", "Im Spektefeld"),
             this.getTerminus("M45", "Johannesstift"),
             this.getTerminus("X33", "Wilhelmsruher Damm"),
             this.getTerminus("X36", "Haselhorst"),
