@@ -41,18 +41,21 @@ module.exports = (env, argv) => {
             {
               loader: "postcss-loader",
               options: {
-                ident: "postcss",
-                plugins: [
-                  require("autoprefixer")({})
-                ]
+                postcssOptions: {
+                  plugins: [
+                    "autoprefixer"
+                  ]
+                }
               }
             },
             {
               loader: "sass-loader",
               options: {
                 sourceMap: true,
-                outputStyle:
-                  argv.mode === "production" ? "compressed" : "expanded"
+                sassOptions: {
+                  outputStyle:
+                    argv.mode === "production" ? "compressed" : "expanded"
+                }
               }
             }
           ]
