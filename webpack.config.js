@@ -43,7 +43,7 @@ module.exports = (env, argv) => {
               options: {
                 ident: "postcss",
                 plugins: [
-                  require("autoprefixer")({ browsers: "last 3 versions" })
+                  require("autoprefixer")({})
                 ]
               }
             },
