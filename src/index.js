@@ -165,7 +165,8 @@ class Station extends Direction {
   }
   getData() {
     this.stop.forEach((stop, index) => {
-      const url = `https://1.bvg.transport.rest/stations/${stop}/departures?duration=60&includeRelatedStations=false`;
+	    //  const url = `https://1.bvg.transport.rest/stations/${stop}/departures?duration=60&includeRelatedStations=false`;
+      const url = `https://sklinkusch-vbbmicro.now.sh/?station=${stop}&duration=20`;
       fetch(url)
         .then(response => {
           return response.json();
