@@ -5,25 +5,17 @@ class Station extends Direction {
     super();
     this.container = document.querySelector("#container");
     this._stop = this.direction.jov.stop;
-    this._filter = this.direction.jov.filter;
     this.getData();
     this.addEventListeners();
   }
   addEventListeners() {
     const dropdown = document.querySelector("#dropdown");
-    dropdown.addEventListener("input", e => {
-      while (this.container.firstChild) {
-        this.container.removeChild(this.container.firstChild);
-      }
+    dropdown.addEventListener("input", (e) => {
       const selectValue = e.target.value;
       this.stop = this.direction[selectValue].stop;
-      this.filter = this.direction[selectValue].filter;
       this.getData();
     });
     document.querySelector("#refresh").addEventListener("click", () => {
-      while (this.container.firstChild) {
-        this.container.removeChild(this.container.firstChild);
-      }
       this.getData();
     });
   }
@@ -44,102 +36,119 @@ class Station extends Direction {
     return "";
   }
   checkState(array) {
-    for (let i = 0; i < array.length; i++) {
-      if (array[i].type == "status") {
-        return `<span class="fas fa-times" title="${
-          array[i].text
-        }">&nbsp;</span>`;
-      }
+    const stateText =
+      array
+        .filter((a) => a.type === "status")
+        .map((a) => a.text)
+        .join("\n") || "";
+    if (stateText !== "") {
+      return `<span class="fas fa-times" title="${stateText}">&nbsp;</span>`;
     }
     return "";
   }
   checkWarning(array) {
-    for (let i = 0; i < array.length; i++) {
-      let summary, text;
-      if (/<a.*href=".*".*>.*<\/a>/.test(array[i].summary)) {
-        summary = this.replaceLinks(array[i].summary);
-      } else {
-        summary = array[i].summary;
-      }
-      if (/<a.*href=".*".*>.*<\/a>/.test(array[i].text)) {
-        text = this.replaceLinks(array[i].text);
-      } else {
-        text = array[i].text;
-      }
-      if (array[i].type == "warning") {
-        return `<span class="fas fa-exclamation-triangle" title="${
-          array[i].validFrom
-        } - ${array[i].validUntil}: ${summary}, ${text}">&nbsp;</span>`;
-      }
+    const warnArray = array.filter((a) => a.type === "warning");
+    const arrayWithoutLinks = warnArray.map((a) => ({
+      summary: /<a.*href=".*".*>.*<\/a>/.test(a.summary)
+        ? this.replaceLinks(a.summary)
+        : a.summary,
+      text: /<a.*href=".*".*>.*<\/a>/.test(a.text)
+        ? this.replaceLinks(a.text)
+        : a.text,
+      validFrom: a.validFrom,
+      validUntil: a.validUntil,
+    }));
+    const warnText =
+      arrayWithoutLinks
+        .map((a) => `${a.validFrom} - ${a.validUntil}: ${a.summary}, ${a.text}`)
+        .join("\n") || "";
+    if (warnText !== "") {
+      return `<span class="fas fa-exclamation-triangle" title="${warnText}">&nbsp;</span>`;
     }
     return "";
   }
   evalData(array, index) {
+    while (this.container.firstChild) {
+      this.container.removeChild(this.container.firstChild);
+    }
     if (array.length > 0) {
-      const header = document.createElement("h2");
-      header.innerHTML = `Abfahrten ab ${array[0].stop.name}`;
-      this.container.appendChild(header);
-
-      this.filter[index].forEach(filterSet => {
-        var subheader_ident = true;
-        for (let i = 0; i < array.length; i++) {
-          let identifier = false;
-          for (let j = 0; j < filterSet.length; j++) {
-            if (filterSet[j].line != null && filterSet[j].dir != null) {
-              if (
-                array[i].line.name == filterSet[j].line &&
-                array[i].direction.includes(filterSet[j].dir)
-              ) {
-                identifier = true;
-                break;
-              }
-            } else if (filterSet[j].line != null) {
-              if (array[i].line.name == filterSet[j].line) {
-                identifier = true;
-                break;
-              }
-            } else if (filterSet[j].dir != null) {
-              if (array[i].direction.includes(filterSet[j].dir)) {
-                identifier = true;
-                break;
-              }
-            } else {
-              identifier = true;
-              break;
-            }
+      const sortedArray = array.sort((a, b) => {
+        if (a.stop.name.toLowerCase() < b.stop.name.toLowerCase()) {
+          return -1;
+        } else if (b.stop.name.toLowerCase() < a.stop.name.toLowerCase()) {
+          return +1;
+        } else {
+          const sortingArray = [
+            "express",
+            "regional",
+            "suburban",
+            "subway",
+            "tram",
+            "bus",
+            "ferry",
+          ];
+          if (
+            sortingArray.indexOf(a.line.product) <
+            sortingArray.indexOf(b.line.product)
+          ) {
+            return -1;
+          } else if (
+            sortingArray.indexOf(b.line.product) <
+            sortingArray.indexOf(a.line.product)
+          ) {
+            return +1;
+          } else {
+            return 0;
           }
-          if (identifier == true) {
-            if (subheader_ident == true) {
-              const subheader = document.createElement("h3");
-              subheader.innerHTML = `Richtung ${array[i].direction}`;
-              this.container.appendChild(subheader);
-              subheader_ident = false;
-            }
-            let planTime, realTime, delay;
-            if (array[i].when != null && array[i].delay != null) {
-              realTime = array[i].when.substr(11, 5);
-              delay = Math.floor(array[i].delay / 60);
-              planTime = this.getPlanTime(realTime, delay);
-            } else if (array[i].when != null) {
-              planTime = array[i].when.substr(11, 5);
-              delay = "?";
-              realTime = "";
-            } else {
-              realTime = "Ausfall";
-              delay = "X";
-              planTime = array[i].formerScheduledWhen.substr(11, 5);
-            }
-            const line = array[i].line.name;
-            const mean = this.getMean(line);
-            const target = array[i].direction;
-            const remarks = array[i].remarks;
-            const barrier = this.checkBarrier(remarks);
-            const bike = this.checkBike(remarks);
-            const warning = this.checkWarning(remarks);
-            const state = this.checkState(remarks);
-            const row = document.createElement("div");
-            row.className = "row";
-            row.innerHTML = `
+        }
+      });
+      let splitArray = [];
+      let lowestValue = 0;
+      while (lowestValue < sortedArray.length) {
+        let lowestResult = sortedArray[lowestValue].stop.name;
+        let highestValue;
+        let filtered;
+        for (let i = lowestValue; i < sortedArray.length; i++) {
+          if (sortedArray[i].stop.name !== lowestResult) {
+            highestValue = i;
+            break;
+          }
+        }
+        filtered = sortedArray.slice(lowestValue, highestValue);
+        splitArray.push(filtered);
+        lowestValue = highestValue;
+      }
+      splitArray.forEach((singleStop) => {
+        const header = document.createElement("h2");
+        header.innerHTML = `Abfahrten ab ${singleStop[0].stop.name}`;
+        this.container.appendChild(header);
+
+        singleStop.forEach((trip) => {
+          let planTime, realTime, delay;
+          if (trip.when != null && trip.delay != null) {
+            realTime = trip.when.substr(11, 5);
+            delay = Math.floor(trip.delay / 60);
+            planTime = this.getPlanTime(realTime, delay);
+          } else if (trip.when != null) {
+            planTime = trip.when.substr(11, 5);
+            delay = "?";
+            realTime = "";
+          } else {
+            realTime = "Ausfall";
+            delay = "X";
+            planTime = trip.formerScheduledWhen.substr(11, 5);
+          }
+          const line = trip.line.name;
+          const mean = this.getMean(line);
+          const target = trip.direction;
+          const remarks = trip.remarks;
+          const barrier = this.checkBarrier(remarks);
+          const bike = this.checkBike(remarks);
+          const warning = this.checkWarning(remarks);
+          const state = this.checkState(remarks);
+          const row = document.createElement("div");
+          row.className = "row";
+          row.innerHTML = `
             <div class="planTime">${planTime}</div>
             <div class="realTime">${realTime}</div>
             <div class="delay">${delay}</div>
@@ -150,31 +159,24 @@ class Station extends Direction {
             <div class="bike">${bike}</div>
             <div class="warning">${warning}</div>
             <div class="status">${state}</div>
-            `;
-            this.container.appendChild(row);
-          }
-        }
+          `;
+          this.container.appendChild(row);
+        });
       });
     }
   }
-  get filter() {
-    return this._filter;
-  }
-  set filter(newFilter) {
-    this._filter = newFilter;
-  }
   getData() {
     this.stop.forEach((stop, index) => {
-	    //  const url = `https://1.bvg.transport.rest/stations/${stop}/departures?duration=60&includeRelatedStations=false`;
+      //  const url = `https://1.bvg.transport.rest/stations/${stop}/departures?duration=60&includeRelatedStations=false`;
       const url = `https://sklinkusch-vbbmicro.now.sh/?station=${stop}&duration=20`;
       fetch(url)
-        .then(response => {
+        .then((response) => {
           return response.json();
         })
-        .then(data => {
+        .then((data) => {
           this.evalData(data, index);
         })
-        .catch(err => console.log(err));
+        .catch((err) => console.log(err));
     });
   }
   getMean(line) {
