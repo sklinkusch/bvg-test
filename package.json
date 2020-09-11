@@ -38,5 +38,8 @@
     "sass-loader": "^10.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "vbb-stations": "^7.3.0"
   }
 }
