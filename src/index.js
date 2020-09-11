@@ -10,12 +10,13 @@ class Station {
   }
   addEventListeners() {
     const dropdown = document.querySelector("#dropdown")
+    const refresh = document.querySelector("#refresh")
     dropdown.addEventListener("input", (e) => {
       const selectValue = e.target.value
       this._stop = this.direction[selectValue]
       this.getData()
     })
-    document.querySelector("#refresh").addEventListener("click", () => {
+    refresh.addEventListener("click", () => {
       this.getData()
     })
   }
@@ -142,6 +143,7 @@ class Station {
           const mean = this.getMean(line)
           const target = trip.direction
           const remarks = trip.remarks
+          const track = trip.platform || ""
           const barrier = this.checkBarrier(remarks)
           const bike = this.checkBike(remarks)
           const warning = this.checkWarning(remarks)
@@ -155,6 +157,7 @@ class Station {
             <div class="transport">${mean}</div>
             <div class="line">${line}</div>
             <div class="direction">${target}</div>
+            <div class="track">${track}</div>
             <div class="barrier">${barrier}</div>
             <div class="bike">${bike}</div>
             <div class="warning">${warning}</div>
