@@ -1,4 +1,15 @@
 const unsortedStopObject = require("vbb-stations/full.json")
+import train from "./images/express.svg"
+import regional from "./images/regional.svg"
+import suburban from "./images/suburban.svg"
+import subway from "./images/subway.svg"
+import metrotram from "./images/metro-tram.svg"
+import tram from "./images/tram.svg"
+import metrobus from "./images/metro-bus.svg"
+import expressbus from "./images/express-bus.svg"
+import specialbus from "./images/special-bus.svg"
+import nightbus from "./images/night-bus.svg"
+import ferry from "./images/ferry.svg"
 
 class Station {
   constructor() {
@@ -143,7 +154,7 @@ class Station {
             planTime = trip.formerScheduledWhen.substr(11, 5)
           }
           const line = trip.line.name
-          const mean = this.getMean(line)
+          const mean = this.getMean(trip.line)
           const target = trip.direction
           const remarks = trip.remarks
           const track = trip.platform || ""
@@ -225,66 +236,38 @@ class Station {
     }
   }
   getMean(line) {
-    switch (true) {
-      case /^ICE/.test(line):
-        return `<span class="fas fa-train" title="Intercity Express train">&nbsp;</span>`
-        break
-      case /^IC/.test(line):
-        return `<span class="fas fa-train" title="Intercity train">&nbsp;</span>`
-        break
-      case /^EC/.test(line):
-        return `<span class="fas fa-train" title="Eurocity train">&nbsp;</span>`
-        break
-      case /^RJ/.test(line):
-        return `<span class="fas fa-train" title="Austrian Railjet train">&nbsp;</span>`
-        break
-      case /^EN/.test(line):
-        return `<span class="fas fa-train" title="EuroNight train">&nbsp;</span>`
-        break
-      case /^NJ/.test(line):
-        return `<span class="fas fa-train" title="Austrian NightJet train">&nbsp;</span>`
-        break
-      case /^TGV/.test(line):
-        return `<span class="fas fa-train" title="French Train &#224; grande vitesse">&nbsp;</span>`
-        break
-      case /^THA/.test(line):
-        return `<span class="fas fa-train" title="European Thalys train">&nbsp;</span>`
-        break
-      case /^FLX/.test(line):
-        return `<span class="fas fa-train" title="FlixTrain">&nbsp;</span>`
-        break
-      case /^HBX/.test(line):
-        return `<span class="fas fa-train" title="Harz-Berlin Express train">&nbsp;</span>`
-        break
-      case /^IRE/.test(line):
-        return `<span class="fas fa-train" title="InterRegio Express train">&nbsp;</span>`
-        break
-      case /^RE/.test(line):
-        return `<span class="fas fa-train" title="Regional Express train">&nbsp;</span>`
-        break
-      case /^RB/.test(line):
-        return `<span class="fas fa-train" title="Regional train">&nbsp;</span>`
-        break
-      case /^S/.test(line):
-        return `<span class="fas fa-subway" title="suburban railway (S-Bahn)">&nbsp;</span>`
-      case /^U/.test(line):
-        return `<span class="fas fa-subway" title="underground (U-Bahn)">&nbsp;</span>`
-        break
-      case /^M(1|2|4|5|6|8)$/.test(line):
-      case /^M1(0|3|7)$/.test(line):
-      case /^[1-9][0-9]$/.test(line):
-        return `<span class="fas fa-tram" title="tramway">&nbsp;</span>`
-        break
-      case /^F/.test(line):
-        return `<span class="fas fa-ship" title="ferry">&nbsp;</span>`
-        break
-      case /^[1-9][0-9]{2}$/.test(line):
-      case /^M(11|19|21|27|29|32|37|41|44|45|46|48|49|76|77|82|85)$/.test(line):
-      case /^X[0-9]{1,2}$/.test(line):
-      case /^N[0-9]{1,2}$/.test(line):
-      case /^TXL$/.test(line):
-        return `<span class="fas fa-bus" title="bus">&nbsp;</span>`
-        break
+    const { express, metro, name, night, product } = line
+    switch (product) {
+      case "express":
+        return `<div class="mean"><img src="./assets/fonts/express.svg" alt="express" /></div>`
+      case "regional":
+        return `<div class="mean"><img src="./assets/fonts/regional.svg" alt="regional"/></div>`
+      case "suburban":
+        return `<div class="mean"><img src="./assets/fonts/suburban.svg" alt="suburban railway (S-Bahn)"/></div>`
+      case "subway":
+        return `<div class="mean"><img src="./assets/fonts/subway.svg" alt="subway (U-Bahn)"/></div>`
+      case "tram":
+        if (metro) {
+          return `<div class="mean"><img src="./assets/fonts/metro-tram.svg" alt="metro tram"/></div>`
+        } else {
+          return `<div class="mean"><img src="./assets/fonts/tram.svg" alt="tramway"/></div>`
+        }
+      case "bus":
+        if (express) {
+          return `<div class="mean"><img src="./assets/fonts/express-bus.svg" alt="express bus"/></div>`
+        } else if (metro) {
+          return `<div class="mean"><img src="./assets/fonts/metro-bus.svg" alt="metro bus"/></div>`
+        } else if (night) {
+          return `<div class="mean"><img src="./assets/fonts/bus.svg" alt="night bus"/></div>`
+        } else if (name === "A05") {
+          return `<div class="mean"><img src="./assets/fonts/special-bus.svg" alt="special-bus"/></div>`
+        } else {
+          return `<div class="mean"><img src="./assets/fonts/bus.svg" alt="bus"/></div>`
+        }
+      case "ferry":
+        return `<div class="mean"><img src="./assets/fonts/ferry.svg" alt="ferry"/></div>`
+      default:
+        return `<div class="mean"><img src="./assets/fonts/bus.svg" alt="bus"/></div>`
     }
   }
   getPlanTime(realtime, delay) {
