@@ -17,18 +17,24 @@ class Station {
     this.getStops()
     this.getDirection()
     this._stop = this.direction["900000100011"]
-    this.getDropdown()
+    this.getDropdown("")
     this.getData()
     this.addEventListeners()
   }
   addEventListeners() {
+    const filter = document.querySelector("#filter")
     const dropdown = document.querySelector("#dropdown")
     const refresh = document.querySelector("#refresh")
+    filter.addEventListener("input", (e) => {
+      const filterValue = e.target.value
+      this.getDropdown(filterValue)
+    })
     dropdown.addEventListener("input", (e) => {
       const selectValue = e.target.value
       this._stop = this.direction[selectValue]
       this.getData()
-      this.getDropdown()
+      this.getDropdown("")
+      filter.value = ""
     })
     refresh.addEventListener("click", () => {
       this.getData()
@@ -202,12 +208,18 @@ class Station {
     }, {})
     this.direction = stopsObjectBerlin
   }
-  getDropdown() {
+  getDropdown(filterValue) {
     if (this._stop) {
       const remainingStops = this.allStops.filter(
         (stop) => stop.id !== this._stop.id
       )
-      const sortedRemainingStops = remainingStops.sort((a, b) => {
+      const filteredStops =
+        filterValue !== ""
+          ? remainingStops.filter((stop) =>
+              stop.name.toLowerCase().includes(filterValue.toLowerCase())
+            )
+          : remainingStops
+      const sortedRemainingStops = filteredStops.sort((a, b) => {
         if (a.name < b.name) {
           return -1
         } else if (b.name < a.name) {
