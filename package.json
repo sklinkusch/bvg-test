@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
+    "deploy": "webpack --mode production && gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,16 +31,25 @@
     "autoprefixer": "^9.8.6",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
+    "browser-sync": "2.26.12",
+    "browser-sync-webpack-plugin": "2.2.2",
     "css-loader": "^4.3.0",
     "dotenv-webpack": "^2.0.0",
+    "file-loader": "6.1.0",
+    "gh-pages": "3.1.0",
+    "html-webpack-plugin": "4.4.1",
     "mini-css-extract-plugin": "^0.11.1",
     "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "5.0.4",
     "postcss-loader": "^4.0.1",
     "sass-loader": "^10.0.2",
+    "style-loader": "1.2.1",
+    "uglifyjs-webpack-plugin": "2.2.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.14.0",
     "vbb-stations": "^7.3.0"
   }
 }
