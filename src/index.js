@@ -3,8 +3,10 @@ const unsortedStopObject = require("vbb-stations/full.json")
 class Station {
   constructor() {
     this.container = document.querySelector("#container")
+    this.getStops()
     this.getDirection()
     this._stop = this.direction["900000100011"]
+    this.getDropdown()
     this.getData()
     this.addEventListeners()
   }
@@ -15,6 +17,7 @@ class Station {
       const selectValue = e.target.value
       this._stop = this.direction[selectValue]
       this.getData()
+      this.getDropdown()
     })
     refresh.addEventListener("click", () => {
       this.getData()
@@ -180,53 +183,20 @@ class Station {
       .catch((err) => console.log(err))
   }
   getDirection() {
-    unsortedStopObject["900000470117"].name = "Cottbus, Beuchstr."
-    unsortedStopObject["900000210600"].name = "Wustermark, Brunnenplatz"
-    const stopsUnsorted = Object.keys(unsortedStopObject).map((key) => {
-      return {
-        id: unsortedStopObject[key].id,
-        name: unsortedStopObject[key].name,
-      }
-    })
-    // Berlin
-    const stopsFilterBerlin = stopsUnsorted.filter(
-      (stop) =>
-        stop.name.includes("(Berlin)") ||
-        stop.name.includes("(Bln)") ||
-        stop.name.startsWith("Berlin,") ||
-        stop.name.includes("Berlin Hauptbahnhof") ||
-        stop.name === "U Stadtmitte/Krausenstr." ||
-        stop.name === "U Alexanderplatz [Bus]" ||
-        stop.name === "S Rahnsdorf [Tram]"
-    )
-    const stopsRawBerlin = stopsFilterBerlin.map((stop) => {
-      if (stop.name.startsWith("Berlin,")) {
-        return { id: stop.id, name: stop.name.substr(8) }
-      } else if (stop.name.endsWith("(Berlin)")) {
-        return {
-          id: stop.id,
-          name: stop.name.substring(0, stop.name.length - 9),
-        }
-      } else if (stop.name.includes("(Bln)")) {
-        const newName = stop.name.replace("(Bln)", "")
-        return { id: stop.id, name: newName }
-      } else if (stop.name.includes("(Berlin)")) {
-        const newName = stop.name.replace("(Bln)", "")
-        return { id: stop.id, name: newName }
-      }
-      return { id: stop.id, name: stop.name }
-    })
-    const remainingStopsBerlin = stopsUnsorted.filter(
-      (stop) => stopsFilterBerlin.indexOf(stop) === -1
-    )
+    const stopsRawBerlin = this.allStops
     const stopsObjectBerlin = stopsRawBerlin.reduce((acc, stop) => {
       const newObject = {}
       newObject[stop.id] = stop
       return Object.assign(acc, newObject)
     }, {})
     this.direction = stopsObjectBerlin
-    document.getElementById("dropdown").innerHTML = stopsRawBerlin
-      .sort((a, b) => {
+  }
+  getDropdown() {
+    if (this._stop) {
+      const remainingStops = this.allStops.filter(
+        (stop) => stop.id !== this._stop.id
+      )
+      const sortedRemainingStops = remainingStops.sort((a, b) => {
         if (a.name < b.name) {
           return -1
         } else if (b.name < a.name) {
@@ -235,8 +205,24 @@ class Station {
           return 0
         }
       })
-      .map((stop) => `<option value="${stop.id}">${stop.name}</option>`)
-      .join("")
+      const dropDownStops = [this._stop, ...sortedRemainingStops]
+      document.getElementById("dropdown").innerHTML = dropDownStops
+        .map((stop) => `<option value="${stop.id}">${stop.name}</option>`)
+        .join("")
+    } else {
+      document.getElementById("dropdown").innerHTML = stopsRawBerlin
+        .sort((a, b) => {
+          if (a.name < b.name) {
+            return -1
+          } else if (b.name < a.name) {
+            return +1
+          } else {
+            return 0
+          }
+        })
+        .map((stop) => `<option value="${stop.id}">${stop.name}</option>`)
+        .join("")
+    }
   }
   getMean(line) {
     switch (true) {
@@ -327,6 +313,45 @@ class Station {
     const pattern = /<a.*href=\"(.*)\".*>(.*)<\/a>/g
     const finalString = string.replace(pattern, "$2 ($1)")
     return finalString
+  }
+  getStops() {
+    unsortedStopObject["900000470117"].name = "Cottbus, Beuchstr."
+    unsortedStopObject["900000210600"].name = "Wustermark, Brunnenplatz"
+    const stopsUnsorted = Object.keys(unsortedStopObject).map((key) => {
+      return {
+        id: unsortedStopObject[key].id,
+        name: unsortedStopObject[key].name,
+      }
+    })
+    // Berlin
+    const stopsFilterBerlin = stopsUnsorted.filter(
+      (stop) =>
+        stop.name.includes("(Berlin)") ||
+        stop.name.includes("(Bln)") ||
+        stop.name.startsWith("Berlin,") ||
+        stop.name.includes("Berlin Hauptbahnhof") ||
+        stop.name === "U Stadtmitte/Krausenstr." ||
+        stop.name === "U Alexanderplatz [Bus]" ||
+        stop.name === "S Rahnsdorf [Tram]"
+    )
+    const stopsRawBerlin = stopsFilterBerlin.map((stop) => {
+      if (stop.name.startsWith("Berlin,")) {
+        return { id: stop.id, name: stop.name.substr(8) }
+      } else if (stop.name.endsWith("(Berlin)")) {
+        return {
+          id: stop.id,
+          name: stop.name.substring(0, stop.name.length - 9),
+        }
+      } else if (stop.name.includes("(Bln)")) {
+        const newName = stop.name.replace("(Bln)", "")
+        return { id: stop.id, name: newName }
+      } else if (stop.name.includes("(Berlin)")) {
+        const newName = stop.name.replace("(Bln)", "")
+        return { id: stop.id, name: newName }
+      }
+      return { id: stop.id, name: stop.name }
+    })
+    this.allStops = stopsRawBerlin
   }
   get stop() {
     return this._stop
