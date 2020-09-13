@@ -251,35 +251,35 @@ class Station {
     const { express, metro, name, night, product } = line
     switch (product) {
       case "express":
-        return `<div class="mean"><img src="./assets/fonts/express.svg" alt="express" /></div>`
+        return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/express.svg" alt="express" /></div>`
       case "regional":
-        return `<div class="mean"><img src="./assets/fonts/regional.svg" alt="regional"/></div>`
+        return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/regional.svg" alt="regional"/></div>`
       case "suburban":
-        return `<div class="mean"><img src="./assets/fonts/suburban.svg" alt="suburban railway (S-Bahn)"/></div>`
+        return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/suburban.svg" alt="suburban railway (S-Bahn)"/></div>`
       case "subway":
-        return `<div class="mean"><img src="./assets/fonts/subway.svg" alt="subway (U-Bahn)"/></div>`
+        return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/subway.svg" alt="subway (U-Bahn)"/></div>`
       case "tram":
         if (metro) {
-          return `<div class="mean"><img src="./assets/fonts/metro-tram.svg" alt="metro tram"/></div>`
+          return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/metro-tram.svg" alt="metro tram"/></div>`
         } else {
-          return `<div class="mean"><img src="./assets/fonts/tram.svg" alt="tramway"/></div>`
+          return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/tram.svg" alt="tramway"/></div>`
         }
       case "bus":
         if (express) {
-          return `<div class="mean"><img src="./assets/fonts/express-bus.svg" alt="express bus"/></div>`
+          return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/express-bus.svg" alt="express bus"/></div>`
         } else if (metro) {
-          return `<div class="mean"><img src="./assets/fonts/metro-bus.svg" alt="metro bus"/></div>`
+          return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/metro-bus.svg" alt="metro bus"/></div>`
         } else if (night) {
-          return `<div class="mean"><img src="./assets/fonts/bus.svg" alt="night bus"/></div>`
+          return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/bus.svg" alt="night bus"/></div>`
         } else if (name === "A05") {
-          return `<div class="mean"><img src="./assets/fonts/special-bus.svg" alt="special-bus"/></div>`
+          return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/special-bus.svg" alt="special-bus"/></div>`
         } else {
-          return `<div class="mean"><img src="./assets/fonts/bus.svg" alt="bus"/></div>`
+          return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/bus.svg" alt="bus"/></div>`
         }
       case "ferry":
-        return `<div class="mean"><img src="./assets/fonts/ferry.svg" alt="ferry"/></div>`
+        return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/ferry.svg" alt="ferry"/></div>`
       default:
-        return `<div class="mean"><img src="./assets/fonts/bus.svg" alt="bus"/></div>`
+        return `<div class="mean"><img src="https://raw.githubusercontent.com/sklinkusch/bvg-test/master/dist/assets/fonts/bus.svg" alt="bus"/></div>`
     }
   }
   getPlanTime(realtime, delay) {
